@@ -1,0 +1,75 @@
+---
+permalink: data-protection/task_restore_data_use_health_volume_details_page.html 
+sidebar: sidebar 
+keywords: restore, data, volume, health details page, console 
+summary: Você pode restaurar arquivos, diretórios ou um volume inteiro sobrescritos ou excluídos de uma cópia Snapshot usando o recurso de restauração na página de detalhes Volume / Health. 
+---
+= Restaure os dados usando as páginas de detalhes de Volume e Volume/Integridade em Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode restaurar arquivos, diretórios ou um volume inteiro sobrescritos ou excluídos de uma cópia Snapshot usando o recurso de restauração nas páginas de detalhes Volume e Volume / Health.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+
+NOTE: Observe os seguintes pontos:
+
+* Não é possível restaurar um diretório ou um volume a partir de um snapshot em nenhum dos seguintes cenários:
++
+** A opção *Sim, preservar todas as cópias instantâneas* está selecionada.
+** Você está usando uma conta LDAP para monitorar o cluster.
+** Você está conectado como um usuário de domínio.
+** Sua conta está configurada para autenticação SAML.
+** Você está usando o protocolo NDMP.
++
+Para obter mais detalhes, consulte o artigo da Knowledge Base https://kb.netapp.com/on-prem/ontap/DP/NDMP/NDMP-KBs/How_to_configure_NDMP_authentication_in_the_SVM-scope_previously_known_as_Vserver-scope_mode["Como configurar autenticação NDMP no modo 'SVM-scope'"^].
+
+
+
+* Não é possível restaurar fluxos de arquivos NTFS.
+* A opção de restauração não está disponível quando:
++
+** O ID do volume é desconhecido: por exemplo, quando existe uma relação entre clusters e o cluster de destino ainda não foi descoberto.
+** O volume está configurado para a replicação síncrona do SnapMirror.
+
+
+
+
+.Passos
+. No painel de navegação esquerdo, acesse *Armazenamento > Volumes*.
+. Selecione o volume e clique no botão *Restaurar*. Como alternativa, clique no volume para acessar *Detalhes do Volume/Integridade > Ações > Restaurar*. A caixa de diálogo Restaurar é exibida. Para obter informações sobre esta página, consulte link:../data-protection/reference_restore_dialog_box.html["Caixa de diálogo Restaurar"].
+. Selecione o volume e a cópia Snapshot a partir dos quais você deseja restaurar os dados, caso sejam diferentes dos padrões.
+. Selecione os itens que deseja restaurar, por exemplo, o LUN de origem.
++
+Você pode restaurar o volume inteiro ou especificar as pastas e os arquivos que deseja restaurar.
+
+. Selecione o local para o qual deseja restaurar os itens selecionados: *local original* ou *local alternativo existente*.
+. Se você selecionar um local alternativo já existente, faça um dos seguintes procedimentos:
++
+** No campo de texto "Caminho de restauração", digite o caminho do local para o qual você deseja restaurar os dados e clique em *Select Directory*.
+** Clique em *Procurar* para abrir a caixa de diálogo Procurar diretórios e conclua as seguintes etapas:
++
+... Selecione o cluster de destino, a máquina virtual de armazenamento (SVM) e o volume para os quais você deseja restaurar.
+... Na tabela Name, selecione um nome de diretório que precisa ser restaurado.
+... Clique em *Select Directory*.
+
+
+
+
+. Clique em *Restaurar*.
++
+O processo de restauração começa. Uma tarefa é criada no backend para concluir o processo de restauração.
+
+. Se você quiser visualizar o progresso da tarefa, no painel de navegação esquerdo, acesse *Protection > Jobs* para visualizar o status da tarefa de restauração na lista de tarefas.
++
+[NOTE]
+====
+Se uma operação de restauração falhar entre clusters HA do Cloud Volumes ONTAP com um erro de NDMP, talvez seja necessário adicionar uma rota AWS explícita no cluster de destino para que o destino possa se comunicar com a LIF de gerenciamento de cluster do sistema de origem. Você executa essa etapa de configuração usando o NetApp Console.
+
+====
+

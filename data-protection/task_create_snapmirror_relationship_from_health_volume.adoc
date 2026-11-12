@@ -1,0 +1,58 @@
+---
+permalink: data-protection/task_create_snapmirror_relationship_from_health_volume.html 
+sidebar: sidebar 
+keywords: create, snapmirror, protection, relationship,  volume, health details page 
+summary: Você pode usar a página de detalhes de Volume/Integridade para criar uma relação do SnapMirror para que a replicação de dados seja habilitada para fins de proteção. A replicação do SnapMirror permite restaurar os dados do volume de destino em caso de perda de dados na origem. 
+---
+= Crie uma relação do SnapMirror a partir da página de detalhes de integridade do volume no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a página de detalhes de Volume/Integridade para criar uma relação do SnapMirror para que a replicação de dados seja habilitada para fins de proteção. A replicação do SnapMirror permite restaurar os dados do volume de destino em caso de perda de dados na origem.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+* Você precisa ter configurado o Workflow Automation.
+
+
+O menu *Proteger* não é exibido nos seguintes casos:
+
+* Se as configurações do RBAC não permitirem essa ação: por exemplo, se você tiver apenas privilégios de operador
+* Quando o ID do volume é desconhecido: por exemplo, quando você tem uma relação entre clusters e o cluster de destino ainda não foi descoberto
+
+
+Você pode executar até 10 tarefas de proteção simultaneamente sem impacto no desempenho. Pode haver alguma queda de desempenho ao executar entre 11 e 30 tarefas simultaneamente. Não é recomendável executar mais de 30 tarefas simultaneamente.
+
+.Passos
+. Na aba *Proteção* da página de detalhes *Volume / Saúde*, na visualização de topologia clique com o botão direito do mouse no nome de um volume que você deseja proteger.
+. Selecione *Proteger* > *SnapMirror* no menu.
++
+A caixa de diálogo Configurar Proteção é exibida.
+
+. Clique em *SnapMirror* para visualizar a guia *SnapMirror* e configurar as informações de destino.
+. Clique em *Avançado* para definir a garantia de espaço, conforme necessário, e depois clique em *Aplicar*.
+. Complete a área *Informações de destino* e a área *Configurações de relacionamento* na caixa de diálogo *Configurar proteção*.
+. Clique em *Aplicar*.
++
+Você retorna à página de detalhes Volume / Health.
+
+. Clique no link do trabalho de configuração da proteção na parte superior da página de detalhes *Volume / Health*.
++
+As tarefas e os detalhes do trabalho são exibidos na página Job details.
+
+. Na página de detalhes do *Job*, clique em *Refresh* para atualizar a lista de tarefas e os detalhes das tarefas associados ao job de configuração de proteção e determinar quando o job estará concluído.
+. Quando as tarefas do trabalho estiverem concluídas, clique em *Back* no seu navegador para retornar à página de detalhes *Volume / Health*.
++
+A nova relação é exibida na visualização de topologia da página de detalhes Volume / Health.
+
+
+
+Dependendo da SVM de destino especificada durante a configuração ou das opções que você ativou nas suas configurações avançadas, a relação do SnapMirror resultante pode ser uma das várias variações possíveis:
+
+* Se você especificou uma SVM de destino executada na mesma versão do ONTAP ou em uma versão mais recente que a do volume de origem, uma relação do SnapMirror baseada em replicação de blocos será o resultado padrão.
+* Se você especificou uma SVM de destino que é executada na mesma versão ou em uma versão mais recente do ONTAP em comparação com a do volume de origem, mas habilitou a replicação flexível de versão nas configurações avançadas, o resultado é uma relação do SnapMirror com replicação flexível de versão.
+* Se você especificou uma SVM de destino executada em uma versão anterior do ONTAP, ou em uma versão superior à do volume de origem, e a versão anterior oferecer suporte à replicação flexível de versão, uma relação do SnapMirror com replicação flexível de versão será o resultado automático.
+

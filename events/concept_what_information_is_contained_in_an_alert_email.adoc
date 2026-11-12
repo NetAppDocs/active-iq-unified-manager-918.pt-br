@@ -1,0 +1,22 @@
+---
+permalink: events/concept_what_information_is_contained_in_an_alert_email.html 
+sidebar: sidebar 
+keywords: information, contained, alert, email 
+summary: Os e-mails de alerta do Unified Manager fornecem o tipo de evento, a gravidade do evento, o nome da política ou do limite que foi violado e causou o evento, além de uma descrição do evento. A mensagem de e-mail também inclui um hiperlink para cada evento, permitindo que você visualize a página de detalhes do evento na interface do usuário. 
+---
+= Informações contidas em um e-mail de alerta do Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os e-mails de alerta do Unified Manager fornecem o tipo de evento, a gravidade do evento, o nome da política ou do limite que foi violado e causou o evento, além de uma descrição do evento. A mensagem de e-mail também inclui um hiperlink para cada evento, permitindo que você visualize a página de detalhes do evento na interface do usuário.
+
+Os e-mails de alerta são enviados a todos os usuários que se inscreveram para receber alertas.
+
+Se um contador de desempenho ou um valor de capacidade sofrer uma grande alteração durante um período de coleta, isso poderá acionar simultaneamente um evento crítico e um evento de aviso para a mesma política de limite. Nesse caso, você poderá receber um e-mail para o evento de aviso e outro para o evento crítico. Isso ocorre porque o Unified Manager permite que você se inscreva separadamente para receber alertas de violações de limite de aviso e crítico.
+
+Um exemplo de e-mail de alerta é mostrado abaixo:
+
+image::../media/um_email_alert.gif[Uma captura de tela que mostra um exemplo de e-mail de alerta.]

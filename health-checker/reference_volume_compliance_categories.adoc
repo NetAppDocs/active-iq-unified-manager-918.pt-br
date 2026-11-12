@@ -1,0 +1,49 @@
+---
+permalink: health-checker/reference_volume_compliance_categories.html 
+sidebar: sidebar 
+keywords: volume, encryption, compliance, categories 
+summary: Esta tabela descreve os parâmetros de criptografia de volume que o Unified Manager avalia para determinar se os dados em seus volumes estão adequadamente protegidos contra o acesso de usuários não autorizados. 
+---
+= Entenda as categorias de conformidade de volume no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esta tabela descreve os parâmetros de criptografia de volume que o Unified Manager avalia para determinar se os dados em seus volumes estão adequadamente protegidos contra o acesso de usuários não autorizados.
+
+Observe que os parâmetros de criptografia do volume não afetam se o cluster ou a máquina virtual de armazenamento é considerado compatível.
+
+[cols="2*"]
+|===
+| Parâmetro | Descrição 
+
+
+ a| 
+Criptografado por software
+ a| 
+Exibe o número de volumes protegidos usando as soluções de criptografia por software NetApp Volume Encryption (NVE) ou NetApp Aggregate Encryption (NAE).
+
+
+
+ a| 
+Criptografado por hardware
+ a| 
+Exibe o número de volumes protegidos usando a criptografia de hardware NetApp Storage Encryption (NSE).
+
+
+
+ a| 
+Criptografia de software e hardware
+ a| 
+Exibe o número de volumes protegidos por criptografia de software e de hardware.
+
+
+
+ a| 
+Não criptografado
+ a| 
+Exibe o número de volumes que não estão criptografados.
+
+|===

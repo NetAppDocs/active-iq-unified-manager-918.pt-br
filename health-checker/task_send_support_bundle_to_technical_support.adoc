@@ -1,0 +1,27 @@
+---
+permalink: health-checker/task_send_support_bundle_to_technical_support.html 
+sidebar: sidebar 
+keywords: support bundle, technical support 
+summary: Quando um problema exigir informações mais detalhadas de diagnóstico e solução de problemas do que uma mensagem AutoSupport fornece, você pode enviar um pacote de suporte para o suporte técnico. 
+---
+= Envie um pacote de suporte para o suporte técnico a partir do Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando um problema exigir informações mais detalhadas de diagnóstico e solução de problemas do que uma mensagem AutoSupport fornece, você pode enviar um pacote de suporte para o suporte técnico.
+
+.Antes de começar
+Você precisa ter acesso ao pacote de suporte para enviá-lo ao suporte técnico.
+
+Você precisa ter um número de protocolo gerado por meio do site de suporte técnico.
+
+.Passos
+. Faça login no site de suporte da NetApp.
+. Carregue o arquivo.
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Miscellaneous/How_to_upload_a_file_to_NetApp["Como enviar um arquivo para a NetApp"]
+
+

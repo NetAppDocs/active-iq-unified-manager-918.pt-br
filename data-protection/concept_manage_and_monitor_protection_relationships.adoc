@@ -1,0 +1,28 @@
+---
+permalink: data-protection/concept_manage_and_monitor_protection_relationships.html 
+sidebar: sidebar 
+keywords: manage, monitor, protection, relationships 
+summary: O Active IQ Unified Manager permite que você crie relações de proteção, monitore e solucione problemas nas relações do SnapMirror e do SnapVault em clusters gerenciados, e restaure dados quando eles forem sobrescritos ou perdidos. 
+---
+= Saiba como gerenciar e monitorar relações de proteção no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Active IQ Unified Manager permite que você crie relações de proteção, monitore e solucione problemas nas relações do SnapMirror e do SnapVault em clusters gerenciados, e restaure dados quando eles forem sobrescritos ou perdidos.
+
+Para operações do SnapMirror, existem dois tipos de replicação:
+
+* Assíncrono
++
+A replicação do volume primário para o volume secundário é determinada por um cronograma.
+
+* Síncrono
++
+A replicação é realizada simultaneamente no volume primário e no volume secundário.
+
+
+
+Você pode executar até 10 tarefas de proteção simultaneamente sem impacto no desempenho. Pode haver alguma queda de desempenho ao executar entre 11 e 30 tarefas simultaneamente. Não é recomendável executar mais de 30 tarefas simultaneamente.

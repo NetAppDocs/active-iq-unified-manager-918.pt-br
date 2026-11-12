@@ -1,0 +1,69 @@
+---
+permalink: performance-checker/concept_cluster_components_and_why_they_can_be_in_contention.html 
+sidebar: sidebar 
+keywords: cluster, components, why, contention 
+summary: 'Você pode identificar problemas de desempenho no cluster quando um componente entra em contenção. O desempenho das cargas de trabalho que usam o componente diminui, e o tempo de resposta (latência) às solicitações do cliente aumenta, o que aciona um evento no Unified Manager.' 
+---
+= Compreenda os componentes do cluster e a contenção no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode identificar problemas de desempenho no cluster quando um componente entra em contenção. O desempenho das cargas de trabalho que usam o componente diminui, e o tempo de resposta (latência) às solicitações do cliente aumenta, o que aciona um evento no Unified Manager.
+
+Um componente que está em contenção não consegue operar em seu nível ideal. Seu desempenho diminuiu, e o desempenho de outros componentes e cargas de trabalho do cluster, chamados de _vítimas_, pode ter aumentado a latência. Para tirar um componente da contenção, é necessário reduzir sua carga de trabalho ou aumentar sua capacidade de lidar com mais trabalho, para que o desempenho retorne aos níveis normais. Como o Unified Manager coleta e analisa o desempenho da carga de trabalho em intervalos de cinco minutos, ele detecta apenas quando um componente do cluster é usado em excesso de forma consistente. Picos transitórios de uso excessivo que duram apenas um curto período dentro do intervalo de cinco minutos não são detectados.
+
+Por exemplo, um agregado de storage pode estar sob contenção porque uma ou mais cargas de trabalho nele estão competindo para que suas solicitações de E/S sejam atendidas. Outras cargas de trabalho no agregado podem ser afetadas, causando queda no desempenho. Para reduzir a quantidade de atividade no agregado, há diferentes medidas que você pode tomar, como mover uma ou mais cargas de trabalho para um agregado ou nó menos ocupado, para diminuir a demanda geral de carga de trabalho no agregado atual. Para um grupo de políticas de QoS, você pode ajustar o limite de taxa de transferência ou mover cargas de trabalho para um grupo de políticas diferente, para que as cargas de trabalho não sofram mais limitação.
+
+O Unified Manager monitora os seguintes componentes do cluster para alertar você quando eles estiverem em contenção:
+
+* *Rede*
++
+Representa o tempo de espera das solicitações de E/S pelos protocolos de rede externos no cluster. O tempo de espera é o tempo gasto aguardando a conclusão das transações "`transfer ready`" antes que o cluster possa responder a uma solicitação de E/S. Se o componente de rede estiver em contenção, isso significa que um alto tempo de espera na camada de protocolo está impactando a latência de uma ou mais cargas de trabalho.
+
+* *Processamento de rede*
++
+Representa o componente de software no cluster envolvido no processamento de E/S entre a camada de protocolo e o cluster. O nó responsável pelo processamento de rede pode ter mudado desde que o evento foi detectado. Se o componente de processamento de rede estiver em contenção, isso significa que a alta utilização no nó de processamento de rede está afetando a latência de uma ou mais cargas de trabalho.
+
++
+Ao usar um cluster All SAN Array em uma configuração ativo-ativo, o valor da latência de processamento de rede é exibido para ambos os nós, para que você possa verificar se os nós estão compartilhando a carga igualmente.
+
+* *Limite máximo de QoS*
++
+Representa a configuração de taxa de transferência máxima (pico) do grupo de políticas de Qualidade de Serviço (QoS) de storage atribuído à carga de trabalho. Se o componente do grupo de políticas estiver em contenção, isso significa que todas as cargas de trabalho no grupo de políticas têm a taxa limitada pelo limite de taxa de transferência definido, o que afeta a latência de uma ou mais dessas cargas de trabalho.
+
+* *Limite mínimo de QoS*
++
+Representa a latência para uma carga de trabalho causada pela configuração mínima (esperada) de taxa de transferência de QoS atribuída a outras cargas de trabalho. Se a configuração mínima de QoS em determinadas cargas de trabalho utilizar a maior parte da largura de banda para garantir a taxa de transferência prometida, outras cargas de trabalho terão sua largura de banda limitada e apresentarão maior latência.
+
+* *Interconexão de cluster*
++
+Representa os cabos e adaptadores com os quais os nós em cluster estão fisicamente conectados. Se o componente de interconexão de cluster estiver em disputa, isso significa que o alto tempo de espera para solicitações de E/S na interconexão de cluster está afetando a latência de uma ou mais cargas de trabalho.
+
+* *Data Processing*
++
+Representa o componente de software no cluster envolvido com o processamento de E/S entre o cluster e o agregado de storage que contém a carga de trabalho. O nó que lida com o processamento de dados pode ter mudado desde que o evento foi detectado. Se o componente de processamento de dados estiver em contenção, isso significa que a alta utilização no nó de processamento de dados está afetando a latência de uma ou mais cargas de trabalho.
+
+* *Ativação por Volume*
++
+Representa o processo que monitora o uso de todos os volumes ativos. Em ambientes de grande porte, com mais de 1000 volumes ativos, esse processo monitora quantos volumes críticos precisam acessar recursos por meio do nó simultaneamente. Quando o número de volumes ativos simultâneos excede o limite máximo recomendado, alguns dos volumes não críticos apresentarão latência conforme identificado aqui.
+
+* *MetroCluster Recursos*
++
+Representa os recursos do MetroCluster, incluindo NVRAM e links entre switches (ISLs), usados para espelhar dados entre clusters em uma configuração do MetroCluster. Se o componente do MetroCluster estiver em contenção, isso significa que uma alta taxa de transferência de gravação das cargas de trabalho no cluster local ou um problema na integridade do link está afetando a latência de uma ou mais cargas de trabalho no cluster local. Se o cluster não estiver em uma configuração do MetroCluster, este ícone não será exibido.
+
+* *Operações de agregado ou agregado SSD*
++
+Representa o agregado de storage no qual as cargas de trabalho estão em execução. Se o componente de agregado estiver em contenção, isso significa que a alta utilização no agregado está afetando a latência de uma ou mais cargas de trabalho. Um agregado consiste em todos os HDDs, ou em uma combinação de HDDs e SSDs (um agregado Flash Pool), ou em uma combinação de HDDs e uma camada de nuvem (um agregado FabricPool). Um "`SSD Aggregate`" consiste em todos os SSDs (um agregado all-flash), ou em uma combinação de SSDs e uma camada de nuvem (um agregado FabricPool).
+
+* *Latência na nuvem*
++
+Representa o componente de software no cluster envolvido no processamento de E/S entre o cluster e a camada de nuvem na qual os dados de usuário são armazenados. Se o componente de latência da nuvem estiver em contenção, isso significa que uma grande quantidade de leituras de volumes hospedados na camada de nuvem está afetando a latência de uma ou mais cargas de trabalho.
+
+* *Sincronização do SnapMirror*
++
+Representa o componente de software no cluster envolvido na replicação de dados de usuário do volume primário para o volume secundário em uma relação síncrona do SnapMirror. Se o componente de sincronização do SnapMirror estiver em contenção, isso significa que a atividade das operações síncronas do SnapMirror está afetando a latência de uma ou mais cargas de trabalho.
+
+

@@ -1,0 +1,62 @@
+---
+permalink: data-protection/reference_create_resource_pool_dialog_box.html 
+sidebar: sidebar 
+keywords: create, resource pool, dialog box 
+summary: Você pode usar a caixa de diálogo Criar Conjunto de Recursos para nomear e descrever um novo pool de recursos, bem como para adicionar agregados a esse pool de recursos e excluir agregados dele. 
+---
+= Utilize a caixa de diálogo Criar pool de recursos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a caixa de diálogo Criar Conjunto de Recursos para nomear e descrever um novo pool de recursos, bem como para adicionar agregados a esse pool de recursos e excluir agregados dele.
+
+
+
+[[resource-pool-name]]
+== Nome do pool de recursos
+
+As caixas de texto permitem adicionar as seguintes informações para criar um pool de recursos:
+
+Permite especificar um nome para o pool de recursos.
+
+
+
+[[description]]
+== Descrição
+
+Permite que você descreva um pool de recursos.
+
+
+
+[[members]]
+== Membros
+
+Exibe os membros do pool de recursos. Você também pode adicionar e excluir membros.
+
+
+
+[[command-buttons]]
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas:
+
+* *Adicionar*
++
+Abre a caixa de diálogo "Aggregates" para que você possa adicionar agregados de um cluster específico ao pool de recursos. Você pode adicionar agregados de clusters diferentes, mas os mesmos agregados não podem ser adicionados a mais de um pool de recursos.
+
+* *Remover*
++
+Permite remover agregados selecionados do pool de recursos.
+
+* *Criar*
++
+Cria o pool de recursos. Este botão só será habilitado depois que informações forem inseridas nos campos Nome do pool de recursos ou Descrição.
+
+* *Cancelar*
++
+Descarta as alterações e fecha a caixa de diálogo Create Resource Pool.
+
+

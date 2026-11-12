@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/task_view_performance_threshold_policies.html 
+sidebar: sidebar 
+keywords: view, performance, threshold, policies 
+summary: Você pode visualizar todas as políticas de limite de desempenho definidas atualmente na página Performance Thresholds. 
+---
+= Visualize as políticas de limite de desempenho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar todas as políticas de limite de desempenho definidas atualmente na página Performance Thresholds.
+
+A lista de políticas de limite é classificada em ordem alfabética pelo nome da política e inclui políticas para todos os tipos de objetos de armazenamento. Você pode clicar no cabeçalho de uma coluna para classificar as políticas por essa coluna. Se você estiver procurando uma política específica, use os mecanismos de filtro e pesquisa para refinar a lista de políticas de limite que aparecem na lista de inventário.
+
+Você pode passar o cursor sobre o Nome da Política e o nome da Condição para ver os detalhes de configuração da política. Além disso, você pode usar os botões fornecidos para criar, clonar, editar e excluir políticas de limite definidas pelo usuário.
+
+.Etapa
+. No painel de navegação esquerdo, selecione *Limiares de eventos* > *Desempenho*.
++
+A página Limites de desempenho é exibida.
+
+

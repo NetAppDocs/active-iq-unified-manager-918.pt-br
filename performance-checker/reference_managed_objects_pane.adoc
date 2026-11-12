@@ -1,0 +1,50 @@
+---
+permalink: performance-checker/reference_managed_objects_pane.html 
+sidebar: sidebar 
+keywords: managed, objects, pane 
+summary: O painel Objetos Gerenciados na guia Resumo de Desempenho fornece uma visão geral de alto nível dos tipos e das contagens de objetos de armazenamento do cluster. Este painel permite que você acompanhe o status dos objetos em cada cluster. 
+---
+= Analise o painel Objetos Gerenciados no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O painel Objetos Gerenciados na guia Resumo de Desempenho fornece uma visão geral de alto nível dos tipos e das contagens de objetos de armazenamento do cluster. Este painel permite que você acompanhe o status dos objetos em cada cluster.
+
+A contagem de objetos gerenciados é um dado de ponto no tempo referente ao último período de coleta. Novos objetos são descobertos em intervalos de 15 minutos.
+
+Ao clicar no número vinculado de qualquer tipo de objeto, você verá a página de inventário de desempenho desse tipo de objeto. A página de inventário de objetos é filtrada para mostrar apenas os objetos neste cluster.
+
+Os objetos gerenciados são:
+
+* *Nós*
++
+Um sistema físico em um cluster.
+
+* *Agregados*
++
+Um conjunto de múltiplos grupos de redundant array of independent disks (RAID) que podem ser gerenciados como uma única unidade para proteção e provisionamento.
+
+* *Portas*
++
+Um ponto de conexão física nos nós que é usado para se conectar a outros dispositivos em uma rede.
+
+* *VMs de armazenamento*
++
+Uma máquina virtual que fornece acesso à rede por meio de endereços de rede exclusivos. Uma SVM pode fornecer dados a partir de um namespace distinto e é administrável separadamente do restante do cluster.
+
+* *Volumes*
++
+Uma entidade lógica que mantém dados de usuário acessíveis por meio de um ou mais protocolos de acesso compatíveis. A contagem inclui volumes FlexVol e volumes FlexGroup; não inclui constituintes de FlexGroup.
+
+* *LUNs*
++
+O identificador de uma unidade lógica Fibre Channel (FC) ou de uma unidade lógica iSCSI. Uma unidade lógica normalmente corresponde a um volume de armazenamento e é representada em um sistema operacional como um dispositivo.
+
+* *Interfaces de rede*
++
+Uma interface de rede lógica que representa um ponto de acesso à rede para um nó. A contagem inclui todos os tipos de interface.
+
+

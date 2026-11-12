@@ -1,0 +1,28 @@
+---
+permalink: storage-mgmt/concept_how_discovery_process_works.html 
+sidebar: sidebar 
+keywords: cluster, discovery, process, works 
+summary: Depois de adicionar um cluster ao Unified Manager, o servidor descobre os objetos do cluster e os adiciona ao seu banco de dados. Compreender como funciona o processo de descoberta ajuda você a gerenciar os clusters da sua organização e seus respectivos objetos. 
+---
+= Aprenda como funciona o processo de descoberta de clusters no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de adicionar um cluster ao Unified Manager, o servidor descobre os objetos do cluster e os adiciona ao seu banco de dados. Compreender como funciona o processo de descoberta ajuda você a gerenciar os clusters da sua organização e seus respectivos objetos.
+
+O intervalo de monitoramento para coletar informações de configuração do cluster é de 15 minutos. Por exemplo, depois que você adiciona um cluster, leva 15 minutos para exibir os objetos do cluster na UI do Unified Manager. Esse intervalo de tempo também se aplica quando você faz alterações em um cluster. Por exemplo, se você adicionar dois novos volumes a uma SVM em um cluster, verá esses novos objetos na UI após o próximo intervalo de polling, que pode levar até 15 minutos.
+
+A imagem a seguir ilustra o processo de descoberta:
+
+image::../media/discovery_process_oc_6_0.gif[Como funciona o processo de descoberta]
+
+Após todos os objetos de um novo cluster serem descobertos, o Unified Manager começa a coletar dados históricos de desempenho dos 15 dias anteriores. Essas estatísticas são coletadas usando a funcionalidade de coleta de continuidade de dados. Esse recurso fornece a você mais de duas semanas de informações de desempenho de um cluster imediatamente após sua adição. Após a conclusão do ciclo de coleta de continuidade de dados, os dados de desempenho do cluster em tempo real são coletados, por padrão, a cada cinco minutos.
+
+[NOTE]
+====
+Como a coleta de 15 dias de dados de desempenho exige muito da CPU, é recomendável escalonar a adição de novos clusters para que as pesquisas de coleta de continuidade de dados não sejam executadas em muitos clusters ao mesmo tempo.
+
+====

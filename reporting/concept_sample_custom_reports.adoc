@@ -1,0 +1,22 @@
+---
+permalink: reporting/concept_sample_custom_reports.html 
+sidebar: sidebar 
+keywords: sample, custom, reports 
+summary: Esses exemplos de relatórios personalizados são comumente usados para ajudar você a identificar possíveis problemas e responder a possíveis questões antes que os problemas ocorram. 
+---
+= Entenda os exemplos de relatórios personalizados no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esses exemplos de relatórios personalizados são comumente usados para ajudar você a identificar possíveis problemas e responder a possíveis questões antes que os problemas ocorram.
+
+A lista de relatórios nesta seção não é exaustiva e será ampliada com o tempo. Você pode sugerir a inclusão de relatórios personalizados nesta seção, enviando seu feedback sobre a documentação.
+
+[NOTE]
+====
+Você precisa ter a função de Application Administrator ou Storage Administrator para gerenciar relatórios.
+
+====

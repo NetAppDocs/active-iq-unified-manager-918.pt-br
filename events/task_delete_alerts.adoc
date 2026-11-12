@@ -1,0 +1,23 @@
+---
+permalink: events/task_delete_alerts.html 
+sidebar: sidebar 
+keywords: delete, alerts 
+summary: Você pode excluir um alerta quando ele não for mais necessário. Por exemplo, você pode excluir um alerta criado para um recurso específico quando esse recurso não for mais monitorado pelo Unified Manager. 
+---
+= Excluir alertas no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode excluir um alerta quando ele não for mais necessário. Por exemplo, você pode excluir um alerta criado para um recurso específico quando esse recurso não for mais monitorado pelo Unified Manager.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator.
+
+.Passos
+. No painel de navegação à esquerda, clique em *Gerenciamento de armazenamento* > *Configuração de alertas*.
+. Na página *Configuração de alertas*, selecione os alertas que deseja excluir e clique em *Excluir*.
+. Clique em *Sim* para confirmar a solicitação de exclusão.
+

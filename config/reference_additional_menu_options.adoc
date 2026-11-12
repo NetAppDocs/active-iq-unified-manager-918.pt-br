@@ -1,0 +1,66 @@
+---
+permalink: config/reference_additional_menu_options.html 
+sidebar: sidebar 
+keywords: additional menu, options 
+summary: As opções de menu a seguir permitem que você execute diversas tarefas administrativas no servidor Unified Manager. 
+---
+= Saiba mais sobre as opções adicionais do menu do console de manutenção no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As opções de menu a seguir permitem que você execute diversas tarefas administrativas no servidor Unified Manager.
+
+As seguintes opções de menu estão disponíveis:
+
+* *Redefinir certificado do servidor*
++
+Regenera o certificado do servidor HTTPS.
+
++
+Você pode regenerar o certificado do servidor na GUI do Unified Manager clicando em *Geral* > *Certificados HTTPS* > *Regenerar certificado HTTPS*.
+
+* *Desativar a autenticação SAML*
++
+Desativa a autenticação SAML para que o provedor de identidade (IdP) não forneça mais autenticação de logon para os usuários que acessam a GUI do Unified Manager. Essa opção de console normalmente é usada quando um problema com o servidor IdP ou com a configuração SAML impede que os usuários acessem a GUI do Unified Manager.
+
+* *Fornecedor de dados externo*
++
+Oferece opções para conectar o Unified Manager a um provedor de dados externo. Após estabelecer a conexão, os dados de desempenho são enviados para um servidor externo para que especialistas em desempenho de storage possam gerar gráficos das métricas usando software de terceiro. As seguintes opções são exibidas:
+
++
+** *Exibir configuração do servidor*--Exibe as configurações atuais de conexão e de configuração de um provedor de dados externo.
+** *Adicionar / Modificar conexão com o servidor*--Permite inserir novas configurações de conexão para um provedor de dados externo ou alterar as configurações existentes.
+** *Modificar Configuração do Servidor* permite inserir novas configurações para um provedor de dados externo ou alterar as configurações existentes.
+** *Excluir conexão com o servidor*--Exclui a conexão com um provedor de dados externo.
++
+Após a exclusão da conexão, o Unified Manager perde a conexão com o servidor externo.
+
+
+
+* *Backup e Restauração*
++
+Para obter mais informações, consulte os tópicos em link:../health-checker/concept_manage_backup_and_restore_operations.html["Gerenciamento de operações de backup e restauração"].
+
+* *Configuração do intervalo de sondagem de desempenho*
++
+Oferece uma opção para configurar a frequência com que o Unified Manager coleta dados estatísticos de desempenho dos clusters. O intervalo de coleta padrão é de 5 minutos.
+
++
+Você pode alterar esse intervalo para 10 ou 15 minutos se perceber que as coletas de dados de clusters grandes não terminam no prazo.
+
+* *Visualizar/Alterar portas do aplicativo*
++
+Oferece uma opção para alterar as portas padrão que o Unified Manager usa para os protocolos HTTP e HTTPS, se necessário para a segurança. As portas padrão são 80 para HTTP e 443 para HTTPS.
+
+* *Controlar o acesso à porta 3306 do MySQL*
++
+Controla o acesso do host à porta padrão do MySQL 3306. Por motivos de segurança, o acesso por meio dessa porta é restrito apenas ao localhost durante uma nova instalação do Unified Manager em sistemas Linux, Windows e VMware vSphere. Esta opção permite alternar a visibilidade dessa porta entre o localhost e hosts remotos, ou seja, se ela estiver habilitada apenas para localhost em seu ambiente, você poderá disponibilizar essa porta também para hosts remotos. Como alternativa, quando ela estiver habilitada para todos os hosts, você poderá restringir o acesso a essa porta apenas ao localhost. Se o acesso tiver sido habilitado anteriormente em hosts remotos, a configuração será mantida em um cenário de upgrade. Você deve verificar as configurações do firewall em sistemas Windows após alternar a visibilidade da porta e desabilitar as configurações do firewall se elas estiverem configuradas para restringir o acesso à porta 3306 do MySQL.
+
+* *Sair*
++
+Sai do menu do console de manutenção.
+
+

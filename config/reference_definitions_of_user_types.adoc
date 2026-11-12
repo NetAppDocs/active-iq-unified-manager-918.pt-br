@@ -1,0 +1,38 @@
+---
+permalink: config/reference_definitions_of_user_types.html 
+sidebar: sidebar 
+keywords: definitions, user types 
+summary: Um tipo de usuário especifica o tipo de conta que o usuário possui e inclui usuários remotos, grupos remotos, usuários locais, usuários de banco de dados e usuários de manutenção. Cada um desses tipos tem sua própria função, que é atribuída por um usuário com a função de Administrator. 
+---
+= Saiba mais sobre os tipos de usuários no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um tipo de usuário especifica o tipo de conta que o usuário possui e inclui usuários remotos, grupos remotos, usuários locais, usuários de banco de dados e usuários de manutenção. Cada um desses tipos tem sua própria função, que é atribuída por um usuário com a função de Administrator.
+
+Os tipos de usuários do Unified Manager são os seguintes:
+
+* *Usuário de manutenção*
++
+Criado durante a configuração inicial do Unified Manager. O usuário de manutenção cria outros usuários e atribui funções. O usuário de manutenção também é o único usuário com acesso ao console de manutenção. Quando o Unified Manager é instalado em um sistema Red Hat Enterprise Linux, o usuário de manutenção recebe o nome de usuário "`umadmin.`"
+
+* *Usuário local*
++
+Acessa a interface de usuário do Unified Manager e executa funções com base na função atribuída pelo usuário de manutenção ou por um usuário com a função Application Administrator.
+
+* *Grupo remoto*
++
+Um grupo de usuários que acessa a interface do usuário do Unified Manager usando as credenciais armazenadas no servidor de autenticação. O nome dessa conta deve corresponder ao nome de um grupo armazenado no servidor de autenticação. Todos os usuários do grupo remoto recebem acesso à interface do usuário do Unified Manager usando suas credenciais individuais de usuário. Os grupos remotos podem executar funções de acordo com os papéis atribuídos.
+
+* *Usuário remoto*
++
+Acessa a interface do Unified Manager usando as credenciais armazenadas no servidor de autenticação. Um usuário remoto executa funções com base na função atribuída pelo usuário de manutenção ou por um usuário com a função Application Administrator.
+
+* *Usuário do banco de dados*
++
+Possui acesso somente leitura aos dados no banco de dados do Unified Manager, não tem acesso à interface da web do Unified Manager nem ao console de manutenção e não pode executar chamadas de API.
+
+

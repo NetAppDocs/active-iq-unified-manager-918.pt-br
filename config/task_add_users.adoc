@@ -1,0 +1,35 @@
+---
+permalink: config/task_add_users.html 
+sidebar: sidebar 
+keywords: add, users 
+summary: Você pode adicionar usuários locais ou usuários de banco de dados usando a página Usuários. Também é possível adicionar usuários remotos ou grupos que pertencem a um servidor de autenticação. Você pode atribuir funções a esses usuários e, com base nos privilégios dessas funções, os usuários podem gerenciar os objetos de armazenamento e os dados com Unified Manager ou visualizar os dados em um banco de dados. 
+---
+= Adicionar usuários no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode adicionar usuários locais ou usuários de banco de dados usando a página Usuários. Também é possível adicionar usuários remotos ou grupos que pertencem a um servidor de autenticação. Você pode atribuir funções a esses usuários e, com base nos privilégios dessas funções, os usuários podem gerenciar os objetos de armazenamento e os dados com Unified Manager ou visualizar os dados em um banco de dados.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator.
+* Para adicionar um usuário ou grupo remoto, você precisa ter habilitado a autenticação remota e configurado seu servidor de autenticação.
+* Se você planeja configurar a autenticação SAML para que um provedor de identidade (IdP) autentique os usuários que acessam a interface gráfica, certifique-se de que esses usuários sejam definidos como usuários "`remote`".
++
+O acesso à interface do usuário não é permitido para usuários do tipo "`local`" ou "`maintenance`" quando a autenticação SAML está habilitada.
+
+
+
+Se você adicionar um grupo do Active Directory do Windows, todos os membros diretos e subgrupos aninhados poderão se autenticar no Unified Manager, a menos que os subgrupos aninhados estejam desativados. Se você adicionar um grupo do OpenLDAP ou de outros serviços de autenticação, somente os membros diretos desse grupo poderão se autenticar no Unified Manager.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Geral* > *Usuários*.
+. Na página Users, clique em *Add*.
+. Na caixa de diálogo Add User, selecione o tipo de usuário que você deseja adicionar e insira as informações necessárias.
++
+Ao inserir as informações de usuário necessárias, você deve especificar um endereço de e-mail exclusivo para esse usuário. Evite especificar endereços de e-mail compartilhados por vários usuários.
+
+. Clique em *Add*.
+

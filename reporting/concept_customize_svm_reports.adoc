@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_svm_reports.html 
+sidebar: sidebar 
+keywords: customize, storage, vm reports 
+summary: 'Você pode criar relatórios de máquinas virtuais de storage (SVMs) para analisar informações de volume e visualizar a integridade geral e a disponibilidade de storage. Por exemplo, você pode criar relatórios para exibir as SVMs que atingiram a contagem máxima de volume e para analisar as SVMs interrompidas.' 
+---
+= Personalize os relatórios de máquinas virtuais de armazenamento no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar relatórios de máquinas virtuais de storage (SVMs) para analisar informações de volume e visualizar a integridade geral e a disponibilidade de storage. Por exemplo, você pode criar relatórios para exibir as SVMs que atingiram a contagem máxima de volume e para analisar as SVMs interrompidas.

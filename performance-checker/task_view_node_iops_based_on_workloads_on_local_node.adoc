@@ -1,0 +1,33 @@
+---
+permalink: performance-checker/task_view_node_iops_based_on_workloads_on_local_node.html 
+sidebar: sidebar 
+keywords: view, node, iops, workloads, reside, only, local node 
+summary: 'O gráfico do contador de IOPS do nó pode destacar onde as operações passam apenas pelo nó local usando uma LIF de rede para executar operações de leitura/gravação em volumes em um nó remoto. Os gráficos de IOPS - "Total (Local)" e "Detalhamento (Local)" exibem o IOPS para dados que residem apenas em volumes locais no nó atual.' 
+---
+= Visualize as IOPS do nó com base nas cargas de trabalho locais no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O gráfico do contador de IOPS do nó pode destacar onde as operações estão apenas passando pelo nó local usando uma LIF de rede para executar operações de leitura/gravação em volumes em um nó remoto. Os gráficos de IOPS, "`Total (Local)`" e "`Breakdown (Local)`", exibem os IOPS de dados que residem apenas em volumes locais no nó atual.
+
+As versões "`Local`" desses gráficos de contadores são semelhantes aos gráficos de nós de capacidade de desempenho e utilização, pois também mostram apenas as estatísticas dos dados que residem em volumes locais.
+
+Ao comparar as versões "`Local`" desses gráficos de contador com as versões regulares "`Total`" desses gráficos de contador, você pode ver se há muito tráfego passando pelo nó local para acessar volumes no nó remoto. Essa situação pode causar problemas de desempenho, possivelmente indicados por alta utilização no nó, caso haja muitas operações passando pelo nó local para alcançar um volume em um nó remoto. Nesses casos, talvez você queira mover um volume para o nó local ou criar uma LIF no nó remoto à qual o tráfego dos hosts que acessam esse volume possa se conectar.
+
+.Passos
+. Na página *Performance/Node Explorer* do nó selecionado, no gráfico de IOPS, selecione *Total* no menu suspenso.
++
+O gráfico IOPS - Total é exibido.
+
+. Clique em *Visualização ampliada* para exibir uma versão maior do gráfico em uma nova aba do navegador.
+. De volta à página *Performance/Node Explorer*, no gráfico de IOPS, selecione *Total (Local)* no menu suspenso.
++
+O gráfico IOPS - Total (Local) é exibido.
+
+. Clique em *Visualização ampliada* para exibir uma versão maior do gráfico em uma nova aba do navegador.
+. Visualize os dois gráficos lado a lado e identifique as áreas em que os valores de IOPS parecem ser bastante diferentes.
+. Mova o cursor sobre essas áreas para comparar o IOPS local e total em um ponto específico no tempo.
+

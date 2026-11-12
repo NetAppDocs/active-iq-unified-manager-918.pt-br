@@ -1,0 +1,55 @@
+---
+permalink: data-protection/reference_browse_directories_dialog_box.html 
+sidebar: sidebar 
+keywords: browse, directories, dialog box 
+summary: Você pode usar a caixa de diálogo Procurar Diretórios quando quiser restaurar dados para um diretório em um cluster e SVM diferente da origem original. O cluster de origem e o volume de origem originais são selecionados por padrão. 
+---
+= Utilize a caixa de diálogo Procurar diretórios no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a caixa de diálogo Procurar Diretórios quando quiser restaurar dados para um diretório em um cluster e SVM diferente da origem original. O cluster de origem e o volume de origem originais são selecionados por padrão.
+
+A caixa de diálogo Procurar diretórios permite selecionar o cluster, SVM, volume e caminho do diretório para o qual você deseja restaurar os dados.
+
+* *Cluster*
++
+Lista os destinos de cluster disponíveis para os quais você pode restaurar. Por padrão, o cluster do volume de origem original é selecionado.
+
+* *Lista suspensa de SVM*
++
+Lista as SVMs disponíveis para o cluster selecionado. Por padrão, a SVM do volume de origem original é selecionada.
+
+* *Volume*
++
+Lista todos os volumes de leitura/gravação em uma SVM selecionada. Você pode filtrar os volumes por nome e por espaço disponível. O volume com mais espaço é listado primeiro e assim por diante, em ordem decrescente. Por padrão, o volume de origem original é selecionado.
+
+* *Caixa de texto com o caminho do arquivo*
++
+Permite que você digite o caminho do arquivo para o qual deseja restaurar os dados. O caminho inserido deve já existir.
+
+* *Nome*
++
+Exibe os nomes das pastas disponíveis no volume selecionado. Clicar em uma pasta na lista Nome exibe as subpastas, se houver. Os arquivos contidos nas pastas não são exibidos. Clicar em image:../media/icon_upfolder.gif["ícone de pasta superior"] após selecionar uma pasta move você um nível acima na estrutura de diretórios.
+
+
+
+
+
+[[command-buttons]]
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas:
+
+* *Selecionar diretório*
++
+Aplica suas seleções e fecha a caixa de diálogo Procurar diretórios. Se nenhum diretório estiver selecionado, este botão fica desativado.
+
+* *Cancelar*
++
+Descarta suas seleções e fecha a caixa de diálogo Browse Directories.
+
+

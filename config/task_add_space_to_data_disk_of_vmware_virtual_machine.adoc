@@ -1,0 +1,33 @@
+---
+permalink: config/task_add_space_to_data_disk_of_vmware_virtual_machine.html 
+sidebar: sidebar 
+keywords: add, space, data, disk, vmware, virtual, machine 
+summary: Se você precisar aumentar a quantidade de espaço no disco de dados para o banco de dados do Unified Manager, poderá adicionar capacidade após a instalação aumentando o espaço de disco por meio do console de manutenção do Unified Manager. 
+---
+= Adicione espaço ao disco de dados em uma máquina virtual no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você precisar aumentar a quantidade de espaço no disco de dados para o banco de dados do Unified Manager, poderá adicionar capacidade após a instalação aumentando o espaço de disco por meio do console de manutenção do Unified Manager.
+
+.Antes de começar
+* Você precisa ter acesso ao vSphere Client.
+* A máquina virtual não deve ter nenhum snapshot armazenado localmente.
+* Você precisa ter as credenciais do usuário de manutenção.
+
+
+Recomendamos que você faça um backup da sua máquina virtual antes de aumentar o tamanho dos discos virtuais.
+
+.Passos
+. No cliente vSphere, selecione a máquina virtual do Unified Manager e, em seguida, adicione mais capacidade de disco aos dados `disk 3`. Consulte a documentação da VMware para obter detalhes.
++
+Em alguns casos raros, a implantação do Unified Manager usa "`Hard Disk 2`" para o disco de dados em vez de "`Hard Disk 3`". Se isso ocorreu na sua implantação, aumente o espaço do disco que for maior. O disco de dados sempre terá mais espaço do que o outro disco.
+
+. No cliente vSphere, selecione a máquina virtual do Unified Manager e, em seguida, selecione a guia *Console*.
+. Clique na janela do console e, em seguida, faça login no console de manutenção usando seu nome de usuário e senha.
+. No menu principal, digite o número da opção *Configuração do sistema*.
+. No menu de configuração do sistema, insira o número da opção *Aumentar o tamanho do disco de dados*.
+

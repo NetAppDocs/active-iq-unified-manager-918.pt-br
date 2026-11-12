@@ -1,0 +1,43 @@
+---
+permalink: events/reference_description_of_event_impact_areas.html 
+sidebar: sidebar 
+keywords: description, event, impact, areas 
+summary: 'Os eventos são categorizados em seis áreas de impacto (disponibilidade, capacidade, configuração, desempenho, proteção e segurança) para permitir que você se concentre nos tipos de eventos pelos quais é responsável.' 
+---
+= Saiba mais sobre as áreas de impacto de eventos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos são categorizados em seis áreas de impacto (disponibilidade, capacidade, configuração, desempenho, proteção e segurança) para permitir que você se concentre nos tipos de eventos pelos quais é responsável.
+
+* *Disponibilidade*
++
+Os eventos de disponibilidade notificam você se um objeto de storage ficar offline, se um serviço de protocolo falhar, se ocorrer um problema com o failover de storage ou se ocorrer um problema com o hardware.
+
+* *Capacidade*
++
+Os eventos de capacidade notificam você se seus agregados, volumes, LUNs ou namespaces estão se aproximando ou já atingiram um limite de tamanho, ou se a taxa de crescimento é incomum para o seu ambiente.
+
+* *Configuração*
++
+Os eventos de configuração informam você sobre a descoberta, exclusão, adição, remoção ou renomeação dos seus objetos de storage. Os eventos de configuração têm um nível de impacto "Evento" e um tipo de gravidade "Informação".
+
+* *Desempenho*
++
+Os eventos de desempenho notificam você sobre condições de recursos, configuração ou atividade em seu cluster que podem afetar negativamente a velocidade de entrada ou recuperação de dados no storage em seus objetos de armazenamento monitorados.
+
+* *Proteção*
++
+Os eventos de proteção notificam você sobre incidentes ou riscos envolvendo relacionamentos do SnapMirror, problemas com a capacidade de destino, problemas com relacionamentos do SnapVault ou problemas com tarefas de proteção. Qualquer objeto do ONTAP, especialmente agregados, volumes e SVMs, que hospede volumes secundários e relacionamentos de proteção é categorizado na área de impacto da proteção.
+
+* *Segurança*
++
+Os eventos de segurança notificam você sobre o nível de segurança dos seus clusters do ONTAP, máquinas virtuais de storage (SVMs) e volumes, com base nos parâmetros definidos no https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["NetApp Guia de Reforço de Segurança para o ONTAP 9"^].
+
++
+Além disso, esta área inclui eventos de atualização relatados pela plataforma Active IQ.
+
+

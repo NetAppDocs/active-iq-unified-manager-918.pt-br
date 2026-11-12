@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_understand_root_object.html 
+sidebar: sidebar 
+keywords: understand, root, object 
+summary: O objeto raiz serve como base de comparação para outros objetos. Isso permite visualizar e comparar os dados de outros objetos com o objeto raiz, fornecendo análises de desempenho que auxiliam na solução de problemas e na melhoria do desempenho dos objetos. 
+---
+= Utilize objetos raiz para monitoramento de desempenho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O objeto raiz serve como base de comparação para outros objetos. Isso permite visualizar e comparar os dados de outros objetos com o objeto raiz, fornecendo análises de desempenho que auxiliam na solução de problemas e na melhoria do desempenho dos objetos.
+
+O nome do objeto raiz é exibido na parte superior do painel Comparação. Os objetos adicionais são exibidos abaixo do objeto raiz. Embora não haja limite para o número de objetos adicionais que você pode adicionar ao painel Comparação, apenas um objeto raiz é permitido. Os dados do objeto raiz são exibidos automaticamente nos gráficos do painel Gráficos de Contador.
+
+Não é possível alterar o objeto raiz; ele é sempre definido como a página do objeto que você está visualizando. Por exemplo, se você abrir a página do Volume Performance Explorer de Volume1, então Volume1 é o objeto raiz e não pode ser alterado. Se você quiser comparar com um objeto raiz diferente, deverá clicar no link de um objeto e abrir sua página inicial.
+
+[NOTE]
+====
+Eventos e limiares são exibidos apenas para objetos raiz.
+
+====

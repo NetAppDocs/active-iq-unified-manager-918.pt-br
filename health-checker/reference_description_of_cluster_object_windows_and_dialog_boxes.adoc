@@ -1,0 +1,22 @@
+---
+permalink: health-checker/reference_description_of_cluster_object_windows_and_dialog_boxes.html 
+sidebar: sidebar 
+keywords: description, cluster, object, windows, dialog boxes 
+summary: Você pode visualizar todos os seus clusters e objetos de cluster na página do respectivo objeto de armazenamento. Você também pode visualizar os detalhes na página de detalhes do objeto de armazenamento correspondente. Agora você pode iniciar a interface de usuário do System Manager nas seguintes seções ARMAZENAMENTO e PROTEÇÃO do INVENTÁRIO. 
+---
+= Compreenda as janelas e caixas de diálogo de objetos de cluster no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar todos os seus clusters e objetos de cluster na página do respectivo objeto de armazenamento. Você também pode visualizar os detalhes na página de detalhes do objeto de armazenamento correspondente. Agora você pode iniciar a interface de usuário do System Manager nas seguintes seções ARMAZENAMENTO e PROTEÇÃO do INVENTÁRIO.
+
+* Páginas de inventário, saúde e desempenho do cluster
+* Páginas de inventário, integridade e desempenho do agregado
+* Páginas de Inventário de volume, Integridade do volume e Desempenho do volume
+* Páginas de inventário de nós e desempenho de nós
+* Páginas de Inventário do StorageVM, Integridade do StorageVM e Desempenho do StorageVM
+* Páginas de relacionamento de proteção
+

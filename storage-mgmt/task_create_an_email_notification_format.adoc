@@ -1,0 +1,26 @@
+---
+permalink: storage-mgmt/task_create_an_email_notification_format.html 
+sidebar: sidebar 
+keywords: create, email, notification, format, user, group, quotas 
+summary: 'Você pode criar um formato de notificação para os e-mails enviados a um usuário ou grupo de usuários quando houver um problema relacionado à cota (limite flexível ultrapassado ou limite rígido atingido).' 
+---
+= Crie um formato de notificação por e-mail para cotas de usuários e grupos de usuários no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar um formato de notificação para os e-mails enviados a um usuário ou grupo de usuários quando houver um problema relacionado à cota (limite flexível ultrapassado ou limite rígido atingido).
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+.Passos
+. No painel de navegação à esquerda, clique em *Geral* > *Formato de e-mail de cota*.
+. Insira ou modifique os detalhes nos campos *De*, *Assunto* e *Detalhes do e-mail*.
+. Clique em *Visualizar* para ver uma prévia da notificação por e-mail.
+. Clique em *Fechar* para fechar a janela de pré-visualização.
+. Modifique o conteúdo da notificação por e-mail, se necessário.
+. Clique em *Salvar*.
+

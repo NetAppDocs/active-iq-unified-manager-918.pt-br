@@ -1,0 +1,28 @@
+---
+permalink: storage-mgmt/concept_introduction_to_unified_manager_performance_monitoring.html 
+sidebar: sidebar 
+keywords: introduction, active iq unified manager, performance, monitoring 
+summary: 'O Active IQ Unified Manager (anteriormente OnCommand Unified Manager) oferece recursos de monitoramento de desempenho e análise da causa raiz de eventos para sistemas que executam o software NetApp ONTAP.' 
+---
+= Saiba mais sobre monitoramento de desempenho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Active IQ Unified Manager (anteriormente OnCommand Unified Manager) oferece recursos de monitoramento de desempenho e análise da causa raiz de eventos para sistemas que executam o software NetApp ONTAP.
+
+O Unified Manager ajuda você a identificar cargas de trabalho que estão sobrecarregando os componentes do cluster e diminuindo o desempenho de outras cargas de trabalho no cluster. Ao definir políticas de limite de desempenho, você também pode especificar valores máximos para determinados contadores de desempenho, para que eventos sejam gerados quando o limite for ultrapassado. O Unified Manager alerta você sobre esses eventos de desempenho para que você possa tomar medidas corretivas e trazer o desempenho de volta aos níveis normais de operação. Você pode visualizar e analisar eventos na interface do usuário do Unified Manager.
+
+O Unified Manager monitora o desempenho de dois tipos de cargas de trabalho:
+
+* Cargas de trabalho definidas pelo usuário
++
+Essas cargas de trabalho consistem em volumes FlexVol e volumes FlexGroup que você criou em seu cluster.
+
+* Cargas de trabalho definidas pelo sistema
++
+Essas cargas de trabalho consistem em atividades internas do sistema.
+
+

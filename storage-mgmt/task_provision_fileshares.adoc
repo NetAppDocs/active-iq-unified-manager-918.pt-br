@@ -1,0 +1,61 @@
+---
+permalink: storage-mgmt/task_provision_fileshares.html 
+sidebar: sidebar 
+keywords: provision, file, share, volumes 
+summary: 'Você pode criar volumes de compartilhamento de arquivos que oferecem suporte aos protocolos CIFS/SMB e NFS em um cluster existente e em uma máquina virtual de storage (storage VM) na página Provision Workload.' 
+---
+= Provisione volumes de compartilhamento de arquivos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar volumes de compartilhamento de arquivos que oferecem suporte aos protocolos CIFS/SMB e NFS em um cluster existente e em uma máquina virtual de storage (storage VM) na página Provision Workload.
+
+.Antes de começar
+* A VM de storage deve ter espaço para provisionar o volume de compartilhamento de arquivos.
+* Um ou ambos os serviços SMB e NFS devem estar habilitados na sua máquina virtual de storage.
+* Para selecionar e atribuir o Nível de Serviço de Desempenho (PSL) e a Política de Eficiência de Storage (SEP) à carga de trabalho, as políticas devem ter sido criadas antes de você começar a criar a carga de trabalho.
+
+
+.Passos
+. Na página *Provisionar carga de trabalho*, adicione o nome da carga de trabalho que você deseja criar e, em seguida, selecione o cluster na lista disponível.
+. Com base no cluster que você selecionou, o campo *VM de storage* filtra as VMs de storage disponíveis para esse cluster. Selecione a VM de storage necessária na lista.
++
+Com base nos serviços SMB e NFS compatíveis na máquina virtual de storage, a opção NAS é ativada na seção Informações do host.
+
+. Na seção Armazenamento e Otimização, atribua a capacidade de storage e o PSL e, opcionalmente, um SEP para a carga de trabalho.
++
+As especificações do SEP são atribuídas ao LUN e as definições do PSL são aplicadas à carga de trabalho quando ela é criada.
+
+. Selecione a caixa de seleção *Impor limites de desempenho* se você quiser impor o PSL que atribuiu à carga de trabalho.
++
+Atribuir um PSL a uma carga de trabalho garante que o agregado no qual a carga de trabalho é criada possa suportar os objetivos de desempenho e capacidade definidos na respectiva política. Por exemplo, se uma carga de trabalho tiver o PSL "Extreme Performance" atribuído, o agregado no qual a carga de trabalho será provisionada deverá ter a capacidade de suportar os objetivos de desempenho e capacidade da política "Extreme Performance", como armazenamento SSD.
+
++
+[NOTE]
+====
+A menos que você selecione esta caixa de seleção, o PSL não se aplica à carga de trabalho, e o status da carga de trabalho no painel aparece como não atribuída.
+
+====
+. Selecione a opção *NAS*.
++
+Se você não vir a opção *NAS* habilitada, verifique se a VM de storage selecionada oferece suporte a SMB ou NFS, ou a ambos.
+
++
+[NOTE]
+====
+Se a sua máquina virtual de storage estiver habilitada para os serviços SMB e NFS, você poderá selecionar as caixas de seleção *Share by NFS* e *Share by SMB* e criar um compartilhamento de arquivos que ofereça suporte aos protocolos NFS e SMB. Se você quiser criar um compartilhamento SMB ou CIFS, selecione apenas a respectiva caixa de seleção.
+
+====
+. Para volumes de compartilhamento de arquivos NFS, especifique o endereço IP do host ou da rede para acessar o volume de compartilhamento de arquivos. Você pode inserir valores separados por vírgula para vários hosts.
++
+Ao adicionar o endereço IP do host, uma verificação interna é executada para corresponder os detalhes do host com a VM de storage, e a política de exportação para esse host é criada ou, caso já exista uma política, ela é reutilizada. Se vários compartilhamentos NFS forem criados para o mesmo host, uma política de exportação disponível para esse host com regras correspondentes será reutilizada para todos os compartilhamentos de arquivos. A função de especificar regras de políticas individuais ou reutilizar políticas fornecendo chaves de política específicas está disponível quando você provisiona o compartilhamento NFS usando APIs.
+
+. Para um compartilhamento SMB, especifique quais usuários ou grupos de usuários podem acessar o compartilhamento SMB e atribua as permissões necessárias. Para cada grupo de usuários, uma nova lista de controle de acesso (ACL) é gerada durante a criação do compartilhamento de arquivos.
+. Clique em *Salvar*.
++
+A carga de trabalho é adicionada à lista de cargas de trabalho de storage.
+
+

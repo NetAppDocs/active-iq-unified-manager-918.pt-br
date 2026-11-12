@@ -1,0 +1,46 @@
+---
+permalink: performance-checker/task_use_perf_capacity_used_breakdown_chart_for_failover_planning.html 
+sidebar: sidebar 
+keywords: performance, capacity, used, breakdown, chart, failover, planning 
+summary: O gráfico detalhado de detalhamento da capacidade de desempenho usada mostra a capacidade de desempenho usada pelo nó primário e pelo nó parceiro. Ele também mostra a quantidade de capacidade de desempenho livre no nó de takeover estimado. Essas informações ajudam você a determinar se poderá haver um problema de desempenho caso o nó parceiro falhe. 
+---
+= Utilize o gráfico de detalhamento da capacidade de desempenho utilizada para o planejamento de failover no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O gráfico detalhado de detalhamento da capacidade de desempenho usada mostra a capacidade de desempenho usada pelo nó primário e pelo nó parceiro. Ele também mostra a quantidade de capacidade de desempenho livre no nó de takeover estimado. Essas informações ajudam você a determinar se poderá haver um problema de desempenho caso o nó parceiro falhe.
+
+Além de mostrar a capacidade de desempenho total utilizada pelos nós, o gráfico de detalhamento divide os valores de cada nó em protocolos de usuário e processos em segundo plano.
+
+* Os protocolos de usuário são as operações de entrada/saída (I/O) de aplicativos do usuário de e para o cluster.
+* Os processos em segundo plano são os processos internos do sistema envolvidos na eficiência de storage, na replicação de dados e na saúde do sistema.
+
+
+Esse nível adicional de detalhamento permite que você determine se um problema de desempenho é causado pela atividade de aplicativos do usuário ou por processos do sistema em segundo plano, como deduplicação, reconstrução de RAID, limpeza de disco e cópias do SnapMirror.
+
+.Passos
+. Acesse a página *Desempenho/Planejamento de failover de nó* do nó que servirá como o nó de takeover estimado.
+. No seletor *Intervalo de Tempo*, escolha o período para o qual as estatísticas históricas são exibidas na grade de contadores e nos gráficos de contadores.
++
+São exibidos os gráficos de contadores com estatísticas do nó Primary, do nó Partner e do nó Estimated Takeover.
+
+. Na lista *Escolher gráficos*, selecione *Desemp. Capacidade usada*.
+. No gráfico *Desempenho da Capacidade Utilizada *, selecione *Detalhamento* e clique em *Visualização Ampliada*.
++
+O gráfico detalhado da capacidade de desempenho Usada é exibido.
+
++
+image::../media/headroom_advanced_zoom_chart.gif[Uma captura de tela que mostra o gráfico detalhado de desempenho. Capacidade usada.]
+
+. Mova o cursor sobre o gráfico detalhado para visualizar as informações sobre a capacidade de desempenho utilizada na janela pop-up.
++
+A porcentagem de capacidade livre de des Empenho é a capacidade de desempenho disponível no nó de takeover estimado. Ela indica quanta capacidade de desempenho resta no nó de takeover após um failover. Se for 0%, um failover fará com que a latência aumente para um nível inaceitável no nó de takeover.
+
+. Considere tomar medidas corretivas para evitar uma baixa porcentagem de capacidade de desempenho livre.
++
+Se você planeja iniciar um failover para manutenção do nó, escolha um momento para fazer failover do nó parceiro quando a porcentagem de capacidade de desempenho livre não estiver em 0.
+
+

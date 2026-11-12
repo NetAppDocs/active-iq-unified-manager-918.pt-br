@@ -1,0 +1,30 @@
+---
+permalink: storage-mgmt/concept_overview_of_quota_process_um_6_1.html 
+sidebar: sidebar 
+keywords: overview, quota, process 
+summary: As quotas podem ser flexíveis ou rígidas. As quotas flexíveis fazem com que ONTAP envie uma notificação quando os limites especificados forem excedidos, enquanto as quotas rígidas impedem que uma operação de gravação seja concluída com sucesso quando os limites especificados forem excedidos. 
+---
+= Saiba mais sobre o processo de cotas do Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As quotas podem ser flexíveis ou rígidas. As quotas flexíveis fazem com que ONTAP envie uma notificação quando os limites especificados forem excedidos, enquanto as quotas rígidas impedem que uma operação de gravação seja concluída com sucesso quando os limites especificados forem excedidos.
+
+Quando o ONTAP recebe uma solicitação de um usuário ou grupo de usuários para gravar em um FlexVol volume, ele verifica se as cotas estão ativadas nesse volume para o usuário ou grupo de usuários e determina o seguinte:
+
+* Se o limite rígido será atingido
++
+Caso afirmativo, a operação de gravação falha quando o limite rígido é atingido e a notificação de cota rígida é enviada.
+
+* Se o limite flexível será ultrapassado
++
+Em caso afirmativo, a operação de gravação é bem-sucedida quando o limite flexível é ultrapassado e a notificação de cota flexível é enviada.
+
+* Se uma operação de gravação não excederá o limite flexível
++
+Se sim, a operação de gravação é concluída com êxito e nenhuma notificação é enviada.
+
+

@@ -1,0 +1,16 @@
+---
+permalink: install-vapp/concept_overview_of_deployment_process.html 
+sidebar: sidebar 
+keywords: overview, deployment, process 
+summary: O fluxo de trabalho de implantação descreve as tarefas que você deve executar antes de poder usar o Unified Manager. 
+---
+= Saiba mais sobre o processo de implantação do Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O fluxo de trabalho de implantação descreve as tarefas que você deve executar antes de poder usar o Unified Manager.
+
+image::../media/deployment_sequence_oc_6_0.gif[Um diagrama que mostra os pré-requisitos de implantação do Unified Manager, a implantação do appliance e as etapas de configuração inicial]

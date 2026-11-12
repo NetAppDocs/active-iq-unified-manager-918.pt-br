@@ -1,0 +1,24 @@
+---
+permalink: events/task_view_alerts.html 
+sidebar: sidebar 
+keywords: view, alerts 
+summary: Na página Configuração de Alertas, você pode visualizar a lista de alertas criada para vários eventos. Você também pode visualizar as propriedades dos alertas, como a descrição do alerta, o método e a frequência de notificação, os eventos que acionam o alerta, os destinatários de e-mail dos alertas e os recursos afetados, como clusters, agregados e volumes. 
+---
+= Visualize os alertas no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Na página Configuração de Alertas, você pode visualizar a lista de alertas criada para vários eventos. Você também pode visualizar as propriedades dos alertas, como a descrição do alerta, o método e a frequência de notificação, os eventos que acionam o alerta, os destinatários de e-mail dos alertas e os recursos afetados, como clusters, agregados e volumes.
+
+.Antes de começar
+Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+
+.Etapa
+. No painel de navegação à esquerda, clique em *Gerenciamento de armazenamento* > *Configuração de alertas*.
++
+A lista de alertas é exibida na página de Configuração de Alertas.
+
+

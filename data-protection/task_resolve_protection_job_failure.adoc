@@ -1,0 +1,36 @@
+---
+permalink: data-protection/task_resolve_protection_job_failure.html 
+sidebar: sidebar 
+keywords: resolve, protection, job failure 
+summary: Este fluxo de trabalho fornece um exemplo de como você pode identificar e resolver uma falha em uma tarefa de proteção a partir do painel do Unified Manager. 
+---
+= Resolver uma falha em uma tarefa de proteção no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este fluxo de trabalho fornece um exemplo de como você pode identificar e resolver uma falha em uma tarefa de proteção a partir do painel do Unified Manager.
+
+.Antes de começar
+Como algumas tarefas neste fluxo de trabalho exigem que você faça login usando a função de Administrador, você precisa estar familiarizado com as funções necessárias para usar as diversas funcionalidades.
+
+Nesse cenário, você acessa a página Dashboard para ver se há algum problema com suas tarefas de proteção. Na área Protection Incident, você percebe que há um incidente Job Terminated, mostrando um erro Protection Job Failed em um volume. Você investiga esse erro para determinar a possível causa e a possível solução.
+
+.Passos
+. No painel "Incidentes de proteção" da área "Incidentes e riscos não resolvidos" do Dashboard, clique no evento *Falha na tarefa de proteção*.
++
+[TIP]
+====
+O texto vinculado ao evento é escrito no formato `object_name:/object_name - Error Name`, como `cluster2_src_svm:/cluster2_src_vol2 - Protection Job Failed`.
+
+====
++
+A página de detalhes do evento para a tarefa de proteção com falha é exibida.
+
+. Analise a mensagem de erro no campo Cause da área *Summary* para determinar o problema e avaliar possíveis ações corretivas.
++
+Consulte link:task_identify_problem_for_failed_protection_job.html["Identificar o problema e executar ações corretivas para uma falha na tarefa de proteção"].
+
+

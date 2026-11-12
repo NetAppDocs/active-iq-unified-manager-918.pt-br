@@ -1,0 +1,22 @@
+---
+permalink: data-protection/task_remove_workflow_automation.html 
+sidebar: sidebar 
+keywords: remove, oncommand, workflow, automation, setup, unified manager 
+summary: Você pode remover a configuração do OnCommand Workflow Automation do Unified Manager quando não quiser mais usar o Workflow Automation. 
+---
+= Remova a configuração do OnCommand Workflow Automation do Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode remover a configuração do OnCommand Workflow Automation do Unified Manager quando não quiser mais usar o Workflow Automation.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+.Passos
+. No painel de navegação esquerdo, clique em *General* > *Workflow Automation* no menu Setup à esquerda.
+. Na página *Workflow Automation*, clique em *Remove Setup*.
+

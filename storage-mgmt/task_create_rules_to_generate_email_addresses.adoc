@@ -1,0 +1,40 @@
+---
+permalink: storage-mgmt/task_create_rules_to_generate_email_addresses.html 
+sidebar: sidebar 
+keywords: create, rules, generate, email, addresses 
+summary: 'Você pode criar regras para especificar o endereço de e-mail com base na cota de usuário associada a clusters, máquinas virtuais de storage (SVMs), volumes, qtrees, usuários ou grupos de usuários. Uma notificação é enviada para o endereço de e-mail especificado quando ocorre uma violação de cota.' 
+---
+= Crie regras para gerar endereços de e-mail no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar regras para especificar o endereço de e-mail com base na cota de usuário associada a clusters, máquinas virtuais de storage (SVMs), volumes, qtrees, usuários ou grupos de usuários. Uma notificação é enviada para o endereço de e-mail especificado quando ocorre uma violação de cota.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+* Você deve ter revisado as diretrizes na página Regras para gerar endereços de e-mail para cotas de usuário e grupo.
+
+
+Você deve definir as regras para os endereços de e-mail de cota e inseri-las na ordem em que deseja executá-las. Por exemplo, se você quiser usar o endereço de e-mail abc@xyz.com para receber notificações sobre violações de cota para o grupo abc e usar o endereço de e-mail dl-$GROUP@$DOMAIN para todos os outros grupos, as regras devem ser listadas na seguinte ordem:
+
+* if ( $USER == 'abc' ) then abc@xyz.com
+* se ( $GROUP == * ) então dl-$GROUP@$DOMAIN
+
+
+Se nenhum dos critérios das regras que você especificou for atendido, a regra padrão será usada:
+
+se ( $USER_OR_GROUP == * ) então $USER_OR_GROUP@$DOMAIN
+
+.Passos
+. No painel de navegação esquerdo, clique em *Geral* > *Regras de e-mail de cota*.
+. Insira a regra com base nos seus critérios.
+. Clique em *Validar* para validar a sintaxe da regra.
++
+Uma mensagem de erro é exibida se a sintaxe da regra estiver incorreta. Você deve corrigir a sintaxe e clicar em *Validate* novamente.
+
+. Clique em *Salvar*.
+. Verifique se o endereço de e-mail que você criou é exibido na guia *Cotas de Usuário e Grupo* da página de detalhes de storage *VM / Health*.
+

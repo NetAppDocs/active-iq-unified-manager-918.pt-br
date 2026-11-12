@@ -1,0 +1,16 @@
+---
+permalink: storage-mgmt/concept_override_management_actions_through_scripts.html 
+sidebar: sidebar 
+keywords: override, management, actions, scripts 
+summary: Você pode criar scripts personalizados e associá-los a alertas para executar ações específicas para eventos específicos, em vez de optar pelas ações de gerenciamento padrão disponíveis para eles na página Management Actions ou no dashboard do Unified Manager. 
+---
+= Substitua as ações de gerenciamento com scripts no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar scripts personalizados e associá-los a alertas para executar ações específicas para eventos específicos, em vez de optar pelas ações de gerenciamento padrão disponíveis para eles na página Management Actions ou no dashboard do Unified Manager.
+
+Se você quiser executar ações específicas para um tipo de evento e optar por não corrigi-las como parte do recurso de ações de gerenciamento fornecido pelo Unified Manager, poderá configurar um script personalizado para a ação específica. Em seguida, você poderá associar o script a um alerta para esse tipo de evento e cuidar desses eventos individualmente. Nesse caso, as ações de gerenciamento não são geradas para esse tipo de evento específico na página Management Actions ou no painel do Unified Manager.

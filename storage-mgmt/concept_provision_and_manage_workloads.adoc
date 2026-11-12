@@ -1,0 +1,46 @@
+---
+permalink: storage-mgmt/concept_provision_and_manage_workloads.html 
+sidebar: sidebar 
+keywords: provision, manage, workloads 
+summary: O recurso de gerenciamento do Active IQ Unified Manager fornece Performance Service Levels, Storage Efficiency Policies e APIs de provedores de storage para provisionamento, monitoramento e gerenciamento de workloads de storage em um data center. 
+---
+= Provisione e gerencie cargas de trabalho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O recurso de gerenciamento do Active IQ Unified Manager fornece Performance Service Levels, Storage Efficiency Policies e APIs de provedores de storage para provisionamento, monitoramento e gerenciamento de workloads de storage em um data center.
+
+[NOTE]
+====
+O Unified Manager fornece essa funcionalidade por padrão. Você pode desativá-la em *Gerenciamento de storage* > *Configurações de recursos* caso não pretenda utilizá-la.
+
+====
+Quando ativado, você pode provisionar cargas de trabalho nos clusters ONTAP gerenciados pela sua instância do Unified Manager. Você também pode atribuir políticas, como níveis de serviço de desempenho e políticas de eficiência de storage, às cargas de trabalho e gerenciar seu ambiente de storage com base nessas políticas.
+
+Este recurso permite as seguintes funções:
+
+* Descoberta automática de cargas de trabalho de storage nos clusters adicionados, permitindo avaliação e implantação fáceis das cargas de trabalho de storage
+* Provisionamento de cargas de trabalho NAS compatíveis com os protocolos NFS e CIFS
+* Provisionamento de cargas de trabalho SAN com suporte aos protocolos iSCSI e FCP
+* Suporte para os protocolos NFS e CIFS no mesmo compartilhamento de arquivos
+* Gerenciamento dos níveis de serviço de desempenho e das políticas de eficiência de storage
+* Atribuição de níveis de serviço de desempenho e políticas de eficiência de armazenamento a cargas de trabalho de armazenamento
+
+
+As opções *Provisioning*, *Storage* > *Workloads* e *Policies* no painel esquerdo da interface de usuário permitem que você modifique várias configurações.
+
+Você pode executar as seguintes funções usando estas opções:
+
+* Visualize as cargas de trabalho de storage na página *Storage* > *Workloads*
+* Crie cargas de trabalho de armazenamento a partir da página Provision Workload
+* Criar e gerenciar níveis de serviço de desempenho a partir de políticas
+* Criar e gerenciar políticas de eficiência de storage em Policies
+* Atribua políticas às cargas de trabalho de storage na página Workloads
+
+
+*Informações relacionadas*
+
+link:../config/concept_policy_based_storage_management.html["Gerenciamento de storage baseado em políticas"]

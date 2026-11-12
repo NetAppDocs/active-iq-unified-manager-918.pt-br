@@ -1,0 +1,37 @@
+---
+permalink: data-protection/task_edit_protection_relationships_from_health_volume.html 
+sidebar: sidebar 
+keywords: edit, protection, relationships, volume, health details page 
+summary: Você pode editar as relações de proteção existentes para alterar a taxa máxima de transferência atual, a política de proteção ou o agendamento de proteção. Você pode editar uma relação para diminuir a largura de banda usada para transferências ou para aumentar a frequência das transferências agendadas porque os dados mudam com frequência. 
+---
+= Edite as relações de proteção na página Detalhes de Volume/Saúde no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode editar as relações de proteção existentes para alterar a taxa máxima de transferência atual, a política de proteção ou o agendamento de proteção. Você pode editar uma relação para diminuir a largura de banda usada para transferências ou para aumentar a frequência das transferências agendadas porque os dados mudam com frequência.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+* Você precisa ter instalado e configurado o Workflow Automation.
+
+
+Os volumes selecionados devem ser destinos de relacionamentos de proteção. Não é possível editar relacionamentos quando volumes de origem, volumes de balanceamento de carga ou volumes que não sejam o destino de uma relação do SnapMirror ou do SnapVault estiverem selecionados.
+
+.Passos
+. Na guia *Protection* da página de detalhes *Volume / Health*, localize na topologia a relação de proteção que você deseja editar e clique nela com o botão direito do mouse.
+. Selecione *Editar* no menu.
++
+Alternativamente, no menu *Ações*, selecione *Relacionamento* > *Editar* para editar o relacionamento cujos detalhes você está visualizando.
+
++
+A caixa de diálogo *Edit Relationship* é exibida.
+
+. Na caixa de diálogo Editar relacionamento, edite a taxa máxima de transferência, a política de proteção ou o cronograma de proteção, conforme necessário.
+. Clique em *Aplicar*.
++
+As alterações são aplicadas aos relacionamentos selecionados.
+
+

@@ -1,0 +1,50 @@
+---
+permalink: health-checker/task_disable_specific_security_events.html 
+sidebar: sidebar 
+keywords: disable, specific, security events 
+summary: Todos os eventos estão ativados por padrão. Você pode desativar eventos específicos para impedir a geração de notificações para aqueles que não são importantes no seu ambiente. Você pode ativar eventos desativados se desejar voltar a receber notificações para eles. 
+---
+= Desative eventos de segurança específicos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Todos os eventos estão ativados por padrão. Você pode desativar eventos específicos para impedir a geração de notificações para aqueles que não são importantes no seu ambiente. Você pode ativar eventos desativados se desejar voltar a receber notificações para eles.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Ao desativar eventos, os eventos gerados anteriormente no sistema são marcados como obsoletos e os alertas configurados para esses eventos não são acionados. Ao ativar eventos desativados, as notificações para esses eventos são geradas a partir do próximo ciclo de monitoramento.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Configuração de eventos*.
+. Na página *Event* Setup, desative ou ative eventos escolhendo uma das seguintes opções:
++
+[cols="2*"]
+|===
+| Se você quiser... | Então faça isso... 
+
+
+ a| 
+Desativar eventos
+ a| 
+.. Clique em *Desativar*.
+.. Na caixa de diálogo Disable Events, selecione a gravidade *Warning*. Esta é a categoria para todos os eventos de segurança.
+.. Na coluna Eventos correspondentes, selecione os eventos de segurança que deseja desativar e clique na seta para a direita para movê-los para a coluna Desativar eventos.
+.. Clique em *Salvar e fechar*.
+.. Verifique se os eventos que você desativou são exibidos na exibição em lista da página Configuração de Eventos.
+
+
+
+
+ a| 
+Ativar eventos
+ a| 
+.. Na lista de eventos desativados, selecione a caixa de seleção do evento, ou dos eventos, que você deseja reativar.
+.. Clique em *Enable*.
+
+
+|===
+

@@ -1,0 +1,33 @@
+---
+permalink: health-checker/task_view_health_and_capacity_status_of_all_san_array_clusters.html 
+sidebar: sidebar 
+keywords: view, all san array, health and capacity, clusters 
+summary: Você pode usar as páginas de inventário do cluster para exibir o status de integridade e capacidade dos seus clusters All SAN Array. 
+---
+= Visualize o status de integridade e capacidade de todos os clusters SAN Array no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar as páginas de inventário do cluster para exibir o status de integridade e capacidade dos seus clusters All SAN Array.
+
+.Antes de começar
+Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+
+Você pode visualizar informações gerais dos clusters All SAN Array nas visualizações "Health: All Clusters" e "Capacity: All Clusters". Além disso, você pode visualizar detalhes na página "Cluster / Health details".
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Clusters*.
+. Certifique-se de que a coluna "`Personality`" esteja visível na visualização *Health: All Clusters* ou adicione-a usando o controle *Show / Hide*.
++
+Esta coluna exibe "`All SAN Array`" para seus clusters All SAN Array.
+
+. Analise as informações.
+. Para visualizar informações sobre capacidade de storage nesses clusters, selecione a visualização Capacidade: todos os clusters.
+. Para visualizar informações detalhadas sobre a integridade e capacidade de storage desses clusters, clique no nome de um cluster All SAN Array.
++
+Veja os detalhes nas abas Health, Capacity e Nodes na página de detalhes Cluster / Health
+
+

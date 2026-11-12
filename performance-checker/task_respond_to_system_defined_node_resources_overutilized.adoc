@@ -1,0 +1,45 @@
+---
+permalink: performance-checker/task_respond_to_system_defined_node_resources_overutilized.html 
+sidebar: sidebar 
+keywords: node, resources, overutilized, performance, events 
+summary: O Unified Manager gera eventos de aviso de sobrecarga de recursos de nós quando um único nó está operando acima dos limites de sua eficiência operacional e, portanto, potencialmente afetando as latências das cargas de trabalho. Esses eventos definidos pelo sistema oferecem a oportunidade de corrigir possíveis problemas de desempenho antes que muitas cargas de trabalho sejam afetadas pela latência. 
+---
+= Responder a eventos de sobreutilização de recursos de nós no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Unified Manager gera eventos de aviso de sobrecarga de recursos de nós quando um único nó está operando acima dos limites de sua eficiência operacional e, portanto, potencialmente afetando as latências das cargas de trabalho. Esses eventos definidos pelo sistema oferecem a oportunidade de corrigir possíveis problemas de desempenho antes que muitas cargas de trabalho sejam afetadas pela latência.
+
+.Antes de começar
+* Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+* Deve haver eventos de desempenho novos ou obsoletos.
+
+
+O Unified Manager gera eventos de alerta para violações de política de sobreutilização de recursos de nó ao procurar nós que estejam utilizando mais de 100% de sua capacidade de desempenho por mais de 30 minutos.
+
+Você pode usar o System Manager ou os comandos do ONTAP para corrigir esse tipo de problema de desempenho, incluindo as seguintes tarefas:
+
+* Criar e aplicar uma política de QoS a quaisquer volumes ou LUNs que estejam usando excessivamente os recursos do sistema
+* Redução do limite máximo de taxa de transferência de QoS de um grupo de políticas ao qual cargas de trabalho foram aplicadas
+* Mover uma carga de trabalho para um agregado ou nó diferente
+* Aumentar a capacidade adicionando discos ao nó ou atualizando para um nó com uma CPU mais rápida e mais RAM
+
+
+.Passos
+. Exiba a página *Detalhes do evento* para visualizar informações sobre o evento.
+. Analise a *Descrição*, que descreve a violação do limite que causou o evento.
++
+Por exemplo, a mensagem "`Perf. O valor de 139% de Capacity Used em simplicity-02 acionou um evento de WARNING para identificar possíveis problemas de desempenho na unidade de processamento de dados.`" indica que a capacidade de desempenho no nó simplicity-02 está sendo usada em excesso e afetando o desempenho do nó.
+
+. Na seção *Diagnóstico do Sistema*, revise os três gráficos: um para a capacidade de desempenho utilizada no nó, um para a média de IOPS de armazenamento utilizada pelas principais cargas de trabalho e um para a latência nas principais cargas de trabalho. Ao organizá-los dessa forma, você poderá identificar quais cargas de trabalho são a causa da latência no nó.
++
+Você pode visualizar quais cargas de trabalho têm políticas de QoS aplicadas e quais não têm, movendo o cursor sobre o gráfico de IOPS.
+
+. Na seção *Ações Sugeridas*, revise as sugestões e determine quais ações você deve executar para evitar um aumento na latência da carga de trabalho.
++
+Se necessário, clique no botão *Help* para ver mais detalhes sobre as ações sugeridas que você pode executar para tentar resolver o evento de desempenho.
+
+

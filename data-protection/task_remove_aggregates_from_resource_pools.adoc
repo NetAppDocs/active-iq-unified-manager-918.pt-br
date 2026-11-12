@@ -1,0 +1,39 @@
+---
+permalink: data-protection/task_remove_aggregates_from_resource_pools.html 
+sidebar: sidebar 
+keywords: remove, aggregates, resource pools 
+summary: Remova agregados de um pool de recursos existente, por exemplo, quando quiser usar um agregado para outra finalidade. 
+---
+= Remover agregados de pools de recursos em Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode remover agregados de um pool de recursos existente: por exemplo, quando quiser usar um agregado para alguma outra finalidade.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Os membros do pool de recursos são exibidos somente quando um pool de recursos é selecionado.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Proteção* > *Pools de recursos*.
+. Selecione o pool de recursos do qual você deseja remover os agregados membros.
++
+A lista de agregados de membros é exibida no painel Membros.
+
+. Selecione um ou mais agregados.
++
+O botão *Remover* está ativado.
+
+. Clique em *Remover.*
++
+Uma caixa de diálogo de aviso é exibida.
+
+. Clique em *Yes* para continuar.
++
+Os agregados selecionados são removidos do painel Membros.
+
+

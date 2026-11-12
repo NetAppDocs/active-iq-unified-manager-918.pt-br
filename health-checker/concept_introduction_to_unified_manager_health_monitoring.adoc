@@ -1,0 +1,92 @@
+---
+permalink: health-checker/concept_introduction_to_unified_manager_health_monitoring.html 
+sidebar: sidebar 
+keywords: introduction, active iq, unified manager, health, monitor 
+summary: 'O Active IQ Unified Manager (anteriormente o OnCommand Unified Manager) ajuda você a monitorar um grande número de sistemas que executam o software ONTAP por meio de uma interface de usuário centralizada. A infraestrutura de servidor do Unified Manager oferece escalabilidade, suporte e recursos aprimorados de monitoramento e notificação.' 
+---
+= Saiba mais sobre o monitoramento de integridade do Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Active IQ Unified Manager (anteriormente o OnCommand Unified Manager) ajuda você a monitorar um grande número de sistemas que executam o software ONTAP por meio de uma interface de usuário centralizada. A infraestrutura de servidor do Unified Manager oferece escalabilidade, suporte e recursos aprimorados de monitoramento e notificação.
+
+As principais funcionalidades do Unified Manager incluem monitoramento, emissão de alertas, gerenciamento da disponibilidade e da capacidade dos clusters, gerenciamento de recursos de proteção e agrupamento de dados de diagnóstico e envio deles ao suporte técnico.
+
+Você pode usar o Unified Manager para monitorar seus clusters. Quando ocorrem problemas no cluster, o Unified Manager notifica você sobre os detalhes desses problemas por meio de eventos. Alguns eventos também fornecem uma ação corretiva que você pode executar para solucionar os problemas. Você pode configurar alertas para eventos para que, quando ocorrerem problemas, você receba notificações por e-mail e traps SNMP.
+
+Você pode usar o Unified Manager para gerenciar objetos de armazenamento em seu ambiente associando-os a anotações. Você pode criar anotações personalizadas e associar dinamicamente clusters, máquinas virtuais de armazenamento (SVMs) e volumes a essas anotações por meio de regras.
+
+Você também pode planejar os requisitos de armazenamento dos objetos do seu cluster usando as informações fornecidas nos gráficos de capacidade e saúde do respectivo objeto de cluster.
+
+
+
+[[physical-and-logical-capacity]]
+== Capacidade física e lógica
+
+O Unified Manager utiliza os conceitos de espaço físico e lógico usados para objetos de storage do ONTAP.
+
+* Capacidade física: o espaço físico refere-se aos blocos físicos de armazenamento utilizados no volume. A "capacidade física utilizada" é normalmente menor que a capacidade lógica utilizada devido à redução de dados dos recursos de eficiência de storage, como deduplicação e compressão.
+* Capacidade lógica: o espaço lógico refere-se ao espaço utilizável (os blocos lógicos) em um volume. O espaço lógico refere-se a como o espaço teórico pode ser usado, sem considerar os resultados da deduplicação ou da compressão. O "espaço lógico usado" é o espaço físico usado mais a economia gerada pelos recursos de eficiência de storage, como deduplicação e compressão, que foram configurados. Essa medição geralmente parece maior do que a capacidade física usada porque não reflete a compressão de dados e outras reduções no espaço físico. Assim, a capacidade lógica total pode ser maior do que o espaço provisionado.
+
+
+
+
+[[capacity-measurement-units]]
+== Unidades de medida de capacidade
+
+O Unified Manager calcula a capacidade de storage com base em unidades binárias de 1024 (2^10^) bytes. No ONTAP 9.10.0 e versões anteriores, essas unidades eram exibidas como KB, MB, GB, TB e PB. A partir do ONTAP 9.10.1, elas são exibidas no Unified Manager como KiB, MiB, GiB, TiB e PiB.
+
+
+NOTE: As unidades usadas para a taxa de transferência continuam sendo kilobytes por segundo (Kbps), megabytes por segundo (Mbps), gigabytes por segundo (Gbps) ou terabytes por segundo (Tbps) e assim por diante, para todas as versões do ONTAP.
+
+[cols="4*"]
+|===
+| Unidade de capacidade exibida no Unified Manager para ONTAP 9.10.0 e versões anteriores | Unidade de capacidade exibida no Unified Manager para ONTAP 9.10.1 | Cálculo | Valor em bytes 
+
+
+ a| 
+KB
+ a| 
+KiB
+ a| 
+1024
+ a| 
+1024 bytes
+
+
+
+ a| 
+MB
+ a| 
+MiB
+ a| 
+1024 * 1024
+ a| 
+1.048.576 bytes
+
+
+
+ a| 
+GB
+ a| 
+GiB
+ a| 
+1024 * 1024 * 1024
+ a| 
+1.073.741.824 bytes
+
+
+
+ a| 
+TB
+ a| 
+TiB
+ a| 
+1024 * 1024 * 1024 * 1024
+ a| 
+1.099.511.627.776 bytes
+
+|===

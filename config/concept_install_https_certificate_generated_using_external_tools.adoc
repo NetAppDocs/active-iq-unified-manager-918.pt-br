@@ -1,0 +1,123 @@
+---
+permalink: config/concept_install_https_certificate_generated_using_external_tools.html 
+sidebar: sidebar 
+keywords: install, HTTPS, certificate, generated from external tools 
+summary: 'Você pode instalar certificados autoassinados ou assinados por uma Autoridade Certificadora (CA) e gerados usando uma ferramenta externa, como OpenSSL, BoringSSL, LetsEncrypt.' 
+---
+= Saiba mais sobre certificados HTTPS gerados usando ferramentas externas no Active IQ Unified Manager Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode instalar certificados autoassinados ou assinados por uma Autoridade Certificadora (CA) e gerados usando uma ferramenta externa, como OpenSSL, BoringSSL, LetsEncrypt.
+
+Você deve carregar a chave privada junto com a cadeia de certificados, porque esses certificados são um par de chaves pública-privada gerado externamente. Os algoritmos de par de chaves permitidos são "`RSA`" e "`EC`". A opção *Install HTTPS Certificate* está disponível na página HTTPS Certificates, na seção General. O arquivo que você enviar deve estar no seguinte formato de entrada.
+
+. Chave privada do servidor que pertence ao host do Active IQ Unified Manager
+. Certificado do servidor que corresponde à chave privada
+. Certificados das ACs em ordem inversa até a raiz, que são usados para assinar o certificado acima
+
+
+
+
+[[format-for-loading-a-certificate-with-an-ec-key-pair]]
+== Formato para carregar um certificado com um par de chaves EC
+
+As curvas permitidas são "`prime256v1`" e "`secp384r1`". Exemplo de certificado com um par EC gerado externamente:
+
+[listing]
+----
+ -----BEGIN EC PRIVATE KEY-----
+<EC private key of Server>
+-----END EC PRIVATE KEY-----
+----
+[listing]
+----
+ -----BEGIN CERTIFICATE-----
+ <Server certificate>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #1 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #2 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Root signing certificate>
+ -----END CERTIFICATE-----
+----
+
+
+[[format-for-loading-a-certificate-with-an-rsa-key-pair]]
+== Formato para carregar um certificado com um par de chaves RSA
+
+Os tamanhos de chave permitidos para o par de chaves RSA pertencente ao certificado de host são 2048, 3072 e 4096. certificado com um *par de chaves RSA* gerado externamente:
+
+[listing]
+----
+-----BEGIN RSA PRIVATE KEY-----
+ <RSA private key of Server>
+ -----END RSA PRIVATE KEY-----
+ -----BEGIN CERTIFICATE-----
+ <Server certificate>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #1 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #2 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Root signing certificate>
+ -----END CERTIFICATE-----
+----
+Após o upload do certificado, você deverá reiniciar a instância do Active IQ Unified Manager para que as alterações entrem em vigor.
+
+
+
+[[checks-while-uploading-externally-generated-certificates]]
+== Verificações ao carregar certificados gerados externamente
+
+O sistema realiza verificações durante o upload de um certificado gerado usando ferramentas externas. Se alguma das verificações falhar, o certificado será rejeitado. Há também validações incluídas para os certificados gerados a partir da CSR no produto e para os certificados gerados usando ferramentas externas.
+
+* A chave privada informada é validada em relação ao certificado do host informado.
+* O Common Name (CN) no certificado do host é verificado em relação ao FQDN do host.
+* O nome comum (CN) do certificado do host não deve estar vazio ou em branco e não deve ser definido como localhost.
+* A data de início da validade não deve estar no futuro, e a data de expiração da validade do certificado não deve estar no passado.
+* Se existir CA intermediária ou CA, a data de início da validade do certificado não deve estar no futuro e a data de expiração da validade não deve estar no passado.
+
+
+[NOTE]
+====
+A chave privada na entrada não deve estar criptografada. Se houver chaves privadas criptografadas, elas serão rejeitadas pelo sistema.
+
+====
+Exemplo 1
+
+[listing]
+----
+----BEGIN ENCRYPTED PRIVATE KEY-----
+<Encrypted private key>
+-----END ENCRYPTED PRIVATE KEY-----
+----
+Exemplo 2
+
+[listing]
+----
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+<content here>
+-----END RSA PRIVATE KEY-----
+----
+Exemplo 3
+
+[listing]
+----
+-----BEGIN EC PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+<content here>
+-----END EC PRIVATE KEY-----
+----
+Se a instalação do certificado falhar, consulte o artigo da base de conhecimento (KB): https://kb.netapp.com/mgmt/AIQUM/AIQUM_fails_to_install_externally_generated_certificate["O ActiveIQ Unified Manager falha ao instalar um certificado gerado externamente"^]

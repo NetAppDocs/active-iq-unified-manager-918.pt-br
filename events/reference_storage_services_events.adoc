@@ -1,0 +1,86 @@
+---
+permalink: events/reference_storage_services_events.html 
+sidebar: sidebar 
+keywords: storage, services, events, impact area, configuration, protection 
+summary: Os eventos de serviços de armazenamento fornecem informações sobre a criação e a assinatura desses serviços, permitindo o monitoramento de possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade. 
+---
+= Saiba mais sobre eventos de serviços de armazenamento no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de serviços de armazenamento fornecem informações sobre a criação e a assinatura desses serviços, permitindo o monitoramento de possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade.
+
+
+
+[[impact-area-configuration]]
+== Área de impacto: configuração
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Serviço de armazenamento criado(não aplicável)
+ a| 
+Evento
+ a| 
+Serviço de armazenamento
+ a| 
+Informação
+
+
+
+ a| 
+Serviço de armazenamento contratado(Não aplicável)
+ a| 
+Evento
+ a| 
+Serviço de armazenamento
+ a| 
+Informação
+
+
+
+ a| 
+Serviço de armazenamento cancelado(não aplicável)
+ a| 
+Evento
+ a| 
+Serviço de armazenamento
+ a| 
+Informação
+
+|===
+
+
+[[impact-area-protection]]
+== Área de impacto: proteção
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Exclusão inesperada da relação gerenciada do SnapMirror RelationshipocumEvtStorageServiceUnsupportedRelationshipDeletion
+ a| 
+Risco
+ a| 
+Serviço de armazenamento
+ a| 
+Aviso
+
+
+
+ a| 
+Exclusão inesperada do volume do membro do serviço de armazenamento(ocumEvtStorageServiceUnexpectedVolumeDeletion)
+ a| 
+Incidente
+ a| 
+Serviço de armazenamento
+ a| 
+Crítico
+
+|===

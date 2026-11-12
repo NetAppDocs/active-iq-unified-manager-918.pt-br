@@ -1,0 +1,25 @@
+---
+permalink: storage-mgmt/reference_user_not_found.html 
+sidebar: sidebar 
+keywords: user, not, found 
+summary: Solucione o erro de usuário não encontrado. 
+---
+= Resolver o erro "Usuário não encontrado" no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ao executar uma operação relacionada à autenticação, como adicionar, editar, excluir ou testar usuários ou grupos remotos, a seguinte mensagem de erro é exibida: `User not found.`
+
+*Causa*
+
+Esse problema pode ocorrer se o usuário existir no servidor AD ou no servidor LDAP, e se você tiver definido o nome diferenciado base com um valor incorreto.
+
+*Ação corretiva*
+
+. No painel de navegação à esquerda, clique em *Geral* > *Autenticação Remota*.
+. Insira as informações apropriadas para o nome diferenciado base.
+. Clique em *Salvar*.
+

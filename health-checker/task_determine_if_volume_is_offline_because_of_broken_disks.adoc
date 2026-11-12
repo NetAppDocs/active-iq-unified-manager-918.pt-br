@@ -1,0 +1,37 @@
+---
+permalink: health-checker/task_determine_if_volume_is_offline_because_of_broken_disks.html 
+sidebar: sidebar 
+keywords: determine, volume, offline, broken disks, aggregate 
+summary: Você pode usar a interface do usuário da Web do Unified Manager para confirmar ou descartar a possibilidade de que um volume esteja off-line porque problemas de disco RAID colocaram seu agregado host off-line. 
+---
+= Determine se um volume está offline devido a discos defeituosos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a interface do usuário da Web do Unified Manager para confirmar ou descartar a possibilidade de que um volume esteja off-line porque problemas de disco RAID colocaram seu agregado host off-line.
+
+.Antes de começar
+Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+
+Para determinar se a condição de volume off-line é causada por problemas de disco RAID que estão colocando o agregado de hospedagem off-line, execute as seguintes ações:
+
+.Passos
+. Localize e clique no link de hipertexto exibido em Aggregate no painel *Related Devices* da página de detalhes *Volume / Health*.
++
+A página Detalhes do Agregado/Saúde exibe o status online ou off-line do agregado de hospedagem. Se o status do agregado for online, os problemas de disco RAID não serão a causa de o volume estar off-line.
+
+. Se o status do agregado estiver off-line, clique em *Informações do disco* e procure eventos de disco corrompido na lista *Eventos* na guia *Informações do disco*.
+. Para identificar melhor os discos defeituosos, clique no hiperlink exibido em Nó no painel *Dispositivos Relacionados*.
++
+A página de detalhes de Cluster / Health é exibida.
+
+. Clique em *Discos* e selecione *Com defeito* no painel *Filtros* para listar todos os discos no estado com defeito.
++
+Se os discos em estado defeituoso causaram o estado off-line do agregado de host, o nome do agregado será exibido na coluna "Impacted Aggregate".
+
+
+
+Após confirmar que a condição de volume off-line é causada por discos RAID defeituosos e pelo consequente agregado de host off-line, entre em contato com o administrador ou operador responsável para substituir manualmente os discos defeituosos e colocar o agregado on-line novamente.

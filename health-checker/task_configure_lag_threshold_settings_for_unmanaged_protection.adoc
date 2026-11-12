@@ -1,0 +1,32 @@
+---
+permalink: health-checker/task_configure_lag_threshold_settings_for_unmanaged_protection.html 
+sidebar: sidebar 
+keywords: configure, lag, threshold settings, unmanaged, protection, relationships 
+summary: Você pode editar as configurações globais padrão dos limites de integridade de aviso e erro de atraso para relacionamentos de proteção não gerenciados, de forma que os eventos sejam gerados em intervalos adequados às suas necessidades. 
+---
+= Configure os limites de atraso para relacionamentos de proteção não gerenciados no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode editar as configurações globais padrão dos limites de integridade de aviso e erro de atraso para relacionamentos de proteção não gerenciados, de forma que os eventos sejam gerados em intervalos adequados às suas necessidades.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+O tempo de atraso não deve ser superior ao intervalo definido da programação de transferência. Por exemplo, se a programação de transferência for de hora em hora, o tempo de atraso não deve ser superior a uma hora. O limite de atraso especifica uma porcentagem que o tempo de atraso não deve exceder. Usando o exemplo de uma hora, se o limite de atraso for definido como 150%, você receberá um evento quando o tempo de atraso for superior a 1,5 horas.
+
+As configurações descritas nesta tarefa são aplicadas globalmente a todos os relacionamentos de proteção não gerenciados. As configurações não podem ser especificadas e aplicadas exclusivamente a um relacionamento de proteção não gerenciado.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Limiares de Evento* > *Relacionamento*.
+. Aumente ou diminua a porcentagem global padrão do tempo de atraso para avisos ou erros, conforme necessário.
+. Para impedir que um aviso ou evento de erro seja acionado por qualquer valor de limite de atraso, desmarque a caixa ao lado de *Enabled*.
+. Clique em *Salvar*.
+
+
+*Informações relacionadas*
+
+link:../config/task_add_users.html["Adicionando usuários"]

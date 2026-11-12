@@ -1,0 +1,31 @@
+---
+permalink: health-checker/task_delete_values_from_annotations.html 
+sidebar: sidebar 
+keywords: delete, values, annotations 
+summary: Você pode excluir valores associados a anotações personalizadas quando esse valor não se aplicar mais à anotação. 
+---
+= Excluir valores de anotações no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode excluir valores associados a anotações personalizadas quando esse valor não se aplicar mais à anotação.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+* O valor da anotação não deve estar associado a nenhuma regra de anotação ou regra de grupo.
+
+
+Não é possível excluir valores de anotações predefinidas.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Anotações*.
+. Na lista de anotações na guia *Anotações*, selecione a anotação da qual deseja excluir um valor.
+. Na área *Valores* da guia *Anotações*, selecione o valor que deseja excluir e clique em *Excluir*.
+. Na caixa de diálogo *Aviso*, clique em *Sim*.
++
+O valor é excluído e deixa de ser exibido na lista de valores da anotação selecionada.
+
+

@@ -1,0 +1,44 @@
+---
+permalink: events/task_enable_and_disable_active_iq_event_reporting.html 
+sidebar: sidebar 
+keywords: enable, disable, active iq, event, report 
+summary: 'Por padrão, os eventos da plataforma Active IQ são gerados e exibidos na interface de usuário do Unified Manager. Caso considere que esses eventos geram muito "ruído" ou não deseje visualizá-los no Unified Manager, você pode desativar a geração desses eventos. Você poderá reativá-los posteriormente, se desejar voltar a receber essas notificações.' 
+---
+= Ativar e desativar o relatório de eventos do Active IQ no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Por padrão, os eventos da plataforma Active IQ são gerados e exibidos na interface de usuário do Unified Manager. Caso você considere que esses eventos geram muito "ruído" ou não queira visualizá-los no Unified Manager, você pode desativar a geração desses eventos. Você pode reativá-los mais tarde, se quiser voltar a receber essas notificações.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator.
+
+Ao desativar esse recurso, o Unified Manager para de receber eventos da plataforma Active IQ imediatamente.
+
+Ao ativar esse recurso, o Unified Manager começa a receber eventos da plataforma Active IQ logo após a meia-noite, com base no fuso horário do cluster. O horário de início é baseado em quando o Unified Manager recebe mensagens de AutoSupport de cada cluster.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Geral* > *Configurações de recursos*.
+. Na página *Configurações de recursos*, desative ou ative os eventos da plataforma Active IQ escolhendo uma das seguintes opções:
++
+|===
+| Se você quiser... | Então faça isso... 
+
+
+ a| 
+Desativar eventos da plataforma Active IQ
+ a| 
+No painel *Active IQ Portal Events*, mova o botão deslizante para a esquerda.
+
+
+
+ a| 
+Ativar eventos de plataforma do Active IQ
+ a| 
+No painel *Active IQ Portal Events*, mova o botão deslizante para a direita.
+
+|===
+

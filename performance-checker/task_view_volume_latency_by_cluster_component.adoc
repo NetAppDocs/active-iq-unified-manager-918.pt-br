@@ -1,0 +1,41 @@
+---
+permalink: performance-checker/task_view_volume_latency_by_cluster_component.html 
+sidebar: sidebar 
+keywords: view, volume, latency, cluster, component 
+summary: Você pode visualizar informações detalhadas de latência de um volume usando a página Volume Performance Explorer. O gráfico de contadores Latency - Total mostra a latência total no volume, e o gráfico de contadores Latency - Breakdown é útil para determinar o impacto da latência de leitura e gravação no volume. 
+---
+= Visualize a latência por componente de cluster no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar informações detalhadas de latência de um volume usando a página Volume Performance Explorer. O gráfico de contadores Latency - Total mostra a latência total no volume, e o gráfico de contadores Latency - Breakdown é útil para determinar o impacto da latência de leitura e gravação no volume.
+
+Além disso, o gráfico Latência - Componentes do cluster mostra uma comparação detalhada da latência de cada componente do cluster para ajudar a determinar como cada componente contribui para a latência total no volume. Os seguintes componentes do cluster são exibidos:
+
+* Rede
+* Limite máximo de QoS
+* Limite mínimo de QoS
+* Processamento de rede
+* Interconexão de clusters
+* Data Processing
+* Operações de agregado
+* Ativação de volume
+* MetroCluster Recursos
+* Latência na nuvem
+* Sincronizar o SnapMirror
+
+
+.Passos
+. Na página *Volume Performance Explorer* do volume selecionado, no gráfico *Latency*, selecione *Cluster Components* no menu suspenso.
++
+O gráfico Latência - Componentes do cluster é exibido.
+
+. Para visualizar uma versão ampliada do gráfico, selecione *Visualização com zoom*.
++
+O gráfico comparativo dos componentes do cluster é exibido. Você pode restringir a comparação desmarcando ou marcando o image:../media/eye_icon.gif["ícone de olho"] associado a cada componente do cluster.
+
+. Para visualizar os valores específicos, mova o seu cursor para a área do gráfico para ver a janela pop-up.
+

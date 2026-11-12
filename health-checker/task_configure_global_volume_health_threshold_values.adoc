@@ -1,0 +1,36 @@
+---
+permalink: health-checker/task_configure_global_volume_health_threshold_values.html 
+sidebar: sidebar 
+keywords: configure, global, volume, health, threshold values 
+summary: Você pode configurar os valores globais de limite de integridade para todos os volumes a fim de monitorar qualquer violação de limite. Eventos apropriados são gerados para violações dos limites de integridade, e você pode tomar medidas preventivas com base nesses eventos. Você pode configurar os valores globais com base nas configurações de melhores práticas para limites que se aplicam a todos os volumes monitorados. 
+---
+= Configure os valores de limite de integridade do volume global no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar os valores globais de limite de integridade para todos os volumes a fim de monitorar qualquer violação de limite. Eventos apropriados são gerados para violações dos limites de integridade, e você pode tomar medidas preventivas com base nesses eventos. Você pode configurar os valores globais com base nas configurações de melhores práticas para limites que se aplicam a todos os volumes monitorados.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+A maioria das opções de limite possui valores padrão para melhor monitoramento. No entanto, você pode alterar os valores para adequá-los às necessidades do seu ambiente.
+
+Observe que, quando o Autogrow está ativado em um volume, os limites de capacidade são considerados ultrapassados com base no tamanho máximo do volume definido pelo Autogrow, e não com base no tamanho original do volume.
+
+[NOTE]
+====
+O valor padrão de 1000 cópias Snapshot se aplica apenas a volumes FlexVol quando a versão do ONTAP é 9.4 ou superior, e a volumes FlexGroup quando a versão do ONTAP é 9.8 ou superior. Para clusters instalados com versões mais antigas do software ONTAP, o número máximo é de 250 cópias Snapshot por volume. Para essas versões mais antigas, o Unified Manager interpreta esse número, 1000, e qualquer número entre 1000 e 250, como 250; isso significa que você continuará recebendo eventos quando o número de cópias Snapshot atingir 250. Se você quiser definir esse limite para menos de 250 nessas versões mais antigas, deverá defini-lo como 250 ou menos aqui, na visualização Health: All Volumes, ou na página de detalhes Volume / Health.
+
+====
+.Passos
+. No painel de navegação esquerdo, clique em *Limiares de Evento* > *Volume*.
+. Configure os valores de limite apropriados para capacidade, cópias Snapshot, cotas de qtree, crescimento de volume e inodes.
+. Clique em *Salvar*.
+
+
+*Informações relacionadas*
+
+link:../config/task_add_users.html["Adicionando usuários"]

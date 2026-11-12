@@ -1,0 +1,229 @@
+---
+permalink: install-vapp/reference_complete_worksheet_um.html 
+sidebar: sidebar 
+keywords: complete, worksheet, installation, information, unified manager 
+summary: Antes de instalar e configurar o Unified Manager, você deve ter informações específicas sobre o seu ambiente prontamente disponíveis. Você pode registrar essas informações na planilha. 
+---
+= Preencha a planilha no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de instalar e configurar o Unified Manager, você deve ter informações específicas sobre o seu ambiente prontamente disponíveis. Você pode registrar essas informações na planilha.
+
+
+
+[[unified-manager-installation-information]]
+== Informações de instalação do Unified Manager
+
+Os detalhes necessários para instalar o Unified Manager.
+
+[cols="2*"]
+|===
+| Sistema no qual o software é implantado | Seu valor 
+
+
+ a| 
+Endereço IP do servidor ESXi
+ a| 
+
+
+
+ a| 
+Nome de domínio totalmente qualificado do host
+ a| 
+
+
+
+ a| 
+Endereço IP do host
+ a| 
+
+
+
+ a| 
+Máscara de rede
+ a| 
+
+
+
+ a| 
+Endereço IP do gateway
+ a| 
+
+
+
+ a| 
+Endereço DNS primário
+ a| 
+
+
+
+ a| 
+Endereço DNS secundário
+ a| 
+
+
+
+ a| 
+Domínios de pesquisa
+ a| 
+
+
+
+ a| 
+Nome de usuário de manutenção
+ a| 
+
+
+
+ a| 
+Senha do usuário de manutenção
+ a| 
+
+|===
+
+
+[[unified-manager-configuration-information]]
+== Informações de configuração do Unified Manager
+
+Os detalhes para configurar o Unified Manager após a instalação. Alguns valores são opcionais, dependendo da sua configuração.
+
+[cols="2*"]
+|===
+| Configuração | Seu valor 
+
+
+ a| 
+Endereço de e-mail do usuário de manutenção
+ a| 
+
+
+
+ a| 
+Servidor NTP
+ a| 
+
+
+
+ a| 
+Nome do host do servidor SMTP ou endereço IP
+ a| 
+
+
+
+ a| 
+Nome de usuário SMTP
+ a| 
+
+
+
+ a| 
+Senha SMTP
+ a| 
+
+
+
+ a| 
+Porta SMTP
+ a| 
+25 (Valor padrão)
+
+
+
+ a| 
+E-mail a partir do qual as notificações de alerta são enviadas
+ a| 
+
+
+
+ a| 
+Nome do host ou endereço IP do servidor de autenticação
+ a| 
+
+
+
+ a| 
+Nome do administrador do Active Directory ou nome diferenciado de vinculação LDAP
+ a| 
+
+
+
+ a| 
+Senha do Active Directory ou senha de bind LDAP
+ a| 
+
+
+
+ a| 
+Nome diferenciado base do servidor de autenticação
+ a| 
+
+
+
+ a| 
+URL do provedor de identidade (IdP)
+ a| 
+
+
+
+ a| 
+Metadados do provedor de identidade (IdP)
+ a| 
+
+
+
+ a| 
+Endereços IP do host de destino de traps SNMP
+ a| 
+
+
+
+ a| 
+Porta SNMP
+ a| 
+
+|===
+
+
+[[cluster-information]]
+== Informações do cluster
+
+Os detalhes dos sistemas de armazenamento que você gerencia usando o Unified Manager.
+
+[cols="2*"]
+|===
+| Cluster 1 de N | Seu valor 
+
+
+ a| 
+Nome do host ou endereço IP de gerenciamento do cluster
+ a| 
+
+
+
+ a| 
+Nome de usuário do administrador do ONTAP
+
+[NOTE]
+====
+O administrador deve ter recebido a função "`admin`".
+
+==== a| 
+
+
+
+ a| 
+Senha do administrador do ONTAP
+ a| 
+
+
+
+ a| 
+Protocolo
+ a| 
+HTTPS
+
+|===

@@ -1,0 +1,244 @@
+---
+permalink: performance-checker/reference_what_performance_metrics_can_be_monitored_using_thresholds.html 
+sidebar: sidebar 
+keywords: performance, counters, tracked, thresholds 
+summary: Alguns contadores de desempenho comuns, como IOPS e MB/s, podem ter limites definidos para todos os objetos de armazenamento. Existem outros contadores que podem ter limites definidos apenas para determinados objetos de armazenamento. 
+---
+= Entenda os contadores de desempenho monitorados por meio de limites no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Alguns contadores de desempenho comuns, como IOPS e MB/s, podem ter limites definidos para todos os objetos de armazenamento. Existem outros contadores que podem ter limites definidos apenas para determinados objetos de armazenamento.
+
+
+
+[[available-performance-counters]]
+== Contadores de desempenho disponíveis
+
+|===
+| Objeto de armazenamento | Contador de desempenho | Descrição 
+
+
+ a| 
+Cluster
+ a| 
+IOPS
+ a| 
+Número médio de operações de entrada/saída que o cluster processa por segundo.
+
+
+
+ a| 
+MB/s
+ a| 
+Número médio de megabytes de dados transferidos de e para este cluster por segundo.
+
+
+
+ a| 
+Nó
+ a| 
+IOPS
+ a| 
+Número médio de operações de entrada/saída que o nó processa por segundo.
+
+
+
+ a| 
+MB/s
+ a| 
+Número médio de megabytes de dados transferidos de e para este nó por segundo.
+
+
+
+ a| 
+Latência
+ a| 
+Número médio de milissegundos que o nó leva para responder às solicitações da aplicação.
+
+
+
+ a| 
+Utilização
+ a| 
+Porcentagem média de uso da CPU e da RAM do nó.
+
+
+
+ a| 
+Capacidade de desempenho utilizada
+ a| 
+Percentual médio da capacidade de desempenho que o nó está consumindo.
+
+
+
+ a| 
+Capacidade de desempenho utilizada - takeover
+ a| 
+Percentual médio da capacidade de desempenho consumida pelo nó, mais a capacidade de desempenho do nó parceiro.
+
+
+
+ a| 
+Agregado
+ a| 
+IOPS
+ a| 
+Número médio de operações de entrada/saída que o agregado processa por segundo.
+
+
+
+ a| 
+MB/s
+ a| 
+Número médio de megabytes de dados transferidos de e para este agregado por segundo.
+
+
+
+ a| 
+Latência
+ a| 
+Número médio de milissegundos que o agregado leva para responder às solicitações do aplicativo.
+
+
+
+ a| 
+Utilização
+ a| 
+Percentual médio dos discos do agregado que estão sendo usados.
+
+
+
+ a| 
+Capacidade de desempenho utilizada
+ a| 
+Porcentagem média da capacidade de desempenho que está sendo consumida pelo agregado.
+
+
+
+ a| 
+VM de armazenamento
+ a| 
+IOPS
+ a| 
+Número médio de operações de entrada/saída processadas pela SVM por segundo.
+
+
+
+ a| 
+MB/s
+ a| 
+Número médio de megabytes de dados transferidos de e para esta SVM por segundo.
+
+
+
+ a| 
+Latência
+ a| 
+Número médio de milissegundos que a SVM leva para responder às solicitações da aplicação.
+
+
+
+ a| 
+Volume
+ a| 
+IOPS
+ a| 
+Número médio de operações de entrada/saída que o volume processa por segundo.
+
+
+
+ a| 
+MB/s
+ a| 
+Número médio de megabytes de dados transferidos de e para este volume por segundo.
+
+
+
+ a| 
+Latência
+ a| 
+Número médio de milissegundos que o volume leva para responder às solicitações da aplicação.
+
+
+
+ a| 
+Taxa de falhas de cache
+ a| 
+Porcentagem média de solicitações de leitura de aplicativos cliente que são retornadas do volume em vez de serem retornadas do cache.
+
+
+
+ a| 
+LUN
+ a| 
+IOPS
+ a| 
+Número médio de operações de entrada/saída que o LUN processa por segundo.
+
+
+
+ a| 
+MB/s
+ a| 
+Número médio de megabytes de dados transferidos de e para este LUN por segundo.
+
+
+
+ a| 
+Latência
+ a| 
+Número médio de milissegundos que o LUN leva para responder às solicitações da aplicação.
+
+
+
+ a| 
+Espaço de nomes
+ a| 
+IOPS
+ a| 
+Número médio de operações de entrada/saída processadas pelo namespace por segundo.
+
+
+
+ a| 
+MB/s
+ a| 
+Número médio de megabytes de dados transferidos de e para este namespace por segundo.
+
+
+
+ a| 
+Latência
+ a| 
+Número médio de milissegundos que o namespace leva para responder às solicitações do aplicativo.
+
+
+
+ a| 
+Porta
+ a| 
+Utilização da largura de banda
+ a| 
+Porcentagem média da largura de banda disponível da porta que está sendo utilizada.
+
+
+
+ a| 
+MB/s
+ a| 
+Número médio de megabytes de dados transferidos de e para esta porta por segundo.
+
+
+
+ a| 
+Interface de Rede (LIF)
+ a| 
+MB/s
+ a| 
+Número médio de megabytes de dados transferidos de e para esta LIF por segundo.
+
+|===

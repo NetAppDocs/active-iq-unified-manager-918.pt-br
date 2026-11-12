@@ -1,0 +1,53 @@
+---
+section: install-vapp
+title: Instale o Unified Manager em sistemas VMware vSphere
+entries:
+- title: Saiba mais sobre o Active IQ Unified Manager
+  entries:
+  - title: Introdução ao Active IQ Unified Manager
+    url: "/install-vapp/concept_introduction_to_unified_manager.html"
+  - title: O que o servidor Unified Manager faz
+    url: "/install-vapp/concept_what_unified_manager_server_does.html"
+  - title: Saiba mais sobre a sequência de instalação do Unified Manager
+    url: "/install-vapp/concept_overview_of_installation_sequence_um.html"
+- title: Requisitos para instalar o Unified Manager
+  entries:
+  - title: Certifique-se de que o servidor atenda aos requisitos de instalação do
+      Active IQ Unified Manager
+    url: "/install-vapp/concept_requirements_for_installing_unified_manager.html"
+  - title: Requisitos de infraestrutura virtual e hardware para o Unified Manager
+    url: "/install-vapp/concept_virtual_infrastructure_or_hardware_system_requirements.html"
+  - title: Requisitos de software e instalação da VMware para o Unified Manager
+    url: "/install-vapp/reference_vmware_software_and_installation_requirements.html"
+  - title: Navegadores compatíveis com o Unified Manager
+    url: "/install-vapp/concept_browser_and_platform_requirements.html"
+  - title: Requisitos de protocolo e porta para o Unified Manager
+    url: "/install-vapp/reference_protocol_and_port_requirements.html"
+  - title: Planilha de instalação do Unified Manager
+    url: "/install-vapp/reference_complete_worksheet_um.html"
+- title: Instalação, atualização e remoção do Unified Manager no VMware vSphere
+  entries:
+  - title: Saiba mais sobre o processo de implantação do Unified Manager
+    url: "/install-vapp/concept_overview_of_deployment_process.html"
+  - title: Fluxo de trabalho de implantação do appliance virtual do Unified Manager
+    entries:
+    - title: Implantar o Active IQ Unified Manager
+      url: "/install-vapp/task_deploy_unified_manager_vapp.html"
+    - title: Baixe o arquivo de instalação do Unified Manager
+      url: "/install-vapp/task_download_unified_manager_ova_file.html"
+    - title: Implante o dispositivo virtual do Unified Manager
+      url: "/install-vapp/task_deploy_unified_manager_virtual_appliance_vapp.html"
+  - title: Fluxo de trabalho de atualização do appliance virtual do Unified Manager
+    entries:
+    - title: Atualize o Active IQ Unified Manager
+      url: "/install-vapp/task_upgrade_unified_manager_vapp.html"
+    - title: Caminho de atualização compatível para versões do Unified Manager
+      url: "/include/upgrade-path.html"
+    - title: Baixe o arquivo de atualização do Unified Manager
+      url: "/install-vapp/task_download_unified_manager_iso_image_vapp.html"
+    - title: Atualize o appliance virtual do Unified Manager
+      url: "/install-vapp/task_upgrade_unified_manager_virtual_appliance_vapp.html"
+  - title: Reinicie a máquina virtual do Unified Manager
+    url: "/install-vapp/task_restart_unified_manager_virtual_machine.html"
+  - title: Remover o Unified Manager
+    url: "/install-vapp/task_remove_unified_manager_vapp.html"

@@ -1,0 +1,39 @@
+---
+permalink: health-checker/task_perform_diagnotstic_actions_for_volume_offline_conditions.html 
+sidebar: sidebar 
+keywords: perform, diagnostic actions, volume, offline, conditions 
+summary: Após acessar a página de detalhes Volume / Saúde de um volume relatado como off-line, você pode procurar informações adicionais úteis para diagnosticar a condição de volume off-line. 
+---
+= Execute ações de diagnóstico para condições de volume offline no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após acessar a página de detalhes Volume / Saúde de um volume relatado como off-line, você pode procurar informações adicionais úteis para diagnosticar a condição de volume off-line.
+
+.Antes de começar
+Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+
+Se o volume informado como off-line não foi colocado off-line deliberadamente, esse volume pode estar off-line por vários motivos.
+
+Na página de detalhes Volume/Integridade do volume off-line, você pode navegar para outras páginas e painéis para confirmar ou eliminar possíveis causas:
+
+* Clique nos links da página de detalhes *Volume / Health* para determinar se o volume está off-line porque seu nó host está inativo e o failover de armazenamento para o parceiro do seu par de HA também falhou.
++
+Consulte link:task_determine_if_volume_offline_condition_is_by_down_cluster_node.html["Determinar se uma condição de volume off-line é causada por um nó inativo"].
+
+* Clique nos links da página de detalhes *Volume / Health* para determinar se o volume está off-line e se a máquina virtual de armazenamento (SVM) do host está parada porque o nó que hospeda o volume raiz dessa SVM está inativo.
++
+Consulte link:task_determine_if_volume_is_offline_and_its_svm_is_stopped.html["Determinar se um volume está off-line e se a SVM está parada porque um nó está inativo"].
+
+* Clique nos links da página de detalhes *Volume / Health* para determinar se o volume está off-line devido a discos com falha no agregado host.
++
+Consulte link:task_determine_if_volume_is_offline_because_of_broken_disks.html["Determinar se um volume está off-line devido a discos com falha em um agregado"].
+
+
+
+*Informações relacionadas*
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Funções e capacidades de usuário do Unified Manager"]

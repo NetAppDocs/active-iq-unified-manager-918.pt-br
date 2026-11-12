@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_add_group_actions.html 
+sidebar: sidebar 
+keywords: add, group, actions 
+summary: Você pode configurar ações de grupo que deseja aplicar aos objetos de armazenamento em um grupo. Configurar ações para um grupo permite economizar tempo, pois você não precisa adicionar essas ações a cada objeto individualmente. 
+---
+= Adicionar ações de grupo no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar ações de grupo que deseja aplicar aos objetos de armazenamento em um grupo. Configurar ações para um grupo permite economizar tempo, pois você não precisa adicionar essas ações a cada objeto individualmente.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Grupos*.
+. Na guia *Ações do Grupo*, clique em *Adicionar*.
+. Na caixa de diálogo *Adicionar ação de grupo*, insira um nome e uma descrição para a ação.
+. No menu *Grupo*, selecione o grupo para o qual deseja configurar a ação.
+. No menu *Tipo de ação*, selecione um tipo de ação.
++
+A caixa de diálogo se expande, permitindo que você configure o tipo de ação selecionado com os parâmetros necessários.
+
+. Insira os valores apropriados para os parâmetros necessários para configurar uma ação de grupo.
+. Clique em *Add*.
+

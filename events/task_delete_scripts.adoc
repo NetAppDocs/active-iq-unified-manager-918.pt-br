@@ -1,0 +1,25 @@
+---
+permalink: events/task_delete_scripts.html 
+sidebar: sidebar 
+keywords: delete, scripts 
+summary: Você pode excluir um script do Unified Manager quando ele não for mais necessário ou válido. 
+---
+= Excluir scripts no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode excluir um script do Unified Manager quando ele não for mais necessário ou válido.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+* O script não deve estar associado a um alerta.
+
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Scripts*.
+. Na página *Scripts*, selecione o script que deseja excluir e clique em *Excluir*.
+. Na caixa de diálogo *Aviso*, confirme a exclusão clicando em *Sim*.
+

@@ -1,0 +1,74 @@
+---
+permalink: config/task_set_up_authentication_services.html 
+sidebar: sidebar 
+keywords: set up, authentication, services 
+summary: Os serviços de autenticação permitem a autenticação de usuários remotos ou grupos remotos em um servidor de autenticação antes de conceder a eles acesso ao Unified Manager. Você pode autenticar usuários usando serviços de autenticação predefinidos, como Active Directory ou OpenLDAP, ou configurando seu próprio mecanismo de autenticação. 
+---
+= Configure os serviços de autenticação no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os serviços de autenticação permitem a autenticação de usuários remotos ou grupos remotos em um servidor de autenticação antes de conceder a eles acesso ao Unified Manager. Você pode autenticar usuários usando serviços de autenticação predefinidos, como Active Directory ou OpenLDAP, ou configurando seu próprio mecanismo de autenticação.
+
+.Antes de começar
+* Você deve ter habilitado a autenticação remota.
+* Você precisa ter a função de Application Administrator.
+
+
+.Passos
+. No painel de navegação à esquerda, clique em *Geral* > *Autenticação Remota*.
+. Selecione um dos seguintes serviços de autenticação:
++
+[cols="2*"]
+|===
+| Se você selecionar... | Então faça isso... 
+
+
+ a| 
+Active Directory
+ a| 
+.. Digite o nome do administrador e a senha.
+.. Especifique o nome diferenciado base do servidor de autenticação.
++
+Por exemplo, se o nome de domínio do servidor de autenticação for +ou@domain.com+, então o nome diferenciado base será *cn=ou,dc=domain,dc=com*.
+
+
+
+
+
+ a| 
+O OpenLDAP
+ a| 
+.. Insira o nome diferenciado de vinculação e a senha de vinculação.
+.. Especifique o nome diferenciado base do servidor de autenticação.
++
+Por exemplo, se o nome de domínio do servidor de autenticação for +ou@domain.com+, então o nome diferenciado base será *cn=ou,dc=domain,dc=com*.
+
+
+
+
+
+ a| 
+Outros
+ a| 
+.. Insira o nome diferenciado de vinculação e a senha de vinculação.
+.. Especifique o nome diferenciado base do servidor de autenticação.
++
+Por exemplo, se o nome de domínio do servidor de autenticação for +ou@domain.com+, então o nome diferenciado base será *cn=ou,dc=domain,dc=com*.
+
+.. Especifique a versão do protocolo LDAP compatível com o servidor de autenticação.
+.. Insira o nome de usuário, a associação a grupos, o grupo de usuários e os atributos do membro.
+
+
+|===
++
+[NOTE]
+====
+Se você quiser modificar o serviço de autenticação, deverá excluir todos os servidores de autenticação existentes e, em seguida, adicionar novos servidores de autenticação.
+
+====
+. Clique em *Salvar*.
+

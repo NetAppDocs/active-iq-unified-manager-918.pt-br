@@ -1,0 +1,39 @@
+---
+permalink: health-checker/task_view_storage_pool_details.html 
+sidebar: sidebar 
+keywords: view, storage pool, details 
+summary: Você pode visualizar os detalhes do pool de storage para monitorar a integridade do pool de storage, o cache total e disponível e as alocações usadas e disponíveis. 
+---
+= Visualize os detalhes do pool de storage no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar os detalhes do pool de storage para monitorar a integridade do pool de storage, o cache total e disponível e as alocações usadas e disponíveis.
+
+.Antes de começar
+Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Agregados*.
+. Clique no nome de um agregado.
++
+Você vê os detalhes do agregado selecionado.
+
+. Clique na aba *Informações do Disco*.
++
+São exibidas informações detalhadas do disco.
+
++
+[NOTE]
+====
+A tabela Cache é exibida somente quando o agregado selecionado está usando um pool de storage.
+
+====
+. Na tabela Cache, mova o ponteiro sobre o nome do pool de storage necessário.
++
+Os detalhes do pool de storage são exibidos.
+
+

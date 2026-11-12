@@ -1,0 +1,78 @@
+---
+permalink: data-protection/reference_create_snapvault_policy_dialog_box.html 
+sidebar: sidebar 
+keywords: create, snapvault, policy, dialog box 
+summary: A caixa de diálogo Create SnapVault Policy permite criar uma política para definir a prioridade das transferências do SnapVault. Você usa políticas para maximizar a eficiência das transferências do volume primário para o volume secundário. 
+---
+= Use a caixa de diálogo Criar SnapVault Policy no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Create SnapVault Policy permite criar uma política para definir a prioridade das transferências do SnapVault. Você usa políticas para maximizar a eficiência das transferências do volume primário para o volume secundário.
+
+* *Cluster de destino*
++
+O nome do cluster que você selecionou na aba SnapVault da caixa de diálogo Configure Protection.
+
+* *SVM de destino*
++
+O nome da SVM que você selecionou na guia SnapVault da caixa de diálogo Configure Protection.
+
+* *Nome da política*
++
+O nome que você fornecer para a nova política. Os nomes de políticas podem conter os caracteres de A a Z, de a a z, de 0 a 9, ponto (.), hífen (-) e sublinhado (_).
+
+* *Prioridade de Transferência*
++
+A prioridade na qual a transferência é executada. Você pode selecionar Normal ou Baixa. Os relacionamentos de transferência com políticas que especificam uma prioridade de transferência Normal são executados antes daqueles com políticas que especificam uma prioridade de transferência Baixa. A configuração padrão é Normal.
+
+* *Comentário*
++
+Campo opcional no qual você pode adicionar um comentário de até 255 caracteres sobre a política do SnapVault.
+
+* *Ignorar tempo de acesso*
++
+Especifica se as transferências incrementais são ignoradas para arquivos que tiveram apenas o tempo de acesso alterado.
+
+* *Rótulo de replicação*
++
+Lista em uma tabela as regras associadas às cópias Snapshot selecionadas pelo ONTAP que possuem um rótulo de replicação específico em uma política. As seguintes informações e ações também estão disponíveis:
+
++
+** Botões de comando
++
+Os botões de comando permitem que você execute as seguintes ações:
+
++
+*** Adicionar
++
+Permite que você crie um rótulo de cópia Snapshot e defina uma contagem de retenção.
+
+*** Editar contagem de retenção
++
+Permite que você altere a contagem de retenção de um rótulo de cópia Snapshot existente. A contagem de retenção deve ser um número entre 1 e 251. A soma de todas as contagens de retenção de todas as regras não pode exceder 251.
+
+*** Excluir
++
+Permite excluir um rótulo de cópia Snapshot existente.
+
+
+
+** Rótulo da cópia Snapshot
++
+Exibe o rótulo da cópia Snapshot. Se você selecionar um ou mais volumes com a mesma política local de cópia Snapshot, será exibida uma entrada para cada rótulo na política. Se você selecionar vários volumes que tenham duas ou mais políticas locais de cópia Snapshot, a tabela exibirá todos os rótulos de todas as políticas
+
+** Cronograma
++
+Exibe a programação associada a cada rótulo de cópia Snapshot. Se um rótulo tiver mais de uma programação associada a ele, as programações desse rótulo serão exibidas em uma lista separada por vírgulas. Se você selecionar vários volumes com o mesmo rótulo, mas com programações diferentes, a programação exibirá "`Várias`" para indicar que mais de uma programação está associada aos volumes selecionados.
+
+** Contagem de retenção de destino
++
+Exibe o número de cópias Snapshot com o rótulo especificado que são retidas no secundário do SnapVault. As contagens de retenção para rótulos com vários agendamentos exibem a soma das contagens de retenção de cada par de rótulo e agendamento. Se você selecionar vários volumes com duas ou mais políticas locais de cópia Snapshot, a contagem de retenção ficará vazia.
+
+
+
+

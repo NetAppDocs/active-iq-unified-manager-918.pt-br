@@ -1,0 +1,30 @@
+---
+permalink: config/concept_authentication_with_active_directory_or_openldap.html 
+sidebar: sidebar 
+keywords: authentication, active directory, openldap 
+summary: Você pode habilitar a autenticação remota no servidor de gerenciamento e configurar o servidor de gerenciamento para se comunicar com seus servidores de autenticação, para que os usuários desses servidores de autenticação possam acessar o Unified Manager. 
+---
+= Autentique com o Active Directory ou OpenLDAP no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode habilitar a autenticação remota no servidor de gerenciamento e configurar o servidor de gerenciamento para se comunicar com seus servidores de autenticação, para que os usuários desses servidores de autenticação possam acessar o Unified Manager.
+
+Você pode usar um dos seguintes serviços de autenticação predefinidos ou especificar seu próprio serviço de autenticação:
+
+* O Microsoft Active Directory
++
+[NOTE]
+====
+Você não pode usar o Microsoft Lightweight Directory Services.
+
+====
+* O OpenLDAP
+
+
+Você pode selecionar o serviço de autenticação necessário e adicionar os servidores de autenticação apropriados para permitir que os usuários remotos no servidor de autenticação acessem o Unified Manager. As credenciais de usuários ou grupos remotos são mantidas pelo servidor de autenticação. O servidor de gerenciamento usa o Protocolo Lightweight Directory Access Protocol (LDAP) para autenticar usuários remotos no servidor de autenticação configurado.
+
+Para usuários locais criados no Unified Manager, o servidor de gerenciamento mantém seu próprio banco de dados de nomes de usuário e senhas. O servidor de gerenciamento realiza a autenticação e não utiliza o Active Directory ou o OpenLDAP para autenticação.

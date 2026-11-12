@@ -1,0 +1,27 @@
+---
+permalink: performance-checker/task_identify_victim_workloads_involved_in_performance_event.html 
+sidebar: sidebar 
+keywords: identify, victim workloads, dynamic, performance, event 
+summary: 'No Unified Manager, você pode identificar quais cargas de trabalho de volume apresentam o maior desvio no tempo de resposta (latência) causado por um componente de armazenamento em disputa. Identificar essas cargas de trabalho ajuda você a entender por que os aplicativos cliente que acessam esses volumes estão apresentando desempenho mais lento do que o normal.' 
+---
+= Identifique cargas de trabalho afetadas em eventos de desempenho dinâmicos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+No Unified Manager, você pode identificar quais cargas de trabalho de volume apresentam o maior desvio no tempo de resposta (latência) causado por um componente de armazenamento em disputa. Identificar essas cargas de trabalho ajuda você a entender por que os aplicativos cliente que acessam esses volumes estão apresentando desempenho mais lento do que o normal.
+
+.Antes de começar
+* Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+* Deve haver eventos de desempenho dinâmico novos, reconhecidos ou obsoletos.
+
+
+A página de detalhes do evento exibe uma lista das cargas de trabalho definidas pelo usuário e pelo sistema, classificadas pelo maior desvio na atividade ou no uso do componente ou pelo maior impacto causado pelo evento. Os valores são baseados nos picos que o Unified Manager identificou quando detectou e analisou o evento pela última vez.
+
+.Passos
+. Exiba a página *Detalhes do evento* para visualizar informações sobre o evento.
+. Nos gráficos Latência da carga de trabalho e Atividade da carga de trabalho, selecione *Cargas de trabalho vítimas*.
+. Passe o cursor sobre os gráficos para visualizar as principais cargas de trabalho definidas pelo usuário que estão afetando o componente, bem como o nome da carga de trabalho vítima.
+

@@ -1,0 +1,66 @@
+---
+permalink: performance-checker/task_respond_to_cluster_imbalance_performance_events.html 
+sidebar: sidebar 
+keywords: cluster, imbalance, performance, events 
+summary: O Unified Manager gera eventos de aviso de desequilíbrio de cluster quando um nó em um cluster está operando com uma carga muito maior do que outros nós e, portanto, potencialmente afetando as latências das cargas de trabalho. Esses eventos definidos pelo sistema oferecem a oportunidade de corrigir possíveis problemas de desempenho antes que muitas cargas de trabalho sejam afetadas pela latência. 
+---
+= Responder a eventos de desempenho de desequilíbrio de cluster no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Unified Manager gera eventos de aviso de desequilíbrio de cluster quando um nó em um cluster está operando com uma carga muito maior do que outros nós e, portanto, potencialmente afetando as latências das cargas de trabalho. Esses eventos definidos pelo sistema oferecem a oportunidade de corrigir possíveis problemas de desempenho antes que muitas cargas de trabalho sejam afetadas pela latência.
+
+.Antes de começar
+Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+
+O Unified Manager gera eventos de alerta para violações da política de limite de desequilíbrio do cluster, comparando o valor da capacidade de desempenho usada em todos os nós do cluster para verificar se há uma diferença de carga de 30% entre quaisquer nós.
+
+Estas etapas ajudam você a identificar os seguintes recursos para que possa mover cargas de trabalho de alto desempenho para um nó menos utilizado:
+
+* Os nós do mesmo cluster que estão menos utilizados
+* Os agregados no novo nó que são menos utilizados
+* Os volumes de melhor desempenho no nó atual
+
+
+.Passos
+. Exiba a página de detalhes do *Event* para visualizar informações sobre o evento.
+. Analise a *Descrição*, que descreve a violação do limite que causou o evento.
++
+Por exemplo, a mensagem "`O contador de capacidade de desempenho usada indica uma diferença de carga de 62% entre os nós do cluster Dallas-1-8 e acionou um evento de AVISO com base no limite do sistema de 30%`" indica que a capacidade de desempenho em um dos nós está sobreutilizada e afetando o desempenho do nó.
+
+. Analise o texto em *Ações Sugeridas* para mover um volume de alto desempenho do nó com o maior valor de capacidade de desempenho utilizada para um nó com o menor valor de capacidade de desempenho utilizada.
+. Identifique os nós com o maior e o menor valor de capacidade de desempenho utilizada:
++
+.. Na seção *Informações do evento*, clique no nome do cluster de origem.
+.. Na página *Resumo do Cluster / Desempenho*, clique em *Nós* na área *Objetos Gerenciados*.
+.. Na página de inventário *Nós*, classifique os nós pela coluna *Capacidade de Desempenho Utilizada*.
+.. Identifique os nós com o maior e o menor valor de capacidade de desempenho usado e anote esses nomes.
+
+
+. Identifique o volume que usa mais IOPS no nó com o maior valor de capacidade de desempenho utilizada:
++
+.. Clique no nó com o maior valor de capacidade de desempenho usada.
+.. Na página *Node / Performance Explorer*, selecione *Aggregates on this Node* no menu *View and Compare*.
+.. Clique no agregado com o maior valor de capacidade de desempenho utilizada.
+.. Na página *Aggregate / Performance Explorer*, selecione *Volumes on this Aggregate* no menu *View and Compare*.
+.. Ordene os volumes pela coluna *IOPS* e anote o nome do volume que usa mais IOPS e o nome do agregado onde o volume reside.
+
+
+. Identifique o agregado com a menor utilização no nó que apresenta o menor valor de capacidade de desempenho utilizada:
++
+.. Clique em *Storage* > *Aggregates* para exibir a página de inventário de *Aggregates*.
+.. Selecione a visualização *Desempenho: todos os agregados*.
+.. Clique no botão *Filter* e adicione um filtro em que "`Node`" seja igual ao nome do nó com o menor valor de capacidade de desempenho usada que você anotou na etapa 4.
+.. Anote o nome do agregado que possui o menor valor de capacidade de desempenho utilizada.
+
+
+. Mova o volume do nó sobrecarregado para o agregado que você identificou como tendo baixa utilização no novo nó.
++
+Você pode executar a operação de movimentação usando o ONTAP System Manager, o OnCommand Workflow Automation, comandos do ONTAP ou uma combinação dessas ferramentas.
+
+
+
+Após alguns dias, verifique se você está recebendo o mesmo evento de desequilíbrio de cluster deste cluster.

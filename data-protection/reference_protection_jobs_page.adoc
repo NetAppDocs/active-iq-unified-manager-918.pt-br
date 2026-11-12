@@ -1,0 +1,157 @@
+---
+permalink: data-protection/reference_protection_jobs_page.html 
+sidebar: sidebar 
+keywords: jobs, page 
+summary: A página Jobs permite que você veja o status atual e outras informações sobre todos os trabalhos de proteção de aplicativos parceiros que estão em execução no momento, bem como os trabalhos que já foram concluídos. Você pode usar essas informações para ver quais trabalhos ainda estão em execução e se um trabalho foi concluído com sucesso ou falhou. 
+---
+= Saiba mais sobre a página de jobs no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página Jobs permite que você veja o status atual e outras informações sobre todos os trabalhos de proteção de aplicativos parceiros que estão em execução no momento, bem como os trabalhos que já foram concluídos. Você pode usar essas informações para ver quais trabalhos ainda estão em execução e se um trabalho foi concluído com sucesso ou falhou.
+
+
+
+[[command-buttons]]
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas:
+
+* *Abortar*
++
+Cancela a tarefa selecionada. Esta opção só está disponível se a tarefa selecionada estiver em execução.
+
+* *Tentar novamente*
++
+Reinicia uma tarefa com falha do tipo Configuração de Proteção ou Operação de Relacionamento de Proteção. Você pode tentar novamente apenas uma tarefa com falha por vez. Se mais de uma tarefa com falha for selecionada, o botão *Tentar novamente* ficará desabilitado. Não é possível tentar novamente tarefas com falha do serviço de armazenamento.
+
+* *Atualizar*
++
+Atualiza a lista de jobs e as informações associadas a eles.
+
+
+
+
+
+[[jobs-list]]
+== Lista de trabalhos
+
+A lista de trabalhos exibe, em formato tabular, uma lista dos trabalhos em andamento. Por padrão, a lista exibe apenas os trabalhos gerados na última semana. Você pode usar a classificação por colunas e a filtragem para personalizar quais trabalhos são exibidos.
+
+* *Status*
++
+Exibe o status atual de um trabalho. O status pode ser Erro (image:../media/sev_error.gif[""]) ou Normal (image:../media/sev_normal.gif[""]).
+
+* *ID do trabalho*
++
+Exibe o número de identificação da tarefa. Por padrão, esta coluna está oculta.
+
++
+O número de identificação da tarefa é único e é atribuído pelo servidor quando a tarefa é iniciada. Você pode pesquisar uma tarefa específica inserindo o número de identificação da tarefa na caixa de texto fornecida pelo filtro de coluna.
+
+* *Nome*
++
+Exibe o nome do trabalho.
+
+* *Tipo*
++
+Exibe o tipo de trabalho. Os tipos de trabalho são os seguintes:
+
++
+** *Aquisição de cluster*
++
+Uma tarefa do Workflow Automation está redescobrindo um cluster.
+
+** *Configuração de proteção*
++
+Uma tarefa de proteção inicia fluxos de trabalho do Workflow Automation, como agendamentos cron, criação de políticas do SnapMirror e assim por diante.
+
+** *Operação de Relação de Proteção*
++
+Um trabalho de proteção está executando operações do SnapMirror.
+
+** *Cadeia de Fluxo de Trabalho de Proteção*
++
+Uma tarefa do Workflow Automation executa vários fluxos de trabalho.
+
+** *Restaurar*
++
+Uma tarefa de restauração está em execução.
+
+** *Limpar*
++
+A tarefa consiste em limpar os artefatos dos membros do serviço de armazenamento que não são mais necessários para fins de restauração.
+
+** *Conformidade*
++
+A tarefa consiste em verificar a configuração dos membros do serviço de armazenamento para garantir que estejam em conformidade.
+
+** *Destruir*
++
+A tarefa está excluindo um serviço de armazenamento.
+
+** *Importar*
++
+A tarefa consiste em importar objetos de armazenamento não gerenciados para um serviço de armazenamento existente.
+
+** *Modificar*
++
+A tarefa consiste em modificar os atributos de um serviço de armazenamento existente.
+
+** *Inscreva-se*
++
+A tarefa consiste em inscrever membros em um serviço de armazenamento.
+
+** *Cancelar inscrição*
++
+A tarefa consiste em cancelar a assinatura de membros de um serviço de armazenamento.
+
+** *Atualizar*
++
+Uma tarefa de atualização de proteção está em execução.
+
+** *Configuração do WFA*
++
+Uma tarefa do Workflow Automation está enviando credenciais do cluster e sincronizando caches do banco de dados.
+
+
+
+* *Estado*
++
+Exibe o estado de execução da tarefa. As opções de estado são as seguintes:
+
++
+** *Abortado*
++
+A tarefa foi abortada.
+
+** *Abortando*
++
+A tarefa está em processo de cancelamento.
+
+** *Concluído*
++
+O trabalho está concluído.
+
+** *Em execução*
++
+A tarefa está em execução.
+
+
+
+* *Hora de envio*
++
+Exibe a hora em que o trabalho foi submetido.
+
+* *Duração*
++
+Exibe o tempo que a tarefa levou para ser concluída. Esta coluna é exibida por padrão.
+
+* *Tempo de conclusão*
++
+Exibe a hora em que a tarefa foi concluída. Por padrão, esta coluna está oculta.
+
+

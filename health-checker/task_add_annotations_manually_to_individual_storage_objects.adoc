@@ -1,0 +1,55 @@
+---
+permalink: health-checker/task_add_annotations_manually_to_individual_storage_objects.html 
+sidebar: sidebar 
+keywords: add, annotations, manually, individual, storage objects 
+summary: Você pode anotar manualmente volumes, clusters e SVMs selecionados sem usar regras de anotação. Você pode anotar um único objeto de armazenamento ou vários objetos de armazenamento e especificar a combinação de nome e valor necessária para a anotação. 
+---
+= Adicione anotações manualmente a objetos de storage individuais no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode anotar manualmente volumes, clusters e SVMs selecionados sem usar regras de anotação. Você pode anotar um único objeto de armazenamento ou vários objetos de armazenamento e especificar a combinação de nome e valor necessária para a anotação.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+.Passos
+. Navegue até os objetos de armazenamento que você deseja anotar:
++
+[cols="2*"]
+|===
+| Para adicionar anotação a... | Faça isso... 
+
+
+ a| 
+Clusters
+ a| 
+.. Clique em *Armazenamento* > *Clusters*.
+.. Selecione um ou mais clusters.
+
+
+
+
+ a| 
+Volumes
+ a| 
+.. Clique em *Armazenamento* > *Volumes*.
+.. Selecione um ou mais volumes.
+
+
+
+
+ a| 
+SVMs
+ a| 
+.. Clique em *Storage* > *SVMs*.
+.. Selecione uma ou mais SVMs.
+
+
+|===
+. Clique em *Anotar* e selecione um par nome-valor.
+. Clique em *Aplicar*.
+

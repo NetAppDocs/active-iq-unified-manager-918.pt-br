@@ -1,0 +1,32 @@
+---
+permalink: health-checker/task_edit_individual_aggregate_health_threshold_settings.html 
+sidebar: sidebar 
+keywords: edit, individual, aggregate, health, threshold, settings 
+summary: Você pode editar as configurações de limite de integridade para a capacidade, o crescimento e as cópias de Snapshot de um ou mais agregados. Quando um limite é ultrapassado, alertas são gerados e você recebe notificações. Essas notificações ajudam você a tomar medidas preventivas com base no evento gerado. 
+---
+= Edite as configurações individuais de limite de integridade de agregado no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode editar as configurações de limite de integridade para a capacidade, o crescimento e as cópias de Snapshot de um ou mais agregados. Quando um limite é ultrapassado, alertas são gerados e você recebe notificações. Essas notificações ajudam você a tomar medidas preventivas com base no evento gerado.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Com base nas alterações nos valores de limite, os eventos são gerados ou ficam obsoletos no próximo ciclo de monitoramento.
+
+Quando o Autogrow está ativado em volumes que residem no agregado, os limites de capacidade do agregado são considerados ultrapassados com base no tamanho máximo do volume definido pelo Autogrow, e não com base no tamanho original do volume.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Agregados*.
+. Na visualização *Health: All Aggregates*, selecione um ou mais agregados e clique em *Edit Thresholds*.
+. Na caixa de diálogo *Edit Aggregate Thresholds*, edite as configurações de limite de um dos seguintes itens: capacidade, crescimento ou cópias Snapshot, selecionando a caixa de seleção apropriada e, em seguida, modificando as configurações.
+. Clique em *Salvar*.
+
+
+*Informações relacionadas*
+
+link:../config/task_add_users.html["Adicionando usuários"]

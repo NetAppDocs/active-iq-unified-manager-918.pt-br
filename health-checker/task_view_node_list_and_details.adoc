@@ -1,0 +1,54 @@
+---
+permalink: health-checker/task_view_node_list_and_details.html 
+sidebar: sidebar 
+keywords: view, node list, details 
+summary: 'Use a visualização "Todos os nós" na página "Saúde" para ver a lista de nós em seus clusters e a página "Detalhes de integridade do cluster" para obter informações detalhadas sobre os nós.' 
+---
+= Visualize a lista de nós e detalhes no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a visualização Saúde: todos os nós para ver a lista de nós em seus clusters. Você pode usar a página de detalhes de Cluster/Health para ver informações detalhadas sobre os nós que fazem parte do cluster monitorado.
+
+.Antes de começar
+Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+
+Você pode visualizar detalhes como o estado do nó, o cluster que contém o nó, os detalhes da capacidade do agregado (usada e total) e os detalhes da capacidade bruta (utilizável, reserva e total). Você também pode obter informações sobre pares de HA, shelves de disco e portas.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Nós*.
+. Na visualização *Health: All Nodes*, clique no nó cujos detalhes você deseja visualizar.
++
+As informações detalhadas do nó selecionado são exibidas na página de detalhes Cluster / Health. O painel esquerdo exibe a lista de pares de HA. Por padrão, os Detalhes de HA ficam abertos, exibindo detalhes do estado de HA e eventos relacionados ao par de HA selecionado.
+
+. Para visualizar outros detalhes sobre o nó, execute a ação apropriada:
++
+[cols="2*"]
+|===
+| Para visualizar... | Clique... 
+
+
+ a| 
+Detalhes sobre as prateleiras de discos
+ a| 
+*Gavetas de disco*.
+
+
+
+ a| 
+Informações relacionadas à porta
+ a| 
+*Portas*.
+
+|===
+
+
+Para obter mais informações, consulte:
+
+* link:../performance-checker/performance-view-all.html#performance-all-nodes-view["Desempenho: visualização de todos os nós"]
+* link:../performance-checker/concept_view_node_and_aggregate_available_iops_values.html["Visualizando os valores de IOPS disponíveis no nó e no agregado"]
+* link:../performance-checker/concept_view_node_and_aggregate_performance_capacity_used_values.html["Visualizando os valores usados da capacidade de desempenho do nó e do agregado"]
+

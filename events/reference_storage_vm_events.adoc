@@ -1,0 +1,456 @@
+---
+permalink: events/reference_storage_vm_events.html 
+sidebar: sidebar 
+keywords: storage, vm events, impact area, availability, configuration, performance, security 
+summary: 'Os eventos de máquinas virtuais de armazenamento (SVMs) fornecem informações sobre o status das suas SVMs, permitindo o monitoramento de possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do alerta (trap), o nível de impacto, o tipo de origem e a gravidade.' 
+---
+= Saiba mais sobre eventos de VMs de armazenamento no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de máquina virtual de armazenamento (storage virtual machine, também conhecida como SVM) fornecem informações sobre o status das suas máquinas virtuais de armazenamento (SVMs), permitindo que você monitore possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade.
+
+Um asterisco (*) identifica eventos do EMS que foram convertidos em eventos do Unified Manager.
+
+
+
+[[impact-area-availability]]
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Serviço CIFS da VM de storage inativo(ocumEvtVserverCifsServiceStatusDown)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Serviço CIFS da SVM não configurado(não aplicável)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+
+
+ a| 
+Tentativas de conexão a compartilhamento CIFS inexistente *(nbladeCifsNoPrivShare)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Conflito de nome NetBIOS do CIFS *(nbladeCifsNbNameConflict)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+
+
+ a| 
+Falha na operação de cópia de sombra do CIFS *(cifsShadowCopyFailure)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+
+
+ a| 
+Muitas conexões CIFS *(nbladeCifsManyAuths)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+
+
+ a| 
+Número máximo de conexões CIFS excedido *(nbladeCifsMaxOpenSameFile)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+
+
+ a| 
+Número máximo de conexões CIFS por usuário excedido *(nbladeCifsMaxSessPerUsrConn)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+
+
+ a| 
+Serviço FC/FCoE da SVM inativo(ocumEvtVserverFcServiceStatusDown)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Serviço iSCSI da SVM inativo(ocumEvtVserverIscsiServiceStatusDown)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Serviço NFS da VM de storage inativo (ocumEvtVserverNfsServiceStatusDown)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Serviço SVM FC/FCoE não configurado(não aplicável)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+
+
+ a| 
+Serviço iSCSI da SVM não configurado(não aplicável)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+
+
+ a| 
+Serviço NFS do SVM não configurado (não aplicável)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+
+
+ a| 
+Máquina virtual de armazenamento interrompida(ocumEvtVserverDown)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+
+
+ a| 
+Servidor AV muito ocupado para aceitar nova solicitação de verificação *(nbladeVscanConnBackPressure)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+
+
+ a| 
+Nenhuma conexão de servidor AV para verificação de vírus *(nbladeVscanNoScannerConn)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Nenhum servidor AV registrado *(nbladeVscanNoRegdScanner)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+
+
+ a| 
+Sem conexão responsiva com o servidor AV *(nbladeVscanConnInactive)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+
+
+ a| 
+Tentativa de usuário não autorizado de acessar o servidor AV *(nbladeVscanBadUserPrivAccess)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+
+
+ a| 
+Vírus detectado pelo servidor antivírus *(nbladeVscanVirusDetected)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Erro
+
+|===
+
+
+[[impact-area-configuration]]
+== Área de impacto: configuração
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+SVM detectado(Não aplicável)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+
+
+ a| 
+SVM excluído(não aplicável)
+ a| 
+Evento
+ a| 
+Cluster
+ a| 
+Informação
+
+
+
+ a| 
+SVM renomeado(não aplicável)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+|===
+
+
+[[impact-area-performance]]
+== Área de impacto: desempenho
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Limiar crítico de IOPS do SVM ultrapassado(ocumSvmIopsIncident)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Limiar de aviso de IOPS do SVM ultrapassado(ocumSvmIopsWarning)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+
+
+ a| 
+Limiar crítico de MB/s do SVM ultrapassado(ocumSvmMbpsIncident)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Limiar de aviso de MB/s da SVM ultrapassado(ocumSvmMbpsWarning)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+
+
+ a| 
+Limiar crítico de latência da SVM ultrapassado(ocumSvmLatencyIncident)
+ a| 
+Incidente
+ a| 
+SVM
+ a| 
+Crítico
+
+
+
+ a| 
+Limiar de aviso de latência do SVM ultrapassado(ocumSvmLatencyWarning)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+|===
+
+
+[[impact-area-security]]
+== Área de impacto: segurança
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Registro de auditoria desativado(ocumVserverAuditLogDisabled)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+
+
+ a| 
+Banner de login desativado(ocumVserverLoginBannerDisabled)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+
+
+ a| 
+O SSH está usando cifras inseguras(ocumVserverSSHInsecure)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+
+
+ a| 
+Banner de login alterado(ocumVserverLoginBannerChanged)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+
+
+ a| 
+O monitoramento anti-ransomware da VM de armazenamento está desativado (antiRansomwareSvmStateDisabled)
+ a| 
+Risco
+ a| 
+SVM
+ a| 
+Aviso
+
+
+
+ a| 
+O monitoramento antiransomware da VM de storage está ativado (modo de aprendizado) (antiRansomwareSvmStateDryrun)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+
+
+ a| 
+Máquina virtual de storage adequada para monitoramento anti-ransomware (Modo de Aprendizagem) (ocumEvtSvmArwCandidate)
+ a| 
+Evento
+ a| 
+SVM
+ a| 
+Informação
+
+|===

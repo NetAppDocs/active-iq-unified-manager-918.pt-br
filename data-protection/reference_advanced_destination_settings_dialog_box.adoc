@@ -1,0 +1,30 @@
+---
+permalink: data-protection/reference_advanced_destination_settings_dialog_box.html 
+sidebar: sidebar 
+keywords: advanced, destination, settings, dialog box 
+summary: Você pode usar a caixa de diálogo Configurações avançadas de destino para habilitar as configurações de garantia de espaço em um volume de destino. Você pode selecionar as configurações avançadas quando a garantia de espaço estiver desabilitada na origem, mas quiser habilitá-la no destino. As configurações de deduplicação, compactação e crescimento automático em uma relação do SnapMirror são herdadas do volume de origem e não podem ser alteradas. 
+---
+= Utilize a caixa de diálogo Configurações Avançadas de Destino no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a caixa de diálogo Configurações avançadas de destino para habilitar as configurações de garantia de espaço em um volume de destino. Você pode selecionar as configurações avançadas quando a garantia de espaço estiver desabilitada na origem, mas quiser habilitá-la no destino. As configurações de deduplicação, compactação e crescimento automático em uma relação do SnapMirror são herdadas do volume de origem e não podem ser alteradas.
+
+
+
+[[space-guarantee]]
+== Garantia de espaço
+
+Garante que haja espaço suficiente alocado no volume de destino para que as transferências de dados sejam sempre bem-sucedidas. A configuração de garantia de espaço pode ser uma das seguintes:
+
+* Arquivo
+* Volume
+* Nenhum
+
+
+Por exemplo, você pode ter um volume de 200 GB que contém arquivos totalizando 50 GB; no entanto, esses arquivos contêm apenas 10 GB de dados. A garantia de volume aloca 200 GB para o volume de destino, independentemente do conteúdo na origem. A garantia de arquivo aloca 50 GB para garantir que haja espaço suficiente reservado para os arquivos de origem no destino; selecionar *None* nesse cenário significa que apenas 10 GB são alocados no destino para o espaço realmente usado pelos dados dos arquivos na origem.
+
+A garantia de espaço está definida como Volume por padrão.

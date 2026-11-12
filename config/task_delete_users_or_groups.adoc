@@ -1,0 +1,28 @@
+---
+permalink: config/task_delete_users_or_groups.html 
+sidebar: sidebar 
+keywords: delete, users, groups 
+summary: Você pode excluir um ou mais usuários do banco de dados do servidor de gerenciamento para impedir que usuários específicos acessem o Unified Manager. Você também pode excluir grupos para que todos os usuários do grupo não possam mais acessar o servidor de gerenciamento. 
+---
+= Excluir usuários ou grupos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode excluir um ou mais usuários do banco de dados do servidor de gerenciamento para impedir que usuários específicos acessem o Unified Manager. Você também pode excluir grupos para que todos os usuários do grupo não possam mais acessar o servidor de gerenciamento.
+
+.Antes de começar
+* Ao excluir grupos remotos, você deve ter reatribuído os eventos atribuídos aos usuários desses grupos.
++
+Se você excluir usuários locais ou usuários remotos, os eventos atribuídos a esses usuários terão a atribuição removida automaticamente.
+
+* Você precisa ter a função de Application Administrator.
+
+
+.Passos
+. No painel de navegação esquerdo, clique em *Geral* > *Usuários*.
+. Na página Usuários, selecione os usuários ou grupos que deseja excluir e clique em *Excluir*.
+. Clique em *Sim* para confirmar a exclusão.
+

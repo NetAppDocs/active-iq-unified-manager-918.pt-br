@@ -1,0 +1,51 @@
+---
+permalink: storage-mgmt/task_edit_user_and_group_quota_email_addresses.html 
+sidebar: sidebar 
+keywords: edit, user, group, quota, email, addresses 
+summary: 'Você pode modificar os endereços de e-mail com base na cota de usuário associada a clusters, máquinas virtuais de armazenamento (SVMs), volumes, qtrees, usuários ou grupos de usuários. Você pode modificar o endereço de e-mail quando desejar substituir o endereço de e-mail gerado pelas regras especificadas na caixa de diálogo "Regras para gerar endereço de e-mail de cota de usuário e grupo".' 
+---
+= Edite os endereços de e-mail de cotas de usuários e grupos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode modificar os endereços de e-mail com base na cota de usuário associada a clusters, máquinas virtuais de armazenamento (SVMs), volumes, qtrees, usuários ou grupos de usuários. Você pode modificar o endereço de e-mail quando desejar substituir o endereço de e-mail gerado pelas regras especificadas na caixa de diálogo "Regras para gerar endereço de e-mail de cota de usuário e grupo".
+
+.Antes de começar
+* Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+* Você deve ter revisado o link:reference_rules_to_generate_user_and_group_quota.html["diretrizes para a criação de regras"].
+
+
+Ao editar um endereço de e-mail, as regras para gerar os endereços de e-mail de cota de usuário e de grupo deixam de ser aplicáveis à cota. Para que as notificações sejam enviadas para o endereço de e-mail gerado pelas regras especificadas, você deve excluir o endereço de e-mail e salvar a alteração.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *SVMs*.
+. Na visualização *Saúde: Todas as VMs de armazenamento*, selecione uma SVM e clique na guia *Cotas de usuário e grupo*.
+. Clique em *Editar endereço de e-mail* abaixo da linha de abas.
+. Na caixa de diálogo *Editar endereço de e-mail*, execute a ação apropriada:
++
+|===
+| Se... | Então... 
+
+
+ a| 
+Deseja que as notificações sejam enviadas para o endereço de e-mail gerado pelas regras especificadas
+ a| 
+.. Apague o endereço de e-mail no campo *Endereço de e-mail*.
+.. Clique em *Salvar*.
+.. Atualize o navegador pressionando F5 para recarregar a caixa de diálogo Edit Email Address. O endereço de e-mail gerado pela regra especificada é exibido no campo *Email Address*.
+
+
+
+
+ a| 
+Você deseja que as notificações sejam enviadas para um endereço de e-mail específico
+ a| 
+.. Modifique o endereço de e-mail no campo *Endereço de e-mail*.
+.. Clique em *Salvar*. As regras para gerar os endereços de e-mail de cota de usuário e grupo não são mais aplicáveis à cota.
+
+
+|===
+

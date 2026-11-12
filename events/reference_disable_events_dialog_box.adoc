@@ -1,0 +1,61 @@
+---
+permalink: events/reference_disable_events_dialog_box.html 
+sidebar: sidebar 
+keywords: disable, events, dialog box, properties, area, command buttons 
+summary: A caixa de diálogo Disable Events exibe a lista de tipos de evento para os quais você pode desativar eventos. Você pode desativar eventos para um tipo de evento com base em uma gravidade específica ou para um conjunto de eventos. 
+---
+= Desative a caixa de diálogo Eventos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Disable Events exibe a lista de tipos de evento para os quais você pode desativar eventos. Você pode desativar eventos para um tipo de evento com base em uma gravidade específica ou para um conjunto de eventos.
+
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+
+
+[[event-properties-area]]
+== Área de propriedades do evento
+
+A área Propriedades do evento especifica as seguintes propriedades do evento:
+
+* *Gravidade do evento*
++
+Permite que você selecione eventos com base no tipo de gravidade, que pode ser Crítico, Erro, Aviso ou Informação.
+
+* *O nome do evento contém*
++
+Permite que você filtre eventos cujos nomes contenham os caracteres especificados.
+
+* *Eventos correspondentes*
++
+Exibe a lista de eventos que correspondem ao tipo de gravidade e à cadeia de texto que você especificar.
+
+* *Desativar eventos*
++
+Exibe a lista de eventos que você selecionou para desativar.
+
++
+A gravidade do evento também é exibida juntamente com o nome do evento.
+
+
+
+
+
+[[command-buttons]]
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas para os eventos selecionados:
+
+* *Salvar e fechar*
++
+Desativa o tipo de evento e fecha a caixa de diálogo.
+
+* *Cancelar*
++
+Descarta as alterações e fecha a caixa de diálogo.
+
+

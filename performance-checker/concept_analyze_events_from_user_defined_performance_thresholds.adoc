@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_analyze_events_from_user_defined_performance_thresholds.html 
+sidebar: sidebar 
+keywords: analyze, events, user-defined, performance, thresholds 
+summary: Os eventos gerados a partir de limites definidos pelo usuário indicam que um contador de desempenho para um determinado objeto de armazenamento, por exemplo, um agregado ou volume, ultrapassou o limite definido na política. Isso indica que o objeto do cluster está apresentando um problema de desempenho. 
+---
+= Analise eventos a partir de limites de desempenho definidos pelo usuário no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos gerados a partir de limites definidos pelo usuário indicam que um contador de desempenho para um determinado objeto de armazenamento, por exemplo, um agregado ou volume, ultrapassou o limite definido na política. Isso indica que o objeto do cluster está apresentando um problema de desempenho.
+
+Você usa a página Detalhes do evento para analisar o evento de desempenho e tomar medidas corretivas, se necessário, para fazer o desempenho voltar ao normal.

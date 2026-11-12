@@ -1,0 +1,142 @@
+---
+permalink: performance-checker/reference_summary_page_opm.html 
+sidebar: sidebar 
+keywords: summary page, charts, counter, statistics 
+summary: A página Resumo exibe gráficos de contadores com detalhes de eventos e desempenho por objeto no período anterior de 72 horas, atualizados até o último carregamento. 
+---
+= Analise a página de Resumo de Desempenho em Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página Resumo exibe gráficos de contadores que contêm detalhes sobre os eventos e o desempenho por objeto nas 72 horas anteriores. Esses dados não são atualizados automaticamente, mas estão atuais até o último carregamento da página. Os gráficos na página Resumo respondem à pergunta _Preciso verificar mais alguma coisa?_
+
+
+
+[[charts-and-counter-statistics]]
+== Gráficos e estatísticas de contador
+
+Os gráficos de resumo fornecem uma visão geral rápida e de alto nível das últimas 72 horas e ajudam você a identificar possíveis problemas que exigem investigação mais aprofundada.
+
+As estatísticas de contadores da página Summary são exibidas em gráficos.
+
+Você pode posicionar o cursor sobre a linha de tendência em um gráfico para visualizar os valores do contador em um determinado momento. Os gráficos de resumo também exibem o número total de eventos críticos e de alerta ativos nas últimas 72 horas para os seguintes contadores:
+
+* *Latência*
++
+Tempo de resposta médio para todas as solicitações de E/S; expresso em milissegundos por operação.
+
++
+Exibido para todos os tipos de objeto.
+
+* *IOPS*
++
+Velocidade operacional média; expressa em operações de entrada/saída por segundo.
+
++
+Exibido para todos os tipos de objeto.
+
+* *MB/s*
++
+Taxa de transferência média; expressa em megabytes por segundo.
+
++
+Exibido para todos os tipos de objeto.
+
+* *Capacidade de desempenho utilizada*
++
+Porcentagem da capacidade de desempenho que está sendo consumida por um nó ou agregado.
+
++
+Exibido apenas para nós e agregados.
+
+* *Utilização*
++
+Porcentagem de utilização de objetos para nós e agregados, ou utilização de largura de banda para portas.
+
++
+Exibido apenas para nós, agregados e portas.
+
+
+
+Ao posicionar o cursor sobre a contagem de eventos ativos, o tipo e o número de eventos são exibidos. Os eventos críticos são exibidos em vermelho (image:../media/treemapred_png.gif["Ícone para TreeMap: cor vermelha"]) e os eventos de aviso são exibidos em amarelo (image:../media/treemapstatus_warning_png.gif["Ícone do TreeMap: status de aviso"]).
+
+O número no canto superior direito do gráfico na barra cinza representa o valor médio das últimas 72 horas. Os números exibidos na parte inferior e superior do gráfico de linha de tendência representam os valores mínimo e máximo das últimas 72 horas. A barra cinza abaixo do gráfico contém a contagem de eventos ativos (novos e confirmados) e eventos obsoletos das últimas 72 horas.
+
+image::../media/iops_graph.gif[Uma captura de tela da interface de usuário que mostra o gráfico de IOPS.]
+
+* *Gráfico do contador de latência*
++
+O gráfico do contador de latência fornece uma visão geral de alto nível da latência do objeto no período de 72 horas anterior. A latência refere-se ao tempo médio de resposta para todas as solicitações de E/S, expresso em milissegundos por operação, ao tempo de serviço, ao tempo de espera ou a ambos experimentados por um pacote de dados ou bloco no componente de storage do cluster em questão.
+
++
+*Valor máximo (valor do contador):* o número no cabeçalho exibe a média do período anterior de 72 horas.
+
++
+*Gráfico do meio (desempenho):* o número na parte inferior do gráfico exibe a menor latência, e o número na parte superior do gráfico exibe a maior latência para o período anterior de 72 horas. Posicione o cursor sobre a linha de tendência do gráfico para visualizar o valor da latência em um horário específico.
+
++
+*Parte inferior (eventos):* ao passar o cursor sobre o elemento, uma janela pop-up exibe os detalhes dos eventos. Clique no link *Eventos Ativos* abaixo do gráfico para navegar até a página de Inventário de Eventos e visualizar os detalhes completos dos eventos.
+
+* *Gráfico do contador de IOPS*
++
+O gráfico do contador de IOPS fornece uma visão geral de alto nível da integridade de IOPS do objeto nas 72 horas anteriores. O IOPS indica a velocidade do sistema de storage em número de operações de entrada/saída por segundo.
+
++
+*Valor máximo (valor do contador):* o número no cabeçalho exibe a média do período anterior de 72 horas.
+
++
+*Gráfico do meio (desempenho):* o número na parte inferior do gráfico exibe o menor valor de IOPS, e o número na parte superior do gráfico exibe o maior valor de IOPS para o período anterior de 72 horas. Posicione o cursor sobre a linha de tendência do gráfico para visualizar o valor de IOPS para um horário específico.
+
++
+*Parte inferior (eventos):* ao passar o cursor sobre o elemento, uma janela pop-up exibe os detalhes dos eventos. Clique no link *Eventos Ativos* abaixo do gráfico para navegar até a página de Inventário de Eventos e visualizar os detalhes completos dos eventos.
+
+* *Gráfico de contador de MB/s*
++
+O gráfico do contador de MB/s exibe o desempenho em MB/s do objeto e indica a quantidade de dados transferidos de e para o objeto em megabytes por segundo. O gráfico do contador de MB/s fornece uma visão geral de alto nível da integridade em MB/s do objeto para o período anterior de 72 horas.
+
++
+*Valor máximo (contador):* o número no cabeçalho exibe a média de MB/s no período anterior de 72 horas.
+
++
+*Meio (gráfico de desempenho):* o valor na parte inferior do gráfico exibe o menor número de MB/s, e o valor na parte superior do gráfico exibe o maior número de MB/s para o período anterior de 72 horas. Posicione o cursor sobre a linha de tendência do gráfico para visualizar o valor de MB/s em um horário específico.
+
++
+*Parte inferior (eventos):* ao passar o cursor sobre o elemento, uma janela pop-up exibe os detalhes dos eventos. Clique no link *Eventos Ativos* abaixo do gráfico para navegar até a página de Inventário de Eventos e visualizar os detalhes completos dos eventos.
+
+* *Gráfico do contador Capacidade de desempenho usada*
++
+O gráfico do contador Capacidade de Desempenho Utilizada exibe a porcentagem da capacidade de desempenho consumida pelo objeto.
+
++
+*Valor máximo (contador):* o número no cabeçalho exibe a capacidade média de desempenho utilizada nas últimas 72 horas.
+
++
+*Meio (gráfico de desempenho):* o valor na parte inferior do gráfico exibe a menor porcentagem de capacidade de desempenho utilizada, e o valor na parte superior do gráfico exibe a maior porcentagem de capacidade de desempenho utilizada no período anterior de 72 horas. Posicione o cursor sobre a linha de tendência do gráfico para visualizar o valor da capacidade de desempenho utilizada em um horário específico.
+
++
+*Parte inferior (eventos):* ao passar o cursor sobre o elemento, uma janela pop-up exibe os detalhes dos eventos. Clique no link *Eventos Ativos* abaixo do gráfico para navegar até a página de Inventário de Eventos e visualizar os detalhes completos dos eventos.
+
+* *Gráfico de contador de utilização*
++
+O gráfico do contador de utilização exibe a porcentagem de utilização do objeto. O gráfico do contador de utilização fornece uma visão geral de alto nível da porcentagem de utilização do objeto ou da utilização de largura de banda no período anterior de 72 horas.
+
++
+*Valor superior (valor do contador):* o número no cabeçalho exibe a porcentagem média de utilização no período anterior de 72 horas.
+
++
+*Gráfico do meio (desempenho):* o valor na parte inferior do gráfico exibe a menor porcentagem de utilização, e o valor na parte superior do gráfico exibe a maior porcentagem de utilização no período anterior de 72 horas. Posicione o cursor sobre a linha de tendência do gráfico para visualizar o valor de utilização em um horário específico.
+
++
+*Parte inferior (eventos):* ao passar o cursor sobre o elemento, uma janela pop-up exibe os detalhes dos eventos. Clique no link *Eventos Ativos* abaixo do gráfico para navegar até a página de Inventário de Eventos e visualizar os detalhes completos dos eventos.
+
+
+
+
+
+[[events]]
+== Eventos
+
+A tabela de histórico de eventos, quando aplicável, lista os eventos mais recentes que ocorreram nesse objeto. Clicar no nome do evento exibe os detalhes do evento na página Event Details.

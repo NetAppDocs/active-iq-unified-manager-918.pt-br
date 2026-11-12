@@ -1,0 +1,50 @@
+---
+permalink: data-protection/task_abort_active_data_protection_transfer_from_health_volume.html 
+sidebar: sidebar 
+keywords: abort, active, data protection, transfer, volume health details page 
+summary: Você pode abortar uma transferência ativa de proteção de dados quando quiser interromper uma replicação do SnapMirror em andamento. Você também pode limpar o ponto de verificação de reinício de uma transferência, caso não seja uma transferência completa. Você pode abortar uma transferência quando ela entrar em conflito com outra operação, como a movimentação de um volume. 
+---
+= Cancelar uma transferência na página de detalhes de Volume/Saúde no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode abortar uma transferência ativa de proteção de dados quando quiser interromper uma replicação do SnapMirror em andamento. Você também pode limpar o ponto de verificação de reinício de uma transferência, caso não seja uma transferência completa. Você pode abortar uma transferência quando ela entrar em conflito com outra operação, como a movimentação de um volume.
+
+[NOTE]
+====
+Você não pode abortar relacionamentos de volumes protegidos pelo grupo de consistência.
+
+====
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+* Você precisa ter configurado o Workflow Automation.
+
+
+A ação de abortar não é exibida nos seguintes casos:
+
+* Se as configurações do RBAC não permitirem essa ação: por exemplo, se você tiver apenas privilégios de operador
+* Quando o ID do volume é desconhecido: por exemplo, quando você tem uma relação entre clusters e o cluster de destino ainda não foi descoberto
+
+
+Não é possível limpar o ponto de verificação de reinicialização de uma transferência completa.
+
+.Passos
+. Na guia *Proteção* da página de detalhes *Volume / Health*, clique com o botão direito do mouse na relação na visualização de topologia da transferência de dados que você deseja abortar e selecione *Abortar*.
++
+A caixa de diálogo Abort Transfer é exibida.
+
+. Se você quiser limpar o ponto de verificação de reinicialização de uma transferência que não seja uma transferência completa, selecione *Limpar pontos de verificação*.
+. Clique em *Continuar*.
++
+A caixa de diálogo Abortar Transferência é fechada, e o status da operação de cancelamento é exibido na parte superior da página de detalhes de Volume / Integridade, juntamente com um link para os detalhes do trabalho.
+
+. *Opcional:* Clique no link *View details* para acessar a página de detalhes do *Job* e ver detalhes adicionais e o andamento do job.
+. Clique em cada tarefa para visualizar os detalhes.
+. Clique na seta de voltar do seu navegador para retornar à página de detalhes *Volume / Saúde*.
++
+A operação de cancelamento é finalizada quando todas as tarefas do trabalho forem concluídas com sucesso.
+
+

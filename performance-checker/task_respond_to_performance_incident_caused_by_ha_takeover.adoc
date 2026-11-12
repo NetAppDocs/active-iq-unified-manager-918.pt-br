@@ -1,0 +1,46 @@
+---
+permalink: performance-checker/task_respond_to_performance_incident_caused_by_ha_takeover.html 
+sidebar: sidebar 
+keywords: dynamic, performance, event, ha, takeover 
+summary: 'Você pode usar o Unified Manager para investigar um evento de desempenho causado pelo alto processamento de dados em um nó de cluster que está em um par de alta disponibilidade (HA). Você também pode usar o Unified Manager para verificar a integridade dos nós e ver se algum evento de integridade recente detectado nos nós contribuiu para o evento de desempenho.' 
+---
+= Responder a um evento de desempenho causado pela tomada de controle do HA no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o Unified Manager para investigar um evento de desempenho causado pelo alto processamento de dados em um nó de cluster que está em um par de alta disponibilidade (HA). Você também pode usar o Unified Manager para verificar a integridade dos nós e ver se algum evento de integridade recente detectado nos nós contribuiu para o evento de desempenho.
+
+.Antes de começar
+* Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+* Devem existir eventos de desempenho novos, reconhecidos ou obsoletos.
+
+
+.Passos
+. Exiba a página *Detalhes do evento* para visualizar informações sobre o evento.
+. Leia a *Descrição*, que descreve as cargas de trabalho envolvidas no evento e o componente do cluster em contenção.
++
+Há um volume afetado cuja latência foi impactada pelo componente do cluster em disputa. O nó de processamento de dados, que assumiu todas as cargas de trabalho de seu nó parceiro, é o componente do cluster em disputa. Em "Componente em disputa", o ícone Data Processing fica destacado em vermelho, e o nome do nó que estava processando dados no momento do evento é exibido entre parênteses.
+
+. Na seção *Descrição*, clique no nome do volume.
++
+A página Volume Performance Explorer é exibida. Na parte superior da página, na linha do tempo de Eventos, um ícone de evento de alteração (image:../media/opm_change_icon.gif["Ícone de evento de alteração"]) indica o momento em que o Unified Manager detectou o início do takeover de HA.
+
+. Posicione o cursor sobre o ícone do evento de alteração do takeover de HA, e os detalhes sobre o takeover de HA serão exibidos no texto ao passar o mouse.
++
+No gráfico Latency, um evento indica que o volume selecionado ultrapassou o limite de desempenho devido à alta latência por volta do mesmo momento em que ocorreu o takeover de HA.
+
+. Clique em *Zoom View* para exibir o gráfico de latência em uma nova página.
+. No menu Exibir, selecione *Componentes do Cluster* para visualizar a latência total por componente do cluster.
+. Posicione o cursor do mouse sobre o ícone do evento de alteração para o início do takeover de HA e compare a latência do processamento de dados com a latência total.
++
+No momento do takeover de HA, houve um pico no processamento de dados devido ao aumento da demanda da carga de trabalho no nó de processamento de dados. O aumento da utilização de CPU elevou a latência e acionou o evento.
+
+. Após corrigir o nó com falha, use o ONTAP System Manager para executar um HA giveback, que move as cargas de trabalho do nó parceiro para o nó corrigido.
+. Depois que o giveback de HA for concluído, após a próxima descoberta de configuração no Unified Manager (aproximadamente 15 minutos), localize o evento e a carga de trabalho acionados pelo takeover de HA na página de inventário *Event Management*.
++
+O evento acionado pelo takeover de HA agora tem um estado obsoleto, o que indica que o evento foi resolvido. A latência no componente de processamento de dados diminuiu, o que reduziu a latência total. O nó que o volume selecionado está usando agora para processamento de dados resolveu o evento.
+
+

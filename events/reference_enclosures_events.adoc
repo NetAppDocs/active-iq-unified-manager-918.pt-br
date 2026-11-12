@@ -1,0 +1,103 @@
+---
+permalink: events/reference_enclosures_events.html 
+sidebar: sidebar 
+keywords: enclosures, events, impact area, availability, configuration 
+summary: Os eventos de gabinetes fornecem informações sobre o status dos gabinetes de discos em seu data center para que você possa monitorar possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade. 
+---
+= Saiba mais sobre eventos de enclausuramento no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de gabinetes fornecem informações sobre o status dos gabinetes de discos em seu data center para que você possa monitorar possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade.
+
+
+
+[[impact-area-availability]]
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+As ventoinhas da gaveta de discos falharam(ocumEvtShelfFanFailed)
+ a| 
+Incidente
+ a| 
+Gaveta de armazenamento
+ a| 
+Crítico
+
+
+
+ a| 
+As fontes de alimentação do compartimento de discos falharam(ocumEvtShelfPowerSupplyFailed)
+ a| 
+Incidente
+ a| 
+Gaveta de armazenamento
+ a| 
+Crítico
+
+
+
+ a| 
+Multipath do compartimento de discos não configurado(ocumDiskShelfConnectivityNotInMultiPath)
+
+Este evento não se aplica a:
+
+* Clusters que estão em uma configuração MetroCluster
+* As seguintes plataformas: FAS2554, FAS2552, FAS2520 e FAS2240
+
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Aviso
+
+
+
+ a| 
+Falha no caminho do compartimento de discos(ocumDiskShelfConnectivityPathFailure)
+ a| 
+Risco
+ a| 
+Gaveta de armazenamento
+ a| 
+Aviso
+
+|===
+
+
+[[impact-area-configuration]]
+== Área de impacto: configuração
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Compartimento de discos detectado(não aplicável)
+ a| 
+Evento
+ a| 
+Nó
+ a| 
+Informação
+
+
+
+ a| 
+Prateleiras de disco removidas(Não aplicável)
+ a| 
+Evento
+ a| 
+Nó
+ a| 
+Informação
+
+|===

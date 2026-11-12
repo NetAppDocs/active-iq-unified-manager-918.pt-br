@@ -1,0 +1,82 @@
+---
+permalink: config/concept_audit_logging.html 
+sidebar: sidebar 
+keywords: audit, logging 
+summary: Você pode detectar se os logs de auditoria foram comprometidos usando Audit Logs. Todas as atividades realizadas por um usuário são monitoradas e registradas em Audit Logs. As auditorias são realizadas para todas as funcionalidades da interface de usuário e das APIs publicamente expostas do Active IQ Unified Manager. 
+---
+= Saiba mais sobre os registros de auditoria no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+É possível detectar se os logs de auditoria foram comprometidos usando os logs de auditoria. Todas as atividades realizadas por um usuário são monitoradas e registradas nos logs de auditoria. As auditorias são realizadas para todas as funcionalidades da interface de usuário e das APIs expostas publicamente do Active IQ Unified Manager.
+
+Você pode usar a *Visualização de arquivos: log de auditoria* para visualizar e acessar todos os arquivos de log de auditoria disponíveis no seu Active IQ Unified Manager. Os arquivos na Visualização de arquivos: log de auditoria são listados com base na data de criação. Essa visualização exibe informações de todos os logs de auditoria capturados desde a instalação ou atualização até o momento no sistema. Sempre que você executa uma ação no Unified Manager, as informações são atualizadas e ficam disponíveis nos logs. O status de cada arquivo de log é capturado usando o atributo "`File Integrity Status`", que é monitorado ativamente para detectar adulteração ou exclusão do arquivo de log. Os logs de auditoria podem ter um dos seguintes estados quando estão disponíveis no sistema:
+
+[cols="2*"]
+|===
+| Estado | Descrição 
+
+
+ a| 
+ATIVO
+ a| 
+Arquivo no qual os logs estão sendo registrados atualmente.
+
+
+
+ a| 
+NORMAL
+ a| 
+Arquivo inativo, compactado e armazenado no sistema.
+
+
+
+ a| 
+ADULTERADO
+ a| 
+Arquivo comprometido por um usuário que editou o arquivo manualmente.
+
+
+
+ a| 
+EXCLUSÃO MANUAL
+ a| 
+Arquivo que foi excluído por um usuário autorizado.
+
+
+
+ a| 
+ROLLOVER_DELETE
+ a| 
+Arquivo excluído devido à remoção com base na Política de Configuração de Rotação.
+
+
+
+ a| 
+UNEXPECTED_DELETE
+ a| 
+Arquivo que foi excluído por motivos desconhecidos.
+
+|===
+A página de log de auditoria inclui os seguintes botões de comando:
+
+* Configurar
+* Excluir
+* Download
+
+
+O botão *EXCLUIR* permite excluir qualquer um dos logs de auditoria listados na visualização Logs de auditoria. Você pode excluir um log de auditoria e, opcionalmente, fornecer um motivo para excluir o arquivo, o que ajuda no futuro a determinar se a exclusão foi válida. A coluna MOTIVO lista o motivo juntamente com o nome do usuário que realizou a operação de exclusão.
+
+[NOTE]
+====
+Excluir um arquivo de log remove o arquivo do sistema, mas não exclui a entrada na tabela do DB.
+
+====
+Você pode baixar os logs de auditoria do Active IQ Unified Manager usando o botão *DOWNLOAD* na seção Audit Logs e exportar os arquivos de log de auditoria. Os arquivos marcados como "`NORMAL`" ou "`TAMPERED`" são baixados em formato `.gzip` compactado.
+
+Os arquivos de log de auditoria são arquivados periodicamente e salvos no banco de dados para referência. Antes do arquivamento, os logs de auditoria são assinados digitalmente para manter a segurança e a integridade.
+
+Quando um pacote completo do AutoSupport é gerado, o pacote de suporte inclui arquivos de log de auditoria ativos e arquivados. Mas, quando um pacote de suporte simplificado é gerado, ele inclui apenas os logs de auditoria ativos. Os logs de auditoria arquivados não são incluídos.

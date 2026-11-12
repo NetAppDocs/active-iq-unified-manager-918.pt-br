@@ -1,0 +1,32 @@
+---
+permalink: reporting/concept_unified_manager_reporting.html 
+sidebar: sidebar 
+keywords: unified, manager, reporting 
+summary: 'O Active IQ Unified Manager (anteriormente OnCommand Unified Manager) permite visualizar, personalizar, baixar e agendar relatórios para seus sistemas de storage ONTAP. Os relatórios podem fornecer detalhes sobre a capacidade, a integridade, o desempenho e as relações de proteção do sistema de storage.' 
+---
+= Saiba mais sobre os relatórios do Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Active IQ Unified Manager (formerly OnCommand Unified Manager) permite visualizar, personalizar, baixar e agendar relatórios para seus sistemas de storage ONTAP. Os relatórios podem fornecer detalhes sobre a capacidade, a integridade, o desempenho, a segurança e os relacionamentos de proteção do sistema de storage.
+
+A nova funcionalidade de relatórios e agendamento do Unified Manager, introduzida no Active IQ Unified Manager 9.6, substitui o mecanismo de relatórios anterior, descontinuado na versão 9.5 do Unified Manager.
+
+Os relatórios fornecem diferentes visões da sua rede, oferecendo informações práticas sobre capacidade, integridade, desempenho, segurança e dados de proteção. Você pode personalizar suas visualizações mostrando, ocultando e reorganizando colunas, filtrando e classificando dados e pesquisando os resultados. Você pode salvar visualizações personalizadas para reutilização, baixá-las como relatórios e agendá-las como relatórios recorrentes para distribuí-los por e-mail.
+
+Você pode baixar visualizações no formato Microsoft® Excel e personalizá-las. Você pode usar recursos avançados do Excel, como classificações complexas, filtros em camadas, tabelas dinâmicas e gráficos. Quando estiver satisfeito com o relatório do Excel resultante, você pode fazer upload do arquivo do Excel para usá-lo sempre que o relatório for agendado e compartilhado.
+
+Além de gerar relatórios a partir da interface de usuário, você pode extrair dados de integridade, segurança e desempenho do Unified Manager usando estes métodos adicionais:
+
+* Utilizando a Conectividade Aberta de Banco de Dados (ODBC) e ferramentas ODBC para acessar diretamente o banco de dados e obter informações do cluster
+* Executando as APIs REST do Unified Manager para retornar as informações que você deseja revisar
+
+
+A partir desta versão do Active IQ Unified manager, as seguintes melhorias foram implementadas nos relatórios:
+
+* Um e-mail com o relatório é enviado conforme a programação configurada. Mesmo ao gerar um relatório sob demanda, você receberá um e-mail.
+* O nome do arquivo do relatório e os metadados do relatório incluem o nome do host de onde o relatório foi gerado. Mesmo que alguém altere o nome do arquivo, ainda é possível identificar o nome do host de onde o relatório foi gerado graças a essa melhoria.
+

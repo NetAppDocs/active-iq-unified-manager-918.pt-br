@@ -1,0 +1,34 @@
+---
+permalink: events/reference_flash_card_events.html 
+sidebar: sidebar 
+keywords: flash, card, events, impact area, availability 
+summary: Os eventos de placas flash fornecem informações sobre o status das placas flash instaladas nos nós do seu data center para que você possa monitorar possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade. 
+---
+= Saiba mais sobre eventos de flash card no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de placas flash fornecem informações sobre o status das placas flash instaladas nos nós do seu data center para que você possa monitorar possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade.
+
+
+
+[[impact-area-availability]]
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Placas flash offline (ocumEvtFlashCardOffline)
+ a| 
+Incidente
+ a| 
+Nó
+ a| 
+Crítico
+
+|===

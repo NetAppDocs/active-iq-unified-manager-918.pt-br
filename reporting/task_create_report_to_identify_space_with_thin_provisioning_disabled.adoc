@@ -1,0 +1,38 @@
+---
+permalink: reporting/task_create_report_to_identify_space_with_thin_provisioning_disabled.html 
+sidebar: sidebar 
+keywords: volume, provision, disk, volume, thin-provisioning 
+summary: Quando um volume não usa thin provisioning, ele ocupa todo o espaço em disco definido no momento da sua criação. Identificar os volumes com thin provisioning desativado ajuda você a decidir se deseja ativar esse recurso em determinados volumes. 
+---
+= Identifique os volumes com thin provisioning desativado no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando um volume não usa thin provisioning, ele ocupa todo o espaço em disco definido no momento da sua criação. Identificar os volumes com thin provisioning desativado ajuda você a decidir se deseja ativar esse recurso em determinados volumes.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+
+Siga os passos abaixo para criar uma visualização personalizada que exiba as colunas necessárias na ordem correta e, em seguida, agende a geração de um relatório para essa visualização.
+
+.Passos
+. No painel de navegação à esquerda, clique em *Armazenamento* > *Volumes*.
+. No menu Exibir, selecione *Capacidade* > *Todos os volumes*.
+. Selecione *Mostrar/Ocultar* para remover as colunas que você não quer no relatório.
+. Arraste e solte as colunas "`Used Data %`" e "`Thin Provisioned`" próximas à coluna "`Available Data Capacity`".
+. Clique no ícone de filtro, adicione o seguinte filtro, *Com thin provisioning* é *Não*, e clique em *Aplicar filtro*.
+. Clique na parte superior da coluna "`Used Data %`" para classificar os resultados de forma que os volumes com a maior porcentagem apareçam no topo da lista.
+. Salve a visualização com um nome que reflita o que ela está exibindo, por exemplo "`Vols no thin provisioning`".
+. Clique no botão *Relatórios Agendados* na página de inventário.
+. Clique em *Adicionar agendamento* para adicionar uma nova linha à página *Agendamentos de relatório*, para que você possa definir as características do agendamento para o novo relatório.
+. Insira um nome para o cronograma do relatório e preencha os outros campos do relatório, depois clique na marca de seleção (image:../media/blue_check.gif[""]) no final da linha.
++
+O relatório é enviado imediatamente como teste. Depois disso, o relatório é gerado e enviado por e-mail aos destinatários listados na frequência especificada.
+
+
+
+Com base nos resultados apresentados no relatório, você pode querer ativar thin provisioning em determinados volumes.

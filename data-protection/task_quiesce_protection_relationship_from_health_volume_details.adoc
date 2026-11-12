@@ -1,0 +1,40 @@
+---
+permalink: data-protection/task_quiesce_protection_relationship_from_health_volume_details.html 
+sidebar: sidebar 
+keywords: quiesce, protection, relationship, volume, health details page 
+summary: Você pode suspender temporariamente uma relação de proteção para impedir que as transferências de dados ocorram. Você pode suspender uma relação quando quiser criar uma cópia Snapshot de um volume de destino do SnapMirror que contenha um banco de dados e quiser garantir que seu conteúdo permaneça estável durante a cópia Snapshot. 
+---
+= Suspenda uma relação de proteção na página de detalhes de Volume/Saúde no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode suspender temporariamente uma relação de proteção para impedir que as transferências de dados ocorram. Você pode suspender uma relação quando quiser criar uma cópia Snapshot de um volume de destino do SnapMirror que contenha um banco de dados e quiser garantir que seu conteúdo permaneça estável durante a cópia Snapshot.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+* Você precisa ter configurado o Workflow Automation.
+
+
+A ação de quiescência não é exibida nos seguintes casos:
+
+* Se as configurações do RBAC não permitirem essa ação, por exemplo, se você tiver apenas privilégios de operador
+* Quando o ID do volume é desconhecido, por exemplo, quando existe uma relação entre clusters e o cluster de destino ainda não foi descoberto
+* Quando você não tiver emparelhado o Workflow Automation e o Unified Manager
+
+
+.Passos
+. Na guia *Proteção* da página de detalhes *Volume / Health*, clique com o botão direito do mouse na relação, na visualização de topologia, da relação de proteção que você deseja colocar em quiesce.
+. Selecione *Quiesce* no menu.
+. Clique em *Yes* para continuar.
++
+O status da tarefa de quiesce é exibido na parte superior da página de detalhes de Volume / Health, juntamente com um link para os detalhes da tarefa.
+
+. Clique no link *View details* para acessar a página de detalhes de *Job* e obter detalhes adicionais e acompanhar o andamento do trabalho.
+. *Opcional:* clique na seta Voltar do seu navegador para retornar à página de detalhes de *Volume / Health*.
++
+O trabalho de quiescência é concluído quando todas as tarefas do trabalho são concluídas com sucesso.
+
+

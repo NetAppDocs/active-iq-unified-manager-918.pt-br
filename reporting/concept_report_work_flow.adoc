@@ -1,0 +1,16 @@
+---
+permalink: reporting/concept_report_work_flow.html 
+sidebar: sidebar 
+keywords: report, workflow 
+summary: Árvore de decisão que descreve o fluxo de trabalho do relatório. 
+---
+= Compreenda os fluxos de trabalho de relatórios no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Árvore de decisão que descreve o fluxo de trabalho do relatório.
+
+image::../media/reports_view_workflow.png[Um diagrama que mostra um fluxo de trabalho em árvore de decisão para visualizar, personalizar, carregar e baixar relatórios]

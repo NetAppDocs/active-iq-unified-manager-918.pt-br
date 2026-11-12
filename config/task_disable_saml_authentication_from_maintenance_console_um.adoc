@@ -1,0 +1,39 @@
+---
+permalink: config/task_disable_saml_authentication_from_maintenance_console_um.html 
+sidebar: sidebar 
+keywords: disable, saml authentication, maintenance, console 
+summary: Pode ser necessário desativar a autenticação SAML no console de manutenção quando não houver acesso à interface gráfica do Unified Manager. Isso pode ocorrer em casos de configuração incorreta ou se o IdP estiver inacessível. 
+---
+= Desative a autenticação SAML no console de manutenção do Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pode ser necessário desativar a autenticação SAML no console de manutenção quando não houver acesso à interface gráfica do Unified Manager. Isso pode ocorrer em casos de configuração incorreta ou se o IdP estiver inacessível.
+
+.Antes de começar
+Você precisa ter acesso ao console de manutenção como o usuário de manutenção.
+
+Quando a autenticação SAML está desativada, os provedores de serviço de diretório configurados, como Active Directory ou LDAP, realizam a autenticação de login. Os usuários locais e os usuários de manutenção poderão acessar a interface gráfica do usuário, além dos usuários remotos configurados.
+
+Você também pode desativar a autenticação SAML na página Setup/Authentication da interface de usuário.
+
+[NOTE]
+====
+O Unified Manager é reiniciado automaticamente após a desativação da autenticação SAML.
+
+====
+.Passos
+. Faça login no console de manutenção.
+. No *Menu Principal*, insira o número da opção *Desativar autenticação SAML*.
++
+Uma mensagem será exibida para confirmar que você deseja desativar a autenticação SAML e reiniciar o Unified Manager.
+
+. Digite *y* e pressione Enter para reiniciar o Unified Manager.
+
+
+Na próxima vez que os usuários remotos tentarem acessar a interface gráfica do Unified Manager, eles inserirão suas credenciais na página de login do Unified Manager em vez da página de login do IdP.
+
+Caso necessário, acesse seu IdP e exclua a URL do servidor do Unified Manager e os metadados.

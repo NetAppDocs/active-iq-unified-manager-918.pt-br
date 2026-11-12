@@ -1,0 +1,58 @@
+---
+permalink: config/reference_saml_authentication_page_um.html 
+sidebar: sidebar 
+keywords: saml authentication page 
+summary: 'Você pode usar a página de autenticação SAML para configurar o Unified Manager para autenticar usuários remotos usando SAML por meio de um provedor de identidade (IdP) seguro antes que eles possam fazer login na interface web do Unified Manager.' 
+---
+= Utilize a página de autenticação SAML no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a página de autenticação SAML para configurar o Unified Manager para autenticar usuários remotos usando SAML por meio de um provedor de identidade (IdP) seguro antes que eles possam fazer login na interface web do Unified Manager.
+
+* Você precisa ter a função Application Administrator para criar ou modificar a configuração do SAML.
+* Você precisa ter configurado a autenticação remota.
+* Você deve ter configurado pelo menos um usuário remoto ou um grupo remoto.
+
+
+Após configurar a autenticação remota e os usuários remotos, você pode selecionar a caixa de seleção "Ativar autenticação SAML" para habilitar a autenticação usando um provedor de identidade seguro.
+
+* *URI do IdP*
++
+O URI para acessar o IdP a partir do servidor Unified Manager. Veja abaixo alguns exemplos de URIs.
+
++
+Exemplo de URI do ADFS:
+
++
+`+https://win2016-dc.ntap2016.local/federationmetadata/2007-06/federationmetadata.xml+`
+
++
+Exemplo de URI do Shibboleth:
+
++
+`+https://centos7.ntap2016.local/idp/shibboleth+`
+
+* *Metadados do IdP*
++
+Os metadados do IdP em formato XML.
+
++
+Se o URL do IdP estiver acessível a partir do servidor do Unified Manager, você pode clicar no botão *Obter metadados do IdP* para preencher este campo.
+
+* *Sistema host (FQDN)*
++
+O FQDN do sistema host do Unified Manager, conforme definido durante a instalação. Você pode alterar esse valor, se necessário.
+
+* *URI do host*
++
+O URI para acessar o sistema host do Unified Manager a partir do IdP.
+
+* *Metadados do host*
++
+Os metadados do sistema host em formato XML.
+
+

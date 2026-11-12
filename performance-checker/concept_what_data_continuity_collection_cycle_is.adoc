@@ -1,0 +1,46 @@
+---
+permalink: performance-checker/concept_what_data_continuity_collection_cycle_is.html 
+sidebar: sidebar 
+keywords: data, continuity, collection, cycle 
+summary: Um ciclo de coleta de continuidade de dados recupera dados de desempenho fora do ciclo de coleta de desempenho do cluster em tempo real que é executado, por padrão, a cada cinco minutos. As coletas de continuidade de dados permitem que o Unified Manager preencha lacunas nos dados estatísticos que ocorrem quando não foi possível coletar dados em tempo real. 
+---
+= Compreenda os ciclos de coleta de continuidade de dados no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um ciclo de coleta de continuidade de dados recupera dados de desempenho fora do ciclo de coleta de desempenho do cluster em tempo real que é executado, por padrão, a cada cinco minutos. As coletas de continuidade de dados permitem que o Unified Manager preencha lacunas nos dados estatísticos que ocorrem quando não foi possível coletar dados em tempo real.
+
+O Unified Manager realiza pesquisas de coleta de continuidade de dados dos dados históricos de desempenho quando os seguintes eventos ocorrem:
+
+* Inicialmente, um cluster é adicionado ao Unified Manager.
++
+O Unified Manager coleta dados históricos de desempenho dos últimos 15 dias. Isso permite que você visualize duas semanas de informações históricas de desempenho de um cluster poucas horas após sua adição.
+
++
+Além disso, o sistema relata os eventos de limite do período anterior, se houver.
+
+* O ciclo atual de coleta de dados de desempenho não termina no prazo.
++
+Se a pesquisa de desempenho em tempo real ultrapassar o período de coleta de cinco minutos, um ciclo de coleta de continuidade de dados será iniciado para reunir as informações ausentes. Sem a coleta de continuidade de dados, o próximo período de coleta será ignorado.
+
+* O Unified Manager ficou inacessível por um período de tempo e depois voltou a ficar online, como nas seguintes situações:
++
+** Foi reiniciado.
+** Ele foi desligado durante uma atualização de software ou ao criar um arquivo de backup.
+** Uma interrupção de rede é corrigida.
+
+
+* Um cluster ficou inacessível por um período de tempo e depois voltou a ficar online, como nas seguintes situações:
++
+** Uma interrupção de rede é corrigida.
+** Uma conexão de rede de longa distância lenta atrasou a coleta normal de dados de desempenho.
+
+
+
+
+Um ciclo de coleta de continuidade de dados pode coletar no máximo 24 horas de dados históricos. Se o Unified Manager ficar inativo por mais de 24 horas, uma lacuna nos dados de desempenho aparecerá nas páginas da interface de usuário.
+
+Um ciclo de coleta de continuidade de dados e um ciclo de coleta de dados em tempo real não podem ser executados ao mesmo tempo. O ciclo de coleta de continuidade de dados deve ser concluído antes que a coleta de dados de desempenho em tempo real seja iniciada. Quando a coleta de continuidade de dados precisa coletar mais de uma hora de dados históricos, você vê uma mensagem de banner para esse cluster na parte superior do painel Notifications.

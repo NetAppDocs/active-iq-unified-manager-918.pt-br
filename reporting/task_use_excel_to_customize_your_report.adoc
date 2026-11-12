@@ -1,0 +1,54 @@
+---
+permalink: reporting/task_use_excel_to_customize_your_report.html 
+sidebar: sidebar 
+keywords: excel, customize, report 
+summary: 'Após salvar a visualização, você pode baixá-la no formato de Pasta de Trabalho do Excel (.xlsx). Ao abrir o arquivo do Excel, você pode usar recursos avançados do Excel para personalizar seu relatório.' 
+---
+= Utilize o Excel para personalizar seu relatório no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após salvar a visualização, você pode baixá-la no formato de Pasta de Trabalho do Excel (.xlsx). Ao abrir o arquivo do Excel, você pode usar recursos avançados do Excel para personalizar seu relatório.
+
+.Antes de começar
+Você só pode enviar um arquivo de pasta de trabalho do Excel com a extensão .xlsx.
+
+Por exemplo, alguns recursos avançados do Excel que você pode usar no seu relatório incluem:
+
+* Ordenação em várias colunas
+* Filtragem complexa
+* Tabelas dinâmicas
+* Gráficos
+
+
+[NOTE]
+====
+* O arquivo Excel baixado usa o nome de arquivo padrão para a visualização, não o nome que você salvou.
++
+** O formato é `<View Area>-<Day>-<Month>-<Year>-<Hour>-<Minute>-<Second>.xlsx.`
+** Por exemplo, uma visualização personalizada salva chamada `Volumes-not online` tem o nome de arquivo `health-volumes-05-May-2020-19-18-00.xlsx` se for salva naquele dia e horário.
+
+
+* Você pode adicionar planilhas ao arquivo do Excel, mas não altere as planilhas existentes.
++
+** Não altere as planilhas, os dados e as informações existentes. Em vez disso, copie os dados para uma nova página que você criará.
+** Uma exceção à regra acima é que você pode criar fórmulas na página "`data`". Use as fórmulas da página `data` para criar gráficos em novas páginas.
+** Não dê a uma nova planilha o nome de data ou info.
+
+
+* Se existir um arquivo Excel personalizado, haverá uma marca de seleção ao lado do item de menu *Reports* > *Upload Excel*. Ao baixar o arquivo Excel, a versão com as personalizações será usada.image:../media/upload_excel.png["Uma captura de tela da UI que mostra como carregar excel para relatórios."]
+
+
+====
+.Passos
+. Abra a visualização padrão, personalizada ou salva que você deseja usar como base para o seu relatório.
+. Selecione *Reports* > *Download Excel*.
+. Salve o arquivo. O arquivo é salvo na sua pasta de downloads.
+. Abra o arquivo salvo no Excel. Não mova o arquivo para um novo local ou, se você trabalhar em outro local, salve o arquivo novamente no local original usando o nome original antes de carregá-lo.
+. Personalize o arquivo usando recursos do Excel, como ordenações complexas, filtros em camadas, tabelas dinâmicas ou gráficos. Para obter mais informações, consulte a documentação do Microsoft® Excel.
+. Selecione *Relatórios* > *Carregar Excel* e selecione o arquivo que você modificou. O arquivo baixado mais recentemente é carregado do mesmo local do arquivo.
+. Envie para você um relatório de teste usando o recurso *Relatórios Agendados*.
+

@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_understand_performance_cluster_landing_page.html 
+sidebar: sidebar 
+keywords: understand, performance, cluster, landing page 
+summary: A página inicial do cluster de desempenho fornece uma visão geral de alto nível do desempenho de um cluster selecionado, com ênfase no status de desempenho dos 10 principais objetos dentro do cluster. Os problemas de desempenho são exibidos na parte superior da página, no painel Todos os Eventos neste Cluster. 
+---
+= Entenda a página inicial do Cluster de Desempenho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página inicial do cluster de desempenho fornece uma visão geral de alto nível do desempenho de um cluster selecionado, com ênfase no status de desempenho dos 10 principais objetos dentro do cluster. Os problemas de desempenho são exibidos na parte superior da página, no painel Todos os Eventos neste Cluster.
+
+A página inicial do cluster de desempenho fornece uma visão geral de alto nível de cada cluster gerenciado por uma instância do Unified Manager. Esta página fornece a você informações sobre eventos e desempenho e permite monitorar e solucionar problemas dos clusters. A imagem a seguir mostra um exemplo da página inicial do cluster de desempenho para o cluster chamado opm-mobility:
+
+image::../media/opm_cluster_landing_page_draft.gif[Uma captura de tela que mostra um exemplo da página inicial do cluster de desempenho para o cluster chamado opm-mobility.]
+
+A contagem de eventos na página Resumo do Cluster pode não corresponder à contagem de eventos na página Inventário de Eventos de Desempenho. Isso ocorre porque a página Resumo do Cluster pode exibir um evento em cada uma das barras de Latência e Utilização quando as políticas de limite de combinação são violadas, enquanto a página Inventário de Eventos de Desempenho exibe apenas um evento quando uma política de combinação é violada.
+
+[NOTE]
+====
+Se um cluster for removido do gerenciamento do Unified Manager, o status *Removido* será exibido à direita do nome do cluster, na parte superior da página.
+
+====

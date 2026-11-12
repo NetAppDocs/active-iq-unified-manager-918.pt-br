@@ -1,0 +1,65 @@
+---
+permalink: config/task_generate_an_https_security_certificate_ocf.html 
+sidebar: sidebar 
+keywords: generate, https, security, certificate 
+summary: Quando o Active IQ Unified Manager é instalado pela primeira vez, um certificado HTTPS padrão é instalado. Você pode gerar um novo certificado de segurança HTTPS para substituir o certificado existente. 
+---
+= Gere um certificado de segurança HTTPS no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando o Active IQ Unified Manager é instalado pela primeira vez, um certificado HTTPS padrão é instalado. Você pode gerar um novo certificado de segurança HTTPS para substituir o certificado existente.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator.
+
+Pode haver vários motivos para regenerar o certificado, por exemplo, se você quiser valores melhores para o Nome distinto (DN), um tamanho de chave maior, um período de expiração mais longo ou se o certificado atual tiver expirado.
+
+Se você não tiver acesso à interface web do Unified Manager, poderá regenerar o certificado HTTPS com os mesmos valores usando o console de manutenção. Ao regenerar os certificados, você pode definir o tamanho da chave e a duração de validade da chave. Se você usar a opção `Reset Server Certificate` no console de manutenção, um novo certificado HTTPS será criado e será válido por 397 dias. Este certificado terá uma chave RSA de 2048 bits.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Geral* > *Certificado HTTPS*.
+. Clique em *Regenerate HTTPS Certificate*.
++
+A caixa de diálogo "Regenerate HTTPS Certificate" é exibida.
+
+. Selecione uma das seguintes opções dependendo de como você deseja gerar o certificado:
++
+[cols="2*"]
+|===
+| Se você quiser... | Faça isso... 
+
+
+ a| 
+Gere novamente o certificado com os valores atuais
+ a| 
+Clique na opção *Regenerar usando os atributos do certificado atual*.
+
+
+
+ a| 
+Gere o certificado usando valores diferentes
+ a| 
+Clique na opção *Atualizar os atributos do certificado atual*.
+
+Os campos Nome Comum e Nomes Alternativos usarão os valores do certificado existente se você não inserir novos valores. O "`Nome Comum`" deve ser definido como o FQDN do host. Os outros campos não exigem valores, mas você pode inserir valores, por exemplo, para E-MAIL, EMPRESA, DEPARTAMENTO, Cidade, Estado e País, se quiser que esses valores sejam preenchidos no certificado. Você também pode selecionar entre o TAMANHO DA CHAVE disponível (o algoritmo da chave é "`RSA`".) e o PERÍODO DE VALIDADE.
+
+[NOTE]
+====
+** Os valores permitidos para o tamanho da chave são `2048`, `3072` e `4096`.
+** Os períodos de validade variam de um mínimo de 1 dia a um máximo de 36.500 dias.
++
+Embora seja permitido um período de validade de 36500 dias, recomenda-se que você utilize um período de validade de no máximo 397 dias ou 13 meses. Isso porque, se você selecionar um período de validade superior a 397 dias e planejar exportar um CSR para este certificado e obtê-lo assinado por uma CA reconhecida, a validade do certificado assinado retornado a você pela CA será reduzida para 397 dias.
+
+** Você pode selecionar a caixa de seleção "Excluir informações de identificação local (ex.: localhost)" se quiser remover as informações de identificação local do campo Nomes Alternativos no certificado. Quando essa caixa de seleção estiver marcada, somente o que você inserir no campo será usado no campo Nomes Alternativos. Se deixado em branco, o certificado resultante não terá nenhum campo Nomes Alternativos.
+
+
+====
+|===
+. Clique em *Sim* para regenerar o certificado.
+. Reinicie o servidor do Unified Manager para que o novo certificado entre em vigor.
+. Verifique as novas informações do certificado ao visualizar o certificado HTTPS.
+

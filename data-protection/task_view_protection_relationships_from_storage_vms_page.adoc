@@ -1,0 +1,27 @@
+---
+permalink: data-protection/task_view_protection_relationships_from_storage_vms_page.html 
+sidebar: sidebar 
+keywords: storage vm, viewing protection relationships 
+summary: Na página VMs de armazenamento, você pode visualizar o status dos relacionamentos de recuperação de desastres das VMs de armazenamento existentes. 
+---
+= Visualize as relações de proteção da página de VMs de armazenamento em Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Usando a página VMs de armazenamento, você pode visualizar o status dos relacionamentos de recuperação de desastres das VMs de armazenamento existentes.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Você também pode examinar detalhes das relações de proteção, incluindo o status da transferência e do atraso, além dos detalhes da origem e do destino. É possível agendar relatórios ou baixar relatórios existentes no formato desejado. O botão *Mostrar/Ocultar* permite adicionar as colunas necessárias aos relatórios, já que elas não são exibidas por padrão.
+
+.Passos
+. No painel de navegação esquerdo, clique em *STORAGE* > *Storage VMs*.
+. No menu *EXIBIR*, selecione *Relacionamento* > *Todos os Relacionamentos*.
++
+A visualização "Relacionamento: todos os Relacionamentos" exibe todas as VMs de armazenamento configuradas.
+
+

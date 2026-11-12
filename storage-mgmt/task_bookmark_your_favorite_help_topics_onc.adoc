@@ -1,0 +1,19 @@
+---
+permalink: storage-mgmt/task_bookmark_your_favorite_help_topics_onc.html 
+sidebar: sidebar 
+keywords: bookmark, favorite, help topics 
+summary: Na guia Favoritos da Ajuda, você pode adicionar aos favoritos os tópicos da Ajuda que usa com frequência. Os favoritos da Ajuda proporcionam acesso rápido aos seus tópicos preferidos. 
+---
+= Adicione aos favoritos seus tópicos de Ajuda no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Na guia Favoritos da Ajuda, você pode adicionar aos favoritos os tópicos da Ajuda que usa com frequência. Os favoritos da Ajuda proporcionam acesso rápido aos seus tópicos preferidos.
+
+.Passos
+. Navegue até o tópico de Ajuda que você deseja adicionar aos favoritos.
+. Clique em *Favoritos* e, em seguida, clique em *Adicionar*.
+

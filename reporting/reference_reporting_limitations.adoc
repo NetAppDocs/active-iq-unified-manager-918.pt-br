@@ -1,0 +1,57 @@
+---
+permalink: reporting/reference_reporting_limitations.html 
+sidebar: sidebar 
+keywords: reporting, limitations 
+summary: Há algumas limitações na nova funcionalidade de relatórios do Active IQ Unified Manager das quais você deve estar ciente. 
+---
+= Compreenda as limitações de geração de relatórios no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Há algumas limitações na nova funcionalidade de relatórios do Active IQ Unified Manager das quais você deve estar ciente.
+
+
+
+[[existing-reports-from-previous-versions-of-unified-manager]]
+== Relatórios existentes de versões anteriores do Unified Manager
+
+Você só pode editar o cronograma e os destinatários de relatórios existentes que foram criados e importados (como arquivos .rptdesign) no Unified Manager 9.5 e em versões anteriores. Se você personalizou algum dos relatórios padrão fornecidos com Unified Manager 9.5 ou versões anteriores, esses relatórios personalizados não serão importados para a nova ferramenta de relatórios.
+
+Se precisar editar relatórios existentes importados de arquivos .rptdesign, faça um dos seguintes procedimentos e remova o relatório importado:
+
+* criar uma nova visualização e agendar um relatório a partir dessa visualização (preferencial)
+* passe o cursor sobre o relatório, copie o SQL e extraia os dados usando uma ferramenta externa
+
+
+As visualizações padrão podem ser geradas como relatórios sem a necessidade de qualquer personalização. Você pode usar a nova solução de relatórios para recriar quaisquer relatórios personalizados.
+
+
+
+[[schedule-and-report-relationship]]
+== Relação entre cronograma e relatório
+
+Você pode criar vários agendamentos diferentes com qualquer combinação de destinatários para cada relatório salvo. No entanto, não é possível reutilizar o agendamento para vários relatórios.
+
+
+
+[[report-protection]]
+== Proteção de relatórios
+
+Qualquer usuário com as permissões apropriadas pode editar ou excluir relatórios. Não há como impedir que outros usuários removam ou alterem visualizações ou agendamentos salvos.
+
+
+
+[[event-reports]]
+== Relatórios de eventos
+
+Embora seja possível personalizar a visualização de eventos e baixar o relatório resultante em formato CSV, não é possível agendar a geração e a distribuição de relatórios recorrentes de eventos.
+
+
+
+[[report-attachments]]
+== Anexos do relatório
+
+Os relatórios não podem ser enviados no corpo de um e-mail. Em vez disso, são enviados apenas como anexos em PDF, Excel ou CSV.

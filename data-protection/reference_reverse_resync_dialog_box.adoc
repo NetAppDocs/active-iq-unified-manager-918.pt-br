@@ -1,0 +1,67 @@
+---
+permalink: data-protection/reference_reverse_resync_dialog_box.html 
+sidebar: sidebar 
+keywords: reverse, resync, dialog box 
+summary: Quando uma relação de proteção é interrompida porque o volume de origem está desativado e o destino se torna um volume de leitura/gravação, a ressincronização reversa permite inverter a direção da relação, de modo que o destino se torne a nova origem e a origem se torne o novo destino. 
+---
+= Reversão da resincronização no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando uma relação de proteção é interrompida porque o volume de origem está desativado e o destino se torna um volume de leitura/gravação, a ressincronização reversa permite inverter a direção da relação, de modo que o destino se torne a nova origem e a origem se torne o novo destino.
+
+Quando um desastre desabilita o volume de origem na sua relação de proteção, você pode usar o volume de destino para fornecer dados, convertendo-o para leitura/gravação, enquanto repara ou substitui a origem, atualiza a origem e restabelece a relação. Ao executar uma operação de ressincronização reversa, os dados na origem que forem mais recentes do que os dados na cópia Snapshot comum serão excluídos.
+
+
+
+[[before-reverse-resync]]
+== Antes da resincronização reversa
+
+Exibe a origem e o destino de um relacionamento antes de uma operação de ressincronização reversa.
+
+* *Volume de origem*
++
+O nome e a localização do volume de origem antes de uma operação de ressincronização reversa.
+
+* *Volume de destino*
++
+O nome e a localização do volume de destino antes de uma operação de ressincronização reversa.
+
+
+
+
+
+[[after-reverse-resync]]
+== Após a resincronização reversa
+
+Exibe qual é a origem e o destino de um relacionamento após uma operação de ressincronização de reserva.
+
+* *Volume de origem*
++
+O nome e a localização do volume de origem após uma operação de ressincronização reversa.
+
+* *Volume de destino*
++
+O nome e a localização do volume de destino após uma operação de ressincronização reversa.
+
+
+
+
+
+[[command-buttons]]
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes ações:
+
+* *Enviar*
++
+Inicia o processo de ressincronização reversa.
+
+* *Cancelar*
++
+Fecha a caixa de diálogo de ressincronização reversa sem iniciar uma operação de ressincronização reversa.
+
+

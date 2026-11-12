@@ -1,0 +1,61 @@
+---
+permalink: reporting/task_manage_report_schedules.html 
+sidebar: sidebar 
+keywords:  
+summary: Você pode gerenciar seus agendamentos de relatórios na página Agendamentos de Relatórios. Você pode visualizar, modificar ou excluir agendamentos existentes. 
+---
+= Gerencie agendamentos de relatórios no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode gerenciar seus agendamentos de relatórios na página Agendamentos de Relatórios. Você pode visualizar, modificar ou excluir agendamentos existentes.
+
+[NOTE]
+.Antes de começar
+====
+Não é possível agendar novos relatórios na página "Agendamentos de Relatórios". Você só pode adicionar relatórios agendados nas páginas de inventário de objetos.
+
+====
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Agendamentos de relatórios*.
+. Na página Programações de relatórios:
++
+[cols="2*"]
+|===
+| Se você quiser... | Então... 
+
+
+ a| 
+Ver um agendamento existente
+ a| 
+Navegue pela lista de relatórios existentes usando as barras de rolagem e os controles de página.
+
+
+
+ a| 
+Editar um cronograma existente
+ a| 
+.. Clique no ícone Mais image:../media/more_icon.gif[""] para a programação que você deseja usar.
+.. Clique em *Editar*.
+.. Faça as alterações necessárias.
+.. Clique na marca de seleção para salvar suas alterações.
+
+
+
+
+ a| 
+Excluir um agendamento existente
+ a| 
+.. Clique no ícone Mais image:../media/more_icon.gif[""] para a programação que você deseja usar.
+.. Clique em *Delete*.
+.. Confirme sua decisão.
+
+
+|===
+

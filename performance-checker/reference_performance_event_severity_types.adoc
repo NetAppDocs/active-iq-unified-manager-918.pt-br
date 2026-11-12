@@ -1,0 +1,45 @@
+---
+permalink: performance-checker/reference_performance_event_severity_types.html 
+sidebar: sidebar 
+keywords: performance, event, severity, types 
+summary: Cada evento de desempenho está associado a um tipo de gravidade para ajudar você a priorizar os eventos que exigem ação corretiva imediata. 
+---
+= Priorize eventos de desempenho por gravidade no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cada evento de desempenho está associado a um tipo de gravidade para ajudar você a priorizar os eventos que exigem ação corretiva imediata.
+
+* *Crítico*
++
+Ocorreu um evento de desempenho que pode levar à interrupção do serviço se medidas corretivas não forem tomadas imediatamente.
+
++
+Eventos críticos são enviados somente a partir de limites definidos pelo usuário.
+
+* *Aviso*
++
+Um contador de desempenho para um objeto de cluster está fora da faixa normal e deve ser monitorado para garantir que não atinja a gravidade crítica. Eventos dessa gravidade não causam interrupção do serviço e podem não exigir ação corretiva imediata.
+
++
+Os eventos de alerta são enviados a partir de limites definidos pelo usuário, definidos pelo sistema ou dinâmicos.
+
+* *Informação*
++
+O evento ocorre quando um novo objeto é descoberto ou quando uma ação do usuário é executada. Por exemplo, quando qualquer objeto de armazenamento é excluído ou quando há alterações de configuração, um evento com tipo de gravidade "Information" é gerado.
+
++
+Os eventos de informação são enviados diretamente do ONTAP quando este detecta uma alteração de configuração.
+
+
+
+Para obter mais informações, consulte os seguintes links:
+
+* link:../events/concept_what_happens_when_an_event_is_received.html["O que acontece quando um evento é recebido"]
+* link:../events/concept_what_information_is_contained_in_an_alert_email.html["Que informações estão contidas em um e-mail de alerta"]
+* link:../events/task_add_alerts.html["Adicionando alertas"]
+* link:../events/task_add_alerts_for_performance_events.html["Adicionando alertas para eventos de desempenho"]
+

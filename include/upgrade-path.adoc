@@ -1,0 +1,29 @@
+---
+permalink: include/upgrade-path.html 
+sidebar: sidebar 
+keywords: supported upgrade path, upgrade path, n-2, which versions can be upgraded 
+summary: Caminho de atualização compatível 
+---
+= Utilize o caminho de atualização compatível para as versões do Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Active IQ Unified Manager oferece suporte a um caminho de atualização específico para cada versão.
+
+Nem todas as versões do Unified Manager permitem uma atualização direta para versões posteriores. As atualizações do Unified Manager são limitadas ao modelo N-2. Isso significa que você só pode atualizar para as duas versões seguintes em todas as plataformas. Por exemplo, você só pode atualizar para o Unified Manager 9.18 a partir do Unified Manager 9.14 e do Unified Manager 9.16.
+
+Se você estiver executando uma versão anterior às versões suportadas, sua instância do Unified Manager precisará ser atualizada primeiro para uma das versões suportadas e, em seguida, para a versão atual.
+
+Por exemplo, se sua versão instalada for o Unified Manager 9.9 e você quiser atualizar para o Unified Manager 9.14, deverá seguir uma sequência de atualizações.
+
+.Exemplo de caminho de atualização:
+. Atualização 9.11 -> 9.13
+. Atualização 9.13 -> 9.14
+. Atualização 9.13 -> 9.16
+. Atualização da versão 9.14 ou 9.16 para a versão 9.18
+
+
+Para obter mais informações sobre a matriz de caminho de atualização, consulte isto https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/What_is_the_upgrade_path_for_Active_IQ_Unified_Manager_versions["artigo da Knowledge Base (KB)"].

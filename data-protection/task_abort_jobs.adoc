@@ -1,0 +1,23 @@
+---
+permalink: data-protection/task_abort_jobs.html 
+sidebar: sidebar 
+keywords: abort, jobs 
+summary: Você pode usar a página Jobs para abortar um trabalho se ele estiver demorando muito para terminar, estiver encontrando muitos erros ou não for mais necessário. Você só pode abortar um trabalho se o status e o tipo dele permitirem. Você pode abortar qualquer trabalho em execução. 
+---
+= Cancelar tarefas no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a página Jobs para abortar um trabalho se ele estiver demorando muito para terminar, estiver encontrando muitos erros ou não for mais necessário. Você só pode abortar um trabalho se o status e o tipo dele permitirem. Você pode abortar qualquer trabalho em execução.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Proteção* > *Tarefas*.
+. Na lista de trabalhos, selecione um trabalho e clique em *Abort*.
+. No prompt de confirmação, clique em *Yes* para abortar a tarefa selecionada.
+

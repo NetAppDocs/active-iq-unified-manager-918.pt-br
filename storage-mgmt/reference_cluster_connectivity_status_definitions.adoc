@@ -1,0 +1,51 @@
+---
+permalink: storage-mgmt/reference_cluster_connectivity_status_definitions.html 
+sidebar: sidebar 
+keywords: cluster, connectivity, status, definitions 
+summary: Compreenda os status de conectividade entre clusters em uma configuração do MetroCluster, como Ideal, Impactado ou Inativo. 
+---
+= Entenda a conectividade do cluster em uma configuração do MetroCluster sobre FC no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A conectividade entre os clusters em uma configuração MetroCluster over FC pode ter um dos seguintes status: ideal, impactada ou inativa. Entender os status de conectividade permite que você gerencie suas configurações de MetroCluster com eficácia.
+
+|===
+| Estado da conectividade | Descrição | Ícone exibido 
+
+
+ a| 
+Ideal
+ a| 
+A conectividade entre os clusters na configuração do MetroCluster está normal.
+ a| 
+image:../media/metrocluster_connectivity_optimal.gif["ícone de conectividade ideal do MetroCluster"]
+
+
+
+ a| 
+Afetado
+ a| 
+Um ou mais erros comprometem o status da disponibilidade de failover; no entanto, ambos os clusters na configuração do MetroCluster ainda estão ativos. Por exemplo, quando o link ISL está inativo, quando o link IP entre clusters está inativo ou quando o cluster parceiro está inacessível.
+ a| 
+image:../media/metrocluster_connectivity_impacted.gif["ícone de conectividade do metrocluster afetada"]
+
+
+
+ a| 
+Inativo
+ a| 
+A conectividade entre os clusters na configuração do MetroCluster está inativa porque um ou ambos os clusters estão inativos ou os clusters estão em modo de failover. Por exemplo, quando o cluster parceiro está inativo devido a um desastre ou quando há um switchover planejado para fins de teste.
+ a| 
+Switchover com erros:
+
+image::../media/metrocluster_connectivity_down.gif[ícone de conectividade do MetroCluster inativa]
+
+Switchover concluído com sucesso:
+
+image::../media/metrocluster_connectivity_failover.gif[ícone de failover de conectividade do metrocluster]
+
+|===

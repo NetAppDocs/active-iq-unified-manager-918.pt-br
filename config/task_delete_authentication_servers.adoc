@@ -1,0 +1,28 @@
+---
+permalink: config/task_delete_authentication_servers.html 
+sidebar: sidebar 
+keywords: delete, authentication, servers 
+summary: Você pode excluir um servidor de autenticação se quiser impedir que o servidor do Unified Manager se comunique com o servidor de autenticação. Por exemplo, se quiser alterar um servidor de autenticação com o qual o servidor de gerenciamento se comunica, você pode excluir o servidor de autenticação e adicionar um novo servidor de autenticação. 
+---
+= Excluir servidores de autenticação no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode excluir um servidor de autenticação se quiser impedir que o servidor do Unified Manager se comunique com o servidor de autenticação. Por exemplo, se quiser alterar um servidor de autenticação com o qual o servidor de gerenciamento se comunica, você pode excluir o servidor de autenticação e adicionar um novo servidor de autenticação.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator.
+
+Ao excluir um servidor de autenticação, os usuários ou grupos remotos desse servidor de autenticação não poderão mais acessar o Unified Manager.
+
+.Passos
+. No painel de navegação à esquerda, clique em *Geral* > *Autenticação Remota*.
+. Selecione um ou mais servidores de autenticação que você deseja excluir e clique em *Excluir*.
+. Clique em *Sim* para confirmar a solicitação de exclusão.
++
+Se a opção *Usar conexão segura* estiver ativada, os certificados associados ao servidor de autenticação serão excluídos juntamente com o servidor de autenticação.
+
+

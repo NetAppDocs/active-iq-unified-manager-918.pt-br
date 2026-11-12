@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_verify_qos_policy_group.html 
+sidebar: sidebar 
+keywords: verify, volumes, qos, policy, group, unusually, high, activity 
+summary: 'Analise as cargas de trabalho em um grupo de política de Qualidade de Serviço (QoS) com a maior variação de atividade para determinar qual carga de trabalho causou o evento.' 
+---
+= Analise os volumes de alta atividade em um grupo de políticas de QoS no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode revisar as cargas de trabalho no grupo de políticas de Qualidade de Serviço (QoS) com a maior variação de atividade para determinar se mais de uma carga de trabalho causou o evento. Você também pode verificar se outras cargas de trabalho ainda estão excedendo o limite de taxa de transferência ou se já retornaram ao intervalo de atividade esperado.
+
+Na página Detalhes do evento, na seção Diagnóstico do sistema, você pode classificar as cargas de trabalho por desvio máximo de atividade para exibir as cargas de trabalho com a maior variação de atividade no topo da tabela. Essas cargas de trabalho podem ser os "`bullies`" cuja atividade excedeu o limite definido e podem ter causado o evento.
+
+Você pode acessar a página de Análise de Carga de Trabalho de cada carga de trabalho de volume para revisar sua atividade de IOPS. Se a carga de trabalho apresentar períodos de atividade operacional muito alta, isso pode ter contribuído para o evento. Você pode alterar as configurações do grupo de políticas da carga de trabalho ou movê-la para um grupo de políticas diferente.
+
+Você pode usar o ONTAP System Manager ou os comandos da CLI do ONTAP para gerenciar grupos de políticas, conforme descrito a seguir:
+
+* Crie um grupo de políticas.
+* Adicionar ou remover cargas de trabalho em um grupo de políticas.
+* Mova uma carga de trabalho entre grupos de políticas.
+* Altere o limite de taxa de transferência de um grupo de políticas.
+

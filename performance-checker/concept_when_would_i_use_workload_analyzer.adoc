@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_when_would_i_use_workload_analyzer.html 
+sidebar: sidebar 
+keywords: workload analyzer, use 
+summary: Normalmente, você usaria o analisador de carga de trabalho para solucionar um problema de latência relatado por um usuário, para analisar mais detalhadamente um evento ou alerta relatado ou para explorar uma carga de trabalho que você considera estar operando de forma anormal. 
+---
+= Entenda quando usar o analisador de carga de trabalho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Normalmente, você usaria o analisador de carga de trabalho para solucionar um problema de latência relatado por um usuário, para analisar mais detalhadamente um evento ou alerta relatado ou para explorar uma carga de trabalho que você considera estar operando de forma anormal.
+
+No caso de os usuários entrarem em contato com você para dizer que o aplicativo que estão usando está muito lento, você pode verificar os gráficos de latência, throughput e utilização da carga de trabalho na qual o aplicativo está sendo executado para ver se o storage é a causa do problema de desempenho. Você também pode usar o gráfico de capacidade para ver se a capacidade está baixa, porque um sistema ONTAP com mais de 85% da capacidade em uso pode causar problemas de desempenho. Esses gráficos ajudarão você a determinar se o problema é causado pelo storage, pela rede ou por outro problema relacionado.
+
+Caso o Unified Manager tenha gerado um evento de desempenho e você queira analisar a causa do problema mais detalhadamente, você pode iniciar o analisador de carga de trabalho na página de detalhes do evento clicando no botão *Analyze Workload* para pesquisar algumas das tendências de latência, taxa de transferência e capacidade da carga de trabalho.
+
+Caso você note uma carga de trabalho que pareça estar operando de forma anormal ao visualizar qualquer página de inventário de cargas de trabalho (volume, LUN, carga de trabalho, compartilhamento NFS ou compartilhamento SMB/CIFS), você pode clicar no ícone Mais image:../media/more_icon.gif[""], depois em *Analyze Workload* para abrir a página de análise de carga de trabalho e examinar melhor a carga de trabalho.

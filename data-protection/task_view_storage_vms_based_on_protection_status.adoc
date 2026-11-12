@@ -1,0 +1,62 @@
+---
+permalink: data-protection/task_view_storage_vms_based_on_protection_status.html 
+sidebar: sidebar 
+keywords: storage vm, view protection status 
+summary: Você pode usar a página VMs de armazenamento do Inventário para visualizar todas as VMs de armazenamento no Active IQ Unified Manager e filtrar as VMs de armazenamento com base em seu status de proteção. 
+---
+= Visualize as VMs de armazenamento com base no status de proteção no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a página VMs de armazenamento do Inventário para visualizar todas as VMs de armazenamento no Active IQ Unified Manager e filtrar as VMs de armazenamento com base em seu status de proteção.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Uma nova coluna Função de proteção foi adicionada à visualização de VMs de armazenamento e fornece informações sobre se a VM de armazenamento está protegida ou desprotegida.
+
+[NOTE]
+====
+Se um cluster de origem não for adicionado ao Active IQ Unified Manager, todas as informações relacionadas a esse cluster ficarão indisponíveis nas grades.
+
+====
+.Passos
+. No painel de navegação esquerdo, clique em *STORAGE* > *Storage VMs*.
+. No menu *VISUALIZAR*, selecione *Saúde* > *Todas as VMs de armazenamento*.
++
+A "Saúde: todas as VMs de armazenamento" é exibida.
+
+. Clique em *Filtrar* para visualizar uma das seguintes VMs de armazenamento.
++
+[cols="2*"]
+|===
+| Para visualizar | Valor do filtro 
+
+
+ a| 
+*VMs de armazenamento protegidas*
+ a| 
+*Função de Proteção* é *Protegida*
+
+
+
+ a| 
+*VMs de armazenamento desprotegidas*
+ a| 
+*Função de proteção* é *Desprotegida*
+
+|===
++
+[NOTE]
+====
+Não é possível visualizar as VMs de armazenamento protegidas e desprotegidas simultaneamente. Você precisará limpar o filtro existente para aplicar uma nova opção de filtro.
+
+====
+. Clique em *Aplicar filtro*.
++
+A visualização "Unsaved" exibe todas as VMs de armazenamento que estão protegidas ou desprotegidas pela recuperação de desastres de VM de armazenamento, com base nas suas seleções de filtro.
+
+

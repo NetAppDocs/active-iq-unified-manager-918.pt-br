@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_analyze_events_from_system_defined_performance_thresholds.html 
+sidebar: sidebar 
+keywords: analyze, events, system-defined, performance, thresholds 
+summary: Os eventos gerados a partir de limites de desempenho definidos pelo sistema indicam que um contador de desempenho, ou conjunto de contadores de desempenho, para um determinado objeto de armazenamento ultrapassou o limite estabelecido por uma política do sistema. Isso indica que o objeto de armazenamento, por exemplo, um agregado ou nó, está apresentando um problema de desempenho. 
+---
+= Analise eventos a partir de limites de desempenho definidos pelo sistema no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos gerados a partir de limites de desempenho definidos pelo sistema indicam que um contador de desempenho, ou conjunto de contadores de desempenho, para um determinado objeto de armazenamento ultrapassou o limite estabelecido por uma política do sistema. Isso indica que o objeto de armazenamento, por exemplo, um agregado ou nó, está apresentando um problema de desempenho.
+
+Você usa a página Detalhes do evento para analisar o evento de desempenho e tomar medidas corretivas, se necessário, para fazer o desempenho voltar ao normal.
+
+[NOTE]
+====
+As políticas de limite definidas pelo sistema não estão habilitadas nos sistemas Cloud Volumes ONTAP, ONTAP Edge ou ONTAP Select.
+
+====

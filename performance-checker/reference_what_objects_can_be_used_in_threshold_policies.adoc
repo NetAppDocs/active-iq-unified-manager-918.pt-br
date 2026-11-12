@@ -1,0 +1,97 @@
+---
+permalink: performance-checker/reference_what_objects_can_be_used_in_threshold_policies.html 
+sidebar: sidebar 
+keywords: objects, counters, combination, threshold, policies 
+summary: Apenas alguns contadores de desempenho podem ser usados em conjunto em políticas combinadas. Quando contadores de desempenho primários e secundários são especificados, ambos os contadores de desempenho devem exceder seus limites máximos para gerar um evento. 
+---
+= Compreenda os objetos de política de limite combinado e os contadores no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Apenas alguns contadores de desempenho podem ser usados em conjunto em políticas combinadas. Quando contadores de desempenho primários e secundários são especificados, ambos os contadores de desempenho devem exceder seus limites máximos para gerar um evento.
+
+|===
+| Objeto de armazenamento primário e contador | Objeto de armazenamento secundário e contador 
+
+
+ a| 
+Latência de volume
+ a| 
+IOPS do volume
+
+
+
+ a| 
+MB/s do volume
+
+
+
+ a| 
+Utilização do agregado
+
+
+
+ a| 
+Capacidade de desempenho agregada utilizada
+
+
+
+ a| 
+Utilização de nós
+
+
+
+ a| 
+Capacidade de desempenho do nó utilizada
+
+
+
+ a| 
+Capacidade de desempenho do nó usada: tomada de controle
+
+
+
+ a| 
+Latência da LUN
+ a| 
+IOPS do LUN
+
+
+
+ a| 
+MB/s do LUN
+
+
+
+ a| 
+Utilização do agregado
+
+
+
+ a| 
+Capacidade de desempenho agregada utilizada
+
+
+
+ a| 
+Utilização de nós
+
+
+
+ a| 
+Capacidade de desempenho do nó utilizada
+
+
+
+ a| 
+Capacidade de desempenho do nó usada: tomada de controle
+
+|===
+[NOTE]
+====
+Quando uma política de combinação de volumes é aplicada a um volume FlexGroup, em vez de a um volume FlexVol, somente os atributos "`IOPS do volume`" e "`MB/s do volume`" podem ser selecionados como contador secundário. Se a política de limite contiver um dos atributos de nó ou agregado, a política não será aplicada ao volume FlexGroup, e você receberá uma mensagem de erro descrevendo esse caso. Isso ocorre porque os volumes FlexGroup podem existir em mais de um nó ou agregado.
+
+====

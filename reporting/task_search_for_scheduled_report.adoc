@@ -1,0 +1,52 @@
+---
+permalink: reporting/task_search_for_scheduled_report.html 
+sidebar: sidebar 
+keywords: search, schedule, report 
+summary: Você pode pesquisar relatórios agendados por nome, nome da visualização, tipo de objeto ou destinatários. 
+---
+= Pesquise um relatório agendado no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode pesquisar relatórios agendados por nome, nome da visualização, tipo de objeto ou destinatários.
+
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Agendamentos de relatórios*.
+. Use o campo de texto *Pesquisar relatórios agendados*.
++
+[cols="2*"]
+|===
+| Para encontrar relatórios por ... | Tente ... 
+
+
+ a| 
+Nome do agendamento
+ a| 
+Digite parte do nome do cronograma do relatório.
+
+
+
+ a| 
+Nome da vista
+ a| 
+Digite parte do nome da visualização do relatório. As visualizações padrão e as visualizações personalizadas aparecem na lista de visualizações.
+
+
+
+ a| 
+Destinatário
+ a| 
+Digite parte do endereço de e-mail.
+
+
+
+ a| 
+Tipo de arquivo
+ a| 
+Digite "PDF", "CSV" ou "XLSX".
+
+|===
+. Você pode clicar no cabeçalho de uma coluna para classificar os relatórios em ordem crescente ou decrescente por essa coluna, como nome do agendamento ou formato.
+

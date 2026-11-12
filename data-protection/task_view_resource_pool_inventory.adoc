@@ -1,0 +1,24 @@
+---
+permalink: data-protection/task_view_resource_pool_inventory.html 
+sidebar: sidebar 
+keywords: view, resource pools, inventory 
+summary: Você pode usar a página Pools de recursos para visualizar o inventário de pools de recursos e monitorar a capacidade restante de cada pool de recursos. 
+---
+= Visualize o inventário do pool de recursos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a página Pools de recursos para visualizar o inventário de pools de recursos e monitorar a capacidade restante de cada pool de recursos.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+.Etapa
+. No painel de navegação esquerdo, clique em *Proteção* > *Pools de recursos*.
++
+O inventário do pool de recursos é exibido.
+
+

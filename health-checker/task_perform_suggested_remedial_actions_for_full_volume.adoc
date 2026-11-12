@@ -1,0 +1,44 @@
+---
+permalink: health-checker/task_perform_suggested_remedial_actions_for_full_volume.html 
+sidebar: sidebar 
+keywords: perform, suggested, remedial actions, volume 
+summary: 'Após receber um evento de erro "Volume Space Full", você revisa as ações corretivas sugeridas na página de detalhes do evento e decide executar uma das ações sugeridas.' 
+---
+= Execute as ações corretivas sugeridas para um volume completo no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após receber um evento de erro "`Volume Space Full`", você revisa as ações corretivas sugeridas na página de detalhes do evento e decide executar uma das ações sugeridas.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Um usuário com qualquer função pode executar todas as tarefas neste fluxo de trabalho que usam o Unified Manager.
+
+Neste exemplo, você viu um evento de erro "Espaço de volume cheio" na página de inventário do Unified ManagerEvent Management e clicou no nome do evento.
+
+As possíveis ações corretivas que você pode realizar para um volume cheio incluem o seguinte:
+
+* Habilitar o crescimento automático, a deduplicação ou a compressão no volume
+* Redimensionar ou mover o volume
+* Excluir ou mover dados do volume
+
+
+Embora todas essas ações devam ser executadas no ONTAP System Manager ou na ONTAP CLI, você pode usar o Unified Manager para encontrar informações de que talvez precise para determinar quais ações tomar.
+
+.Passos
+. Na página de detalhes do *Evento*, clique no nome do volume no campo Origem para visualizar os detalhes sobre o volume afetado.
+. Na página de detalhes *Volume / Saúde*, você clica em *Configuração* e vê que a deduplicação e a compressão já estão ativadas no volume.
++
+Você decide redimensionar o volume.
+
+. No painel *Dispositivos Relacionados*, clique no nome do agregado de hospedagem para verificar se ele pode acomodar um volume maior.
+. Na página de detalhes *Aggregate / Health*, você vê que o agregado que hospeda o volume cheio tem capacidade não comprometida suficiente, então você usa o ONTAP System Manager para redimensionar o volume, dando a ele mais capacidade.
+
+
+*Informações relacionadas*
+
+link:../events/reference_event_details_page.html["Página de detalhes do evento"]

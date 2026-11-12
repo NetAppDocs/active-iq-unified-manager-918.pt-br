@@ -1,0 +1,80 @@
+---
+permalink: performance-checker/reference_components_of_node_failover_planning_page.html 
+sidebar: sidebar 
+keywords: components, node, failover, planning page, performance, statistics, grid 
+summary: Os componentes da página Planejamento de failover de nó/desempenho são exibidos em uma grade e no painel de comparação. Essas seções permitem avaliar o impacto de um failover de nó no desempenho do nó que assume o controle. 
+---
+= Analise os componentes da página de Planejamento de Failover de Desempenho/Nó no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os componentes da página Planejamento de failover de nó/desempenho são exibidos em uma grade e no painel de comparação. Essas seções permitem avaliar o impacto de um failover de nó no desempenho do nó que assume o controle.
+
+
+
+[[performance-statistics-grid]]
+== Grade de estatísticas de desempenho
+
+A página Performance/Node Failover Planning exibe uma tabela contendo estatísticas de latência, IOPS, utilização e capacidade de desempenho usada.
+
+[NOTE]
+====
+Os valores de latência e IOPS exibidos nesta página e na página Performance/Node Performance Explorer podem não corresponder, porque contadores de desempenho diferentes são usados para calcular os valores e prever o failover do nó.
+
+====
+Na grade, cada nó recebe uma das seguintes funções:
+
+* Primário
++
+O nó que assume o lugar do parceiro de HA quando ele falha. O objeto raiz é sempre o nó Primary.
+
+* Parceiro
++
+O nó que falha no cenário de failover.
+
+* Takeover estimado
++
+O mesmo que o nó primário. As estatísticas de desempenho exibidas para este nó mostram o desempenho do nó de takeover após ele assumir o parceiro com falha.
+
+
+
+[NOTE]
+====
+Embora a carga de trabalho do nó de takeover seja equivalente à soma das cargas de trabalho de ambos os nós após um failover, as estatísticas do nó de takeover estimado não são a soma das estatísticas do nó primário e do nó parceiro. Por exemplo, se a latência do nó primário for de 2 ms/op e a latência do nó parceiro for de 3 ms/op, o nó de takeover estimado poderá ter uma latência de 4 ms/op. Esse valor é um cálculo que o Unified Manager realiza.
+
+====
+Você pode clicar no nome do nó parceiro se quiser que ele se torne o objeto raiz. Depois que a página Performance/Node Performance Explorer for exibida, você poderá clicar na guia *Failover Planning* para ver como o desempenho muda nesse cenário de falha de nó. Por exemplo, se Node1 for o nó primário e Node2 for o nó parceiro, você poderá clicar em Node2 para torná-lo o nó primário. Dessa forma, você poderá ver como o desempenho estimado muda dependendo de qual nó falha.
+
+
+
+[[comparing-pane]]
+== Painel de comparação
+
+A lista a seguir descreve os componentes exibidos no painel Comparing por padrão:
+
+* *Gráficos de eventos*
++
+Eles são exibidos no mesmo formato que os da página Performance/Node Performance Explorer. Eles se referem apenas ao nó primário.
+
+* *Gráficos de contadores*
++
+Eles exibem estatísticas históricas para o contador de desempenho mostrado na grade. Em cada gráfico, o gráfico do nó Estimated Takeover mostra o desempenho estimado se um failover tivesse ocorrido em qualquer momento.
+
++
+Por exemplo, suponha que o gráfico de Utilização mostre 73% para o nó de takeover estimado às 11h do dia 8 de fevereiro. Se tivesse ocorrido um failover naquele momento, a utilização do nó de takeover teria sido de 73%.
+
++
+As estatísticas históricas ajudam você a encontrar o momento ideal para iniciar um failover, minimizando a possibilidade de sobrecarga do nó de takeover. Você pode agendar um failover somente nos momentos em que o desempenho previsto do nó de takeover for aceitável.
+
+
+
+Por padrão, as estatísticas do objeto raiz e do nó parceiro são exibidas no painel Comparing. Diferentemente da página Performance/Node Performance Explorer, esta página não exibe o botão *Add* para você adicionar objetos para comparação de estatísticas.
+
+Você pode personalizar o painel Comparação da mesma forma que faz na página Performance/Node Performance Explorer. A lista a seguir mostra exemplos de personalização dos gráficos:
+
+* Clique no nome do nó para mostrar ou ocultar as estatísticas do nó nos gráficos de contador.
+* Clique em *Zoom View* para exibir um gráfico detalhado de um determinado contador em uma nova janela.
+

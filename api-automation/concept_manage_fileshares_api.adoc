@@ -1,0 +1,113 @@
+---
+permalink: api-automation/concept_manage_fileshares_api.html 
+sidebar: sidebar 
+keywords: manage, file, share 
+summary: Você pode usar a API /storage-provider/file-shares para visualizar, adicionar, modificar e excluir os volumes de compartilhamento de arquivos CIFS e NFS no seu ambiente de data center. 
+---
+= Gerencie compartilhamentos de arquivos usando APIs no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a `/storage-provider/file-shares` API para visualizar, adicionar, modificar e excluir os volumes de compartilhamento de arquivos CIFS e NFS em seu ambiente de data center.
+
+Antes de provisionar os volumes de compartilhamento de arquivos, certifique-se de que a SVM tenha sido criada e provisionada com os protocolos suportados. Se você estiver atribuindo Níveis de Serviço de Desempenho (PSLs) ou Políticas de Eficiência de Armazenamento (SEPs) durante o provisionamento, os PSLs ou SEPs devem ser criados antes de criar os compartilhamentos de arquivos.
+
+
+
+[[view-file-shares]]
+== Visualizar compartilhamentos de arquivos
+
+Você pode usar o método a seguir para visualizar os volumes de compartilhamento de arquivos disponíveis no seu ambiente do Unified Manager. Quando você adiciona um cluster ONTAP como fonte de dados no Active IQ Unified Manager, as cargas de trabalho de storage desses clusters são adicionadas automaticamente à sua instância do Unified Manager. Esta API recupera os compartilhamentos de arquivos adicionados automática e manualmente à sua instância do Unified Manager. Você pode visualizar os detalhes de um compartilhamento de arquivos específico executando esta API com a chave do compartilhamento de arquivos.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+GET
+ a| 
+`/storage-provider/file-shares`
+
+`/storage-provider/file-shares/\{key}`
+
+|===
+
+
+[[add-file-shares]]
+== Adicionar compartilhamentos de arquivos
+
+Você pode usar o seguinte método para adicionar compartilhamentos de arquivos CIFS e NFS na sua SVM. Você deve inserir os detalhes do compartilhamento de arquivos que deseja criar como parâmetros de entrada. Não é possível usar esta API para adicionar volumes FlexGroup.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+POST
+ a| 
+`/storage-provider/file-shares`
+
+|===
+[NOTE]
+====
+Dependendo de serem fornecidos os parâmetros da lista de controle de acesso (ACL) ou os parâmetros da política de exportação, serão criados compartilhamentos CIFS ou compartilhamentos de arquivos NFS. Se você não fornecer os valores dos parâmetros da ACL, os compartilhamentos CIFS não serão criados, e os compartilhamentos NFS serão criados por padrão, fornecendo acesso a todos.
+
+====
+*Criação de volumes de proteção de dados*: ao adicionar compartilhamentos de arquivos à sua SVM, o tipo do volume montado, por padrão, é `rw` (leitura e gravação). Para criar volumes de proteção de dados (DP), especifique `dp` como valor para o `type` parâmetro.
+
+
+
+[[delete-file-shares]]
+== Excluir compartilhamentos de arquivos
+
+Você pode usar o seguinte método para excluir um compartilhamento de arquivos específico. Você precisa inserir a chave do compartilhamento de arquivos como parâmetro de entrada para excluir um compartilhamento de arquivos específico.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+EXCLUIR
+ a| 
+`/storage-provider/file-shares/\{key}`
+
+|===
+
+
+[[modify-file-shares]]
+== Modificar compartilhamentos de arquivos
+
+Você pode usar o seguinte método para modificar um compartilhamento de arquivos e atualizar suas propriedades.
+
+Para modificar um compartilhamento de arquivos específico, você precisa fornecer a chave do compartilhamento de arquivos. Além disso, você precisa inserir a propriedade que deseja atualizar, juntamente com seu valor.
+
+[NOTE]
+====
+Observe que você só pode atualizar uma propriedade por vez ao invocar esta API. Para várias atualizações, você precisa executar esta API várias vezes.
+
+====
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PATCH
+ a| 
+`/storage-provider/file-shares/\{key}`
+
+|===

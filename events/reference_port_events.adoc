@@ -1,0 +1,130 @@
+---
+permalink: events/reference_port_events.html 
+sidebar: sidebar 
+keywords: port, events, impact area, availability, performance 
+summary: Os eventos de porta fornecem o status das portas do cluster para que você possa monitorar alterações ou problemas na porta, como por exemplo se a porta está inativa. 
+---
+= Saiba mais sobre eventos de porta no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de porta fornecem o status das portas do cluster para que você possa monitorar alterações ou problemas na porta, como por exemplo se a porta está inativa.
+
+
+
+[[impact-area-availability]]
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Status da porta inativa(ocumEvtPortStatusDown)
+ a| 
+Incidente
+ a| 
+Nó
+ a| 
+Crítico
+
+|===
+
+
+[[impact-area-performance]]
+== Área de impacto: desempenho
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Limite crítico de MB/s da porta de rede atingido(ocumNetworkPortMbpsIncident)
+ a| 
+Incidente
+ a| 
+Porta
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de aviso de MB/s da porta de rede ultrapassado(ocumNetworkPortMbpsWarning)
+ a| 
+Risco
+ a| 
+Porta
+ a| 
+Aviso
+
+
+
+ a| 
+Limite crítico de MB/s da porta FCP atingido(ocumFcpPortMbpsIncident)
+ a| 
+Incidente
+ a| 
+Porta
+ a| 
+Crítico
+
+
+
+ a| 
+Aviso de limite de MB/s da porta FCP ultrapassado(ocumFcpPortMbpsWarning)
+ a| 
+Risco
+ a| 
+Porta
+ a| 
+Aviso
+
+
+
+ a| 
+Limite crítico de utilização da porta de rede ultrapassado(ocumNetworkPortUtilizationIncident)
+ a| 
+Incidente
+ a| 
+Porta
+ a| 
+Crítico
+
+
+
+ a| 
+Limiar de aviso de utilização da porta de rede ultrapassado(ocumNetworkPortUtilizationWarning)
+ a| 
+Risco
+ a| 
+Porta
+ a| 
+Aviso
+
+
+
+ a| 
+Utilização da porta FCP: limite crítico ultrapassado(ocumFcpPortUtilizationIncident)
+ a| 
+Incidente
+ a| 
+Porta
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de aviso de utilização de porta FCP ultrapassado(ocumFcpPortUtilizationWarning)
+ a| 
+Risco
+ a| 
+Porta
+ a| 
+Aviso
+
+|===

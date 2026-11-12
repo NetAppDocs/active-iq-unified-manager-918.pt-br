@@ -1,0 +1,16 @@
+---
+permalink: config/concept_login_banner.html 
+sidebar: sidebar 
+keywords: login banner, feature settings 
+summary: Essa funcionalidade permite que sua organização exiba informações como quem tem permissão para acessar o sistema e os termos e condições de uso durante o login e o logout. 
+---
+= Adicione um banner de login no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Adicionar um banner de login permite que sua organização exiba informações como quem tem permissão para acessar o sistema e os termos e condições de uso durante o login e o logout.
+
+Qualquer usuário, como operadores de storage ou administradores, pode visualizar este banner pop-up de login durante o login, logout e o tempo limite da sessão.

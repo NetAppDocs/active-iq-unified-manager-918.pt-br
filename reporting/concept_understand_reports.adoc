@@ -1,0 +1,25 @@
+---
+permalink: reporting/concept_understand_reports.html 
+sidebar: sidebar 
+keywords: understanding, reports 
+summary: Os relatórios exibem informações detalhadas sobre armazenamento, rede, qualidade do serviço e relacionamentos de proteção, ajudando você a identificar e resolver problemas potenciais antes que eles ocorram. 
+---
+= Compreenda os relatórios no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os relatórios exibem informações detalhadas sobre armazenamento, rede, qualidade do serviço e relacionamentos de proteção, ajudando você a identificar e resolver problemas potenciais antes que eles ocorram.
+
+Ao personalizar uma visualização, você pode salvá-la com um nome exclusivo para uso futuro. Você pode agendar um relatório com base nessa visualização para ser executado regularmente e compartilhá-lo com outras pessoas. Você também pode baixar a visualização no Excel para personalizá-la usando recursos avançados do Excel e, em seguida, carregar esse arquivo de volta para o Unified Manager. Se você agendar um relatório usando essa visualização, ele usará o arquivo do Excel que você carregou para criar relatórios robustos que você poderá compartilhar.
+
+Você pode gerenciar todos os relatórios que foram agendados na página Agendamento de Relatórios.
+
+[NOTE]
+====
+Você precisa ter a função de Application Administrator ou Storage Administrator para gerenciar relatórios.
+
+====
+Você pode baixar relatórios como arquivos CSV (valores separados por vírgula), Excel ou PDF.

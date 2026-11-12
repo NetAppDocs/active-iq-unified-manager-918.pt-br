@@ -1,0 +1,64 @@
+---
+permalink: performance-checker/concept_how_qos_policies_are_displayed_in_throughput_charts.html 
+sidebar: sidebar 
+keywords: different, types, qos, policies, display, throughput, charts 
+summary: 'Você pode visualizar as configurações de política de qualidade do serviço (QoS) definidas pelo ONTAP que foram aplicadas a um volume ou LUN no Performance Explorer e nos gráficos de IOPS, IOPS/TB e MB/s do Workload Analysis. As informações exibidas nos gráficos variam dependendo do tipo de política de QoS aplicada à carga de trabalho.' 
+---
+= Visualize as políticas de QoS em gráficos de throughput com o Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar as configurações de política de qualidade do serviço (QoS) definidas pelo ONTAP que foram aplicadas a um volume ou LUN no Performance Explorer e nos gráficos de IOPS, IOPS/TB e MB/s do Workload Analysis. As informações exibidas nos gráficos variam dependendo do tipo de política de QoS aplicada à carga de trabalho.
+
+A configuração de taxa de transferência máxima (ou "`pico`") define a taxa de transferência máxima que a carga de trabalho pode consumir, limitando assim o impacto sobre outras cargas de trabalho que competem por recursos do sistema. A configuração de taxa de transferência mínima (ou "`esperada`") define a taxa de transferência mínima que deve estar disponível para a carga de trabalho, de modo que uma carga de trabalho crítica atenda às metas mínimas de taxa de transferência, independentemente da demanda de outras cargas de trabalho.
+
+As políticas de QoS compartilhadas e não compartilhadas para IOPS e MB/s usam os termos "`minimum`" e "`maximum`" para definir o limite inferior e o limite superior. As políticas de QoS adaptáveis para IOPS/TB, introduzidas no ONTAP 9.3, usam os termos "`expected`" e "`peak`" para definir o limite inferior e o limite superior.
+
+Embora o ONTAP permita criar esses dois tipos de políticas de QoS, dependendo de como elas são aplicadas às cargas de trabalho, existem três maneiras pelas quais a política de QoS será exibida nos gráficos de desempenho.
+
+|===
+| Tipo de política | Funcionalidade | Indicador na interface do Unified Manager 
+
+
+ a| 
+Política de QoS compartilhada atribuída a uma única carga de trabalho ou política de QoS não compartilhada atribuída a uma única carga de trabalho ou a várias cargas de trabalho
+ a| 
+Cada carga de trabalho pode consumir a configuração de taxa de transferência especificada
+ a| 
+Exibe "`(QoS)`"
+
+
+
+ a| 
+Política de QoS compartilhada atribuída a várias cargas de trabalho
+ a| 
+Todas as cargas de trabalho compartilham a configuração de taxa de transferência especificada
+ a| 
+Exibe "`(QoS Shared)`"
+
+
+
+ a| 
+Política de QoS adaptável atribuída a uma única carga de trabalho ou a múltiplas cargas de trabalho
+ a| 
+Cada carga de trabalho pode consumir a configuração de taxa de transferência especificada
+ a| 
+Exibe "`(QoS adaptável)`"
+
+|===
+A figura a seguir mostra um exemplo de como as três opções são apresentadas nos gráficos de contador.
+
+image::../media/3_qos_policy_charts.gif[Uma captura de tela da UI que mostra um exemplo de como as três opções são exibidas nos gráficos de contador.]
+
+Quando uma política de QoS normal, definida em IOPS, aparece no gráfico IOPS/TB de uma carga de trabalho, o ONTAP converte o valor de IOPS para um valor de IOPS/TB, e o Unified Manager exibe essa política no gráfico IOPS/TB juntamente com o texto "`QoS, definida em IOPS`".
+
+Quando uma política de QoS adaptável definida em IOPS/TB aparece no gráfico de IOPS de uma carga de trabalho, o ONTAP converte o valor de IOPS/TB em um valor de IOPS, e o Unified Manager exibe essa política no gráfico de IOPS junto com o texto "`QoS Adaptive - Used, defined in IOPS/TB`" ou "`QoS Adaptive - Allocated, defined in IOPS/TB`", dependendo de como a configuração de alocação de IOPS de pico está definida. Quando a configuração de alocação está definida como "`allocated-space`", o IOPS de pico é calculado com base no tamanho do volume. Quando a configuração de alocação está definida como "`used-space`", o IOPS de pico é calculado com base na quantidade de dados armazenados no volume, levando em consideração as eficiências de storage.
+
+[NOTE]
+====
+O gráfico IOPS/TB exibe dados de desempenho somente quando a capacidade lógica utilizada pelo volume é igual ou superior a 128 GB. Lacunas são exibidas no gráfico quando a capacidade utilizada cai abaixo de 128 GB durante o período selecionado.
+
+====

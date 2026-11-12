@@ -1,0 +1,61 @@
+---
+permalink: storage-mgmt/task_provision_luns.html 
+sidebar: sidebar 
+keywords: provision, luns 
+summary: 'Você pode criar LUNs que oferecem suporte aos protocolos CIFS/SMB e NFS em um cluster existente e em uma Storage Virtual Machine (storage VM) existente na página Provision Workload.' 
+---
+= Provisionar LUNs no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar LUNs que oferecem suporte aos protocolos CIFS/SMB e NFS em um cluster existente e em uma Storage Virtual Machine (storage VM) existente na página Provision Workload.
+
+.Antes de começar
+* A máquina virtual de storage deve ter espaço para provisionar o LUN.
+* Tanto o iSCSI quanto o FCP devem estar habilitados na máquina virtual de armazenamento na qual você cria o LUN.
+* Para selecionar e atribuir o Nível de Serviço de Desempenho (PSL) e a Política de Eficiência de Storage (SEP) à carga de trabalho, as políticas devem ter sido criadas antes de você começar a criar a carga de trabalho.
+
+
+.Passos
+. Na página *Provisionar carga de trabalho*, adicione o nome da carga de trabalho que você deseja criar e, em seguida, selecione o cluster na lista disponível.
++
+Com base no cluster que você selecionou, o campo *VM de armazenamento* filtra as VMs de armazenamento disponíveis para esse cluster.
+
+. Selecione na lista a máquina virtual de armazenamento que oferece suporte aos serviços iSCSI e FCP.
++
+Com base na sua seleção, a opção SAN é ativada na seção Host Information.
+
+. Na seção *Armazenamento e Otimização*, atribua a capacidade de storage e o PSL e, opcionalmente, o SEP para a carga de trabalho.
++
+As especificações do SEP são atribuídas ao LUN e as definições do PSL são aplicadas à carga de trabalho quando ela é criada.
+
+. Selecione a caixa de seleção *Impor limites de desempenho* se você quiser aplicar o PSL atribuído à carga de trabalho.
++
+Atribuir um PSL a uma carga de trabalho garante que o agregado no qual a carga de trabalho é criada possa suportar os objetivos de desempenho e capacidade definidos na respectiva política. Por exemplo, se uma carga de trabalho receber o PSL "Extreme Performance", o agregado no qual a carga de trabalho será provisionada deverá ter a capacidade de suportar os objetivos de desempenho e capacidade da política "Extreme Performance", como storage SSD.
+
++
+[NOTE]
+====
+A menos que você selecione esta caixa de seleção, o PSL não será aplicado à carga de trabalho e o status da carga de trabalho no painel aparecerá como `unassigned`.
+
+====
+. Selecione a opção *SAN*. Se você não conseguir ver a opção *SAN* habilitada, verifique se a VM de storage que você selecionou é compatível com iSCSI e FCP.
+. Selecione o sistema operacional do host.
+. Especifique o mapeamento de host para controlar o acesso dos iniciadores ao LUN. Você pode atribuir grupos de iniciadores (igroups) existentes ou definir e mapear novos igroups.
++
+[NOTE]
+====
+Se você criar um novo igroup durante o provisionamento do LUN, precisará aguardar o próximo ciclo de descoberta (até 15 minutos) para usá-lo. Portanto, é recomendável que você use um igroup existente na lista de igroups disponíveis.
+
+====
++
+Se você quiser criar um novo igroup, selecione o botão *Criar um novo grupo de iniciadores* e insira as informações do igroup.
+
+. Clique em *Salvar*.
++
+A LUN é adicionada à lista de workloads de storage.
+
+

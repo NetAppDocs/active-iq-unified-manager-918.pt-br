@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_what_performance_capacity_used_is.html 
+sidebar: sidebar 
+keywords: performance, capacity, used 
+summary: O contador de capacidade de desempenho utilizada ajuda a identificar se o desempenho de um nó ou agregado está atingindo um ponto em que pode se degradar com o aumento da carga de trabalho. Ele também pode mostrar se um nó ou agregado está sendo sobrecarregado durante períodos específicos. A capacidade de desempenho utilizada é semelhante à utilização, mas fornece informações mais detalhadas sobre a capacidade de desempenho disponível em um recurso físico para uma carga de trabalho específica. 
+---
+= Entenda o contador de capacidade de desempenho usada no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O contador de capacidade de desempenho utilizada ajuda a identificar se o desempenho de um nó ou agregado está atingindo um ponto em que pode se degradar com o aumento da carga de trabalho. Ele também pode mostrar se um nó ou agregado está sendo sobrecarregado durante períodos específicos. A capacidade de desempenho utilizada é semelhante à utilização, mas fornece informações mais detalhadas sobre a capacidade de desempenho disponível em um recurso físico para uma carga de trabalho específica.
+
+A capacidade de desempenho utilizada ideal é o ponto em que um nó ou um agregado tem utilização e latência (tempo de resposta) ideais e é usado de forma eficiente. Um exemplo de curva de latência versus utilização é mostrado para um agregado na figura a seguir.
+
+image::../media/headroom_chart.gif[Uma captura de tela da interface de usuário que mostra uma curva de exemplo de latência versus utilização de um agregado.]
+
+Neste exemplo, o _ponto operacional_ identifica que o agregado está atualmente operando com 50% de utilização e latência de 1.0 ms/op. Com base nas estatísticas coletadas do agregado, o Unified Manager determina que há capacidade de desempenho adicional disponível para este agregado. Neste exemplo, o _ponto ideal_ é identificado como o ponto em que o agregado está com 80% de utilização e latência de 2.0 ms/op. Portanto, você pode adicionar mais volumes e LUNs a este agregado para usar seus sistemas com mais eficiência.
+
+Espera-se que o contador de capacidade de desempenho utilizada seja um número maior que o contador "`utilization`", pois a capacidade de desempenho inclui o impacto na latência. Por exemplo, se um nó ou agregado estiver com 70% de utilização, o valor da capacidade de desempenho pode estar na faixa de 80% a 100%, dependendo do valor da latência.
+
+Em alguns casos, porém, o contador de utilização pode apresentar um valor maior na página Dashboard. Isso é normal, pois o dashboard atualiza os valores atuais do contador a cada período de coleta; ele não exibe médias ao longo de um período, como as outras páginas da interface de usuário do Unified Manager. O contador de capacidade de desempenho utilizada é mais adequado para indicar o desempenho médio ao longo de um período, enquanto o contador de utilização é mais indicado para determinar o uso instantâneo de um recurso.

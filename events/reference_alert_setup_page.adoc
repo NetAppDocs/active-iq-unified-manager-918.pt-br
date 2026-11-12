@@ -1,0 +1,129 @@
+---
+permalink: events/reference_alert_setup_page.html 
+sidebar: sidebar 
+keywords: alert, setup, page, command buttons, list view, details area 
+summary: A página de Configuração de Alertas exibe uma lista de alertas e fornece informações sobre o nome, o status, o método de notificação e a frequência de notificação de cada alerta. Você também pode adicionar, editar, remover, ativar ou desativar alertas nesta página. 
+---
+= Saiba mais sobre a página de Configuração de Alertas no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página de Configuração de Alertas exibe uma lista de alertas e fornece informações sobre o nome, o status, o método de notificação e a frequência de notificação de cada alerta. Você também pode adicionar, editar, remover, ativar ou desativar alertas nesta página.
+
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+
+
+[[command-buttons]]
+== Botões de comando
+
+* *Adicionar*
++
+Exibe a caixa de diálogo Add Alert, que permite adicionar novos alertas.
+
+* *Editar*
++
+Exibe a caixa de diálogo Editar Alerta, que permite editar os alertas selecionados.
+
+* *Excluir*
++
+Exclui os alertas selecionados.
+
+* *Habilitar*
++
+Permite que os alertas selecionados enviem notificações.
+
+* *Desativar*
++
+Desativa os alertas selecionados quando você deseja interromper temporariamente o envio de notificações.
+
+* *Teste*
++
+Testa os alertas selecionados para verificar sua configuração após serem adicionados ou editados.
+
+* *Alertas para eventos resolvidos e obsoletos*
++
+Permite ativar ou desativar o envio de alertas quando os eventos são movidos para os estados Resolved ou Obsolete. Isso pode ajudar os usuários a evitar o recebimento de notificações desnecessárias.
+
+
+
+
+
+[[list-view]]
+== Visualização em lista
+
+A visualização em lista exibe, em formato tabular, informações sobre os alertas criados. Você pode usar os filtros de coluna para personalizar os dados exibidos. Você também pode selecionar um alerta para visualizar mais informações sobre ele na área de detalhes.
+
+* *Status*
++
+Especifica se um alerta está ativado (image:../media/alert_status_enabled.gif[""]) ou desativado (image:../media/alert_status_disabled.gif[""]).
+
+* *Alerta*
++
+Exibe o nome do alerta.
+
+* *Descrição*
++
+Exibe uma descrição para o alerta.
+
+* *Método de Notificação*
++
+Exibe o método de notificação selecionado para o alerta. Você pode notificar os usuários por e-mail ou por meio de traps SNMP.
+
+* *Frequência de notificação*
++
+Especifica a frequência (em minutos) com que o servidor de gerenciamento continua enviando notificações até que o evento seja reconhecido, resolvido ou movido para o estado Obsoleto.
+
+
+
+
+
+[[details-area]]
+== Área de detalhes
+
+A área de detalhes fornece mais informações sobre o alerta selecionado.
+
+* *Nome do alerta*
++
+Exibe o nome do alerta.
+
+* *Descrição do alerta*
++
+Exibe uma descrição para o alerta.
+
+* *Eventos*
++
+Exibe os eventos para os quais você deseja acionar o alerta.
+
+* *Recursos*
++
+Exibe os recursos para os quais você deseja acionar o alerta.
+
+* *Inclui*
++
+Exibe o grupo de recursos para o qual você deseja acionar o alerta.
+
+* *Exclui*
++
+Exibe o grupo de recursos para o qual você não deseja acionar o alerta.
+
+* *Método de Notificação*
++
+Exibe o método de notificação do alerta.
+
+* *Frequência de notificação*
++
+Exibe a frequência com que o servidor de gerenciamento continua enviando notificações de alerta até que o evento seja reconhecido, resolvido ou movido para o estado Obsoleto.
+
+* *Nome do script*
++
+Exibe o nome do script associado ao alerta selecionado. Este script é executado quando um alerta é gerado.
+
+* *Destinatários do e-mail*
++
+Exibe os endereços de e-mail dos usuários que recebem a notificação de alerta.
+
+

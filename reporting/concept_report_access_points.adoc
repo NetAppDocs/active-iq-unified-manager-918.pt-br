@@ -1,0 +1,25 @@
+---
+permalink: reporting/concept_report_access_points.html 
+sidebar: sidebar 
+keywords: access, points, generating, reports 
+summary: Você pode coletar informações no Unified Manager sobre seus clusters para criar relatórios a partir da interface de usuário, de consultas ao banco de dados MySQL e de APIs REST. 
+---
+= Descubra três maneiras de acessar os recursos de geração de relatórios no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode coletar informações no Unified Manager sobre seus clusters para criar relatórios a partir da interface de usuário, de consultas ao banco de dados MySQL e de APIs REST.
+
+Estas seções descrevem a geração de relatórios e o agendamento no Unified Manager por meio da interface de usuário.
+
+Existem três maneiras de acessar os recursos de geração de relatórios oferecidos pelo Unified Manager:
+
+* Extração de dados diretamente das páginas de inventário na interface de usuário.
+* Usando Open Database Connectivity (ODBC) e ferramentas ODBC para acessar todos os objetos disponíveis.
+* Executando as APIs REST do Unified Manager para retornar as informações que você deseja revisar.
+
+
+Estas seções descrevem a geração de relatórios e o agendamento no Unified Manager por meio da interface de usuário.

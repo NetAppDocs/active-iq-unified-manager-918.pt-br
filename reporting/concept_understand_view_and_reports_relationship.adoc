@@ -1,0 +1,29 @@
+---
+permalink: reporting/concept_understand_view_and_reports_relationship.html 
+sidebar: sidebar 
+keywords: understand, view, report, relationship 
+summary: As visualizações e as páginas de inventário se transformam em relatórios quando você as baixa ou agenda. 
+---
+= Compreenda a relação entre visualização e relatório no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As visualizações e as páginas de inventário se transformam em relatórios quando você as baixa ou agenda.
+
+Você pode personalizar e salvar visualizações e páginas de inventário para reutilização. Quase tudo que você pode visualizar no Unified Manager pode ser salvo, reutilizado, personalizado, agendado e compartilhado como um relatório.
+
+No menu suspenso de visualização, os itens com o ícone de exclusão são visualizações personalizadas existentes que você ou outro usuário criou. Os itens sem ícone são visualizações padrão fornecidas com o Unified Manager. As visualizações padrão não podem ser modificadas nem excluídas.
+
+[NOTE]
+====
+* Se você excluir uma visualização personalizada da lista, também excluirá todos os arquivos do Excel ou relatórios agendados que usam essa visualização.
+* Se você alterar uma visualização personalizada, os relatórios que usam essa visualização refletirão a alteração na próxima vez que o relatório for gerado e enviado por e-mail de acordo com o agendamento de relatórios. Ao alterar visualizações, certifique-se de que suas alterações funcionem com quaisquer personalizações do Excel associadas usadas para os relatórios. Se necessário, você pode atualizar o arquivo do Excel baixando-o, fazendo as alterações necessárias e carregando-o como uma nova personalização do Excel para a visualização.
+
+
+====
+image::../media/view_drop_down_3.png[Uma captura de tela da interface de usuário do menu suspenso "View."]
+
+Somente usuários com a função de Application Administrator ou Storage Administrator podem ver o ícone de exclusão, alterar ou excluir uma visualização ou alterar ou excluir um relatório agendado.

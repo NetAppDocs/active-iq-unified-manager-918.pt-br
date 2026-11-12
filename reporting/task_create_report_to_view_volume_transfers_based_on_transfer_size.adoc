@@ -1,0 +1,34 @@
+---
+permalink: reporting/task_create_report_to_view_volume_transfers_based_on_transfer_size.html 
+sidebar: sidebar 
+keywords: create, report, view, volume, transfers, transfer size 
+summary: Você pode criar um relatório para visualizar as transferências de volume com base no tamanho da transferência. 
+---
+= Crie um relatório para visualizar as transferências de volume com base no tamanho da transferência no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar um relatório para visualizar as transferências de volume com base no tamanho da transferência.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+
+Siga as etapas a seguir para criar uma visualização personalizada para transferências de volume com base no tamanho da transferência e, em seguida, agende a geração de um relatório para essa visualização.
+
+.Passos
+. No painel de navegação à esquerda, clique em *Armazenamento* > *Volumes*.
+. No menu Exibir, selecione *Relacionamento* > *Taxa de transferência do último mês*.
+. Clique na parte superior da coluna "`Total Transfer Size`" para classificar as transferências de volumes por tamanho.
+. Salve a visualização com um nome específico que reflita o que ela está exibindo, por exemplo "`Volumes por tamanho de transferência`".
+. Clique no botão *Relatórios Agendados* na página de inventário.
+. Insira um nome para o cronograma do relatório e preencha os outros campos do relatório, depois clique na marca de seleção (image:../media/blue_check.gif[""]) no final da linha.
++
+O relatório é enviado imediatamente como teste. Depois disso, o relatório é gerado e enviado por e-mail aos destinatários listados na frequência especificada.
+
+
+
+Com base nos resultados apresentados no relatório, você pode investigar as relações de volume por tamanho de transferência.

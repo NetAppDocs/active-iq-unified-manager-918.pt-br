@@ -1,0 +1,56 @@
+---
+permalink: data-protection/task_resolve_lag_issues.html 
+sidebar: sidebar 
+keywords: resolve, lag, issues 
+summary: Este fluxo de trabalho fornece um exemplo de como você pode resolver um problema de atraso. Neste cenário, você é um administrador ou operador acessando a página Painel do Unified Manager para verificar se há algum problema com suas relações de proteção e, caso existam, encontrar soluções. 
+---
+= Resolva problemas de latência no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este fluxo de trabalho fornece um exemplo de como você pode resolver um problema de atraso. Neste cenário, você é um administrador ou operador acessando a página Unified ManagerDashboard para verificar se há algum problema com seus relacionamentos de proteção e, caso existam, encontrar soluções.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Na página do Dashboard, você observa a área Incidentes e riscos não resolvidos e vê um erro de SnapMirror Lag no painel Proteção, em Riscos de proteção.
+
+.Passos
+. No painel *Proteção* da página *Painel de Controle*, localize o erro de atraso da relação do SnapMirror e clique nele.
++
+A página de detalhes do evento para o evento de erro de atraso é exibida.
+
+. Na página de detalhes de *Event*, você pode realizar uma ou mais das seguintes tarefas:
++
+** Analise a mensagem de erro no campo Causa da área Resumo para determinar se há alguma ação corretiva sugerida.
+** Clique no nome do objeto, neste caso um volume, no campo Source da área Summary para obter detalhes sobre o volume.
+** Procure anotações que possam ter sido adicionadas sobre este evento.
+** Adicione uma nota ao evento.
+** Atribua o evento a um usuário específico.
+** Reconheça ou resolva o evento.
+
+
+. Nesse cenário, você clica no nome do objeto (nesse caso, um volume) no campo Origem da área *Resumo* para obter detalhes sobre o volume.
++
+A página Detalhes de Volume/Saúde exibe a aba Proteção.
+
+. Na aba *Proteção*, você visualiza o diagrama de topologia.
++
+Você observa que o volume com o erro de atraso é o último volume em uma cascata de SnapMirror de três volumes. O volume que você selecionou está contornado em cinza-escuro, e uma linha dupla laranja partindo do volume de origem indica um erro de relação do SnapMirror.
+
++
+image::../media/topology_cascade_lag_error.gif[SnapMirror topologia em cascata de atraso]
+
+. Clique em cada um dos volumes na cascata do SnapMirror.
++
+Ao selecionar cada volume, as informações de proteção nas áreas Resumo, Topologia, Histórico, Eventos, Dispositivos Relacionados e Alertas Relacionados mudam para exibir detalhes relevantes para o volume selecionado.
+
+. Você visualiza a área *Resumo* e posiciona o cursor sobre o ícone de informações no campo *Atualização Programada* para cada volume.
++
+Nesse cenário, você observa que a política SnapMirror é DPDefault e que o agendamento SnapMirror é atualizado de hora em hora, cinco minutos após a hora. Você percebe que todos os volumes na relação estão tentando concluir uma transferência SnapMirror ao mesmo tempo.
+
+. Para resolver o problema de atraso, você modifica os agendamentos de dois dos volumes em cascata, de forma que cada destino inicie uma transferência do SnapMirror depois que sua origem tiver concluído uma transferência.
+

@@ -1,0 +1,21 @@
+---
+permalink: health-checker/concept_understand_capacity_events_and_thresholds_for_node.html 
+sidebar: sidebar 
+keywords: understand, events, thresholds, node, root, aggregates 
+summary: Você pode monitorar o agregado de raiz do nó usando o Unified Manager. A melhor prática é fazer o provisionamento thick do volume raiz no agregado de raiz para evitar que o nó pare. 
+---
+= Compreenda os eventos e limites para agregados de raiz de nó no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode monitorar o agregado de raiz do nó usando o Unified Manager. A melhor prática é fazer o provisionamento thick do volume raiz no agregado de raiz para evitar que o nó pare.
+
+Por padrão, eventos de capacidade e desempenho não são gerados para agregados de raiz. Além disso, os valores de limite usados pelo Unified Manager não se aplicam aos agregados de raiz dos nós. Somente um representante do suporte técnico pode modificar as configurações para que esses eventos sejam gerados. Quando as configurações são modificadas por um representante do suporte técnico, os valores de limite de capacidade são aplicados ao agregado de raiz do nó.
+
+Você pode tomar as medidas apropriadas para evitar que o nó pare usando o ONTAP System Manager ou a ONTAP CLI.
+
+
+NOTE: A funcionalidade de monitoramento de agregados de raiz de nós não está disponível se os clusters executarem a versão 9.14.1 do ONTAP ou posterior.

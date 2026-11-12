@@ -1,0 +1,29 @@
+---
+permalink: config/task_access_maintenance_console_using_vsphere.html 
+sidebar: sidebar 
+keywords: access, maintenance, console, using, vsphere, vm console 
+summary: Se a interface de usuário do Unified Manager não estiver em funcionamento, ou se você precisar executar funções que não estejam disponíveis na interface de usuário, poderá acessar o console de manutenção para reconfigurar seu dispositivo virtual. 
+---
+= Acesse o console de manutenção usando o console da VM do vSphere no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se a interface de usuário do Unified Manager não estiver em funcionamento, ou se você precisar executar funções que não estejam disponíveis na interface de usuário, poderá acessar o console de manutenção para reconfigurar seu dispositivo virtual.
+
+.Antes de começar
+* Você deve ser o usuário de manutenção.
+* O appliance virtual deve estar ligado para acessar o console de manutenção.
+
+
+.Passos
+. No vSphere Client, localize o dispositivo virtual do Unified Manager.
+. Clique na aba *Console*.
+. Clique dentro da janela do console para fazer login.
+. Faça login no console de manutenção usando seu nome de usuário e senha.
++
+Após 15 minutos de inatividade, o console de manutenção encerra sua sessão.
+
+

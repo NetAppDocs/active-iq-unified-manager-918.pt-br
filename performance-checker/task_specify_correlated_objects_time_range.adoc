@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/task_specify_correlated_objects_time_range.html 
+sidebar: sidebar 
+keywords: specify, time range, correlated objects 
+summary: O seletor de intervalo de tempo na página Performance Explorer permite que você especifique o intervalo de tempo para a comparação de dados de objetos. Especificar um intervalo de tempo refina o conteúdo das páginas Performance Explorer para exibir apenas os dados de objetos dentro do intervalo de tempo especificado. 
+---
+= Especifique um intervalo de tempo para objetos correlacionados no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O seletor de intervalo de tempo na página Performance Explorer permite que você especifique o intervalo de tempo para a comparação de dados de objetos. Especificar um intervalo de tempo refina o conteúdo das páginas Performance Explorer para exibir apenas os dados de objetos dentro do intervalo de tempo especificado.
+
+Refinar o intervalo de tempo oferece um método eficiente para exibir apenas os dados de desempenho que interessam a você. Você pode selecionar um intervalo de tempo predefinido ou especificar um intervalo personalizado. O intervalo de tempo padrão são as 72 horas anteriores.

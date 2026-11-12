@@ -1,0 +1,41 @@
+---
+permalink: health-checker/task_resolve_capacity_issues.html 
+sidebar: sidebar 
+keywords: resolve, capacity issues 
+summary: Este fluxo de trabalho fornece um exemplo de como você pode resolver um problema de capacidade. Neste cenário, você é um administrador ou operador e acessa a página Dashboard do Unified Manager para verificar se algum dos objetos de armazenamento monitorados tem problemas de capacidade. Você deseja determinar a possível causa e a solução para o problema. 
+---
+= Resolva problemas de capacidade no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este fluxo de trabalho fornece um exemplo de como você pode resolver um problema de capacidade. Neste cenário, você é um administrador ou operador e acessa a página Unified ManagerDashboard para verificar se algum dos objetos de armazenamento monitorados apresenta problemas de capacidade. Você deseja determinar a possível causa e a solução para o problema.
+
+.Antes de começar
+Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+
+Na página Dashboard, procure um evento de erro "`Volume Space Full`" no painel Capacity, na lista suspensa events.
+
+.Passos
+. No painel *Capacity* da página *Dashboard*, clique no nome do evento de erro Volume Space Full.
++
+A página de detalhes do evento referente ao erro é exibida.
+
+. Na página de detalhes do *Event*, você pode realizar uma ou mais das seguintes tarefas:
++
+** Analise a mensagem de erro no campo Causa e clique nas sugestões em Ações Corretivas Sugeridas para consultar as descrições das possíveis soluções.
+** Clique no nome do objeto, neste caso um volume, no campo Source para obter detalhes sobre o objeto.
+** Procure anotações que possam ter sido adicionadas sobre este evento.
+** Adicione uma nota ao evento.
+** Atribua o evento a outro usuário.
+** Reconheça o evento.
+** Marque o evento como resolvido.
+
+
+
+
+*Informações relacionadas*
+
+link:../events/reference_event_details_page.html["Página de detalhes do evento"]

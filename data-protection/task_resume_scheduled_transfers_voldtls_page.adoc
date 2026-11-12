@@ -1,0 +1,35 @@
+---
+permalink: data-protection/task_resume_scheduled_transfers_voldtls_page.html 
+sidebar: sidebar 
+keywords: resume schedule, transfers, quiesce, relationship,  volume, health details page 
+summary: 'Após interromper uma relação para impedir que as transferências agendadas ocorram, você pode usar a opção "Retomar" na página de detalhes de Volume/Integridade para reativar as transferências agendadas, de modo que os dados no volume de origem ou primário fiquem protegidos. As transferências são retomadas a partir de um ponto de verificação, se houver, no próximo intervalo de transferência agendado.' 
+---
+= Retome transferências em uma relação do SnapMirror inativa a partir da página de detalhes de Volume/Saúde no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após interromper uma relação para impedir que ocorram transferências agendadas, você pode usar *Retomar* na página de detalhes Volume / Health para reativar as transferências agendadas, de modo que os dados no volume de origem ou primário permaneçam protegidos. As transferências são retomadas a partir de um ponto de verificação, se houver, no próximo intervalo de transferência agendado.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+* Você precisa ter configurado o Workflow Automation.
+
+
+.Passos
+. Na guia *Proteção* da página de detalhes *Volume / Saúde*, na visualização de topologia, clique com o botão direito do mouse em uma relação em pausa que você deseja retomar.
++
+Como alternativa, selecione *Retomar* no menu *Ações* > *Relacionamento*.
+
+. Na caixa de diálogo *Retomar*, clique em *Continuar*.
++
+Você retorna à página de detalhes Volume / Health.
+
+. Para visualizar as tarefas relacionadas e acompanhar o progresso delas, clique no link da tarefa exibido na parte superior da página de detalhes *Volume / Health*.
+. Na página de detalhes do *Job*, clique em *Refresh* para atualizar a lista de tarefas e os detalhes das tarefas associados ao job de configuração de proteção e determinar quando o job estará concluído.
++
+Após a conclusão das tarefas, as transferências de dados são retomadas no próximo intervalo de transferência agendado.
+
+

@@ -1,0 +1,58 @@
+---
+permalink: storage-mgmt/task_create_and_edit_seps.html 
+sidebar: sidebar 
+keywords: create, edit, storage, efficiency, policies 
+summary: Quando as Políticas de Eficiência de Storage definidas pelo sistema não corresponderem aos requisitos da sua carga de trabalho, você poderá criar suas próprias Políticas de Eficiência de Storage otimizadas para suas cargas de trabalho. 
+---
+= Crie e edite políticas de eficiência de armazenamento no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando as Políticas de Eficiência de Storage definidas pelo sistema não corresponderem aos requisitos da sua carga de trabalho, você poderá criar suas próprias Políticas de Eficiência de Storage otimizadas para suas cargas de trabalho.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator.
+* O nome da Política de Eficiência de Storage deve ser único, e você não pode usar as seguintes palavras-chave reservadas:
++
+`High`, `Low`, `Unassigned`, `Learning`, `Idle`, `Default`, e `None`.
+
+
+
+Você cria e edita Políticas de Eficiência de Storage personalizadas na página Políticas de Eficiência de Storage, definindo as características de eficiência de storage necessárias para os aplicativos que acessarão o storage.
+
+[NOTE]
+====
+Não é possível modificar uma política de eficiência de storage se ela estiver atribuída a uma carga de trabalho.
+
+====
+.Passos
+. No painel de navegação esquerdo, em *Configurações*, selecione *Políticas* > *Eficiência de storage*.
+. Na página *Políticas de eficiência de storage*, clique no botão apropriado, dependendo de você querer criar uma nova Política de eficiência de storage ou editar uma Política de eficiência de storage existente.
++
+|===
+| Para... | Siga estes passos... 
+
+
+ a| 
+Criar uma nova Política de eficiência de storage
+ a| 
+Clique em *Adicionar*
+
+
+
+ a| 
+Editar uma política de eficiência de storage existente
+ a| 
+Selecione uma política de eficiência de storage existente e clique em *Editar*
+
+|===
++
+A página para adicionar ou editar uma política de eficiência de storage é exibida.
+
+. Personalize a Política de eficiência de storage especificando as características de eficiência de storage e, em seguida, clique em *Enviar* para salvar a Política de eficiência de storage.
+
+
+Você pode aplicar a Política de eficiência de storage nova ou alterada às cargas de trabalho (LUNs, compartilhamentos de arquivos NFS, compartilhamentos CIFS) na página Workloads ou ao provisionar uma nova carga de trabalho.

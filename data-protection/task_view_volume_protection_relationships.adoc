@@ -1,0 +1,40 @@
+---
+permalink: data-protection/task_view_volume_protection_relationships.html 
+sidebar: sidebar 
+keywords: view, volume, protection relationships 
+summary: Visualize o status dos relacionamentos de volume SnapMirror e SnapVault, incluindo o status de transferência e atraso, origem e destino, e detalhes da programação. 
+---
+= Visualize as relações de proteção de volume no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Na visualização Relacionamento: Todos os Relacionamentos e na página Relacionamentos de Volume, você pode ver o status das relações existentes do volume SnapMirror e SnapVault. Você também pode examinar detalhes sobre as relações de proteção, incluindo o status de transferência e de atraso, detalhes de origem e destino, informações de agendamento e política, entre outros.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Você também pode iniciar comandos de relacionamento a partir desta página.
+
+.Passos
+. No painel de navegação à esquerda, clique em *Armazenamento* > *Volumes*.
+. No menu Exibir, selecione *Relacionamento* > *Todos os relacionamentos*.
++
+A visualização Relacionamento: todos os Relacionamentos é exibida.
+
+. Escolha uma das seguintes maneiras de visualizar os detalhes da proteção do volume:
++
+** Para visualizar informações atuais sobre todos os relacionamentos de volume, permaneça na página padrão *All Relationships*.
+** Para visualizar informações detalhadas sobre as tendências de transferência de volume ao longo de um período, no menu Exibir, selecione Relacionamento: visualização do status de transferência do último mês.
+** Para visualizar informações detalhadas sobre a atividade de transferência de volume no dia a dia, no menu Exibir, selecione Relacionamento: visualização da taxa de transferência do último mês.
+
+
++
+[NOTE]
+====
+As visualizações de transferência de volume exibem informações apenas para volumes em relacionamentos assíncronos; os volumes em relacionamentos síncronos não são exibidos.
+
+====
+

@@ -1,0 +1,53 @@
+---
+permalink: performance-checker/concept_performance_threshold_policies_when_object_is_moved.html 
+sidebar: sidebar 
+keywords: happens, performance, threshold, policies, object, moved 
+summary: Como as políticas de limite de desempenho são atribuídas a objetos de armazenamento, se você mover um objeto, todas as políticas de limite atribuídas permanecerão vinculadas ao objeto após a conclusão da movimentação. Por exemplo, se você mover um volume ou LUN para um agregado diferente, as políticas de limite ainda estarão ativas para o volume ou LUN no novo agregado. 
+---
+= Gerencie políticas de limite ao mover objetos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Como as políticas de limite de desempenho são atribuídas a objetos de armazenamento, se você mover um objeto, todas as políticas de limite atribuídas permanecerão vinculadas ao objeto após a conclusão da movimentação. Por exemplo, se você mover um volume ou LUN para um agregado diferente, as políticas de limite ainda estarão ativas para o volume ou LUN no novo agregado.
+
+Se existir uma condição de contador secundária para a política de limite (uma política combinada), por exemplo, se uma condição adicional for atribuída a um agregado ou a um nó, a condição de contador secundária será aplicada ao novo agregado ou nó para o qual o volume ou LUN foi movido.
+
+Se houver novos eventos ativos para objetos que estejam usando a política de limite alterada, esses eventos serão marcados como obsoletos, e a política de limite começará a monitorar o contador como uma política de limite recém-definida.
+
+Uma operação de movimentação de volume faz com que ONTAP envie um evento de alteração informativo. Um ícone de evento de alteração aparece na linha do tempo de Eventos na página Performance Explorer e na página Workload Analysis para indicar o momento em que a operação de movimentação foi concluída.
+
+[NOTE]
+====
+Ao mover um objeto para um cluster diferente, a política de limite definida pelo usuário é removida do objeto. Caso necessário, você deve atribuir uma política de limite ao objeto após a conclusão da operação de movimentação. Políticas de limite dinâmicas e definidas pelo sistema, no entanto, são aplicadas automaticamente a um objeto após ele ser movido para um novo cluster.
+
+====
+
+
+[[threshold-policy-functionality-during-ha-takeover-and-giveback]]
+== Funcionalidade da política de limite durante o takeover de HA e o giveback
+
+Quando ocorre uma operação de takeover ou giveback em uma configuração de alta disponibilidade (HA), os objetos movidos de um nó para o outro mantêm suas políticas de limite da mesma forma que nas operações de movimentação manual. Como o Unified Manager verifica as alterações na configuração do cluster a cada 15 minutos, o impacto do switchover para o novo nó só é identificado na próxima verificação da configuração do cluster.
+
+[NOTE]
+====
+Se uma operação de takeover e uma de giveback ocorrerem dentro do período de coleta de alterações de configuração de 15 minutos, talvez você não veja as estatísticas de desempenho passarem de um nó para o outro.
+
+====
+
+
+[[threshold-policy-functionality-during-aggregate-relocation]]
+== Funcionalidade da política de limiar durante a realocação de agregado
+
+Se você mover um agregado de um nó para outro usando o `aggregate relocation start` comando, as políticas de limite individuais e combinadas são mantidas em todos os objetos, e a parte da política de limite referente ao nó é aplicada ao novo nó.
+
+
+
+[[threshold-policy-functionality-during-metrocluster-switchover]]
+== Funcionalidade da política de limite durante o switchover do MetroCluster
+
+Os objetos que são movidos de um cluster para outro em uma configuração do MetroCluster não mantêm suas configurações de política de limite definidas pelo usuário. Se necessário, você pode aplicar políticas de limite aos volumes e LUNs que foram movidos para o cluster parceiro. Depois que um objeto retorna ao seu cluster original, a política de limite definida pelo usuário é reaplicada automaticamente.
+
+Para informações, consulte link:../storage-mgmt/concept_volume_behavior_during_switchover_and_switchback.html["Comportamento do volume durante switchover e switchback"].

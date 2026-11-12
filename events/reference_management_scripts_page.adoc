@@ -1,0 +1,48 @@
+---
+permalink: events/reference_management_scripts_page.html 
+sidebar: sidebar 
+keywords: scripts, page, command, buttons, list, view 
+summary: A página Scripts permite que você adicione seus scripts personalizados ao Unified Manager. Você pode associar esses scripts a alertas para habilitar a reconfiguração automática de objetos de armazenamento. 
+---
+= Saiba mais sobre a página de Scripts no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página Scripts permite que você adicione seus scripts personalizados ao Unified Manager. Você pode associar esses scripts a alertas para habilitar a reconfiguração automática de objetos de armazenamento.
+
+A página Scripts permite adicionar ou excluir scripts do Unified Manager.
+
+
+
+[[command-buttons]]
+== Botões de comando
+
+* *Adicionar*
++
+Exibe a caixa de diálogo Adicionar Script, que permite adicionar scripts.
+
+* *Excluir*
++
+Exclui o script selecionado.
+
+
+
+
+
+[[list-view]]
+== Visualização em lista
+
+A visualização em lista exibe, em formato tabular, os scripts que você adicionou ao Unified Manager.
+
+* *Nome*
++
+Exibe o nome do script.
+
+* *Descrição*
++
+Exibe a descrição do script.
+
+

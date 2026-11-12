@@ -1,0 +1,95 @@
+---
+permalink: performance-checker/task_move_workloads_to_node_in_different_ha_pair.html 
+sidebar: sidebar 
+keywords: move, workloads, node, different, ha pair 
+summary: 'Você pode usar o Unified Manager para ajudar a identificar um agregado em um nó de um par de alta disponibilidade (HA) diferente que tenha mais capacidade de desempenho livre do que o par de HA onde suas cargas de trabalho são executadas atualmente. Em seguida, você pode mover os volumes selecionados para agregados no novo par de HA.' 
+---
+= Mova as cargas de trabalho para um nó em um par de HA diferente no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o Unified Manager para ajudar a identificar um agregado em um nó de um par de alta disponibilidade (HA) diferente que tenha mais capacidade de desempenho livre do que o par de HA onde suas cargas de trabalho são executadas atualmente. Em seguida, você pode mover os volumes selecionados para agregados no novo par de HA.
+
+.Antes de começar
+* Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+* Seu cluster deve consistir em no mínimo dois pares de HA
++
+Não é possível usar este processo de correção se você tiver apenas um par de HA no seu cluster.
+
+* Você deve ter anotado os nomes dos dois nós do par de HA que estão apresentando problemas de desempenho.
+* Você deve ter registrado a data e a hora em que os nós receberam o evento de desempenho.
+* O Unified Manager deve ter coletado e analisado dados de desempenho por um mês ou mais.
+
+
+Mover cargas de trabalho de alto desempenho para um agregado em um nó com mais capacidade de desempenho livre permite que as cargas de trabalho em ambos os nós tenham um desempenho mais eficiente. Este procedimento ajuda você a identificar os seguintes recursos para que possa mover cargas de trabalho de alto desempenho para um nó que tenha mais capacidade de desempenho livre em um par de HA:
+
+* Os nós em um par de HA diferente no mesmo cluster que têm a maior capacidade de desempenho livre
+* Os agregados nos novos nós que possuem a maior capacidade de desempenho livre
+* Os volumes de melhor desempenho nos nós atuais
+
+
+.Passos
+. Identifique os nós que fazem parte de um par de HA diferente no mesmo cluster:
++
+.. Na página *Detalhes do Evento*, clique no nome do cluster em que os nós estão localizados.
++
+Os detalhes do cluster são exibidos na página de destino Desempenho/Cluster.
+
+.. Na página *Resumo*, clique em *Nós* no painel *Objetos gerenciados*.
++
+A lista de nós neste cluster é exibida na visualização Desempenho: todos os nós.
+
+.. Anote os nomes dos nós que estão em pares de HA diferentes do par de HA que está apresentando problemas de desempenho.
+
+
+. Identifique um nó no novo par de HA que tenha a maior capacidade de desempenho livre:
++
+.. Na visualização *Desempenho: todos os nós*, clique na coluna *Capacidade de desempenho utilizada* para classificar os nós por menor percentual de utilização.
++
+Isso fornece uma lista de nós potenciais para os quais você pode querer mover cargas de trabalho.
+
+.. Anote o nome do nó em um par de HA diferente para o qual você deseja mover as cargas de trabalho.
+
+
+. Identifique um agregado no novo nó que tenha a maior capacidade de desempenho livre:
++
+.. Na visualização *Desempenho: todos os nós*, clique no nó.
++
+Os detalhes do nó são exibidos na página Performance/Node Explorer.
+
+.. No menu *Exibir e Comparar*, selecione *Agregados neste Nó*.
++
+Os agregados neste nó são exibidos na grade.
+
+.. Clique na coluna *Capacidade de desempenho utilizada* para classificar os agregados por menor utilização.
++
+Isso fornece uma lista de possíveis agregados para os quais você pode querer mover cargas de trabalho.
+
+.. Anote o nome do agregado para o qual você deseja mover as cargas de trabalho.
+
+
+. Identifique as cargas de trabalho de alto desempenho nos nós que receberam o evento:
++
+.. Volte para a página de detalhes do *Event* do evento.
+.. No campo *Volumes Afetados*, clique no link correspondente ao número de volumes do primeiro nó.
++
+A visualização Desempenho: todos os volumes exibe uma lista filtrada dos volumes naquele nó.
+
+.. Clique na coluna *Capacidade Total* para classificar os volumes pelo maior espaço alocado.
++
+Isso fornece uma lista de volumes em potencial que você pode querer mover.
+
+.. Anote os nomes dos volumes que você deseja mover e os nomes dos agregados atuais nos quais eles se encontram.
+.. Execute os passos 4c e 4d para o segundo nó que fez parte deste evento para identificar possíveis volumes que você também deseja mover desse nó.
+
+
+. Mova os volumes para os agregados que você identificou como tendo a maior capacidade de desempenho livre no novo nó.
++
+Você pode executar a operação de movimentação usando o ONTAP System Manager, o OnCommand Workflow Automation, comandos do ONTAP ou uma combinação dessas ferramentas.
+
+
+
+Após alguns dias, você poderá verificar se está recebendo o mesmo tipo de eventos desse nó ou agregado.

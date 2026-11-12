@@ -1,0 +1,14 @@
+---
+permalink: events/concept_how_object_status_is_computed.html 
+sidebar: sidebar 
+keywords: object, status, computed 
+summary: O status de um objeto é determinado pelo evento mais grave que atualmente possui o estado Novo ou Reconhecido. Por exemplo, se o status de um objeto for Erro, um dos eventos do objeto terá o tipo de gravidade Erro. Quando uma ação corretiva é tomada, o estado do evento passa para Resolvido. 
+---
+= Como o Active IQ Unified Manager calcula o status do objeto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O status de um objeto é determinado pelo evento mais grave que atualmente está no estado Novo ou Reconhecido. Por exemplo, se o status de um objeto for Erro, um dos eventos desse objeto terá o tipo de gravidade Erro. Quando uma ação corretiva é tomada, o estado do evento muda para Resolvido.

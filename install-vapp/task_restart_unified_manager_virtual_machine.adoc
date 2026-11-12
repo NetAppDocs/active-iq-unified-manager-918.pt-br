@@ -1,0 +1,26 @@
+---
+permalink: install-vapp/task_restart_unified_manager_virtual_machine.html 
+sidebar: sidebar 
+keywords: restart, unified manager, virtual, machine 
+summary: 'Você pode reiniciar a máquina virtual (VM) do Unified Manager a partir do console de manutenção. Você deve reiniciar a VM após gerar um novo certificado de segurança ou se houver um problema com a VM.' 
+---
+= Reinicie a máquina virtual do Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode reiniciar a máquina virtual (VM) do Unified Manager a partir do console de manutenção. Você deve reiniciar a VM após gerar um novo certificado de segurança ou se houver um problema com a VM.
+
+.Antes de começar
+* O appliance virtual deve estar ligado.
+* Você deve estar conectado ao console de manutenção do Unified Manager como o usuário de manutenção.
+
+
+Você também pode reiniciar a máquina virtual no vSphere usando a opção VMware *Restart Guest*. Consulte https://developer.broadcom.com/powercli/latest/vmware.vimautomation.core/commands/restart-vmguest/["o cmdlet Restart-VMGuest na referência de CMDLET do VMware vSphere PowerCLI da Broadcom."^]
+
+.Passos
+. No console de manutenção, selecione *System Configuration* > *Reboot Virtual Machine*.
+. Inicie a interface do usuário da web do Unified Manager no seu navegador e faça login.
+

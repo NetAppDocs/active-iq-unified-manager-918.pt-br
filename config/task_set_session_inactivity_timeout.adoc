@@ -1,0 +1,48 @@
+---
+permalink: config/task_set_session_inactivity_timeout.html 
+sidebar: sidebar 
+keywords: inactivity, timeout 
+summary: 'Você pode especificar o valor do tempo limite de inatividade para o Unified Manager, para que a sessão seja encerrada automaticamente após um determinado período. Por padrão, o tempo limite é definido como 4.320 minutos (72 horas).' 
+---
+= Defina o tempo limite de inatividade da sessão no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode especificar o valor de tempo limite de inatividade para o Unified Manager, para que a sessão seja encerrada automaticamente após um determinado período de inatividade. Por padrão, o tempo limite é definido como 4.320 minutos (72 horas).
+
+.Antes de começar
+Você precisa ter a função de Application Administrator.
+
+Essa configuração afeta todas as sessões de usuários conectados.
+
+[NOTE]
+====
+Esta opção não está disponível se você tiver ativado a autenticação SAML (Security Assertion Markup Language).
+
+====
+.Passos
+. No painel de navegação esquerdo, clique em *Geral* > *Configurações de recursos*.
+. Na página *Configurações de recursos*, especifique o tempo limite de inatividade escolhendo uma das seguintes opções:
++
+[cols="2*"]
+|===
+| Se você quiser... | Então faça isso... 
+
+
+ a| 
+Não defina um tempo limite para que a sessão nunca seja fechada automaticamente
+ a| 
+No painel *Tempo limite de inatividade*, mova o botão deslizante para a esquerda (desativado) e clique em *Aplicar*.
+
+
+
+ a| 
+Defina um número específico de minutos como o valor de tempo limite
+ a| 
+No painel *Tempo limite de inatividade*, mova o botão deslizante para a direita (ativado), especifique o valor do tempo limite de inatividade em minutos e clique em *Aplicar*.
+
+|===
+

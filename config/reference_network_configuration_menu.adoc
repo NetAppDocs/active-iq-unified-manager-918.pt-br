@@ -1,0 +1,94 @@
+---
+permalink: config/reference_network_configuration_menu.html 
+sidebar: sidebar 
+keywords: network configuration menu 
+summary: O menu Configuração de Rede permite que você gerencie as configurações de rede. Você deve usar este menu quando a interface de usuário do Unified Manager não estiver disponível. 
+---
+= Menu de configuração de rede no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O menu Configuração de Rede permite que você gerencie as configurações de rede. Você deve usar este menu quando a interface de usuário do Unified Manager não estiver disponível.
+
+[NOTE]
+====
+Este menu não está disponível se o Unified Manager estiver instalado no Red Hat Enterprise Linux ou no Microsoft Windows.
+
+====
+As seguintes opções de menu estão disponíveis.
+
+* *Exibir configurações de endereço IP*
++
+Exibe as configurações de rede atuais do dispositivo virtual, incluindo o endereço IP, a rede, o endereço de broadcast, a máscara de rede, o gateway e os servidores DNS.
+
+* *Alterar configurações de endereço IP*
++
+Permite que você altere qualquer configuração de rede do appliance virtual, incluindo o endereço IP, a máscara de rede, o gateway ou os servidores DNS. Se você alterar suas configurações de rede de DHCP para rede estática usando o console de manutenção, não poderá editar o nome do host. Você deve selecionar *Commit Changes* para que as alterações entrem em vigor.
+
+* *Exibir configurações de pesquisa de nome de domínio*
++
+Exibe a lista de pesquisa de nomes de domínio usada para resolver nomes de host.
+
+* *Alterar configurações de pesquisa de nomes de domínio*
++
+Permite alterar os nomes de domínio que você deseja pesquisar ao resolver nomes de host. Você deve selecionar *Confirmar alterações* para que as alterações entrem em vigor.
+
+* *Exibir rotas estáticas*
++
+Exibe as rotas de rede estáticas atuais.
+
+* *Alterar rotas estáticas*
++
+Permite adicionar ou excluir rotas de rede estáticas. Você deve selecionar *Commit Changes* para que as alterações entrem em vigor.
+
++
+** *Adicionar rota*
++
+Permite adicionar uma rota estática.
+
+** *Excluir Rota*
++
+Permite excluir uma rota estática.
+
+** *Voltar*
++
+Retorna ao *Menu Principal*.
+
+** *Sair*
++
+Sai do console de manutenção.
+
+
+
+* *Desativar interface de rede*
++
+Desativa todas as interfaces de rede disponíveis. Se houver apenas uma interface de rede disponível, você não poderá desativá-la. Você deve selecionar *Commit Changes* para que as alterações entrem em vigor.
+
+* *Habilitar interface de rede*
++
+Habilita as interfaces de rede disponíveis. Você deve selecionar *Confirmar alterações* para que as alterações entrem em vigor.
+
+* *Confirmar alterações*
++
+Aplica quaisquer alterações feitas nas configurações de rede do dispositivo virtual. Você deve selecionar esta opção para que quaisquer alterações feitas entrem em vigor, caso contrário, as alterações não ocorrerão.
+
+* *Enviar ping para um host*
++
+Envia um ping para um host de destino para confirmar alterações de endereço IP ou configurações de DNS.
+
+* *Restaurar configurações padrão*
++
+Redefine todas as configurações para o padrão de fábrica. Você deve selecionar *Commit Changes* para que as alterações entrem em vigor.
+
+* *Voltar*
++
+Retorna ao *Menu Principal*.
+
+* *Sair*
++
+Sai do console de manutenção.
+
+

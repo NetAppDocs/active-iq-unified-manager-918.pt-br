@@ -1,0 +1,89 @@
+---
+permalink: config/task_add_alerts.html 
+sidebar: sidebar 
+keywords: add, alerts 
+summary: Você pode configurar alertas para receber notificações quando um evento específico for gerado. Você pode configurar alertas para um único recurso, para um grupo de recursos ou para eventos de um determinado tipo de gravidade. Você pode especificar a frequência com que deseja ser notificado e associar um script ao alerta. 
+---
+= Adicione alertas no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar alertas para receber notificações quando um evento específico for gerado. Você pode configurar alertas para um único recurso, para um grupo de recursos ou para eventos de um determinado tipo de gravidade. Você pode especificar a frequência com que deseja ser notificado e associar um script ao alerta.
+
+.Antes de começar
+* Você precisa ter configurado as definições de notificação, como o endereço de e-mail do usuário, o servidor SMTP e o host de trap SNMP, para permitir que o servidor Active IQ Unified Manager use essas configurações para enviar notificações aos usuários quando um evento for gerado.
+* Você precisa saber os recursos e eventos para os quais deseja acionar o alerta, bem como os nomes de usuário ou endereços de e-mail dos usuários que deseja notificar.
+* Se você quiser que um script seja executado com base no evento, deve ter adicionado o script ao Unified Manager usando a página Scripts.
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+
+Além de criar um alerta na página de Configuração de Alertas, conforme descrito aqui, você pode criá-lo diretamente na página de detalhes do evento após receber um evento.
+
+.Passos
+. No painel de navegação à esquerda, clique em *Gerenciamento de armazenamento* > *Configuração de alertas*.
+. Na página Configuração de alertas, clique em *Adicionar*.
+. Na caixa de diálogo Adicionar alerta, clique em *Nome* e insira um nome e uma descrição para o alerta.
+. Clique em *Recursos*, e selecione os recursos que deseja incluir ou excluir do alerta.
++
+Você pode definir um filtro especificando uma cadeia de texto no campo *Nome contém* para selecionar um grupo de recursos. Com base na cadeia de texto que você especificar, a lista de recursos disponíveis exibe apenas os recursos que correspondem à regra de filtro. A cadeia de texto que você especificar diferencia maiúsculas de minúsculas.
+
++
+Se um recurso estiver em conformidade com as regras de inclusão e exclusão que você especificou, a regra de exclusão tem precedência sobre a regra de inclusão, e o alerta não é gerado para eventos relacionados ao recurso excluído.
+
+. Clique em *Eventos* e selecione os eventos com base no nome do evento ou no tipo de gravidade do evento para os quais você deseja acionar um alerta.
++
+[TIP]
+====
+Para selecionar mais de um evento, pressione a tecla Ctrl enquanto você faz suas seleções.
+
+====
+. Clique em *Ações* e selecione os usuários que você deseja notificar, escolha a frequência de notificação, defina se um trap SNMP será enviado ao receptor de traps e atribua um script para executar quando um alerta for gerado.
++
+[NOTE]
+====
+Se você modificar o endereço de e-mail especificado para o usuário e reabrir o alerta para edição, o campo Nome aparecerá em branco, pois o endereço de e-mail modificado não estará mais vinculado ao usuário selecionado anteriormente. Além disso, se você modificar o endereço de e-mail do usuário selecionado na página Usuários, o endereço de e-mail modificado não será atualizado para o usuário selecionado.
+
+====
++
+Você também pode optar por notificar os usuários por meio de traps SNMP.
+
+. Clique em *Salvar*.
+
+
+
+
+[[example-of-adding-an-alert]]
+== Exemplo de como adicionar um alerta
+
+Este exemplo mostra como criar um alerta que atenda aos seguintes requisitos:
+
+* Nome do alerta: HealthTest
+* Recursos: inclui todos os volumes cujo nome contém "`abc`" e exclui todos os volumes cujo nome contém "`xyz`"
+* Eventos: inclui todos os eventos críticos de saúde
+* Ações: inclui "+sample@domain.com+", um script "`Test`" e o usuário deve ser notificado a cada 15 minutos
+
+
+Execute as etapas a seguir na caixa de diálogo Add Alert:
+
+.Passos
+. Clique em *Nome* e digite *HealthTest* no campo *Nome do alerta*.
+. Clique em *Resources* e, na guia Include, selecione *Volumes* na lista suspensa.
++
+.. Digite *abc* no campo *Nome contém* para exibir os volumes cujo nome contém "`abc`".
+.. Selecione *+<<All Volumes whose name contains 'abc'>>+* na área Recursos Disponíveis e mova-o para a área Recursos Selecionados.
+.. Clique em *Excluir*, digite *xyz* no campo *Nome contém* e, em seguida, clique em *Adicionar*.
+
+
+. Clique em *Eventos* e selecione *Crítico* no campo Severidade do evento.
+. Selecione *Todos os eventos críticos* na área Eventos correspondentes e mova-o para a área Eventos selecionados.
+. Clique em *Actions*, e digite *sample@domain.com* no campo Alert these users.
+. Selecione *Lembrar a cada 15 minutos* para notificar o usuário a cada 15 minutos.
++
+Você pode configurar um alerta para enviar notificações repetidamente aos destinatários durante um período específico. Você deve determinar o horário a partir do qual a notificação do evento estará ativa para o alerta.
+
+. No menu Selecionar Script para Executar, selecione o script *Teste*.
+. Clique em *Salvar*.
+

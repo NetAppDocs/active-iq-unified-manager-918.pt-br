@@ -1,0 +1,60 @@
+---
+permalink: events/task_change_or_cancel_scheduled_maintenance_window.html 
+sidebar: sidebar 
+keywords: change, cancel, scheduled, maintenance, window 
+summary: Se você configurou uma janela de manutenção do Unified Manager para ocorrer no futuro, pode alterar os horários de início e término ou cancelar a ocorrência da janela de manutenção. 
+---
+= Alterar ou cancelar uma janela de manutenção no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você configurou uma janela de manutenção do Unified Manager para ocorrer no futuro, pode alterar os horários de início e término ou cancelar a ocorrência da janela de manutenção.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Cancelar uma janela de manutenção em execução no momento é útil se você concluiu a manutenção do cluster antes do término programado da janela de manutenção e deseja voltar a receber eventos e alertas do cluster.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Configuração de cluster*.
+. Na coluna *modo de manutenção* do cluster:
++
+|===
+| Se você quiser... | Execute esta etapa... 
+
+
+ a| 
+Alterar o período de uma janela de manutenção agendada
+ a| 
+.. Clique no texto "Agendado" ao lado do botão deslizante.
+.. Altere a data e hora de início e/ou término e clique em *Aplicar*.
+
+
+
+
+ a| 
+Prolongue a duração de uma janela de manutenção ativa
+ a| 
+.. Clique no texto "Ativo" ao lado do botão deslizante.
+.. Altere a data e a hora de término e clique em *Aplicar*.
+
+
+
+
+ a| 
+Cancelar uma janela de manutenção agendada
+ a| 
+Selecione o botão deslizante e mova-o para a esquerda.
+
+
+
+ a| 
+Cancelar uma janela de manutenção ativa
+ a| 
+Selecione o botão deslizante e mova-o para a esquerda.
+
+|===
+

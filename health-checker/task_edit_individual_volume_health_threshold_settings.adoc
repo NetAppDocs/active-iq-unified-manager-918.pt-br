@@ -1,0 +1,37 @@
+---
+permalink: health-checker/task_edit_individual_volume_health_threshold_settings.html 
+sidebar: sidebar 
+keywords: edit, individual, volume, health, threshold, settings 
+summary: Você pode editar as configurações de limite de integridade para capacidade de volume, crescimento, cota e reserva de espaço de um ou mais volumes. Quando um limite é ultrapassado, alertas são gerados e você recebe notificações. Essas notificações ajudam você a tomar medidas preventivas com base no evento gerado. 
+---
+= Edite as configurações individuais de limite de integridade do volume no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode editar as configurações de limite de integridade para capacidade de volume, crescimento, cota e reserva de espaço de um ou mais volumes. Quando um limite é ultrapassado, alertas são gerados e você recebe notificações. Essas notificações ajudam você a tomar medidas preventivas com base no evento gerado.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Com base nas alterações nos valores de limite, os eventos são gerados ou ficam obsoletos no próximo ciclo de monitoramento.
+
+Observe que, quando o Autogrow está ativado em um volume, os limites de capacidade são considerados ultrapassados com base no tamanho máximo do volume definido pelo Autogrow, e não com base no tamanho original do volume.
+
+[NOTE]
+====
+O valor padrão de 1000 cópias Snapshot se aplica apenas a volumes FlexVol quando a versão do ONTAP é 9.4 ou superior, e a volumes FlexGroup quando a versão do ONTAP é 9.8 ou superior. Para clusters instalados com versões mais antigas do software ONTAP, o número máximo é de 250 cópias Snapshot por volume. Para essas versões mais antigas, o Unified Manager interpreta esse número, 1000, e qualquer número entre 1000 e 250, como 250; isso significa que você continuará recebendo eventos quando o número de cópias Snapshot atingir 250. Se você quiser definir esse limite para menos de 250 nessas versões mais antigas, deverá defini-lo como 250 ou menos aqui, na visualização Health: All Volumes, ou na página de detalhes Volume / Health.
+
+====
+.Passos
+. No painel de navegação à esquerda, clique em *Armazenamento* > *Volumes*.
+. Na visualização *Saúde: todos os volumes*, selecione um ou mais volumes e clique em *Editar limiares*.
+. Na caixa de diálogo *Edit Volume Thresholds*, edite as configurações de limite de um dos seguintes itens: capacidade, cópias Snapshot, cota de qtree, crescimento ou inodes selecionando a caixa de seleção apropriada e, em seguida, modificando as configurações.
+. Clique em *Salvar*.
+
+
+*Informações relacionadas*
+
+link:../config/task_add_users.html["Adicionando usuários"]

@@ -1,0 +1,47 @@
+---
+permalink: config/task_create_database_user.html 
+sidebar: sidebar 
+keywords: create, database, user 
+summary: Para oferecer suporte a uma conexão entre o Workflow Automation e o Unified Manager, ou para acessar visualizações do banco de dados, você deve primeiro criar um usuário de banco de dados com a função Integration Schema ou Report Schema na interface da web do Unified Manager. 
+---
+= Crie um usuário de banco de dados no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para oferecer suporte a uma conexão entre o Workflow Automation e o Unified Manager, ou para acessar visualizações do banco de dados, você deve primeiro criar um usuário de banco de dados com a função Integration Schema ou Report Schema na interface da web do Unified Manager.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator.
+
+Os usuários do banco de dados fornecem integração com o Workflow Automation e acesso a visualizações de banco de dados específicas de relatórios. Os usuários do banco de dados não têm acesso à interface da web do Unified Manager nem ao console de manutenção, e não podem executar chamadas de API.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Geral* > *Usuários*.
+. Na página Users, clique em *Add*.
+. Na caixa de diálogo Adicionar Usuário, selecione *Usuário do Banco de Dados* na lista suspensa *Tipo*.
+. Digite um nome e uma senha para o usuário do banco de dados.
+. Na lista suspensa *Função*, selecione a função apropriada.
++
+[cols="2*"]
+|===
+| Se você é... | Escolha esta função 
+
+
+ a| 
+Conectando o Unified Manager com o Workflow Automation
+ a| 
+Esquema de integração
+
+
+
+ a| 
+Acesso a relatórios e outras visualizações do banco de dados
+ a| 
+Esquema do relatório
+
+|===
+. Clique em *Add*.
+

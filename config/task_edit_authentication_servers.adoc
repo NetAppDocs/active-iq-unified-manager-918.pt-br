@@ -1,0 +1,25 @@
+---
+permalink: config/task_edit_authentication_servers.html 
+sidebar: sidebar 
+keywords: edit, authentication servers 
+summary: Você pode alterar a porta que o servidor do Unified Manager usa para se comunicar com o seu servidor de autenticação. 
+---
+= Editar servidores de autenticação no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode alterar a porta que o servidor do Unified Manager usa para se comunicar com o seu servidor de autenticação.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator.
+
+.Passos
+. No painel de navegação à esquerda, clique em *Geral* > *Autenticação Remota*.
+. Marque a caixa *Desativar pesquisa de grupo aninhado*.
+. Na área *Servidores de Autenticação*, selecione o servidor de autenticação que você deseja editar e clique em *Editar*.
+. Na caixa de diálogo *Editar Servidor de Autenticação*, edite os detalhes da porta.
+. Clique em *Salvar*.
+

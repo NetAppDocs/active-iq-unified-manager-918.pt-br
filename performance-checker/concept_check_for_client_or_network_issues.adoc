@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_check_for_client_or_network_issues.html 
+sidebar: sidebar 
+keywords: check, client, network, issues 
+summary: Quando os clientes conectados a volumes em um cluster aumentam suas solicitações de E/S, o cluster precisa trabalhar mais para atender à demanda. O aumento da demanda no cluster pode colocar um componente em contenção, aumentar a latência das cargas de trabalho que o utilizam e acionar um evento no Unified Manager. 
+---
+= Entenda como problemas de cliente ou de rede afetam o desempenho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando os clientes conectados a volumes em um cluster aumentam suas solicitações de E/S, o cluster precisa trabalhar mais para atender à demanda. O aumento da demanda no cluster pode colocar um componente em contenção, aumentar a latência das cargas de trabalho que o utilizam e acionar um evento no Unified Manager.
+
+Na página de detalhes do evento, a seção Diagnóstico do sistema exibe as principais cargas de trabalho de volume que usam o componente em contenção. Se você souber qual cliente está acessando um volume específico, poderá ir até o cliente para determinar se o hardware do cliente ou um aplicativo não está operando como esperado ou está realizando mais trabalho do que o normal. Talvez seja necessário entrar em contato com o administrador do cliente ou com o fornecedor do aplicativo para obter assistência.
+
+Você pode verificar sua infraestrutura de rede para determinar se há problemas de hardware, gargalos ou cargas de trabalho concorrentes que possam ter feito com que as solicitações de E/S entre o cluster e os clientes conectados apresentem desempenho mais lento do que o esperado. Talvez seja necessário entrar em contato com seu administrador de rede para obter assistência.

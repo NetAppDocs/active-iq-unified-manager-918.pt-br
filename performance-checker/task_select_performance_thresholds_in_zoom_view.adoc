@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/task_select_performance_thresholds_in_zoom_view.html 
+sidebar: sidebar 
+keywords: select, performance, thresholds, counter, charts, zoom, view 
+summary: Aplicar limites na visualização ampliada dos gráficos de contadores fornece uma visão detalhada das ocorrências de eventos de limite de desempenho. Isso permite que você aplique ou remova limites e visualize imediatamente os resultados, o que pode ser útil para decidir se solucionar problemas deve ser sua próxima etapa. 
+---
+= Selecione os limites de desempenho na visualização ampliada dos gráficos de contador em Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aplicar limites na visualização ampliada dos gráficos de contadores fornece uma visão detalhada das ocorrências de eventos de limite de desempenho. Isso permite que você aplique ou remova limites e visualize imediatamente os resultados, o que pode ser útil para decidir se solucionar problemas deve ser sua próxima etapa.
+
+A seleção de limiares na visualização ampliada dos gráficos de contadores permite visualizar dados precisos sobre eventos de limite de desempenho. Você pode aplicar qualquer limiar que apareça na área *Policies* da visualização ampliada dos gráficos de contadores.
+
+Na visualização ampliada dos gráficos de contador, apenas uma política pode ser aplicada por vez ao objeto.
+
+.Etapa
+. Selecione ou desmarque a image:../media/eye_icon.gif["ícone de olho"] opção associada a uma política.
++
+O limite selecionado é aplicado à visualização ampliada dos gráficos de contador. Os limites críticos são exibidos como uma linha vermelha; os limites de alerta são exibidos como uma linha amarela.
+
+

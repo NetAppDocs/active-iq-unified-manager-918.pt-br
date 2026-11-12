@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_use_qos_policy_settings_to_prioritize_work_on_this_node.html 
+sidebar: sidebar 
+keywords: qos, policy, settings, prioritize, work, node 
+summary: 'Você pode definir um limite em um grupo de políticas de QoS para controlar o limite de I/O por segundo (IOPS) ou o limite de taxa de transferência em MBps para as cargas de trabalho que ele contém. Se as cargas de trabalho estiverem em um grupo de políticas sem limite definido, como o grupo de políticas padrão, ou se o limite definido não atender às suas necessidades, você pode aumentar o limite definido ou mover as cargas de trabalho para um grupo de políticas novo ou existente que tenha o limite desejado.' 
+---
+= Use as configurações de política de QoS para priorizar as cargas de trabalho dos nós no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode definir um limite em um grupo de políticas de QoS para controlar o limite de I/O por segundo (IOPS) ou o limite de taxa de transferência em MBps para as cargas de trabalho que ele contém. Se as cargas de trabalho estiverem em um grupo de políticas sem limite definido, como o grupo de políticas padrão, ou se o limite definido não atender às suas necessidades, você pode aumentar o limite definido ou mover as cargas de trabalho para um grupo de políticas novo ou existente que tenha o limite desejado.
+
+Se um evento de desempenho em um nó for causado por cargas de trabalho que usam excessivamente os recursos do nó, a descrição do evento na página Detalhes do evento exibirá um link para a lista de volumes envolvidos. Na página Desempenho/Volumes, você pode classificar os volumes afetados por IOPS e MBps para ver quais cargas de trabalho têm o maior uso e podem ter contribuído para o evento.
+
+Ao atribuir os volumes que estão sobrecarregando os recursos do nó a uma configuração de grupo de políticas mais restritiva, o grupo de políticas limita as cargas de trabalho para restringir sua atividade, o que pode reduzir o uso dos recursos nesse nó.
+
+Você pode usar o ONTAP System Manager ou os comandos do ONTAP para gerenciar grupos de políticas, incluindo as seguintes tarefas:
+
+* Criando um grupo de políticas
+* Adicionar ou remover cargas de trabalho em um grupo de políticas
+* Transferir carga de trabalho entre grupos de políticas
+* Alterando o limite de taxa de transferência de um grupo de políticas
+

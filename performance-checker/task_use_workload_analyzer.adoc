@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/task_use_workload_analyzer.html 
+sidebar: sidebar 
+keywords: workload analyzer 
+summary: Existem várias maneiras de iniciar o analisador de carga de trabalho a partir da interface de usuário. Aqui descrevemos como iniciar a ferramenta a partir do painel de navegação à esquerda. 
+---
+= Utilize o analisador de carga de trabalho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Existem várias maneiras de iniciar o analisador de carga de trabalho a partir da interface de usuário. Aqui descrevemos como iniciar a ferramenta a partir do painel de navegação à esquerda.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Análise de carga de trabalho*.
++
+A página de Análise de Carga de Trabalho é exibida.
+
+. Se você souber o nome da carga de trabalho, digite-o. Caso não tenha certeza do nome completo, digite no mínimo 3 caracteres e o sistema exibirá uma lista de cargas de trabalho que correspondem à sequência de caracteres.
+. Selecione o intervalo de tempo se desejar visualizar estatísticas por mais de 2 horas, o padrão, e clique em *Apply*.
+. Consulte a área Summary para ver os eventos que ocorreram durante o período.
+. Consulte os gráficos de desempenho e capacidade para verificar quando alguma das métricas apresentar anormalidades e veja se algum evento coincide com o registro anormal.
+

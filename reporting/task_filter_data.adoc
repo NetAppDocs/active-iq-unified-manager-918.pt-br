@@ -1,0 +1,22 @@
+---
+permalink: reporting/task_filter_data.html 
+sidebar: sidebar 
+keywords: filtering, data 
+summary: Filtre os dados para garantir que os resultados correspondam aos requisitos do seu relatório. A filtragem permite exibir apenas os dados do seu interesse. 
+---
+= Filtrar dados no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Filtre os dados para garantir que os resultados correspondam aos requisitos do seu relatório. A filtragem permite exibir apenas os dados do seu interesse.
+
+.Passos
+. Clique no ícone de filtro para adicionar filtros e refinar os resultados que você deseja visualizar e, em seguida, clique em *Aplicar filtro*.
++
+image::../media/filter_cold_data_2.png[Uma captura de tela que mostra como adicionar e aplicar um filtro.]
+
+. Dê um nome à visualização não salva para salvar suas alterações.
+

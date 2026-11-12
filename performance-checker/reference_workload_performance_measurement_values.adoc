@@ -1,0 +1,104 @@
+---
+permalink: performance-checker/reference_workload_performance_measurement_values.html 
+sidebar: sidebar 
+keywords: workload, performance, measurement, values 
+summary: O Unified Manager mede o desempenho das cargas de trabalho em um cluster com base em valores estatísticos históricos e esperados, que formam a previsão de latência para as cargas de trabalho. Ele compara os valores estatísticos reais da carga de trabalho com a previsão de latência para determinar quando o desempenho da carga de trabalho está muito alto ou muito baixo. Uma carga de trabalho que não apresenta o desempenho esperado aciona um evento de desempenho dinâmico para notificar você. 
+---
+= Compreenda os valores de medição de desempenho da carga de trabalho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Unified Manager mede o desempenho das cargas de trabalho em um cluster com base em valores estatísticos históricos e esperados, que formam a previsão de latência para as cargas de trabalho. Ele compara os valores estatísticos reais da carga de trabalho com a previsão de latência para determinar quando o desempenho da carga de trabalho está muito alto ou muito baixo. Uma carga de trabalho que não apresenta o desempenho esperado aciona um evento de desempenho dinâmico para notificar você.
+
+Na ilustração a seguir, o valor real, em vermelho, representa as estatísticas reais de desempenho no período analisado. O valor real ultrapassou o limite de desempenho, que é o limite superior da previsão de latência. O pico representa o maior valor real no período analisado. O desvio mede a diferença entre os valores esperados (a previsão) e os valores reais, sendo que o desvio máximo indica a maior diferença entre os valores esperados e os valores reais.
+
+image::../media/opm_wrkld_perf_measurement_png.gif[Medições de desempenho da carga de trabalho do Unified Manager]
+
+A tabela a seguir lista os valores de medição do desempenho da carga de trabalho.
+
+|===
+| Medição | Descrição 
+
+
+ a| 
+Atividade
+ a| 
+A porcentagem do limite de QoS utilizada pelas cargas de trabalho no grupo de políticas.
+
+[NOTE]
+====
+Se o Unified Manager detectar uma alteração em um grupo de políticas, como a adição ou remoção de um volume ou a alteração do limite de QoS, os valores reais e esperados podem exceder 100% do limite definido. Se um valor exceder 100% do limite definido, ele será exibido como >100%. Se um valor for inferior a 1% do limite definido, ele será exibido como <1%.
+
+====
+
+
+ a| 
+Real
+ a| 
+O valor de desempenho medido em um momento específico para uma determinada carga de trabalho.
+
+
+
+ a| 
+Desvio
+ a| 
+A diferença entre os valores esperados e os valores reais. É a razão entre o valor real menos o valor esperado e o valor máximo do intervalo esperado menos o valor esperado.
+
+[NOTE]
+====
+Um valor de desvio negativo indica que o desempenho da carga de trabalho é inferior ao esperado, enquanto um valor de desvio positivo indica que o desempenho da carga de trabalho é superior ao esperado.
+
+====
+
+
+ a| 
+Esperado
+ a| 
+Os valores esperados são baseados na análise de dados históricos de desempenho para uma determinada carga de trabalho. O Unified Manager analisa esses valores estatísticos para determinar a faixa esperada (previsão de latência) de valores.
+
+
+
+ a| 
+Previsão de latência (faixa esperada)
+ a| 
+A previsão de latência é uma estimativa dos valores superior e inferior de desempenho esperados em um momento específico. Para a latência da carga de trabalho, os valores superiores formam o limite de desempenho. Quando o valor real ultrapassa o limite de desempenho, o Unified Manager aciona um evento de desempenho dinâmico.
+
+
+
+ a| 
+Pico
+ a| 
+O valor máximo medido durante um período de tempo.
+
+
+
+ a| 
+Desvio de pico
+ a| 
+O valor máximo de desvio medido ao longo de um período de tempo.
+
+
+
+ a| 
+Profundidade da fila
+ a| 
+O número de solicitações de E/S pendentes que estão aguardando no componente de interconexão.
+
+
+
+ a| 
+Utilização
+ a| 
+Para os componentes de processamento de rede, processamento de dados e agregação, a porcentagem do tempo em que ficam ocupados para concluir operações de carga de trabalho durante um período de tempo. Por exemplo, a porcentagem de tempo de que os componentes de processamento de rede ou de processamento de dados precisam para processar uma solicitação de E/S ou de que um agregado precisa para atender a uma solicitação de leitura ou gravação.
+
+
+
+ a| 
+Taxa de transferência de gravação
+ a| 
+A taxa de transferência de gravação, em megabytes por segundo (MB/s), de cargas de trabalho em um cluster local para o cluster parceiro em uma configuração do MetroCluster.
+
+|===

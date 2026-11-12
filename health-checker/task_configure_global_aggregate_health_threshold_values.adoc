@@ -1,0 +1,38 @@
+---
+permalink: health-checker/task_configure_global_aggregate_health_threshold_values.html 
+sidebar: sidebar 
+keywords: configure, global, aggregate, health, threshold values 
+summary: Você pode configurar valores globais de limite de integridade para todos os agregados a fim de monitorar qualquer violação de limite. Eventos apropriados são gerados para violações de limite e você pode tomar medidas preventivas com base nesses eventos. Você pode configurar os valores globais com base nas configurações de melhores práticas para limites que se aplicam a todos os agregados monitorados. 
+---
+= Configure os valores globais de limite de integridade de agregados no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar valores globais de limite de integridade para todos os agregados a fim de monitorar qualquer violação de limite. Eventos apropriados são gerados para violações de limite e você pode tomar medidas preventivas com base nesses eventos. Você pode configurar os valores globais com base nas configurações de melhores práticas para limites que se aplicam a todos os agregados monitorados.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Ao configurar as opções globalmente, os valores padrão dos objetos são modificados. No entanto, se os valores padrão tiverem sido alterados no nível do objeto, os valores globais não serão modificados.
+
+As opções de limite têm valores padrão para melhor monitoramento, no entanto, você pode alterar os valores para atender aos requisitos do seu ambiente.
+
+Quando o Autogrow está ativado em volumes que residem no agregado, os limites de capacidade do agregado são considerados ultrapassados com base no tamanho máximo do volume definido pelo Autogrow, e não com base no tamanho original do volume.
+
+[NOTE]
+====
+Os valores de limite de integridade não se aplicam ao agregado de raiz do nó.
+
+====
+.Passos
+. No painel de navegação à esquerda, clique em *Limiares de eventos* > *Agregado*.
+. Configure os valores de limite apropriados para capacidade, crescimento e cópias Snapshot.
+. Clique em *Salvar*.
+
+
+*Informações relacionadas*
+
+link:../config/task_add_users.html["Adicionando usuários"]

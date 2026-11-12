@@ -1,0 +1,129 @@
+---
+permalink: data-protection/reference_job_details_page.html 
+sidebar: sidebar 
+keywords: job, details, page 
+summary: A página de detalhes da tarefa permite que você visualize o status e outras informações sobre tarefas específicas de proteção que estão em execução, na fila ou que foram concluídas. Você pode usar essas informações para monitorar o progresso das tarefas de proteção e solucionar problemas relacionados a falhas. 
+---
+= Saiba mais sobre a página de detalhes do trabalho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página de detalhes da tarefa permite que você visualize o status e outras informações sobre tarefas específicas de proteção que estão em execução, na fila ou que foram concluídas. Você pode usar essas informações para monitorar o progresso das tarefas de proteção e solucionar problemas relacionados a falhas.
+
+
+
+[[job-summary]]
+== Resumo do trabalho
+
+O resumo do trabalho exibe as seguintes informações:
+
+* ID do trabalho
+* Tipo
+* Estado
+* Hora de envio
+* Tempo de conclusão
+* Duração
+
+
+
+
+[[command-buttons]]
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas:
+
+* *Atualizar*
++
+Atualiza a lista de tarefas e as propriedades associadas a cada tarefa.
+
+* *Ver tarefas*
++
+Leva você de volta à página Jobs.
+
+
+
+
+
+[[job-tasks-list]]
+== Lista de tarefas do trabalho
+
+A lista de tarefas do trabalho exibe em uma tabela todas as tarefas associadas a um trabalho específico e as propriedades relacionadas a cada tarefa.
+
+* *Hora de início*
++
+Exibe o dia e a hora em que a tarefa foi iniciada. Por padrão, as tarefas mais recentes são exibidas na parte superior da coluna e as tarefas mais antigas são exibidas na parte inferior.
+
+* *Tipo*
++
+Exibe o tipo de tarefa.
+
+* *Estado*
++
+O estado de uma tarefa específica:
+
++
+** *Concluído*
++
+A tarefa está concluída.
+
+** *Na fila*
++
+A tarefa está prestes a ser executada.
+
+** *Em execução*
++
+A tarefa está em execução.
+
+** *Aguardando*
++
+Um trabalho foi enviado, e algumas tarefas associadas aguardam entrada na fila e execução.
+
+
+
+* *Status*
++
+Exibe o status da tarefa:
+
++
+** *Erro (image:../media/sev_error.gif[""])*
++
+A tarefa falhou.
+
+** *Normal (image:../media/sev_normal.gif[""])*
++
+A tarefa foi concluída com sucesso.
+
+** *Ignorado (image:../media/icon_skipped.gif[""])*
++
+Uma tarefa falhou, fazendo com que as tarefas subsequentes fossem ignoradas.
+
+
+
+* *Duração*
++
+Exibe o tempo decorrido desde o início da tarefa.
+
+* *Tempo de conclusão*
++
+Exibe a hora em que a tarefa foi concluída. Por padrão, esta coluna fica oculta.
+
+* *ID da tarefa*
++
+Exibe o GUID que identifica uma tarefa individual de um trabalho. A coluna pode ser classificada e filtrada. Por padrão, esta coluna está oculta.
+
+* *Ordem de dependência*
++
+Exibe um número inteiro que representa a sequência de tarefas em um gráfico, sendo zero atribuído à primeira tarefa. Por padrão, esta coluna está oculta.
+
+* *Painel de detalhes da tarefa*
++
+Exibe informações adicionais sobre cada tarefa, incluindo o nome da tarefa, a descrição da tarefa e, caso a tarefa tenha falhado, o motivo da falha.
+
+* *Painel de mensagens da tarefa*
++
+Exibe mensagens específicas da tarefa selecionada. As mensagens podem incluir o motivo do erro e sugestões para resolvê-lo. Nem todas as tarefas exibem mensagens da tarefa.
+
+

@@ -1,0 +1,545 @@
+---
+permalink: health-checker/reference_health_aggregate_details_page.html 
+sidebar: sidebar 
+keywords: unified manager, aggregate, health details page 
+summary: Você pode usar a página Detalhes de agregado/Saúde para visualizar informações detalhadas sobre o agregado selecionado, como capacidade, informações de disco, detalhes de configuração e eventos gerados. Você também pode visualizar informações sobre os objetos relacionados e os alertas relacionados a esse agregado. 
+---
+= Visualize a página de detalhes de agregado/de saúde no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a página Detalhes de agregado/Saúde para visualizar informações detalhadas sobre o agregado selecionado, como capacidade, informações de disco, detalhes de configuração e eventos gerados. Você também pode visualizar informações sobre os objetos relacionados e os alertas relacionados a esse agregado.
+
+
+
+[[command-buttons]]
+== Botões de comando
+
+[NOTE]
+====
+Ao monitorar um agregado habilitado para o FabricPool, os valores comprometidos e sobrecomprometidos nesta página são relevantes apenas para a capacidade local, ou da camada de desempenho. A quantidade de espaço disponível na camada de nuvem não se reflete nos valores sobrecomprometidos. Da mesma forma, os valores de limite do agregado são relevantes apenas para a camada de desempenho local.
+
+====
+Os botões de comando permitem que você execute as seguintes tarefas para o agregado selecionado:
+
+* *Alternar para a visualização de desempenho*
++
+Permite navegar até a página de detalhes de agregado / desempenho.
+
+* *Ações*
++
+** Adicionar alerta
++
+Permite que você adicione um alerta ao agregado selecionado.
+
+** Editar limites
++
+Permite modificar as configurações de limite para o agregado selecionado.
+
+
+
+* *Ver agregados*
++
+Permite navegar até a visualização Saúde: todos os agregados.
+
+
+
+
+
+[[capacity-tab]]
+== Aba Capacidade
+
+A aba Capacidade exibe informações detalhadas sobre o agregado selecionado, como sua capacidade, limites e taxa de crescimento diário.
+
+Por padrão, eventos de capacidade não são gerados para agregados de raiz. Além disso, os valores de limite usados pelo Unified Manager não se aplicam a agregados de raiz do nó. Somente um representante do suporte técnico pode modificar as configurações para que esses eventos sejam gerados. Quando um representante do suporte técnico modifica as configurações, os valores de limite são aplicados ao agregado de raiz do nó.
+
+* *Capacidade*
++
+Exibe o gráfico de capacidade de dados e o gráfico de cópias Snapshot, que mostram detalhes da capacidade do agregado:
+
++
+** Espaço lógico utilizado
++
+O tamanho real dos dados armazenados no agregado, sem aplicar as economias obtidas com o uso das tecnologias de eficiência de storage do ONTAP.
+
+** Usado
++
+A capacidade física usada pelos dados no agregado.
+
+** Supercomprometido
++
+Quando o espaço no agregado está superalocado, o gráfico exibe um indicador com a quantidade superalocada.
+
+** Aviso
++
+Exibe uma linha pontilhada no local em que o limite de aviso está definido; isso significa que o espaço no agregado está quase cheio. Se esse limite for ultrapassado, o evento "Space Nearly Full" será gerado.
+
+** Erro
++
+Exibe uma linha contínua no local em que o limite de erro está definido; isso significa que o espaço no agregado está cheio. Se esse limite for ultrapassado, o evento Space Full será gerado.
+
+** Gráfico de cópias Snapshot
++
+Este gráfico é exibido somente quando a capacidade de Snapshot utilizada ou a reserva do Snapshot não for zero.
+
+
+
++
+Ambos os gráficos exibem a capacidade pela qual a capacidade de Snapshot excede a reserva do Snapshot se a capacidade de Snapshot usada exceder a reserva do Snapshot.
+
+* *Nível de nuvem*
++
+Exibe o espaço usado pelos dados na camada de nuvem para agregados habilitados para o FabricPool. O FabricPool pode ser licenciado ou não licenciado.
+
++
+Quando a camada de nuvem é espelhada em outro provedor de nuvem (a "`camada de espelho`"), ambas as camadas de nuvem são exibidas aqui.
+
+* *Detalhes*
++
+Exibe informações detalhadas sobre a capacidade.
+
++
+** Capacidade total
++
+Exibe a capacidade total no agregado.
+
+** Capacidade de dados
++
+Exibe a quantidade de espaço utilizado pelo agregado (capacidade utilizada) e a quantidade de espaço disponível no agregado (capacidade livre).
+
+** Reserva do Snapshot
++
+Exibe a capacidade de Snapshot usada e livre do agregado.
+
+** Capacidade com comprometimento em excesso
++
+Exibe o comprometimento em excesso do agregado. O comprometimento em excesso do agregado permite fornecer mais armazenamento do que o realmente disponível em um determinado agregado, desde que nem todo esse armazenamento esteja sendo usado no momento. Quando o thin provisioning está em uso, o tamanho total dos volumes no agregado pode exceder a capacidade total do agregado.
+
++
+[NOTE]
+====
+Se você tiver comprometimento em excesso no seu agregado, deverá monitorar cuidadosamente o espaço disponível e adicionar armazenamento conforme necessário para evitar erros de gravação por falta de espaço.
+
+====
+** Nível de nuvem
++
+Exibe o espaço usado pelos dados na camada de nuvem para agregados habilitados para FabricPool. O FabricPool pode ser licenciado ou não licenciado. Quando a camada de nuvem é espelhada em outro provedor de nuvem (a camada espelho), ambas as camadas de nuvem são exibidas aqui.
+
+** Espaço total do cache
++
+Exibe o espaço total das unidades de estado sólido (SSDs) ou unidades de alocação adicionadas a um agregado do Flash Pool. Se você habilitou o Flash Pool para um agregado, mas não adicionou nenhum SSD, o espaço de cache será exibido como 0 KB.
+
++
+[NOTE]
+====
+Este campo fica oculto se o Flash Pool estiver desativado para um agregado.
+
+====
+** Limiares de agregados
++
+Exibe os seguintes limites de capacidade do agregado:
+
++
+*** Limiar de quase cheio
++
+Especifica a porcentagem em que um agregado está quase cheio.
+
+*** Limiar total
++
+Especifica a porcentagem em que um agregado está cheio.
+
+*** Limiar de comprometimento em excesso quase atingido
++
+Especifica a porcentagem na qual um agregado está quase com comprometimento em excesso.
+
+*** Limiar de comprometimento em excesso
++
+Especifica a porcentagem na qual um agregado tem comprometimento em excesso.
+
+
+
+** Outros detalhes: taxa de crescimento diário
++
+Exibe o espaço de disco usado no agregado se a taxa de alteração entre as duas últimas amostras continuar por 24 horas.
+
++
+Por exemplo, se um agregado utiliza 10 GB de espaço de disco às 14:00 e 12 GB às 18:00, a taxa de crescimento diário (GB) para esse agregado é de 2 GB.
+
+** Movimentação de volume
++
+Exibe o número de operações de movimentação de volume que estão em andamento:
+
++
+*** Volumes de saída
++
+Exibe o número e a capacidade dos volumes que estão sendo movidos para fora do agregado.
+
++
+Você pode clicar no link para ver mais detalhes, como o nome do volume, o agregado para o qual o volume é movido, o status da operação de movimentação do volume e a hora prevista de término.
+
+*** Volumes em
++
+Exibe o número e a capacidade restante dos volumes que estão sendo movidos para o agregado.
+
++
+Você pode clicar no link para visualizar mais detalhes, como o nome do volume, o agregado de onde o volume é movido, o status da operação de movimentação do volume e a hora prevista de término.
+
+*** Capacidade utilizada estimada após a movimentação de volume
++
+Exibe a quantidade estimada de espaço utilizado, em porcentagem e em KB, MB, GB etc., no agregado após a conclusão das operações de movimentação de volume.
+
+
+
+
+
+* *Visão geral da capacidade - Volumes*
++
+Exibe gráficos que fornecem informações sobre a capacidade dos volumes contidos no agregado. A quantidade de espaço utilizada pelo volume (capacidade utilizada) e a quantidade de espaço disponível (capacidade livre) no volume são exibidas. Quando o evento "Thin-Provisioned Volume Space At Risk" é gerado para volumes com thin provisioning, a quantidade de espaço utilizada pelo volume (capacidade utilizada) e a quantidade de espaço disponível no volume, mas que não pode ser utilizada (capacidade inutilizável) devido a problemas de capacidade do agregado, são exibidas.
+
++
+Você pode selecionar o gráfico que deseja visualizar nas listas suspensas. Você pode classificar os dados exibidos no gráfico para mostrar detalhes como tamanho usado, tamanho provisionado, capacidade disponível, taxa de crescimento diário mais rápida e taxa de crescimento mais lenta. Você pode filtrar os dados com base nas máquinas virtuais de armazenamento (SVMs) que contêm os volumes no agregado. Você também pode visualizar detalhes de volumes com thin provisioning. Você pode visualizar os detalhes de pontos específicos no gráfico posicionando o cursor sobre a área de interesse. Por padrão, o gráfico exibe os 30 principais volumes filtrados no agregado.
+
+
+
+
+
+[[disk-information-tab]]
+== Guia de Informações do disco
+
+Exibe informações detalhadas sobre os discos no agregado selecionado, incluindo o tipo e o tamanho do RAID, e o tipo de discos usados no agregado. A guia também exibe graficamente os grupos RAID e os tipos de discos usados (como SAS, ATA, FCAL, SSD ou VMDISK). Você pode visualizar mais informações, como a baia, a prateleira e a velocidade de rotação do disco, posicionando o cursor sobre os discos de paridade e os discos de dados.
+
+* *Dados*
++
+Exibe graficamente detalhes sobre discos de dados dedicados, discos de dados compartilhados ou ambos. Quando os discos de dados contêm discos compartilhados, os detalhes gráficos dos discos compartilhados são exibidos. Quando os discos de dados contêm discos dedicados e discos compartilhados, os detalhes gráficos dos discos de dados dedicados e dos discos de dados compartilhados são exibidos.
+
++
+** *Detalhes do RAID*
++
+Os detalhes do RAID são exibidos apenas para discos dedicados.
+
++
+*** Tipo
++
+Exibe o tipo de RAID (RAID0, RAID4, RAID-DP ou RAID-TEC).
+
+*** Tamanho do grupo
++
+Exibe o número máximo de discos permitidos no grupo RAID.
+
+*** Grupos
++
+Exibe o número de grupos RAID no agregado.
+
+
+
+** *Discos Utilizados*
++
+*** Tipo efetivo
++
+Exibe os tipos de discos de dados (por exemplo, ATA, SATA, FCAL, SSD ou VMDISK) no agregado.
+
+*** Discos de dados
++
+Exibe o número e a capacidade dos discos de dados atribuídos a um agregado. Os detalhes dos discos de dados não são exibidos quando o agregado contém apenas discos compartilhados.
+
+*** Discos de Paridade
++
+Exibe o número e a capacidade dos discos de paridade atribuídos a um agregado. Os detalhes dos discos de paridade não são exibidos quando o agregado contém apenas discos compartilhados.
+
+*** Discos Compartilhados
++
+Exibe o número e a capacidade dos discos de dados compartilhados atribuídos a um agregado. Os detalhes dos discos compartilhados são exibidos somente quando o agregado contém discos compartilhados.
+
+
+
+** *Discos sobressalentes*
++
+Exibe o tipo efetivo, o número e a capacidade dos discos de dados sobressalentes disponíveis para o nó no agregado selecionado.
+
++
+[NOTE]
+====
+Quando um agregado sofre failover para o nó parceiro, o Unified Manager não exibe todos os discos sobressalentes compatíveis com o agregado.
+
+====
+
+
+* *Cache SSD*
++
+Fornece detalhes sobre discos SSD de cache dedicados e discos SSD de cache compartilhados.
+
++
+Os seguintes detalhes dos discos SSD de cache dedicados são exibidos:
+
++
+** *Detalhes do RAID*
++
+*** Tipo
++
+Exibe o tipo de RAID (RAID0, RAID4, RAID-DP ou RAID-TEC).
+
+*** Tamanho do grupo
++
+Exibe o número máximo de discos permitidos no grupo RAID.
+
+*** Grupos
++
+Exibe o número de grupos RAID no agregado.
+
+
+
+** *Discos Utilizados*
++
+*** Tipo efetivo
++
+Indica que os discos usados para cache no agregado são do tipo SSD.
+
+*** Discos de dados
++
+Exibe o número e a capacidade dos discos de dados atribuídos a um agregado para cache.
+
+*** Discos de Paridade
++
+Exibe o número e a capacidade dos discos de paridade atribuídos a um agregado para cache.
+
+
+
+** *Discos sobressalentes*
++
+Exibe o tipo efetivo de disco, o número e a capacidade dos discos sobressalentes disponíveis para o nó no agregado selecionado para cache.
+
++
+[NOTE]
+====
+Quando um agregado sofre failover para o nó parceiro, o Unified Manager não exibe todos os discos sobressalentes compatíveis com o agregado.
+
+====
+
+
++
+Fornece os seguintes detalhes para o cache compartilhado:
+
++
+** *Pool de storage*
++
+Exibe o nome do pool de storage. Você pode mover o ponteiro sobre o nome do pool de storage para visualizar os seguintes detalhes:
+
++
+*** Status
++
+Exibe o status do pool de storage, que pode estar íntegro ou não íntegro.
+
+*** Alocações totais
++
+Exibe o total de unidades de alocação e o tamanho no pool de storage.
+
+*** Tamanho da unidade de alocação
++
+Exibe a quantidade mínima de espaço no pool de storage que pode ser alocada a um agregado.
+
+*** Discos
++
+Exibe o número de discos usados para criar o pool de storage. Se a contagem de discos na coluna do pool de storage e o número de discos exibido na guia Informações do Disco para esse pool de storage não coincidirem, isso indica que um ou mais discos estão com defeito e que o pool de storage não está íntegro.
+
+*** Alocação utilizada
++
+Exibe o número e o tamanho das unidades de alocação usadas pelos agregados. Você pode clicar no nome do agregado para visualizar os detalhes do agregado.
+
+*** Alocação disponível
++
+Exibe o número e o tamanho das unidades de alocação disponíveis para os nós. Você pode clicar no nome do nó para visualizar os detalhes do agregado.
+
+
+
+** *Cache alocado*
++
+Exibe o tamanho das unidades de alocação usadas pelo agregado.
+
+** *Unidades de Alocação*
++
+Exibe o número de unidades de alocação usadas pelo agregado.
+
+** *Discos*
++
+Exibe o número de discos contidos no pool de storage.
+
+** *Detalhes*
++
+*** Pool de storage
++
+Exibe o número de pools de storage.
+
+*** Tamanho total
++
+Exibe o tamanho total dos pools de storage.
+
+
+
+
+
+* *Nível de nuvem*
++
+Exibe o nome da camada de nuvem, caso você tenha configurado um agregado habilitado para o FabricPool, e mostra o espaço total utilizado. Quando a camada de nuvem é espelhada para outro provedor de nuvem (a camada de espelho), os detalhes de ambas as camadas de nuvem são exibidos aqui.
+
+
+
+
+
+[[configuration-tab]]
+== Guia de configuração
+
+A aba Configuração exibe detalhes sobre o agregado selecionado, como seu nó de cluster, tipo de bloco, tipo de RAID, tamanho de RAID e número de grupos RAID:
+
+* *Visão geral*
++
+** Nó
++
+Exibe o nome do nó que contém o agregado selecionado.
+
+** Tipo de bloco
++
+Exibe o formato de bloco do agregado: 32 bits ou 64 bits.
+
+** Tipo RAID
++
+Exibe o tipo de RAID (RAID0, RAID4, RAID-DP, RAID-TEC ou RAID misto).
+
+** Tamanho do RAID
++
+Exibe o tamanho do grupo RAID.
+
+** Grupos RAID
++
+Exibe o número de grupos RAID no agregado.
+
+** SnapLock Tipo
++
+Exibe o tipo de SnapLock do agregado.
+
+
+
+* *Nível de nuvem*
++
+Se este for um agregado habilitado para FabricPool, os detalhes da camada de nuvem serão exibidos. Alguns campos são diferentes dependendo do provedor de storage. Quando a camada de nuvem é espelhada para outro provedor de nuvem (a "`mirror tier`"), ambas as camadas de nuvem são exibidas aqui.
+
++
+** Fornecedor
++
+Exibe o nome do provedor de armazenamento, por exemplo, o StorageGRID, o Amazon S3, o IBM Cloud Object Storage, o Microsoft Azure Cloud, o Google Cloud Storage ou o Alibaba Cloud Object Storage.
+
+** Nome
++
+Exibe o nome da camada de nuvem quando ela foi criada pelo ONTAP.
+
+** Servidor
++
+Exibe o FQDN da camada de nuvem.
+
+** Porta
++
+A porta utilizada para comunicação com o provedor de nuvem.
+
+** Chave de acesso ou conta
++
+Exibe a chave de acesso ou a conta para a camada de nuvem.
+
+** Nome do contêiner
++
+Exibe o nome do bucket ou contêiner da camada de nuvem.
+
+** SSL
++
+Exibe se a criptografia SSL está habilitada para a camada de nuvem.
+
+
+
+
+
+
+
+[[history-area]]
+== Área de histórico
+
+A área Histórico exibe gráficos que fornecem informações sobre a capacidade do agregado selecionado. Além disso, você pode clicar no botão *Exportar* para criar um relatório em formato CSV para o gráfico que está visualizando.
+
+Você pode selecionar um tipo de gráfico na lista suspensa na parte superior do painel Histórico. Você também pode visualizar detalhes de um período específico selecionando 1 semana, 1 mês ou 1 ano. Os gráficos de histórico podem ajudar você a identificar tendências: por exemplo, se o uso do agregado estiver constantemente ultrapassando o limite "Nearly Full", você pode tomar a ação apropriada.
+
+Os gráficos de histórico exibem as seguintes informações:
+
+* *Capacidade do agregado utilizada (%)*
++
+Exibe a capacidade utilizada no agregado e a tendência de como a capacidade do agregado é usada com base no histórico de uso, em gráficos de linhas, em porcentagem, no eixo vertical (y). O período de tempo é exibido no eixo horizontal (x). Você pode selecionar um período de uma semana, um mês ou um ano. Você pode ver os detalhes de pontos específicos no gráfico posicionando o cursor sobre uma determinada área. Você pode ocultar ou exibir um gráfico de linhas clicando na legenda correspondente. Por exemplo, quando você clica na legenda "Capacidade Utilizada", a linha do gráfico de Capacidade Utilizada fica oculta.
+
+* *Capacidade usada do agregado vs Capacidade total*
++
+Exibe a tendência de como a capacidade agregada é usada com base no histórico de uso, bem como a capacidade utilizada e a capacidade total, como gráficos de linhas, em bytes, kilobytes, megabytes e assim por diante, no eixo vertical (y). O período é exibido no eixo horizontal (x). Você pode selecionar um período de uma semana, um mês ou um ano. Você pode visualizar os detalhes de pontos específicos no gráfico posicionando o cursor sobre uma determinada área. Você pode ocultar ou exibir um gráfico de linhas clicando na legenda apropriada. Por exemplo, ao clicar na legenda "Trend Capacity Used", a linha do gráfico Trend Capacity Used fica oculta.
+
+* *Capacidade utilizada do agregado (%) vs capacidade comprometida (%)*
++
+Exibe a tendência de como a capacidade agregada é usada com base no histórico de uso, bem como o espaço comprometido, em gráficos de linha, em porcentagem, no eixo vertical (y). O período é exibido no eixo horizontal (x). Você pode selecionar um período de uma semana, um mês ou um ano. Você pode ver os detalhes de pontos específicos no gráfico posicionando o cursor sobre uma determinada área. Você pode ocultar ou exibir um gráfico de linha clicando na legenda correspondente. Por exemplo, ao clicar na legenda "Espaço comprometido", a linha do gráfico "Espaço comprometido" é ocultada.
+
+
+
+
+
+[[events-list]]
+== Lista de eventos
+
+A lista de eventos exibe detalhes sobre eventos novos e reconhecidos:
+
+* *Gravidade*
++
+Exibe a gravidade do evento.
+
+* *Evento*
++
+Exibe o nome do evento.
+
+* *Hora de acionamento*
++
+Exibe o tempo decorrido desde que o evento foi gerado. Se o tempo decorrido for superior a uma semana, o registro de data e hora em que o evento foi gerado será exibido.
+
+
+
+
+
+[[related-devices-pane]]
+== Painel de dispositivos relacionados
+
+O painel Dispositivos Relacionados permite visualizar o nó de cluster, os volumes e os discos relacionados ao agregado:
+
+* *Nó*
++
+Exibe a capacidade e o estado de saúde do nó que contém o agregado. A capacidade indica a capacidade utilizável total em relação à capacidade disponível.
+
+* *Agregados no nó*
++
+Exibe o número e a capacidade de todos os agregados no nó de cluster que contém o agregado selecionado. O status de integridade dos agregados também é exibido, com base no nível de gravidade mais alto. Por exemplo, se um nó de cluster contiver dez agregados, cinco dos quais exibem o status de Aviso e os cinco restantes exibem o status Crítico, o status exibido será Crítico.
+
+* *Volumes*
++
+Exibe o número e a capacidade dos volumes FlexVol e dos volumes FlexGroup no agregado; o número não inclui os constituintes do FlexGroup. O estado de integridade dos volumes também é exibido, com base no nível de gravidade mais alto.
+
+* *Pool de recursos*
++
+Exibe os pools de recursos relacionados ao agregado.
+
+* *Discos*
++
+Exibe o número de discos no agregado selecionado.
+
+
+
+
+
+[[related-alerts-pane]]
+== Painel de alertas relacionados
+
+O painel Alertas Relacionados permite visualizar a lista de alertas criados para o agregado selecionado. Você também pode adicionar um alerta clicando no link Adicionar Alerta ou editar um alerta existente clicando no nome do alerta.
+
+*Informações relacionadas*
+
+link:../health-checker/task_view_storage_pool_details.html["Visualizando detalhes do pool de storage"]

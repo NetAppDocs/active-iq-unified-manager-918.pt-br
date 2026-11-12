@@ -1,0 +1,22 @@
+---
+permalink: reporting/concept_sample_microsoft_excel_reports.html 
+sidebar: sidebar 
+keywords: sample, microsoft, excel, reports 
+summary: Estes exemplos de relatórios do Microsoft Excel têm como objetivo apresentar as opções de geração de relatórios disponíveis usando os recursos avançados do Excel. 
+---
+= Entenda exemplos de relatórios do Microsoft Excel no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Estes exemplos de relatórios do Microsoft Excel têm como objetivo apresentar as opções de geração de relatórios disponíveis usando os recursos avançados do Excel.
+
+As funcionalidades avançadas do Excel permitem criar uma ampla variedade de relatórios específicos para as suas necessidades. Para obter informações completas sobre como usar o Excel, consulte a documentação do produto.
+
+[NOTE]
+====
+Você precisa ter a função de Application Administrator ou Storage Administrator para gerenciar relatórios.
+
+====

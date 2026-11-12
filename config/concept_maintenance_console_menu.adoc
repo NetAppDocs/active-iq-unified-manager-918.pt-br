@@ -1,0 +1,37 @@
+---
+permalink: config/concept_maintenance_console_menu.html 
+sidebar: sidebar 
+keywords: maintenance, console, menus 
+summary: O console de manutenção consiste em diferentes menus que permitem a você manter e gerenciar recursos especiais e definições de configuração do servidor do Unified Manager. 
+---
+= Saiba mais sobre os menus do console de manutenção no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O console de manutenção consiste em diferentes menus que permitem a você manter e gerenciar recursos especiais e definições de configuração do servidor do Unified Manager.
+
+Dependendo do sistema operacional no qual você instalou o Unified Manager, o console de manutenção consiste nos seguintes menus:
+
+* Atualizar o Unified Manager (somente VMware)
+* Configuração de rede (somente VMware)
+* Configuração do sistema (somente o VMware)
++
+.. Suporte/Diagnóstico
+.. Redefinir certificado do servidor
+.. Regenerar certificado do cliente
+.. Backup e restauração
+.. Fornecedor de dados externo
+.. Configuração do intervalo de sondagem de desempenho
+.. Desativar autenticação SAML
+.. Visualizar/alterar portas do aplicativo
+.. Configuração do log de depuração
+.. Controlar o acesso à porta 3306 do MySQL
+.. Sair
+
+
+
+
+Você seleciona o número da lista para acessar a opção específica do menu. Por exemplo, para backup e restauração, você seleciona _4_.

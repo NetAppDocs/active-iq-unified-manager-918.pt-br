@@ -1,0 +1,30 @@
+---
+permalink: storage-mgmt/task_rediscover_clusters.html 
+sidebar: sidebar 
+keywords: rediscover clusters, 
+summary: Você pode redescobrir manualmente um cluster na página Cluster Setup para obter as informações mais recentes sobre a integridade, o status de monitoramento e o status de desempenho do cluster. 
+---
+= Redescubra clusters no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode redescobrir manualmente um cluster na página Cluster Setup para obter as informações mais recentes sobre a integridade, o status de monitoramento e o status de desempenho do cluster.
+
+Você pode redescobrir manualmente um cluster quando quiser atualizá-lo, por exemplo, aumentando o tamanho de um agregado quando não houver espaço suficiente, e desejar que o Unified Manager detecte as alterações que você fizer.
+
+Quando o Unified Manager é emparelhado com o OnCommand Workflow Automation (WFA), esse emparelhamento aciona a reaquisição dos dados armazenados em cache pelo WFA.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Configuração de cluster*.
+. Na página *Configuração do Cluster*, clique em *Redescobrir*.
++
+O Unified Manager redescobre o cluster selecionado e exibe o status mais recente de integridade e desempenho.
+
+
+
+*Informações relacionadas*
+
+link:../health-checker/task_view_cluster_list_and_details.html["Visualizando a lista e os detalhes dos clusters"]

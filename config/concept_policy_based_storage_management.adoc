@@ -1,0 +1,31 @@
+---
+permalink: config/concept_policy_based_storage_management.html 
+sidebar: sidebar 
+keywords: slo, storage efficiency policy, storage workloads 
+summary: 'A opção de gerenciamento de storage baseado em políticas permite o gerenciamento de storage com base em objetivos de nível de serviço (SLOs). Essa opção está habilitada por padrão.' 
+---
+= Habilite o gerenciamento de storage baseado em políticas no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A opção *Gerenciamento de storage baseado em políticas* permite o gerenciamento de storage com base em objetivos de nível de serviço (SLOs). Essa opção está habilitada por padrão.
+
+Ao ativar esse recurso, você pode provisionar cargas de trabalho de storage nos clusters do ONTAP adicionados à sua instância do Active IQ Unified Manager e gerenciar essas cargas de trabalho com base nos níveis de serviço de desempenho e nas políticas de eficiência de storage atribuídos.
+
+Você pode optar por ativar ou desativar esse recurso em *Geral* > *Configurações de recursos* > *gerenciamento de storage baseado em política*. Ao ativar esse recurso, as seguintes páginas ficam disponíveis para operação e monitoramento:
+
+* Provisionamento (provisionamento de cargas de trabalho de storage)
+* *Políticas* > *Níveis de Serviço de Desempenho*
+* *Políticas* > *Eficiência de storage*
+* Coluna Cargas de trabalho gerenciadas por nível de serviço de desempenho na página Configuração de clusters
+* Painel de desempenho da carga de trabalho no *Painel de controle*
+
+
+Você pode usar as telas para criar níveis de serviço de desempenho e políticas de eficiência de storage, além de provisionar cargas de trabalho de storage. Você também pode monitorar as cargas de trabalho de storage que estão em conformidade com os níveis de serviço de desempenho atribuídos, bem como aquelas que não estão em conformidade. O painel Desempenho da Carga de Trabalho e IOPS da Carga de Trabalho também permite avaliar a capacidade e o desempenho (IOPS) totais, disponíveis e usados dos clusters em todo o seu data center, com base nas cargas de trabalho de storage provisionadas neles.
+
+Após ativar esse recurso, você pode executar as APIs REST do Unified Manager para realizar algumas dessas funções em *Menu Bar* > *Help button* > *API Documentation* > categoria *storage-provider*. Como alternativa, você pode inserir o nome do host ou o endereço IP e a URL para acessar a página da API REST no formato +https://<hostname>/docs/api/+
+
+Para obter mais informações sobre as APIs, consulte link:../api-automation/concept_get_started_with_um_apis.html["Primeiros passos com as APIs REST do Active IQ Unified Manager"].

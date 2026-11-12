@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_what_performance_events_are.html 
+sidebar: sidebar 
+keywords: performance, events 
+summary: Eventos de desempenho são incidentes relacionados ao desempenho da carga de trabalho em um cluster. Eles ajudam você a identificar cargas de trabalho com tempos de resposta lentos. Juntamente com eventos de integridade que ocorreram ao mesmo tempo, você pode determinar os problemas que podem ter causado ou contribuído para os tempos de resposta lentos. 
+---
+= Saiba mais sobre eventos de desempenho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eventos de desempenho são incidentes relacionados ao desempenho da carga de trabalho em um cluster. Eles ajudam você a identificar cargas de trabalho com tempos de resposta lentos. Juntamente com eventos de integridade que ocorreram ao mesmo tempo, você pode determinar os problemas que podem ter causado ou contribuído para os tempos de resposta lentos.
+
+Quando o Unified Manager detecta múltiplas ocorrências da mesma condição de evento para o mesmo componente de cluster, ele trata todas as ocorrências como um único evento, e não como eventos separados.

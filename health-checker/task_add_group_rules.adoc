@@ -1,0 +1,79 @@
+---
+permalink: health-checker/task_add_group_rules.html 
+sidebar: sidebar 
+keywords: add, group rules 
+summary: 'Você pode criar regras de grupo para um grupo para adicionar dinamicamente objetos de armazenamento, como volumes, clusters ou máquinas virtuais de armazenamento (SVMs), ao grupo. Você deve configurar pelo menos um grupo de condições com pelo menos uma condição para criar uma regra de grupo.' 
+---
+= Adicionar regras de grupo no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar regras de grupo para um grupo para adicionar dinamicamente objetos de armazenamento, como volumes, clusters ou máquinas virtuais de armazenamento (SVMs), ao grupo. Você deve configurar pelo menos um grupo de condições com pelo menos uma condição para criar uma regra de grupo.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Os objetos de armazenamento que estão sendo monitorados são adicionados assim que a regra de grupo é criada. Novos objetos são adicionados somente após a conclusão do ciclo de monitoramento.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Grupos*.
+. Na aba *Regras do Grupo*, clique em *Adicionar*.
+. Na caixa de diálogo *Adicionar regra de grupo*, especifique um nome para a regra de grupo.
+. No campo *Tipo de objeto de destino*, selecione o tipo de objeto de armazenamento que você deseja agrupar.
+. No campo *Grupo*, selecione o grupo necessário para o qual você deseja criar regras de grupo.
+. Na seção *Condições*, execute os seguintes passos para criar uma condição, um grupo de condições ou ambos:
++
+[cols="2*"]
+|===
+| Para criar.... | Faça isso... 
+
+
+ a| 
+Uma condição
+ a| 
+.. Selecione um operando da lista de operandos.
+.. Selecione *Contém* ou *É* como operador.
+.. Insira um valor ou selecione um valor da lista disponível.
+
+
+
+
+ a| 
+Um grupo de condições
+ a| 
+.. Clique em *Adicionar Grupo de Condições*
+.. Selecione um operando da lista de operandos.
+.. Selecione *Contém* ou *É* como operador.
+.. Insira um valor ou selecione um valor da lista disponível.
+.. Clique em *Adicionar condição* para criar mais condições, se necessário, e repita as etapas de a até d para cada condição.
+
+
+|===
+. Clique em *Add*.
+
+
+
+
+[[example-for-creating-a-group-rule]]
+== Exemplo de criação de uma regra de grupo
+
+Na caixa de diálogo Adicionar Regra de Grupo, siga estas etapas para criar uma regra de grupo, incluindo a configuração de uma condição e a adição de um grupo de condições:
+
+.Passos
+. Especifique um nome para a regra de grupo.
+. Selecione o tipo de objeto como máquina virtual de armazenamento (SVM).
+. Selecione um grupo da lista de grupos.
+. Na seção Condições, selecione *Nome do Objeto* como operando.
+. Selecione *Contém* como operador.
+. Insira o valor como `svm_data`.
+. Clique em *Adicionar grupo de condições*.
+. Selecione *Object Name* como operando.
+. Selecione *Contém* como operador.
+. Insira o valor como `vol`.
+. Clique em *Adicionar condição*.
+. Repita os passos de 8 a 10 selecionando *data-priority* como operando no passo 8, *Is* como operador no passo 9 e *critical* como valor no passo 10.
+. Clique em *Adicionar* para criar a condição da regra de grupo.
+

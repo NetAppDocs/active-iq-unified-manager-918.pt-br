@@ -1,0 +1,85 @@
+---
+permalink: performance-checker/task_move_workloads_to_an_aggregate_on_different_node.html 
+sidebar: sidebar 
+keywords: moving, workloads, aggregate, different, node 
+summary: Você pode usar o Unified Manager para ajudar a identificar um agregado em um nó diferente que esteja menos ocupado do que o nó onde suas cargas de trabalho estão sendo executadas atualmente e, em seguida, mover volumes selecionados para esse agregado. Mover cargas de trabalho de alto desempenho para um agregado em um nó menos ocupado permite que as cargas de trabalho em ambos os nós tenham um desempenho mais eficiente. 
+---
+= Mova as cargas de trabalho para um agregado em um nó diferente no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o Unified Manager para ajudar a identificar um agregado em um nó diferente que esteja menos ocupado do que o nó onde suas cargas de trabalho estão sendo executadas atualmente e, em seguida, mover volumes selecionados para esse agregado. Mover cargas de trabalho de alto desempenho para um agregado em um nó menos ocupado permite que as cargas de trabalho em ambos os nós tenham um desempenho mais eficiente.
+
+.Antes de começar
+* Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+* Você deve ter registrado o nome do nó que está apresentando problemas de desempenho.
+* Você deve ter registrado a data e a hora em que o nó recebeu o evento de desempenho.
+* O Unified Manager deve ter coletado e analisado dados de desempenho referentes a um mês ou mais.
+
+
+Estas etapas ajudam você a identificar os seguintes recursos para que possa mover cargas de trabalho de alto desempenho para um nó menos utilizado:
+
+* Os nós do mesmo cluster que estão menos utilizados
+* Os agregados no novo nó que são menos utilizados
+* Os volumes de melhor desempenho no nó atual
+
+
+.Passos
+. Identifique o nó menos utilizado no cluster:
++
+.. Na página de detalhes do *Evento*, clique no nome do cluster em que o nó está localizado.
++
+Os detalhes do cluster são exibidos na página de destino Desempenho/Cluster.
+
+.. Na página *Resumo*, clique em *Nós* no painel *Objetos gerenciados*.
++
+A lista de nós neste cluster é exibida.
+
+.. Clique na coluna *Utilização* para classificar os nós por ordem de menor utilização.
++
+Você também pode identificar os nós que têm a maior *Capacidade Livre*. Isso fornece uma lista de nós potenciais para os quais você pode querer mover cargas de trabalho.
+
+.. Anote o nome do nó para o qual você deseja mover as cargas de trabalho.
+
+
+. Identifique um agregado no novo nó que seja o menos utilizado:
++
+.. No painel de navegação à esquerda, clique em *Armazenamento* > *Agregados* e selecione *Desempenho* > *Todos os Agregados* no menu *Exibir*.
++
+A visualização Performance: All Aggregates é exibida.
+
+.. Clique em *Filtragem*, selecione *Nó* no menu suspenso à esquerda, digite o nome do nó no campo de texto e clique em *Aplicar filtro*.
++
+A visualização Performance: All Aggregates é exibida novamente com a lista de agregados disponíveis neste nó.
+
+.. Clique na coluna *Utilização* para classificar os agregados pelos menos utilizados.
++
+Você também pode identificar os agregados que possuem a maior *Capacidade Livre*. Isso fornece uma lista de agregados potenciais para os quais você pode querer mover cargas de trabalho.
+
+.. Anote o nome do agregado para o qual você deseja mover as cargas de trabalho.
+
+
+. Identifique as cargas de trabalho de alto desempenho do nó que recebeu o evento:
++
+.. Volte para a página de detalhes do *Event* do evento.
+.. No campo *Volumes afetados*, clique no link do número de volumes.
++
+A visualização Desempenho: todos os volumes exibe uma lista filtrada dos volumes naquele nó.
+
+.. Clique na coluna *Capacidade Total* para classificar os volumes pelo maior espaço alocado.
++
+Isso fornece uma lista de possíveis volumes que você pode querer mover.
+
+.. Anote os nomes dos volumes que você deseja mover e os nomes dos agregados atuais nos quais eles se encontram.
+
+
+. Transfira os volumes para os agregados que você identificou com baixa utilização no novo nó.
++
+Você pode executar a operação de movimentação usando o ONTAP System Manager, o OnCommand Workflow Automation, comandos do ONTAP ou uma combinação dessas ferramentas.
+
+
+
+Após alguns dias, verifique se você está recebendo o mesmo tipo de eventos deste nó ou agregado.

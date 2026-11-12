@@ -1,0 +1,67 @@
+---
+permalink: storage-mgmt/task_filter_inventory_page_content.html 
+sidebar: sidebar 
+keywords: filter, inventory, page, content, example 
+summary: Você pode filtrar os dados da página de inventário do Unified Manager para localizar rapidamente os dados com base em critérios específicos. Você pode usar a filtragem para restringir o conteúdo das páginas do Unified Manager e mostrar apenas os resultados nos quais você tem interesse. Isso proporciona um método muito eficiente de exibir apenas os dados nos quais você tem interesse. 
+---
+= Filtre o conteúdo da página de inventário no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode filtrar os dados da página de inventário do Unified Manager para localizar rapidamente os dados com base em critérios específicos. Você pode usar a filtragem para restringir o conteúdo das páginas do Unified Manager e mostrar apenas os resultados nos quais você tem interesse. Isso proporciona um método muito eficiente de exibir apenas os dados nos quais você tem interesse.
+
+Use a opção *Filtragem* para personalizar a visualização em grade de acordo com suas preferências. As opções de filtro disponíveis se baseiam no tipo de objeto visualizado na grade. Se houver filtros aplicados no momento, o número de filtros aplicados será exibido à direita do botão Filter.
+
+Há suporte para três tipos de parâmetros de filtro.
+
+|===
+| Parâmetro | Validação 
+
+
+ a| 
+String (texto)
+ a| 
+Os operadores são *contém*, *começa com*, *termina com* e *não contém*.
+
+
+
+ a| 
+Número
+ a| 
+Os operadores são *maior que*, *menor que*, *no último* e *entre*.
+
+
+
+ a| 
+Enum (texto)
+ a| 
+Os operadores são *is* e *is not*.
+
+|===
+Os campos Coluna, Operador e Valor são obrigatórios para cada filtro; os filtros disponíveis refletem as colunas filtráveis na página atual. O número máximo de filtros que você pode aplicar é quatro. Os resultados filtrados são baseados na combinação dos parâmetros de filtro. Os resultados filtrados se aplicam a todas as páginas da sua pesquisa filtrada, não apenas à página exibida no momento.
+
+Você pode adicionar filtros usando o painel de Filtragem.
+
+. Na parte superior da página, clique no botão *Filtrar*. O painel de filtragem é exibido.
+. Clique na lista suspensa à esquerda e selecione um objeto; por exemplo, _Cluster_, ou um contador de desempenho.
+. Clique na lista suspensa central e selecione o operador que deseja usar.
+. Na última lista, selecione ou insira um valor para completar o filtro desse objeto.
+. Para adicionar outro filtro, clique em *+Add Filter*. Um campo de filtro adicional é exibido. Preencha este filtro usando o processo descrito nas etapas anteriores. Observe que, ao adicionar o seu quarto filtro, o botão *+Add Filter* não é mais exibido.
+. Clique em *Aplicar filtro*. As opções de filtro são aplicadas à grade e o número de filtros é exibido à direita do botão Filtro.
+. Use o painel de filtragem para remover filtros individuais clicando no ícone da lixeira à direita do filtro que você deseja remover.
+. Para remover todos os filtros, clique em *Reset* na parte inferior do painel de filtragem.
+
+
+
+
+[[filtering-example]]
+== Exemplo de filtragem
+
+A ilustração mostra o painel de filtragem com três filtros. O botão *+Adicionar Filtro* é exibido quando você tem menos de quatro filtros, o limite máximo.
+
+image::../media/opm_filtering_panel_draft_3.gif[Uma captura de tela que mostra o painel de filtragem com três filtros.]
+
+Após clicar em *Aplicar filtro*, o painel de filtragem fecha, aplica seus filtros e mostra o número de filtros aplicados (image:../media/opm_filters_applied.gif[""]).

@@ -1,0 +1,187 @@
+---
+permalink: events/reference_nvme_namespace_events.html 
+sidebar: sidebar 
+keywords: nvme, namespace, events, impact area, availability, performance 
+summary: Os eventos de namespace NVMe fornecem informações sobre o status dos seus namespaces, permitindo que você monitore possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade. 
+---
+= Saiba mais sobre eventos de namespace NVMe no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de namespace NVMe fornecem informações sobre o status dos seus namespaces, permitindo que você monitore possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade.
+
+Um asterisco (*) identifica eventos do EMS que foram convertidos em eventos do Unified Manager.
+
+
+
+[[impact-area-availability]]
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+NVMeNS offline *(nvmeNamespaceStatusOffline)
+ a| 
+Evento
+ a| 
+Espaço de nomes
+ a| 
+Informação
+
+
+
+ a| 
+NVMeNS online *(nvmeNamespaceStatusOnline)
+ a| 
+Evento
+ a| 
+Espaço de nomes
+ a| 
+Informação
+
+
+
+ a| 
+NVMeNS sem espaço *(nvmeNamespaceSpaceOutOfSpace)
+ a| 
+Risco
+ a| 
+Espaço de nomes
+ a| 
+Aviso
+
+
+
+ a| 
+Destruir NVMeNS *(nvmeNamespaceDestroy)
+ a| 
+Evento
+ a| 
+Espaço de nomes
+ a| 
+Informação
+
+|===
+
+
+[[impact-area-performance]]
+== Área de impacto: desempenho
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Limiar crítico de IOPS do namespace NVMe atingido(ocumNvmeNamespaceIopsIncident)
+ a| 
+Incidente
+ a| 
+Espaço de nomes
+ a| 
+Crítico
+
+
+
+ a| 
+Aviso de limite de IOPS do namespace NVMe atingido(ocumNvmeNamespaceIopsWarning)
+ a| 
+Risco
+ a| 
+Espaço de nomes
+ a| 
+Aviso
+
+
+
+ a| 
+Limiar crítico de MB/s do namespace NVMe atingido(ocumNvmeNamespaceMbpsIncident)
+ a| 
+Incidente
+ a| 
+Espaço de nomes
+ a| 
+Crítico
+
+
+
+ a| 
+Limiar de aviso de MB/s do namespace NVMe ultrapassado(ocumNvmeNamespaceMbpsWarning)
+ a| 
+Risco
+ a| 
+Espaço de nomes
+ a| 
+Aviso
+
+
+
+ a| 
+Latência do namespace NVMe ms/op limite crítico atingido(ocumNvmeNamespaceLatencyIncident)
+ a| 
+Incidente
+ a| 
+Espaço de nomes
+ a| 
+Crítico
+
+
+
+ a| 
+Latência do namespace NVMe ms/op: limite de aviso excedido(ocumNvmeNamespaceLatencyWarning)
+ a| 
+Risco
+ a| 
+Espaço de nomes
+ a| 
+Aviso
+
+
+
+ a| 
+Limiar crítico de latência e IOPS do namespace NVMe ultrapassado(ocumNvmeNamespaceLatencyIopsIncident)
+ a| 
+Incidente
+ a| 
+Espaço de nomes
+ a| 
+Crítico
+
+
+
+ a| 
+Limiar de aviso de latência e IOPS do namespace NVMe ultrapassado(ocumNvmeNamespaceLatencyIopsWarning)
+ a| 
+Risco
+ a| 
+Espaço de nomes
+ a| 
+Aviso
+
+
+
+ a| 
+Latência do namespace NVMe e limite crítico de MB/s excedido(ocumNvmeNamespaceLatencyMbpsIncident)
+ a| 
+Incidente
+ a| 
+Espaço de nomes
+ a| 
+Crítico
+
+
+
+ a| 
+Latência do namespace NVMe e limite de aviso de MB/s ultrapassado(ocumNvmeNamespaceLatencyMbpsWarning)
+ a| 
+Risco
+ a| 
+Espaço de nomes
+ a| 
+Aviso
+
+|===

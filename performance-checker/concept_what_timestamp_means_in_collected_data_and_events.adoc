@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_what_timestamp_means_in_collected_data_and_events.html 
+sidebar: sidebar 
+keywords: timestamp, means, collected, data, events 
+summary: O registro de data e hora que aparece nos dados de saúde e desempenho coletados, ou que aparece como o horário de detecção de um evento, é baseado na hora do cluster ONTAP, ajustada ao fuso horário definido no navegador da web. 
+---
+= Saiba mais sobre os registros de data e hora nos dados e eventos coletados no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O registro de data e hora que aparece nos dados de saúde e desempenho coletados, ou que aparece como o horário de detecção de um evento, é baseado na hora do cluster ONTAP, ajustada ao fuso horário definido no navegador da web.
+
+É altamente recomendável que você use um servidor NTP (Network Time Protocol) para sincronizar a hora nos seus servidores do Unified Manager, nos clusters do ONTAP e nos navegadores da web.
+
+[NOTE]
+====
+Se você vir carimbos de data e hora que parecem incorretos para um determinado cluster, talvez seja necessário verificar se o horário do cluster está configurado corretamente.
+
+====

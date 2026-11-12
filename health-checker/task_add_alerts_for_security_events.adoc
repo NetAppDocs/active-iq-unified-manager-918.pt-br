@@ -1,0 +1,35 @@
+---
+permalink: health-checker/task_add_alerts_for_security_events.html 
+sidebar: sidebar 
+keywords: add, alerts, security events 
+summary: Você pode configurar alertas para eventos de segurança individuais, assim como para qualquer outro evento recebido pelo Unified Manager. Além disso, se desejar tratar todos os eventos de segurança da mesma forma e enviar e-mails para a mesma pessoa, você pode criar um único alerta para que você seja notificado quando qualquer evento de segurança for acionado. 
+---
+= Adicione alertas para eventos de segurança no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar alertas para eventos de segurança individuais, assim como para qualquer outro evento recebido pelo Unified Manager. Além disso, se desejar tratar todos os eventos de segurança da mesma forma e enviar e-mails para a mesma pessoa, você pode criar um único alerta para que você seja notificado quando qualquer evento de segurança for acionado.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+O exemplo abaixo mostra como criar um alerta para o evento de segurança "`Telnet Protocol Enabled`". Isso enviará um alerta se o acesso Telnet estiver configurado para acesso administrativo remoto no cluster. Você pode usar essa mesma metodologia para criar alertas para todos os eventos de segurança.
+
+.Passos
+. No painel de navegação à esquerda, clique em *Gerenciamento de armazenamento* > *Configuração de alertas*.
+. Na página *Alert Setup*, clique em *Add*.
+. Na caixa de diálogo *Adicionar Alerta*, clique em *Nome* e insira um nome e uma descrição para o alerta.
+. Clique em *Recursos* e selecione o cluster ou o cluster no qual você deseja ativar este alerta.
+. Clique em *Eventos* e execute as seguintes ações:
++
+.. Na lista de gravidade do evento, selecione *Aviso*.
+.. Na lista de eventos correspondentes, selecione *Telnet Protocol Enabled*.
+
+
+. Clique em *Ações* e selecione o nome do usuário que receberá o e-mail de alerta no campo *Alertar estes usuários*.
+. Configure outras opções nesta página para a frequência de notificação, a emissão de traps SNMP e a execução de um script.
+. Clique em *Salvar*.
+

@@ -1,0 +1,49 @@
+---
+permalink: data-protection/task_resynchronize_protection_relationships.html 
+sidebar: sidebar 
+keywords: resynchronize, protection, relationships, volume, relationships page 
+summary: Na página Relações de Volume, você pode ressincronizar uma relação para se recuperar de um evento que desativou seu volume de origem ou quando desejar alterar a origem atual para um volume diferente. 
+---
+= Ressincronize as relações de proteção na página "Relações de Volume" no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Na página Relações de Volume, você pode ressincronizar uma relação para se recuperar de um evento que desativou seu volume de origem ou quando desejar alterar a origem atual para um volume diferente.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+* Você precisa ter configurado o Workflow Automation.
+
+
+.Passos
+. Na página *Relações de Volume*, selecione um ou mais volumes com relações suspensas e, na barra de ferramentas, clique em *Ressincronizar*.
++
+A caixa de diálogo Ressincronizar é exibida.
+
+. Na aba *Opções de Ressincronização*, selecione uma prioridade de transferência e a taxa de transferência máxima.
+. Clique em *Cópias Snapshot de origem*; em seguida, na coluna *Cópia Snapshot*, clique em *Padrão*.
++
+A caixa de diálogo Selecionar cópia Snapshot de origem é exibida.
+
+. Se você quiser especificar uma cópia Snapshot existente em vez de transferir a cópia Snapshot padrão, clique em *Cópia Snapshot existente* e selecione uma cópia Snapshot na lista.
+. Clique em *Enviar*.
++
+Você retorna à caixa de diálogo Ressincronizar.
+
+. Se você selecionou mais de uma origem para ressincronizar, clique em *Default* para a próxima origem para a qual deseja especificar uma cópia Snapshot existente.
+. Clique em *Submit* para iniciar a tarefa de ressincronização.
++
+A tarefa de ressincronização é iniciada, e você retorna à página Relações de volume, e um link para tarefas é exibido na parte superior da página.
+
+. *Opcional:* clique em *Visualizar Tarefas* na página *Relações de Volume* para acompanhar o status de cada tarefa de ressincronização.
++
+Uma lista filtrada de tarefas é exibida.
+
+. *Opcional:* clique na seta *Voltar* do seu navegador para retornar à página *Relações de Volume*.
++
+A operação de ressincronização termina quando todas as tarefas do trabalho são concluídas com sucesso.
+
+

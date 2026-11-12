@@ -1,0 +1,37 @@
+---
+permalink: data-protection/task_monitor_storage_vms_using_relationships_page.html 
+sidebar: sidebar 
+keywords: relationships page, monitor, storage, vm 
+summary: Você pode monitorar os relacionamentos de recuperação de desastres das suas VMs de armazenamento na página Relacionamentos, na seção PROTEÇÃO do INVENTÁRIO. Por padrão, a página Relacionamentos lista apenas os relacionamentos de nível superior, pois o filtro de relacionamentos constituintes está aplicado. 
+---
+= Monitore as VMs de armazenamento usando a página Relacionamentos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode monitorar os relacionamentos de recuperação de desastres das suas VMs de armazenamento na página Relacionamentos, na seção PROTEÇÃO do INVENTÁRIO. Por padrão, a página Relacionamentos lista apenas os relacionamentos de nível superior, pois o filtro de relacionamentos constituintes está aplicado.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Você usa filtros para visualizar as relações de recuperação de desastres das VMs de armazenamento.
+
+.Passos
+. No painel de navegação esquerdo, clique em *PROTECTION* > *Relationships*.
++
+A página exibe todos os tipos de relacionamentos: volume, grupo de consistência e relacionamentos de máquina virtual de armazenamento.
+
+. Clique em *Filtrar* e, em seguida, selecione *Tipo de Objeto de Relacionamento* e *VM de Armazenamento* para visualizar apenas os relacionamentos de recuperação de desastres de VMs de armazenamento.
+. Clique em *Aplicar filtro*.
++
+[NOTE]
+====
+Você deve limpar o filtro de relações de constituintes para visualizar todas as relações de proteção.
+
+====
++
+A página exibe apenas os relacionamentos de recuperação de desastres das máquinas virtuais de armazenamento.
+
+

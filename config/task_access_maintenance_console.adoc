@@ -1,0 +1,65 @@
+---
+permalink: config/task_access_maintenance_console.html 
+sidebar: sidebar 
+keywords: access, maintenance console 
+summary: Caso a interface de usuário do Unified Manager não esteja em funcionamento, ou se você precisar executar funções que não estão disponíveis na interface de usuário, você pode acessar o console de manutenção para gerenciar seu sistema Unified Manager. 
+---
+= Acesse o console de manutenção no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Caso a interface de usuário do Unified Manager não esteja em funcionamento, ou se você precisar executar funções que não estão disponíveis na interface de usuário, você pode acessar o console de manutenção para gerenciar seu sistema Unified Manager.
+
+.Antes de começar
+Você precisa ter instalado e configurado o Unified Manager.
+
+Após 15 minutos de inatividade, o console de manutenção encerra sua sessão.
+
+[NOTE]
+====
+Quando instalado no VMware, se você já tiver feito login como usuário de manutenção por meio do console do VMware, não poderá fazer login simultaneamente usando o Secure Shell.
+
+====
+.Etapa
+. Siga estes passos para acessar o console de manutenção:
++
+[cols="2*"]
+|===
+| Neste sistema operacional... | Siga estes passos... 
+
+
+ a| 
+VMware
+ a| 
+.. Usando o Secure Shell, conecte-se ao endereço IP ou ao nome de domínio totalmente qualificado do dispositivo virtual do Unified Manager.
+.. Faça login no console de manutenção usando seu nome de usuário e senha de manutenção.
+
+
+
+
+ a| 
+Linux
+ a| 
+.. Usando o Secure Shell, conecte-se ao endereço IP ou ao nome de domínio totalmente qualificado do sistema Unified Manager.
+.. Faça login no sistema com o nome e a senha do usuário de manutenção (umadmin).
+.. Digite o comando `maintenance_console` e pressione Enter.
+
+
+
+
+ a| 
+Windows
+ a| 
+.. Faça login no sistema Unified Manager com as credenciais de administrador.
+.. Inicie o PowerShell como administrador do Windows.
+.. Digite o comando `maintenance_console` e pressione Enter.
+
+
+|===
++
+O menu do console de manutenção do Unified Manager é exibido.
+
+

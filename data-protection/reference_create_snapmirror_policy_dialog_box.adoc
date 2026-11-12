@@ -1,0 +1,68 @@
+---
+permalink: data-protection/reference_create_snapmirror_policy_dialog_box.html 
+sidebar: sidebar 
+keywords: create, snapmirror, policy, dialog box 
+summary: A caixa de diálogo Criar política do SnapMirror permite criar uma política para definir a prioridade das transferências do SnapMirror. Você usa políticas para maximizar a eficiência das transferências da origem para o destino. 
+---
+= Use a caixa de diálogo Criar SnapMirror Policy no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Criar política do SnapMirror permite criar uma política para definir a prioridade das transferências do SnapMirror. Você usa políticas para maximizar a eficiência das transferências da origem para o destino.
+
+* *Cluster de destino*
++
+O nome do cluster que você selecionou na guia SnapMirror da caixa de diálogo Configure Protection.
+
+* *SVM de destino*
++
+O nome da SVM que você selecionou na guia SnapMirror da caixa de diálogo Configure Protection.
+
+* *Nome da política*
++
+O nome que você fornecer para a nova política. Os nomes de políticas podem conter os caracteres de A a Z, de a a z, de 0 a 9, ponto (.), hífen (-) e sublinhado (_).
+
+* *Prioridade de Transferência*
++
+A prioridade com que uma transferência é executada para operações assíncronas. Você pode selecionar Normal ou Low. Os relacionamentos de transferência com políticas que especificam uma prioridade de transferência normal são executados antes daqueles com políticas que especificam uma prioridade de transferência low.
+
+* *Comentário*
++
+Um campo opcional no qual você pode adicionar comentários sobre a política.
+
+* *Reiniciar transferência*
++
+Indica qual ação de reinicialização executar quando uma transferência é interrompida por uma operação de cancelamento ou qualquer tipo de falha, como uma interrupção de rede. Você pode selecionar uma das seguintes opções:
+
++
+** Sempre
++
+Especifica que uma nova cópia Snapshot seja criada antes de reiniciar uma transferência e, se já existir uma, a transferência seja reiniciada a partir de um ponto de verificação, seguida por uma transferência incremental a partir da cópia Snapshot recém-criada.
+
+** Nunca
++
+Especifica que as transferências interrompidas nunca são reiniciadas.
+
+
+
+
+
+
+
+[[command-buttons]]
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas:
+
+* *Cancelar*
++
+Descarta as seleções e fecha a caixa de diálogo Configure Protection.
+
+* *Aplicar*
++
+Aplica suas seleções e inicia o processo de proteção.
+
+

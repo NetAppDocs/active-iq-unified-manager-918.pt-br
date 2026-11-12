@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_view_node_and_aggregate_performance_capacity_used_values.html 
+sidebar: sidebar 
+keywords: view, node, aggregate, performance, capacity, used, values 
+summary: Você pode monitorar os valores de capacidade de desempenho utilizados para todos os nós ou para todos os agregados em um cluster, ou pode visualizar detalhes para um único nó ou agregado. 
+---
+= Visualize os valores de capacidade de desempenho de nós e agregados utilizados no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode monitorar os valores de capacidade de desempenho utilizados para todos os nós ou para todos os agregados em um cluster, ou pode visualizar detalhes para um único nó ou agregado.
+
+Os valores de capacidade de desempenho utilizada aparecem no Dashboard, nas páginas Performance Inventory, na página Top Performers, na página Create Threshold Policy, nas páginas Performance Explorer e em gráficos de detalhes. Por exemplo, a página Performance: All Aggregates fornece uma coluna Performance Capacity Used para visualizar o valor de capacidade de desempenho utilizada de todos os agregados.
+
+image::../media/node_inventory_used_headroom.gif[Captura de tela da interface de usuário da página Desempenho: todos os agregados]
+
+O monitoramento do contador de capacidade de desempenho utilizada permite identificar o seguinte:
+
+* Se algum nó ou agregado em quaisquer clusters tiver um valor alto de capacidade de desempenho usada
+* Se algum nó ou agregado em qualquer cluster tem eventos ativos de capacidade de desempenho usada
+* Os nós e agregados com o maior e o menor valor de capacidade de desempenho utilizada em um cluster
+* Valores de latência e dos contadores de utilização em conjunto com nós ou agregados que apresentam valores altos de capacidade de desempenho utilizada
+* Como os valores de capacidade de desempenho usada dos nós em um par de HA serão afetados se um dos nós falhar
+* Os volumes e LUNs mais movimentados em um agregado que tem um alto valor de capacidade de desempenho usada
+

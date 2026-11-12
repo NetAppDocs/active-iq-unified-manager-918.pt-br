@@ -1,0 +1,29 @@
+---
+permalink: events/reference_what_system_diagnosis_section_displays.html 
+sidebar: sidebar 
+keywords: system, diagnosis, section, displays 
+summary: A seção Diagnóstico do Sistema da página Detalhes do Evento fornece informações que podem ajudar você a diagnosticar problemas que podem ter sido responsáveis pelo evento. 
+---
+= Saiba mais sobre o diagnóstico do sistema no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A seção Diagnóstico do Sistema da página Detalhes do Evento fornece informações que podem ajudar você a diagnosticar problemas que podem ter sido responsáveis pelo evento.
+
+Esta área é exibida apenas para alguns eventos.
+
+Alguns eventos de desempenho fornecem gráficos relevantes para o evento específico que foi acionado. Normalmente, isso inclui um gráfico de IOPS ou MBps e um gráfico de latência dos dez dias anteriores. Quando organizados dessa forma, você pode ver quais componentes de armazenamento mais afetam a latência ou são mais afetados pela latência quando o evento está ativo.
+
+Para eventos de desempenho dinâmico, os seguintes gráficos são exibidos:
+
+* Latência da carga de trabalho - Exibe o histórico de latência das principais cargas de trabalho de vítima, bully ou shark no componente em contenção.
+* Atividade da carga de trabalho: exibe detalhes sobre o uso da carga de trabalho do componente do cluster em contenção.
+* Atividade de recursos: exibe estatísticas históricas de desempenho para o componente do cluster em contenção.
+
+
+Outros gráficos são exibidos quando alguns componentes do cluster estão em contenção.
+
+Outros eventos fornecem uma breve descrição do tipo de análise que o sistema está realizando no objeto de armazenamento. Em alguns casos, haverá uma ou mais linhas, uma para cada componente analisado, para políticas de desempenho definidas pelo sistema que analisam vários contadores de desempenho. Nesse cenário, um ícone verde ou vermelho é exibido ao lado do diagnóstico para indicar se um problema foi encontrado ou não naquele diagnóstico específico.

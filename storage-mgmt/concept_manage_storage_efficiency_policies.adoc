@@ -1,0 +1,86 @@
+---
+permalink: storage-mgmt/concept_manage_storage_efficiency_policies.html 
+sidebar: sidebar 
+keywords: manage, storage, efficiency, policies, guidelines, create, custom 
+summary: 'Uma Política de Eficiência de Storage (SEP, na sigla em inglês) permite que você defina as características de eficiência de storage de uma carga de trabalho. Você pode atribuir uma SEP a uma carga de trabalho ao criá-la inicialmente ou, depois, editando-a.' 
+---
+= Gerencie as políticas de eficiência de armazenamento no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Uma Política de Eficiência de Storage (SEP, na sigla em inglês) permite que você defina as características de eficiência de storage de uma carga de trabalho. Você pode atribuir uma SEP a uma carga de trabalho ao criá-la inicialmente ou, depois, editando-a.
+
+A eficiência de storage inclui o uso de tecnologias, como thin provisioning, deduplicação e compressão de dados, que aumentam a utilização do storage e reduzem os custos de storage. Ao criar SEPs, você pode usar essas tecnologias de economia de espaço individualmente ou em conjunto para alcançar a máxima eficiência de storage. Quando você associa as políticas às suas cargas de trabalho de storage, as configurações de política especificadas são atribuídas a elas. O Unified Manager permite atribuir SEPs definidas pelo sistema e pelo usuário para otimizar os recursos de storage no seu data center.
+
+O Unified Manager fornece dois SEPs definidos pelo sistema: alto e baixo. Esses SEPs são aplicáveis à maioria das cargas de trabalho de storage em um data center, no entanto, você pode criar suas próprias políticas se os SEPs definidos pelo sistema não atenderem aos seus requisitos.
+
+Não é possível modificar um SEP que seja definido pelo sistema ou que esteja atualmente atribuído a uma carga de trabalho. Também não é possível excluir um SEP que esteja atribuído a uma carga de trabalho ou que seja o único SEP disponível.
+
+A página Políticas de eficiência de storage lista as SEPs disponíveis e permite adicionar, editar e excluir SEPs personalizadas. Esta página exibe as seguintes informações:
+
+|===
+| Campo | Descrição 
+
+
+ a| 
+Nome
+ a| 
+Nome da SEP.
+
+
+
+ a| 
+Tipo
+ a| 
+Se a política é definida pelo sistema ou pelo usuário.
+
+
+
+ a| 
+Reserva de espaço
+ a| 
+Se o volume é com thin provisioning ou com provisionamento espesso.
+
+
+
+ a| 
+Desduplicação
+ a| 
+Se a deduplicação está habilitada na carga de trabalho:
+
+* Inline: a desduplicação ocorre durante a gravação na carga de trabalho
+* Contexto: a desduplicação ocorre na carga de trabalho
+* Desativar: a deduplicação está desativada na carga de trabalho
+
+
+
+
+ a| 
+Compressão
+ a| 
+Se a compressão de dados está ativada na carga de trabalho:
+
+* Inline: a compressão de dados ocorre durante a gravação na carga de trabalho
+* Contexto: a compressão de dados ocorre na carga de trabalho
+* Desativar: a compressão de dados está desativada na carga de trabalho
+
+
+
+
+ a| 
+Cargas de trabalho
+ a| 
+Número de cargas de trabalho de storage às quais foi atribuído o SEP
+
+|===
+
+
+[[guidelines-for-creating-a-custom-storage-efficiency-policy]]
+== Diretrizes para criar uma política personalizada de eficiência de storage
+
+Se as SEPs existentes não atenderem aos requisitos de política para suas cargas de trabalho de armazenamento, você poderá criar uma SEP personalizada. No entanto, é recomendável que você tente usar as SEPs definidas pelo sistema para suas cargas de trabalho de armazenamento e crie SEPs personalizadas somente se necessário.
+
+Você pode visualizar o SEP atribuído às cargas de trabalho na página All Workloads e na página de detalhes de Volume / Health. Você pode visualizar a taxa de redução de dados em nível de cluster, sem cópias Snapshot, com base nessas eficiências de storage no painel Capacity no Dashboard e na visualização Capacity: All Clusters.

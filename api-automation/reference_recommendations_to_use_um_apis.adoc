@@ -1,0 +1,29 @@
+---
+permalink: api-automation/reference_recommendations_to_use_um_apis.html 
+sidebar: sidebar 
+keywords: recommendations, apis, active iq, unified, manager 
+summary: Ao utilizar as APIs no Active IQ Unified Manager, você deve seguir algumas práticas recomendadas. 
+---
+= Siga as práticas recomendadas para usar o Active IQ Unified Manager APIs
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ao utilizar as APIs no Active IQ Unified Manager, você deve seguir algumas práticas recomendadas.
+
+* Todo tipo de conteúdo da resposta deve estar no seguinte formato para uma execução válida:
++
+[listing]
+----
+application/json
+----
+* O número da versão da API não está relacionado ao número da versão do produto. Você deve usar a versão mais recente da API disponível para a sua instância do Unified Manager. Para obter mais informações sobre as versões da API do Unified Manager, consulte a seção "`Controle de versão da API REST no Active IQ Unified Manager`".
+* Ao atualizar valores de um array usando a API do Unified Manager, você deve atualizar toda a sequência de valores. Não é possível adicionar valores a um array. Você só pode substituir um array existente.
+* Você pode usar operadores de filtro, como pipe (|) e curinga (+*+), para todos os parâmetros de consulta, exceto para valores double, por exemplo, IOPS e desempenho, nas APIs de métricas.
+* Evite consultar objetos usando uma combinação dos operadores de filtro curinga (+*+) e pipe (|). Isso pode retornar um número incorreto de objetos.
+* Ao usar valores para filtro, certifique-se de que o valor não contenha nenhum `?` caractere. Isso serve para mitigar os riscos de injeção de SQL.
+* Observe que a  `GET`solicitação (total) para qualquer API retorna um máximo de 1000 registros. Mesmo que você execute a consulta definindo o  `max_records`parâmetro para um valor superior a 1000, a API retorna apenas 1000 registros.
+* Para executar funções administrativas, é recomendável que você use a interface de usuário do Unified Manager.
+

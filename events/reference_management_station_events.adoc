@@ -1,0 +1,190 @@
+---
+permalink: events/reference_management_station_events.html 
+sidebar: sidebar 
+keywords: management, station, events, impact area, configuration, performance 
+summary: Os eventos da estação de gerenciamento fornecem informações sobre o status do servidor no qual o Unified Manager está instalado para que você possa monitorar possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade. 
+---
+= Saiba mais sobre eventos da estação de gerenciamento no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos da estação de gerenciamento fornecem informações sobre o status do servidor no qual o Unified Manager está instalado para que você possa monitorar possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade.
+
+
+
+[[impact-area-configuration]]
+== Área de impacto: configuração
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Espaço em disco do servidor de gerenciamento quase cheio(ocumEvtUnifiedManagerDiskSpaceNearlyFull)
+ a| 
+Risco
+ a| 
+Estação de gerenciamento
+ a| 
+Aviso
+
+
+
+ a| 
+Espaço em disco do servidor de gerenciamento cheio(ocumEvtUnifiedManagerDiskSpaceFull)
+ a| 
+Incidente
+ a| 
+Estação de gerenciamento
+ a| 
+Crítico
+
+
+
+ a| 
+Servidor de gerenciamento com pouca memória(ocumEvtUnifiedManagerMemoryLow)
+ a| 
+Risco
+ a| 
+Estação de gerenciamento
+ a| 
+Aviso
+
+
+
+ a| 
+Servidor de gerenciamento quase sem memória(ocumEvtUnifiedManagerMemoryAlmostOut)
+ a| 
+Incidente
+ a| 
+Estação de gerenciamento
+ a| 
+Crítico
+
+
+
+ a| 
+O tamanho do arquivo de log do MySQL aumentou; é necessário reiniciar (ocumEvtMysqlLogFileSizeWarning)
+ a| 
+Incidente
+ a| 
+Estação de gerenciamento
+ a| 
+Aviso
+
+
+
+ a| 
+A alocação total do tamanho do log de auditoria está prestes a ficar cheia
+ a| 
+Risco
+ a| 
+Estação de gerenciamento
+ a| 
+Aviso
+
+
+
+ a| 
+O certificado do servidor Syslog está prestes a expirar
+ a| 
+Risco
+ a| 
+Estação de gerenciamento
+ a| 
+Aviso
+
+
+
+ a| 
+Certificado do servidor Syslog expirado
+ a| 
+Risco
+ a| 
+Estação de gerenciamento
+ a| 
+Erro
+
+
+
+ a| 
+Arquivo de registro de auditoria adulterado
+ a| 
+Risco
+ a| 
+Estação de gerenciamento
+ a| 
+Aviso
+
+
+
+ a| 
+Arquivo de registro de auditoria excluído
+ a| 
+Risco
+ a| 
+Estação de gerenciamento
+ a| 
+Aviso
+
+
+
+ a| 
+Erro de conexão com o servidor Syslog
+ a| 
+Risco
+ a| 
+Estação de gerenciamento
+ a| 
+Erro
+
+
+
+ a| 
+Configuração do servidor Syslog alterada
+ a| 
+Evento
+ a| 
+Estação de gerenciamento
+ a| 
+Aviso
+
+|===
+
+
+[[impact-area-performance]]
+== Área de impacto: desempenho
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+A análise de dados de desempenho é afetada(ocumEvtUnifiedManagerDataMissingAnalyze)
+ a| 
+Risco
+ a| 
+Estação de gerenciamento
+ a| 
+Aviso
+
+
+
+ a| 
+A coleta de dados de desempenho foi afetada(ocumEvtUnifiedManagerDataMissingCollection)
+ a| 
+Incidente
+ a| 
+Estação de gerenciamento
+ a| 
+Crítico
+
+|===
+[NOTE]
+====
+Esses dois últimos eventos de desempenho estavam disponíveis apenas para o Unified Manager 7.2. Se algum desses eventos existir no estado "New" e você atualizar para uma versão mais recente do software do Unified Manager, os eventos não serão removidos automaticamente. Você precisará movê-los manualmente para o estado "Resolved".
+
+====

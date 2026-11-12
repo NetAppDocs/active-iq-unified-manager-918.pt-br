@@ -1,0 +1,55 @@
+---
+permalink: events/task_assign_events_to_specific_users.html 
+sidebar: sidebar 
+keywords: assign, events, specific, users 
+summary: Você pode atribuir eventos não atribuídos a si mesmo ou a outros usuários, incluindo usuários remotos. Se necessário, você pode reatribuir eventos atribuídos a outro usuário. Por exemplo, quando problemas frequentes ocorrem em um objeto de armazenamento, você pode atribuir os eventos desses problemas ao usuário que gerencia esse objeto. 
+---
+= Atribua eventos a usuários específicos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode atribuir eventos não atribuídos a si mesmo ou a outros usuários, incluindo usuários remotos. Se necessário, você pode reatribuir eventos atribuídos a outro usuário. Por exemplo, quando problemas frequentes ocorrem em um objeto de armazenamento, você pode atribuir os eventos desses problemas ao usuário que gerencia esse objeto.
+
+.Antes de começar
+* O nome do usuário e o ID de e-mail devem ser configurados corretamente.
+* Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+
+
+.Passos
+. No painel de navegação à esquerda, clique em *Event Management*.
+. Na página de inventário *Event Management*, selecione um ou mais eventos que você deseja atribuir.
+. Atribua o evento escolhendo uma das seguintes opções:
++
+|===
+| Se você deseja atribuir o evento a... | Então faça isso... 
+
+
+ a| 
+Você mesmo
+ a| 
+Clique em *Atribuir a* > *Mim*.
+
+
+
+ a| 
+Outro usuário
+ a| 
+.. Clique em *Atribuir a* > *Outro usuário*.
+.. Na caixa de diálogo "Assign Owner", insira o nome de usuário ou selecione um usuário na lista suspensa.
+.. Clique em *Atribuir*.
++
+Uma notificação por e-mail é enviada ao usuário.
+
++
+[NOTE]
+====
+Se você não inserir um nome de usuário ou selecionar um usuário na lista suspensa e clicar em *Atribuir*, o evento permanecerá não atribuído.
+
+====
+
+
+|===
+

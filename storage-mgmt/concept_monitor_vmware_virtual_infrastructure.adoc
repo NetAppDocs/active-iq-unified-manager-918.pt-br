@@ -1,0 +1,60 @@
+---
+permalink: storage-mgmt/concept_monitor_vmware_virtual_infrastructure.html 
+sidebar: sidebar 
+keywords: monitor, vmware, virtual, infrastructure, not, supported 
+summary: 'O Active IQ Unified Manager oferece visibilidade das máquinas virtuais (VMs) na sua infraestrutura virtual e permite monitorar e solucionar problemas de storage e desempenho no seu ambiente virtual. Você pode usar esse recurso para identificar problemas de latência no seu ambiente de storage ou quando houver um evento de desempenho relatado no seu vCenter Server.' 
+---
+= Entenda como o Active IQ Unified Manager monitora a infraestrutura virtual VMware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Active IQ Unified Manager oferece visibilidade das máquinas virtuais (VMs) na sua infraestrutura virtual e permite monitorar e solucionar problemas de storage e desempenho no seu ambiente virtual. Você pode usar esse recurso para identificar problemas de latência no seu ambiente de storage ou quando houver um evento de desempenho relatado no seu vCenter Server.
+
+Uma implantação típica de infraestrutura virtual no ONTAP tem vários componentes distribuídos entre as camadas de computação, rede e storage. Qualquer atraso no desempenho de uma aplicação em uma máquina virtual pode ocorrer devido a uma combinação de latências enfrentadas pelos vários componentes em suas respectivas camadas. Esse recurso é útil para administradores de storage e do vCenter Server, bem como para generalistas de TI que precisam analisar um problema de desempenho em um ambiente virtual e entender em qual componente o problema ocorreu.
+
+Agora você pode acessar o vCenter Server pelo menu vCenter da seção VMware. A visualização rápida de cada máquina virtual listada tem o link *VCENTER SERVER* na *TOPOLOGY VIEW*, que abre o vCenter Server em um novo navegador. Você também pode usar o botão *Expand Topology* para abrir o vCenter Server e clicar no botão *View in vCenter* para ver os datastores no vCenter Server.
+
+O Unified Manager apresenta o subsistema subjacente de um ambiente virtual em uma visão topológica para determinar se ocorreu um problema de latência no nó de computação, na rede ou no storage. A visão também destaca o objeto específico que causa a lentidão no desempenho, permitindo que você tome medidas corretivas e resolva o problema subjacente.
+
+Uma infraestrutura virtual implantada no storage ONTAP inclui os seguintes objetos:
+
+* O vCenter Server: um plano de controle centralizado para gerenciar as VMs do VMware, os hosts ESXi e todos os componentes relacionados em um ambiente virtual. Para obter mais informações sobre o vCenter Server, consulte a documentação da VMware.
+* Host: um sistema físico ou virtual que executa o ESXi, o software de virtualização da VMware, e hospeda a VM.
+* Datastore: os datastores são objetos de storage virtual conectados aos hosts ESXi. Os datastores são entidades de storage gerenciáveis do ONTAP, como LUNs ou volumes, usadas como repositório para arquivos de máquina virtual, como arquivos de log, scripts, arquivos de configuração e discos virtuais. Eles são conectados aos hosts no ambiente por meio de uma conexão de rede SAN ou IP. Os datastores fora do ONTAP que são mapeados para o vCenter Server não são compatíveis nem exibidos no Unified Manager.
+* VM: uma máquina virtual VMware.
+* Discos virtuais: os discos virtuais nos datastores pertencentes às VMs que têm a extensão VMDK. Os dados de um disco virtual são armazenados no VMDK correspondente.
+* VMDK: um disco de máquina virtual no datastore que fornece espaço de storage para discos virtuais. Para cada disco virtual, existe um VMDK correspondente.
+
+
+Esses objetos são representados em uma visualização de topologia de VM.
+
+*virtualização VMware no ONTAP*
+
+image::../media/vm_deployment.gif[Um diagrama que mostra hosts VMware, VMs, datastores, VMDKs, rede IP e conexões de armazenamento]
+
+*Fluxo de trabalho do usuário*
+
+O diagrama a seguir exibe um caso de uso típico da visualização da topologia da VM:
+
+image::../media/vm_workflow.gif[Um diagrama que mostra um fluxo de trabalho para localizar a latência de aplicativos de VM nas camadas de computação, rede e armazenamento]
+
+
+
+[[what-is-not-supported]]
+== O que não é suportado
+
+* Os datastores que estão fora do ONTAP e são mapeados para as instâncias do servidor vCenter não são suportados no Unified Manager. Quaisquer VMs com discos virtuais nesses datastores também não são suportadas.
+* Não há suporte para um datastore que abranja várias LUNs.
+* Não há suporte para datastores que usam Network address translation (NAT) para o mapeamento de LIFs de dados (endpoint de acesso).
+* Não há suporte para exportar volumes ou LUNs como datastores em clusters diferentes com os mesmos endereços IP em uma configuração de múltiplas LIFs, pois o Unified Manager não consegue identificar a qual cluster cada datastore pertence.
++
+Exemplo: suponha que o cluster A tenha o datastore A. O datastore A é exportado via LIF de dados com o mesmo endereço IP x.x.x.x e a VM A é criada nesse datastore. Da mesma forma, o cluster B tem o datastore B. O datastore B é exportado via LIF de dados com o mesmo endereço IP x.x.x.x e a VM B é criada no datastore B. O UM não conseguirá mapear o datastore A da topologia da VM A para o volume/LUN correspondente do ONTAP, nem mapear a VM B.
+
+* Apenas volumes NAS e SAN (iSCSI e FCP para VMFS) são suportados como datastores, volumes virtuais (vVols) não são suportados.
+* Somente discos virtuais iSCSI são suportados. Discos virtuais dos tipos NVMe e SATA não são suportados.
+* As visualizações não permitem que você gere relatórios para analisar o desempenho dos vários componentes.
+* Para a configuração de recuperação de desastres (DR) da máquina virtual de storage (VM de storage), que é compatível apenas com a infraestrutura virtual no Unified Manager, a configuração precisa ser alterada manualmente no servidor vCenter para apontar para os LUNs ativos em cenários de switchover e switchback. Sem intervenção manual, seus datastores ficam inacessíveis.
+

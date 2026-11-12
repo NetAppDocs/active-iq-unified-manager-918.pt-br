@@ -1,0 +1,18 @@
+---
+permalink: data-protection/concept_monitor_storage_vm_disaster_recovery_relationships.html 
+sidebar: sidebar 
+keywords: disaster recovery, monitor, storage vm protection, relationships 
+summary: O Active IQ Unified Manager oferece suporte ao monitoramento de relacionamentos de recuperação de desastres de VM de storage, o que fornece recuperação de desastres na granularidade do nível de uma VM de storage. A recuperação de desastres de VM de storage permite a recuperação dos dados presentes nos volumes constituintes da VM de storage, bem como a recuperação da configuração da VM de storage. 
+---
+= Saiba mais sobre as relações de recuperação de desastres de máquinas virtuais de armazenamento no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Active IQ Unified Manager oferece suporte ao monitoramento de relacionamentos de recuperação de desastres de VM de storage, o que fornece recuperação de desastres na granularidade do nível de uma VM de storage. A recuperação de desastres de VM de storage permite a recuperação dos dados presentes nos volumes constituintes da VM de storage, bem como a recuperação da configuração da VM de storage.
+
+Uma relação de DR de VM de storage é criada da VM de storage de origem para a VM de storage de destino para fornecer recuperação de desastres assíncrona. Você pode optar por replicar toda a configuração da VM de storage ou um subconjunto dela (excluindo a configuração de rede e de protocolo), juntamente com os volumes de dados, com base na configuração do cluster.
+
+Após a configuração da relação de recuperação de desastres da VM de storage, quando a VM de storage de origem fica indisponível devido a falha de hardware ou desastre ambiental, a VM de storage de destino é iniciada, fornecendo acesso aos dados com o mínimo de interrupção. Da mesma forma, quando a VM de storage de origem volta a ficar disponível, ela é ressincronizada com a VM de storage de destino e, em seguida, a origem é reiniciada para fornecer dados. Você pode usar os comandos do SnapMirror para configurar e gerenciar a relação de recuperação de desastres da VM de storage.

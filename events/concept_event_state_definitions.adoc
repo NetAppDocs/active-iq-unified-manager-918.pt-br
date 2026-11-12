@@ -1,0 +1,53 @@
+---
+permalink: events/concept_event_state_definitions.html 
+sidebar: sidebar 
+keywords: event, state, definitions 
+summary: O estado de um evento ajuda você a identificar se uma ação corretiva apropriada é necessária. Um evento pode ser Novo, Reconhecido, Resolvido ou Obsoleto. Observe que tanto os eventos Novos quanto os Reconhecidos são considerados eventos ativos. 
+---
+= Estados de eventos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O estado de um evento ajuda você a identificar se uma ação corretiva apropriada é necessária. Um evento pode ser Novo, Reconhecido, Resolvido ou Obsoleto. Observe que tanto os eventos Novos quanto os Reconhecidos são considerados eventos ativos.
+
+Os estados do evento são os seguintes:
+
+* *Novo*
++
+O estado de um novo evento.
+
+* *Reconhecido*
++
+O estado de um evento quando você o reconheceu.
+
+* *Resolvido*
++
+O estado de um evento quando ele é marcado como resolvido.
+
+* *Obsoleto*
++
+O estado de um evento quando ele é corrigido automaticamente ou quando a causa do evento deixa de ser válida.
+
++
+[NOTE]
+====
+Não é possível reconhecer ou resolver um evento obsoleto.
+
+====
+
+
+
+
+[[example-of-different-states-of-an-event]]
+== Exemplo de diferentes estados de um evento
+
+Os exemplos a seguir ilustram as alterações manuais e automáticas no estado dos eventos.
+
+Quando o evento Cluster Not Reachable é acionado, o estado do evento é New. Ao reconhecer o evento, o estado do evento muda para Acknowledged. Depois de tomar uma ação corretiva apropriada, você deve marcar o evento como resolvido. O estado do evento então muda para Resolved.
+
+Se o evento "Cluster inacessível" for gerado devido a uma interrupção de energia, quando a energia for restaurada, o cluster começará a funcionar sem qualquer intervenção do administrador. Portanto, o evento "Cluster inacessível" deixa de ser válido e o estado do evento muda para "Obsoleto" no próximo ciclo de monitoramento.
+
+O Unified Manager envia um alerta quando um evento está no estado Obsolete ou Resolved. A linha de assunto e o conteúdo do e-mail de um alerta fornecem informações sobre o estado do evento. Um trap SNMP também inclui informações sobre o estado do evento.

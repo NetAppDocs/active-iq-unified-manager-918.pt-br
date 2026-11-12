@@ -1,0 +1,228 @@
+---
+permalink: config/reference_unified_manager_roles_and_capabilities.html 
+sidebar: sidebar 
+keywords: unified manager, user, roles, capabilities 
+summary: Com base na sua função de usuário atribuída, você pode determinar quais operações pode executar no Unified Manager. 
+---
+= Saiba mais sobre funções e capacidades de usuário no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Com base na sua função de usuário atribuída, você pode determinar quais operações pode executar no Unified Manager.
+
+A tabela a seguir exibe as funções que cada perfil de usuário pode executar:
+
+[cols="6*"]
+|===
+| Função | Operador | Administrador de storage | Administrador de Aplicativos | Esquema de integração | Esquema do relatório 
+
+
+ a| 
+Visualizar informações do sistema de storage
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+
+
+
+ a| 
+Veja outros dados, como históricos e tendências de capacidade
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+
+
+
+ a| 
+Visualizar, atribuir e resolver eventos
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Visualize objetos de serviço de storage, como associações de SVM e pools de recursos
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Ver políticas de limite
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gerenciar objetos de serviço de storage, como associações de SVM e pools de recursos
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Definir alertas
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gerencie as opções de gerenciamento de storage
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gerenciar políticas de gerenciamento de storage
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gerenciar usuários
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gerenciar opções administrativas
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Definir políticas de limite
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gerenciar o acesso ao banco de dados
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Gerencie a integração com o WFA e forneça acesso às visualizações do banco de dados
+ a| 
+ a| 
+ a| 
+ a| 
+•
+ a| 
+
+
+
+ a| 
+Agendar e salvar relatórios
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Execute operações "`Fix It`" em Management Actions
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+Fornecer acesso somente leitura às visualizações do banco de dados
+ a| 
+ a| 
+ a| 
+ a| 
+ a| 
+•
+
+|===

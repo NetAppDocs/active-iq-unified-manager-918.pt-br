@@ -1,0 +1,78 @@
+---
+permalink: config/task_enable_and_disable_policy_based_storage_management.html 
+sidebar: sidebar 
+keywords: provisioning, performance service levels, storage management, enable, disable, policy-based 
+summary: 'A partir do Unified Manager 9.7, você pode provisionar cargas de trabalho de storage (volumes e LUNs) em seus clusters ONTAP e gerenciar essas cargas de trabalho com base nos níveis de serviço de desempenho atribuídos. Essa funcionalidade é semelhante à criação de cargas de trabalho no ONTAP System Manager e à associação de políticas de QoS, mas, quando aplicada usando o Unified Manager, permite provisionar e gerenciar cargas de trabalho em todos os clusters que a sua instância do Unified Manager está monitorando.' 
+---
+= Ative e desative o gerenciamento de storage baseado em políticas no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A partir do Unified Manager 9.7, você pode provisionar cargas de trabalho de storage (volumes e LUNs) em seus clusters ONTAP e gerenciar essas cargas de trabalho com base nos níveis de serviço de desempenho atribuídos. Essa funcionalidade é semelhante à criação de cargas de trabalho no ONTAP System Manager e à associação de políticas de QoS, mas, quando aplicada usando o Unified Manager, permite provisionar e gerenciar cargas de trabalho em todos os clusters que a sua instância do Unified Manager está monitorando.
+
+Você precisa ter a função de Application Administrator.
+
+Essa opção está habilitada por padrão, mas você pode desativá-la se não quiser provisionar e gerenciar cargas de trabalho usando o Unified Manager.
+
+Quando ativada, esta opção fornece vários novos itens na interface de usuário:
+
+[cols="2*"]
+|===
+| Novo conteúdo | Localização 
+
+
+ a| 
+Uma página para provisionar novas cargas de trabalho
+ a| 
+Disponível em *Tarefas comuns* > *Provisionamento*
+
+
+
+ a| 
+Uma página para criar políticas de nível de serviço de desempenho
+ a| 
+Disponível em *Configurações* > *Políticas* > *Níveis de serviço de desempenho*
+
+
+
+ a| 
+Uma página para criar políticas de eficiência de storage de desempenho
+ a| 
+Disponível em *Configurações* > *Políticas* > *Eficiência de storage*
+
+
+
+ a| 
+Painéis que descrevem o desempenho atual da sua carga de trabalho e as IOPS da sua carga de trabalho
+ a| 
+Disponível no painel de controle
+
+|===
+Consulte a ajuda online do produto para obter mais informações sobre essas páginas e sobre essa funcionalidade.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Geral* > *Configurações de recursos*.
+. Na página *Configurações de Recursos*, desative ou ative o gerenciamento de storage baseado em políticas escolhendo uma das seguintes opções:
++
+[cols="2*"]
+|===
+| Se você quiser... | Então faça isso... 
+
+
+ a| 
+Desativar o gerenciamento de storage baseado em políticas
+ a| 
+No painel *gerenciamento de storage baseado em políticas*, mova o botão deslizante para a esquerda.
+
+
+
+ a| 
+Habilitar o gerenciamento de storage baseado em políticas
+ a| 
+No painel *gerenciamento de storage baseado em políticas*, mova o botão deslizante para a direita.
+
+|===
+

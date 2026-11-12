@@ -1,0 +1,83 @@
+---
+permalink: storage-mgmt/concept_monitor_and_manage_clusters_from_dashboard.html 
+sidebar: sidebar 
+keywords: monitor, manage, clusters, dashboard 
+summary: 'O painel fornece informações cumulativas e resumidas sobre o estado atual dos seus sistemas ONTAP monitorados. O painel fornece "painéis" que permitem avaliar a capacidade geral, o desempenho e o estado de segurança dos clusters que você está monitorando.' 
+---
+= Monitore e gerencie clusters a partir do painel de controle no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O painel fornece informações cumulativas, de relance, sobre o estado atual dos seus sistemas ONTAP monitorados. O painel fornece "`painéis`" que permitem avaliar a capacidade geral, o desempenho e o estado de segurança dos clusters que você está monitorando.
+
+Além disso, existem certos problemas do ONTAP que você pode corrigir diretamente na interface de usuário do Unified Manager, em vez de ter que usar o ONTAP System Manager ou a ONTAP CLI.
+
+Na parte superior do painel de controle, você pode selecionar se os painéis exibem informações de todos os clusters monitorados ou de um cluster individual. Você pode começar visualizando o status de todos os clusters e depois aprofundar em clusters individuais quando quiser ver informações detalhadas.
+
+[NOTE]
+====
+Alguns dos painéis listados abaixo podem não aparecer na página dependendo da sua configuração.
+
+====
+|===
+| Painéis | Descrição 
+
+
+ a| 
+Ações de gerenciamento
+ a| 
+Quando o Unified Manager consegue diagnosticar e determinar uma única solução para um problema, essa solução é exibida neste painel com um botão *Fix It*.
+
+
+
+ a| 
+Capacidade
+ a| 
+Exibe a capacidade total e a capacidade utilizada da camada local e da camada de nuvem, bem como o número de dias até que a capacidade local atinja o limite máximo.
+
+
+
+ a| 
+Capacidade de desempenho
+ a| 
+Exibe o valor da capacidade de desempenho para cada cluster e o número de dias até que a capacidade de desempenho atinja o limite máximo.
+
+
+
+ a| 
+IOPS da carga de trabalho
+ a| 
+Exibe o número total de cargas de trabalho em execução no momento em um determinado intervalo de IOPS.
+
+
+
+ a| 
+Desempenho da carga de trabalho
+ a| 
+Exibe o número total de cargas de trabalho em conformidade e não conformes atribuídas a cada Nível de Serviço de Desempenho definido.
+
+
+
+ a| 
+Segurança
+ a| 
+Exibe o número de clusters que estão em conformidade ou não, o número de SVMs que estão em conformidade ou não e o número de volumes que estão criptografados ou não.
+
+
+
+ a| 
+Proteção
+ a| 
+Exibe o número de VMs de storage protegidas pela relação de SVM-DR, volumes protegidos pela relação do SnapMirror, volumes protegidos pelo Snapshot e clusters protegidos pelo MetroCluster.
+
+
+
+ a| 
+Visão geral de uso
+ a| 
+Exibe os clusters classificados por maior IOPS, maior taxa de transferência (MBps) ou maior capacidade física utilizada.
+
+|===

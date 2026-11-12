@@ -1,0 +1,23 @@
+---
+permalink: storage-mgmt/task_view_active_events_from_notification_bell.html 
+sidebar: sidebar 
+keywords: view, active, events, notification, bell 
+summary: O sino de notificação na barra de menus oferece uma maneira rápida de visualizar os eventos ativos mais importantes que o Unified Manager está monitorando. 
+---
+= Visualize os eventos ativos a partir do ícone de notificação no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O ícone de sino de notificação (image:../media/notification_bell.png[""]) na barra de menu fornece uma maneira rápida de visualizar os eventos ativos mais importantes que o Unified Manager está monitorando.
+
+A lista de eventos ativos permite visualizar o número total de eventos críticos, de erro, de aviso e de atualização em todos os clusters. Essa lista inclui eventos dos últimos 7 dias e não inclui eventos de informação. Você pode clicar em um link para exibir a lista de eventos que mais interessam a você.
+
+Observe que, quando um cluster está inacessível, o Unified Manager exibe essas informações nesta página. Você pode visualizar informações detalhadas sobre um cluster inacessível clicando no botão *Details*. Essa ação abre a página Event details. Problemas de monitoramento de escala, como pouco espaço ou RAM insuficiente na estação de gerenciamento, também são exibidos nesta página.
+
+.Passos
+. Na barra de menus, clique em image:../media/notification_bell.png[""].
+. Para visualizar os detalhes de qualquer um dos eventos ativos, clique no link de texto do evento, como "2 Capacity" ou "4 Performance".
+

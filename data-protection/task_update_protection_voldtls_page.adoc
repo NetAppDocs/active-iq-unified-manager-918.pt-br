@@ -1,0 +1,59 @@
+---
+permalink: data-protection/task_update_protection_voldtls_page.html 
+sidebar: sidebar 
+keywords: initialize, update, protection, relationships, volume, health details page 
+summary: Você pode realizar uma transferência completa em uma nova relação de proteção ou atualizar uma relação já inicializada, caso queira realizar uma atualização incremental manual e não programada para transferir os dados imediatamente. 
+---
+= Inicialize ou atualize as relações de proteção na página de detalhes de Volume/Integridade no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode realizar uma transferência completa em uma nova relação de proteção ou atualizar uma relação já inicializada, caso queira realizar uma atualização incremental manual e não programada para transferir os dados imediatamente.
+
+*NOTA*: não é possível inicializar ou atualizar volumes protegidos por Consistency Groups.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+* Você precisa ter configurado o OnCommand Workflow Automation.
+
+
+.Passos
+. Na guia *Proteção* da página de detalhes *Volume / Saúde*, localize na topologia a relação de proteção que deseja inicializar ou atualizar e clique com o botão direito do mouse sobre ela.
+. Selecione *Inicializar/Atualizar* no menu.
++
+Como alternativa, no menu *Ações*, selecione *Relação* > *Inicializar/Atualizar* para inicializar ou atualizar a relação cujos detalhes você está visualizando.
+
++
+A caixa de diálogo Inicializar/Atualizar é exibida.
+
+. Na aba *Opções de Transferência*, selecione uma prioridade de transferência e a taxa máxima de transferência.
+. Clique em *Cópias Snapshot de origem*; em seguida, na coluna *Cópia Snapshot*, clique em *Padrão*.
++
+A caixa de diálogo Selecionar cópia Snapshot de origem é exibida.
+
+. Se você quiser especificar uma cópia Snapshot existente em vez de transferir a cópia Snapshot padrão, clique em *Cópia Snapshot existente* e selecione uma cópia Snapshot na lista.
+. Clique em *Enviar*.
++
+Você retorna à caixa de diálogo Inicializar/Atualizar.
+
+. Se você selecionou mais de uma fonte para inicializar ou atualizar, clique em *Padrão* para a próxima fonte de leitura/gravação para a qual deseja especificar uma cópia Snapshot existente.
++
+Não é possível selecionar uma cópia Snapshot diferente para volumes de proteção de dados.
+
+. Clique em *Enviar* para iniciar a tarefa de inicialização ou atualização.
++
+A tarefa de inicialização ou atualização é iniciada, você retorna à página de detalhes de Volume / Integridade e um link de tarefas é exibido na parte superior da página.
+
+. *Opcional:* Clique em *Visualizar Tarefas* na página de detalhes *Volume / Saúde* para acompanhar o status de cada tarefa de inicialização ou atualização.
++
+Uma lista filtrada de tarefas é exibida.
+
+. *Opcional:* clique em cada tarefa para ver seus detalhes.
+. *Opcional:* clique na seta Voltar do seu navegador para retornar à página de detalhes de *Volume / Health*.
++
+A operação de inicialização ou atualização é concluída quando todas as tarefas do trabalho são concluídas com êxito.
+
+

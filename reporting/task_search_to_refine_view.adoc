@@ -1,0 +1,23 @@
+---
+permalink: reporting/task_search_to_refine_view.html 
+sidebar: sidebar 
+keywords: search, refine, view 
+summary: Após obter a visualização desejada, você pode refinar ainda mais os resultados usando o campo Search para se concentrar nos resultados que deseja incluir no relatório. 
+---
+= Pesquise para refinar sua visualização no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após obter a visualização desejada, você pode refinar ainda mais os resultados usando o campo Search para se concentrar nos resultados que deseja incluir no relatório.
+
+.Passos
+. Abra a visualização personalizada ou padrão que você deseja usar como base para o seu relatório.
+. Digite no campo de pesquisa para refinar os dados listados na visualização. Você pode inserir dados parciais em qualquer uma das colunas exibidas. Por exemplo, se quiser pesquisar nós que incluam "US_East" no nome, você pode refinar a lista completa de nós.
++
+Os resultados da sua pesquisa são salvos na visualização personalizada e usados no relatório agendado resultante.
+
+. Dê um nome à visualização não salva para salvar suas alterações.
+

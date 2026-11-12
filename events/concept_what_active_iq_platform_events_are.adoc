@@ -1,0 +1,24 @@
+---
+permalink: events/concept_what_active_iq_platform_events_are.html 
+sidebar: sidebar 
+keywords: active iq, platform, events 
+summary: O Unified Manager pode exibir eventos que foram descobertos pela plataforma Active IQ. Esses eventos são criados pela execução de um conjunto de regras em mensagens AutoSupport geradas por todos os sistemas de armazenamento monitorados pelo Unified Manager. 
+---
+= Saiba mais sobre os eventos da plataforma Active IQ no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Unified Manager pode exibir eventos que foram descobertos pela plataforma Active IQ. Esses eventos são criados pela execução de um conjunto de regras em mensagens AutoSupport geradas por todos os sistemas de armazenamento monitorados pelo Unified Manager.
+
+Para obter mais informações, consulte link:../events/concept_how_active_iq_platform_events_are_generated.html["Como os eventos da plataforma Active IQ são gerados"].
+
+O Unified Manager verifica automaticamente se há um novo arquivo de regras e só baixa um novo arquivo quando há regras mais recentes. Em sites sem acesso externo à rede, você precisa carregar as regras manualmente em *Storage Management* > *Event Setup* > *Upload Rules*.
+
+Esses eventos do Active IQ não se sobrepõem aos eventos existentes do Unified Manager e identificam incidentes ou riscos relacionados à configuração do sistema, ao cabeamento, às melhores práticas e aos problemas de disponibilidade.
+
+Para obter mais informações sobre como ativar eventos da plataforma, consulte link:../config/concept_active_iq_platform_events.html["Habilitando eventos do portal Active IQ"]. Para obter mais informações sobre como carregar o arquivo de regras, consulte link:../events/task_upload_new_active_iq_rules_file.html["Carregando um novo arquivo de regras do Active IQ"].
+
+NetApp Active IQ é um serviço baseado em nuvem que fornece análises preditivas e suporte proativo para otimizar as operações do sistema de storage em toda a nuvem híbrida NetApp. Veja  https://docs.netapp.com/us-en/active-iq/index.html["O NetApp Active IQ"^] para mais informações.

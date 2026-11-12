@@ -1,0 +1,25 @@
+---
+permalink: health-checker/task_add_annotations_dynamically.html 
+sidebar: sidebar 
+keywords: add, annotations, dynamically 
+summary: 'Ao criar anotações personalizadas, o Unified Manager associa dinamicamente clusters, máquinas virtuais de armazenamento (SVMs) e volumes às anotações por meio de regras. Essas regras atribuem automaticamente as anotações aos objetos de armazenamento.' 
+---
+= Adicione anotações dinamicamente no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ao criar anotações personalizadas, o Unified Manager associa dinamicamente clusters, máquinas virtuais de armazenamento (SVMs) e volumes às anotações por meio de regras. Essas regras atribuem automaticamente as anotações aos objetos de armazenamento.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Anotações*.
+. Na página *Anotações*, clique em *Adicionar Anotação*.
+. Na caixa de diálogo *Add Annotation*, digite um nome e uma descrição para a anotação.
+. Opcional: na seção *Valores da Anotação*, clique em *Adicionar* para adicionar valores à anotação.
+. Clique em *Salvar*.
+

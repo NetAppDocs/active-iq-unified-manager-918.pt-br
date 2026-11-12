@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_remove_protection_relationship_voldtls.html 
+sidebar: sidebar 
+keywords: remove, protection, relationship,  volume, health details page 
+summary: Remova permanentemente uma relação de proteção entre uma origem e um destino selecionados. Esta ação remove todos os metadados e não pode ser desfeita. 
+---
+= Remova uma relação de proteção da página Detalhes de Volume/Saúde em Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode remover uma relação de proteção para excluir permanentemente uma relação existente entre a origem e o destino selecionados: por exemplo, quando quiser criar uma relação usando um destino diferente. Essa operação remove todos os metadados e não pode ser desfeita.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+* Você precisa ter configurado o Workflow Automation.
+
+
+.Passos
+. Na aba *Proteção* da página de detalhes *Volume / Saúde*, selecione na topologia a relação do SnapMirror que você deseja remover.
+. Clique com o botão direito do mouse no nome do destino e selecione *Remover* no menu.
++
+A caixa de diálogo Remover relacionamento é exibida.
+
+. Clique em *Continuar* para remover a relação.
++
+A relação foi removida da página de detalhes de Volume / Health.
+
+

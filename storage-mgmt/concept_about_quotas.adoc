@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_about_quotas.html 
+sidebar: sidebar 
+keywords: about, quotas 
+summary: As quotas permitem restringir ou rastrear o espaço de disco e o número de arquivos usados por um usuário, grupo ou qtree. Você especifica as quotas usando o arquivo /etc/quotas. As quotas são aplicadas a um volume ou qtree. 
+---
+= Saiba mais sobre cotas no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As quotas permitem restringir ou rastrear o espaço de disco e o número de arquivos usados por um usuário, grupo ou qtree. Você especifica as quotas usando o arquivo `/etc/quotas`. As quotas são aplicadas a um volume ou qtree.

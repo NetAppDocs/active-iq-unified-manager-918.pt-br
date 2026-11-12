@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_use_performance_capacity_used_counter.html 
+sidebar: sidebar 
+keywords: performance, capacity, counter, manage, performance 
+summary: Normalmente, as organizações querem operar com uma porcentagem de capacidade de desempenho usada abaixo de 100 para usar os recursos com eficiência e, ao mesmo tempo, reservar alguma capacidade de desempenho adicional para dar suporte às demandas dos períodos de pico. Você pode usar políticas de limiar para personalizar quando os alertas são enviados para valores altos de capacidade de desempenho usada. 
+---
+= Utilize o contador de capacidade de desempenho utilizada no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Normalmente, as organizações querem operar com uma porcentagem de capacidade de desempenho usada abaixo de 100 para usar os recursos com eficiência e, ao mesmo tempo, reservar alguma capacidade de desempenho adicional para dar suporte às demandas dos períodos de pico. Você pode usar políticas de limiar para personalizar quando os alertas são enviados para valores altos de capacidade de desempenho usada.
+
+Você pode estabelecer metas específicas com base nos seus requisitos de desempenho. Por exemplo, empresas de serviços financeiros podem reservar mais capacidade de desempenho para garantir a execução oportuna de negociações. Essas empresas podem definir limites de capacidade de desempenho utilizada na faixa de 70 a 80%. Empresas de manufatura com margens menores podem optar por reservar menos capacidade de desempenho se estiverem dispostas a sacrificar o desempenho para gerenciar melhor os custos de TI. Essas empresas podem definir limites de capacidade de desempenho utilizada na faixa de 85 a 95%.
+
+Quando o valor da capacidade de desempenho utilizada excede a porcentagem definida em uma política de limite definida pelo usuário, o Unified Manager envia um e-mail de alerta e adiciona o evento à página de Inventário de Eventos. Isso permite que você gerencie problemas potenciais antes que eles afetem o desempenho. Esses eventos também podem ser usados como indicadores de que você precisa fazer movimentações e alterações de carga de trabalho em seus nós e agregados.

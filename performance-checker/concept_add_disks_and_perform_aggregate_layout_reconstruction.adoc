@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_add_disks_and_perform_aggregate_layout_reconstruction.html 
+sidebar: sidebar 
+keywords: add, disks, perform, aggregate, layout, reconstruction 
+summary: Você pode adicionar discos a um agregado para aumentar a capacidade de storage e o desempenho desse agregado. Após adicionar os discos, você só verá uma melhoria no desempenho depois de reconstruir o agregado. 
+---
+= Entenda como a adição de discos afeta o layout do agregado no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode adicionar discos a um agregado para aumentar a capacidade de storage e o desempenho desse agregado. Após adicionar os discos, você só verá uma melhoria no desempenho depois de reconstruir o agregado.
+
+Ao receber um evento de limite definido pelo sistema na página Detalhes do evento, o texto de descrição do evento lista o nome do agregado que está apresentando o problema. Você pode adicionar discos e reconstruir os dados nesse agregado.
+
+Os discos que você adicionar ao agregado já devem existir no cluster. Se o cluster não tiver discos adicionais disponíveis, talvez seja necessário entrar em contato com seu administrador ou adquirir mais discos. Você pode usar o ONTAP System Manager ou os comandos do ONTAP para adicionar discos a um agregado.
+
+https://www.netapp.com/pdf.html?item=/media/19675-tr-3838.pdf["Relatório Técnico 3838: guia de Configuração do Subsistema de Armazenamento"^]

@@ -1,0 +1,36 @@
+---
+permalink: performance-checker/concept_move_logical_interfaces.html 
+sidebar: sidebar 
+keywords: move, logical, interfaces, lifs 
+summary: 'Mover interfaces lógicas (LIFs) para uma porta menos utilizada pode ajudar a melhorar o balanceamento de carga, auxiliar nas operações de manutenção e no ajuste de desempenho, além de reduzir o acesso indireto.' 
+---
+= Mova os LIFs para melhorar o desempenho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mover interfaces lógicas (LIFs) para uma porta menos utilizada pode ajudar a melhorar o balanceamento de carga, auxiliar nas operações de manutenção e no ajuste de desempenho, além de reduzir o acesso indireto.
+
+O acesso indireto pode reduzir a eficiência do sistema. Ele ocorre quando uma carga de trabalho de volume usa nós diferentes para processamento de rede e processamento de dados. Para reduzir o acesso indireto, você pode reorganizar as LIFs, o que envolve movê-las para usar o mesmo nó para processamento de rede e processamento de dados. Você pode configurar o balanceamento de carga para que o ONTAP mova automaticamente as LIFs ocupadas para uma porta diferente ou pode mover uma LIF manualmente.
+
+[cols="2*"]
+|===
+| *Benefícios* | *Considerações* 
+
+
+ a| 
+* Melhorar o balanceamento de carga.
+* Reduza o acesso indireto.
+
+ a| 
+[NOTE]
+====
+Ao mover uma LIF conectada a compartilhamentos CIFS, os clientes que acessam os compartilhamentos CIFS são desconectados. Quaisquer solicitações de leitura ou gravação nos compartilhamentos CIFS são interrompidas.
+
+====
+|===
+Você usa os comandos do ONTAP para configurar o balanceamento de carga. Para obter mais informações, consulte a documentação de rede do ONTAP.
+
+Você usa o ONTAP System Manager e os comandos da ONTAP CLI para mover LIFs manualmente.

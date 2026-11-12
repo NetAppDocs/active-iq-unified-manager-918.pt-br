@@ -1,0 +1,67 @@
+---
+permalink: events/reference_volume_move_status_events.html 
+sidebar: sidebar 
+keywords: volume, move, status, events, impact area, capacity 
+summary: Os eventos de status de movimentação de volume informam sobre o status da sua movimentação de volume, permitindo que você monitore possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade. 
+---
+= Saiba mais sobre eventos de status de movimentação de volume no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de status de movimentação de volume informam sobre o status da sua movimentação de volume, permitindo que você monitore possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade.
+
+
+
+[[impact-area-capacity]]
+== Área de impacto: capacidade
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Status da movimentação de volume: em andamento(não aplicável)
+ a| 
+Evento
+ a| 
+Volume
+ a| 
+Informação
+
+
+
+ a| 
+Status da movimentação de volume - Falha(ocumEvtVolumeMoveFailed)
+ a| 
+Risco
+ a| 
+Volume
+ a| 
+Erro
+
+
+
+ a| 
+Status da movimentação de volume: concluída(não aplicável)
+ a| 
+Evento
+ a| 
+Volume
+ a| 
+Informação
+
+
+
+ a| 
+Movimentação de Volume - Transição Adiada(ocumEvtVolumeMoveCutoverDeferred)
+ a| 
+Risco
+ a| 
+Volume
+ a| 
+Aviso
+
+|===

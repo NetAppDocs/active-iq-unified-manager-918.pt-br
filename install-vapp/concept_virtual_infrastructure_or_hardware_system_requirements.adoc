@@ -1,0 +1,81 @@
+---
+permalink: install-vapp/concept_virtual_infrastructure_or_hardware_system_requirements.html 
+sidebar: sidebar 
+keywords: virtual, infrastructure, hardware, system, requirements, virtual appliance 
+summary: A instalação do Unified Manager em infraestrutura virtual ou em um sistema físico deve atender aos requisitos mínimos de memória, CPU e espaço de disco. 
+---
+= Saiba mais sobre infraestrutura virtual e requisitos de hardware para o Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A instalação do Unified Manager em infraestrutura virtual ou em um sistema físico deve atender aos requisitos mínimos de memória, CPU e espaço de disco.
+
+A tabela a seguir exibe os valores recomendados para os recursos de memória, CPU e espaço de disco. Esses valores foram qualificados para que o Unified Manager atenda a níveis aceitáveis de desempenho.
+
+[cols="2*"]
+|===
+| Configuração de hardware | Configurações recomendadas 
+
+
+ a| 
+RAM
+ a| 
+12 GB
+
+
+
+ a| 
+Processadores
+ a| 
+4 CPUs
+
+
+
+ a| 
+Capacidade de ciclos da CPU
+ a| 
+9572 MHz no total (requisito mínimo de 9572 MHz)
+
+
+
+ a| 
+Espaço livre em disco
+ a| 
+* 5 GB (thin provisioning)
+* 152 GB (provisionamento thick)
+
+
+|===
+O Unified Manager pode ser instalado em sistemas com pouca memória, mas os 12 GB de RAM recomendados garantem que haja memória suficiente para um desempenho ideal e para que o sistema possa acomodar clusters e objetos de storage adicionais à medida que sua configuração cresce. Você não deve definir limites de memória na máquina virtual em que o Unified Manager está implantado nem habilitar recursos (por exemplo, ballooning) que impeçam o software de utilizar a memória alocada no sistema.
+
+Além disso, existe um limite para o número de nós que uma única instância do Unified Manager pode monitorar antes de você instalar uma segunda instância do Unified Manager. Para limites de nós, recomendações de CPU e memória, consulte link:https://www.netapp.com/pdf.html?item=/media/13504-tr4621.pdf["o Guia de Práticas Recomendadas do Unified Manager"^].
+
+A troca de páginas de memória impacta negativamente o desempenho do sistema e do aplicativo de gerenciamento. A competição por recursos de CPU indisponíveis devido à utilização geral do host pode degradar o desempenho.
+
+
+
+[[requirement-for-dedicated-use]]
+== Requisito para uso dedicado
+
+O sistema físico ou virtual no qual você instala o Unified Manager deve ser usado exclusivamente para o Unified Manager e não deve ser compartilhado com outros aplicativos. Outros aplicativos podem consumir recursos do sistema e reduzir drasticamente o desempenho do Unified Manager.
+
+
+
+[[space-requirements-for-backups]]
+== Requisitos de espaço para backups
+
+Se você planeja usar o recurso de backup e restauração do Unified Manager, aloque capacidade adicional para que o diretório ou disco "`data`" tenha 150 GB de espaço. Um backup pode ser gravado em um destino local ou em um destino remoto. A melhor prática é identificar um local remoto externo ao sistema host do Unified Manager que tenha no mínimo 150 GB de espaço.
+
+
+
+[[requirements-for-host-connectivity]]
+== Requisitos para conectividade de host
+
+O sistema físico ou virtual no qual você instala o Unified Manager deve ser configurado de forma que você possa `ping` obter o nome do host com sucesso a partir do próprio host. No caso de configuração IPv6, você deve verificar se `ping6` a obtenção do nome do host é bem-sucedida para garantir que a instalação do Unified Manager seja concluída com êxito.
+
+Você pode usar o nome do host (ou o endereço IP do host) para acessar a interface web do produto. Se você configurou um endereço IP estático para sua rede durante a implantação, então designou um nome para o host da rede. Se você configurou a rede usando DHCP, deve obter o nome do host do DNS.
+
+Se você planeja permitir que os usuários acessem o Unified Manager usando o nome curto em vez de usar o nome de domínio totalmente qualificado (FQDN) ou o endereço IP, sua configuração de rede precisa resolver esse nome curto para um FQDN válido.

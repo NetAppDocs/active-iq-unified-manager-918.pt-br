@@ -1,0 +1,71 @@
+---
+permalink: performance-checker/task_move_workloads_to_different_aggregate.html 
+sidebar: sidebar 
+keywords: move, workloads, different, aggregate 
+summary: Você pode usar o Unified Manager para ajudar a identificar um agregado menos ocupado do que o agregado em que suas cargas de trabalho residem atualmente e, em seguida, mover volumes ou LUNs selecionados para esse agregado. Mover cargas de trabalho de alto desempenho para um agregado menos ocupado ou para um agregado com storage flash habilitado permite que a carga de trabalho tenha melhor desempenho. 
+---
+= Mova as cargas de trabalho para um agregado diferente no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o Unified Manager para ajudar a identificar um agregado menos ocupado do que o agregado em que suas cargas de trabalho residem atualmente e, em seguida, mover volumes ou LUNs selecionados para esse agregado. Mover cargas de trabalho de alto desempenho para um agregado menos ocupado ou para um agregado com storage flash habilitado permite que a carga de trabalho tenha melhor desempenho.
+
+.Antes de começar
+* Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+* Você deve ter registrado o nome do agregado que está apresentando problemas de desempenho no momento.
+* Você deve ter registrado a data e a hora em que o agregado recebeu o evento.
+* O Unified Manager deve ter coletado e analisado dados de desempenho referentes a um mês ou mais.
+
+
+Estas etapas ajudam você a identificar os seguintes recursos para que possa mover cargas de trabalho de alto desempenho para um agregado com menor utilização:
+
+* Os agregados no mesmo cluster que são menos utilizados
+* Os volumes de melhor desempenho no agregado atual
+
+
+.Passos
+. Identifique o agregado no cluster que é o menos utilizado:
++
+.. Na página de detalhes do *Evento*, clique no nome do cluster no qual o agregado está localizado.
++
+Os detalhes do cluster são exibidos na página de destino Desempenho/Cluster.
+
+.. Na página *Resumo*, clique em *Agregados* no painel *Objetos Gerenciados*.
++
+A lista de agregados neste cluster é exibida.
+
+.. Clique na coluna *Utilização* para classificar os agregados pelos menos utilizados.
++
+Você também pode identificar os agregados que possuem a maior *Capacidade Livre*. Isso fornece uma lista de agregados potenciais para os quais você pode querer mover cargas de trabalho.
+
+.. Anote o nome do agregado para o qual você deseja mover as cargas de trabalho.
+
+
+. Identifique os volumes de alto desempenho do agregado que recebeu o evento:
++
+.. Clique no agregado que está apresentando o problema de desempenho.
++
+Os detalhes do agregado são exibidos na página Performance/Aggregate Explorer.
+
+.. No seletor *Intervalo de tempo*, selecione *Últimos 30 dias* e clique em *Aplicar intervalo*.
++
+Isso permite visualizar um período de histórico de desempenho mais longo do que as 72 horas padrão. Você pode querer mover um volume que esteja usando muitos recursos de forma consistente, e não apenas nas últimas 72 horas.
+
+.. No controle *Exibir e Comparar*, selecione *Volumes deste Agregado*.
++
+É exibida uma lista dos volumes FlexVol e dos volumes constituintes FlexGroup neste agregado.
+
+.. Ordene os volumes pelo maior valor em MB/s e, em seguida, pelo maior valor em IOPS, para visualizar os volumes com melhor desempenho.
+.. Anote os nomes dos volumes que você deseja mover para um agregado diferente.
+
+
+. Transfira os volumes de alto desempenho para o agregado que você identificou como tendo baixa utilização.
++
+Você pode executar a operação de movimentação usando o ONTAP System Manager, o OnCommand Workflow Automation, comandos do ONTAP ou uma combinação dessas ferramentas.
+
+
+
+Após alguns dias, verifique se você está recebendo o mesmo tipo de eventos deste nó ou agregado.

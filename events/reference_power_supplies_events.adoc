@@ -1,0 +1,34 @@
+---
+permalink: events/reference_power_supplies_events.html 
+sidebar: sidebar 
+keywords: power, supplies, events, impact area, availability 
+summary: Os eventos relacionados às fontes de alimentação fornecem informações sobre o status do seu hardware, permitindo que você monitore possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e da trap, o nível de impacto, o tipo de origem e a gravidade. 
+---
+= Saiba mais sobre eventos relacionados a fontes de alimentação no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos relacionados às fontes de alimentação fornecem informações sobre o status do seu hardware, permitindo que você monitore possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e da trap, o nível de impacto, o tipo de origem e a gravidade.
+
+
+
+[[impact-area-availability]]
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Uma ou mais fontes de alimentação com falha(ocumEvtPowerSupplyOneOrMoreFailed)
+ a| 
+Incidente
+ a| 
+Nó
+ a| 
+Crítico
+
+|===

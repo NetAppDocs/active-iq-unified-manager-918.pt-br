@@ -1,0 +1,53 @@
+---
+permalink: health-checker/task_view_details_about_cifs_shares.html 
+sidebar: sidebar 
+keywords: smb, cifs, view, shares, details 
+summary: 'Veja detalhes sobre compartilhamentos SMB/CIFS, como nome do compartilhamento, caminho de junção, configurações de segurança e políticas de exportação, usando a visualização "Todos os compartilhamentos SMB" na página "Saúde".' 
+---
+= Veja detalhes sobre compartilhamentos SMB/CIFS no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar detalhes sobre todos os compartilhamentos SMB/CIFS, como o nome do compartilhamento, o caminho de junção, os objetos que ele contém, as configurações de segurança e as políticas de exportação definidas para o compartilhamento. Use a visualização "Health: All SMB Shares" para ver todos os compartilhamentos SMB em todos os clusters monitorados e use a página de detalhes "Storage VM / Health" para visualizar todos os compartilhamentos SMB em uma máquina virtual de storage (SVM) específica.
+
+.Antes de começar
+* A licença CIFS deve estar habilitada no cluster.
+* As interfaces de rede que atendem aos compartilhamentos SMB/CIFS devem ser configuradas.
+* Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+
+
+[NOTE]
+====
+Os compartilhamentos em pastas não são exibidos.
+
+====
+.Etapa
+. No painel de navegação à esquerda, siga as etapas abaixo, dependendo de você querer visualizar todos os compartilhamentos SMB/CIFS ou apenas os compartilhamentos de uma SVM específica.
++
+[cols="2*"]
+|===
+| Para... | Siga estes passos... 
+
+
+ a| 
+Veja todos os compartilhamentos SMB/CIFS
+ a| 
+Clique em *Storage* > *SMB Shares*
+
+
+
+ a| 
+Visualize os compartilhamentos SMB/CIFS para uma única SVM
+ a| 
+.. Clique em *Armazenamento* > *VMs de armazenamento*
+.. Clique na SVM para a qual você deseja visualizar os detalhes do compartilhamento SMB/CIFS.
+.. Na página de detalhes de integridade/VM de storage, clique na guia *Compartilhamentos SMB*.
+
+
+|===
+
+
+Para obter mais informações, consulte link:../api-automation/concept_provision_file_share.html["Provisionamento de compartilhamentos de arquivos CIFS e NFS usando APIs"].

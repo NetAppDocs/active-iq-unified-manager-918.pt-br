@@ -1,0 +1,37 @@
+---
+permalink: config/task_disable_saml_authentication_um.html 
+sidebar: sidebar 
+keywords: disable, saml authentication 
+summary: 'Você pode desativar a autenticação SAML quando desejar interromper a autenticação de usuários remotos por meio de um provedor de identidade (IdP) seguro antes que eles possam fazer login na interface web do Unified Manager. Quando a autenticação SAML está desativada, os provedores de serviço de diretório configurados, como o Active Directory ou o LDAP, realizam a autenticação de login.' 
+---
+= Desative a autenticação SAML no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode desativar a autenticação SAML quando desejar interromper a autenticação de usuários remotos por meio de um provedor de identidade (IdP) seguro antes que eles possam fazer login na interface web do Unified Manager. Quando a autenticação SAML está desativada, os provedores de serviço de diretório configurados, como o Active Directory ou o LDAP, realizam a autenticação de login.
+
+Após desativar a autenticação SAML, os usuários locais e os usuários de manutenção poderão acessar a interface gráfica do usuário, além dos usuários remotos configurados.
+
+Você também pode desativar a autenticação SAML usando o console de manutenção do Unified Manager, caso não tenha acesso à interface gráfica de usuário.
+
+[NOTE]
+====
+O Unified Manager é reiniciado automaticamente após a desativação da autenticação SAML.
+
+====
+.Passos
+. No painel de navegação esquerdo, clique em *Geral* > *Autenticação SAML*.
+. Desmarque a caixa de seleção *Ativar autenticação SAML*.
+. Clique em *Salvar*.
++
+Uma caixa de mensagem será exibida para confirmar que você deseja concluir a configuração e reiniciar o Unified Manager.
+
+. Clique em *Confirmar e Sair* e o Unified Manager será reiniciado.
+
+
+Na próxima vez que os usuários remotos tentarem acessar a interface gráfica do Unified Manager, eles inserirão suas credenciais na página de login do Unified Manager em vez da página de login do IdP.
+
+Acesse seu IdP e exclua o URI do servidor do Unified Manager e os metadados.

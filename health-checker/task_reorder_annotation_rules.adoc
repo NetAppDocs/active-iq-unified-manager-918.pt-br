@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_reorder_annotation_rules.html 
+sidebar: sidebar 
+keywords: reorder, annotation rules 
+summary: Você pode alterar a ordem em que o Unified Manager aplica as regras de anotação aos objetos de armazenamento. As regras de anotação são aplicadas aos objetos de armazenamento sequencialmente com base na sua classificação. Ao configurar uma regra de anotação, a classificação é a mais baixa. No entanto, você pode alterar a classificação da regra de anotação de acordo com suas necessidades. 
+---
+= Reordenar regras de anotação no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode alterar a ordem em que o Unified Manager aplica as regras de anotação aos objetos de armazenamento. As regras de anotação são aplicadas aos objetos de armazenamento sequencialmente com base na sua classificação. Ao configurar uma regra de anotação, a classificação é a mais baixa. No entanto, você pode alterar a classificação da regra de anotação de acordo com suas necessidades.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Você pode selecionar uma única linha ou várias linhas e realizar muitas operações de arrastar e soltar para alterar a classificação das regras de anotação. No entanto, você deve salvar as alterações para que a repriorização seja exibida na guia Annotation Rules.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Anotações*.
+. Na aba *Regras de Anotação*, clique em *Reordenar*.
+. Na caixa de diálogo *Reordenar Regra de Anotação*, arraste e solte uma ou várias linhas para reorganizar a sequência das regras de anotação.
+. Clique em *Salvar*.
++
+Você precisa salvar as alterações para que a reordenação apareça.
+
+

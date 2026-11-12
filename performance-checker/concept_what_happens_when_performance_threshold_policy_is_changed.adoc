@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/concept_what_happens_when_performance_threshold_policy_is_changed.html 
+sidebar: sidebar 
+keywords: happens, performance, threshold, policy, changed 
+summary: Se você ajustar o valor do contador ou a duração de uma política de limite de desempenho existente, a alteração da política será aplicada a todos os objetos de storage que usam a política. A nova configuração entra em vigor imediatamente, e o Unified Manager começa a comparar os valores do contador de desempenho com as novas configurações de limite para todos os dados de desempenho recém-coletados. 
+---
+= Entenda as alterações nas políticas de limite de desempenho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se você ajustar o valor do contador ou a duração de uma política de limite de desempenho existente, a alteração da política será aplicada a todos os objetos de storage que usam a política. A nova configuração entra em vigor imediatamente, e o Unified Manager começa a comparar os valores do contador de desempenho com as novas configurações de limite para todos os dados de desempenho recém-coletados.
+
+Se existirem eventos ativos para objetos que estejam usando a política de limite alterada, os eventos serão marcados como obsoletos e a política de limite começará a monitorar o contador como uma política de limite recém-definida.
+
+Ao visualizar o contador ao qual o limite foi aplicado na Visualização Detalhada dos Gráficos de Contadores, as linhas de limite crítico e de aviso refletem as configurações de limite atuais. As configurações de limite originais não aparecem nesta página, mesmo se você visualizar dados históricos quando a configuração de limite antiga estava em vigor.
+
+[NOTE]
+====
+Como as configurações de limite mais antigas não aparecem na Visualização detalhada dos gráficos do contador, você poderá ver eventos históricos que parecem estar abaixo das linhas de limite atuais.
+
+====

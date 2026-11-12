@@ -1,0 +1,29 @@
+---
+permalink: data-protection/task_configure_protection_destination_settings.html 
+sidebar: sidebar 
+keywords: configure, destination, efficiency, settings 
+summary: Você pode configurar as configurações de eficiência do destino, como deduplicação, compactação, crescimento automático e garantia de espaço, em um destino de proteção usando a caixa de diálogo Configurações avançadas de destino. Você usa essas configurações quando quiser maximizar a utilização do espaço em um destino ou volume secundário. 
+---
+= Configure as configurações de eficiência do destino no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar as configurações de eficiência do destino, como deduplicação, compactação, crescimento automático e garantia de espaço, em um destino de proteção usando a caixa de diálogo Configurações avançadas de destino. Você usa essas configurações quando quiser maximizar a utilização do espaço em um destino ou volume secundário.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Por padrão, as configurações de eficiência correspondem às do volume de origem, exceto as configurações de compressão em uma relação do SnapVault, que são desativadas por padrão.
+
+.Passos
+. Na caixa de diálogo *Configurar Proteção*, clique na guia *SnapMirror* ou na guia *SnapVault*, dependendo do tipo de relacionamento que você está configurando.
+. Clique em *Avançado* na área *Informações sobre o destino*.
++
+A caixa de diálogo Configurações avançadas de destino é aberta.
+
+. Ative ou desative as configurações de eficiência para desduplicação, compactação, crescimento automático e garantia de espaço, conforme necessário.
+. Clique em *Aplicar* para salvar suas seleções e voltar à caixa de diálogo *Configurar proteção*.
+

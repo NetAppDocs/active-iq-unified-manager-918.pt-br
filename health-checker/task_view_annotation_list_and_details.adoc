@@ -1,0 +1,19 @@
+---
+permalink: health-checker/task_view_annotation_list_and_details.html 
+sidebar: sidebar 
+keywords: view, annotation list, details 
+summary: 'Você pode visualizar a lista de anotações que são associadas dinamicamente a clusters, volumes e máquinas virtuais de storage (SVMs). Você também pode visualizar detalhes como a descrição, criado por, a data de criação, os valores, as regras e os objetos associados à anotação.' 
+---
+= Veja a lista de anotações e detalhes no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar a lista de anotações que são associadas dinamicamente a clusters, volumes e máquinas virtuais de storage (SVMs). Você também pode visualizar detalhes como a descrição, criado por, a data de criação, os valores, as regras e os objetos associados à anotação.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Anotações*.
+. Na aba *Anotações*, clique no nome da anotação para visualizar os detalhes associados.
+

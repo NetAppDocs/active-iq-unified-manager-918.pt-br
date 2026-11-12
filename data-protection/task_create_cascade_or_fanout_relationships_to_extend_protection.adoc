@@ -1,0 +1,39 @@
+---
+permalink: data-protection/task_create_cascade_or_fanout_relationships_to_extend_protection.html 
+sidebar: sidebar 
+keywords: create, cascade fanout, relationships, extend protection, existing protection relationship 
+summary: 'Você pode estender a proteção de um relacionamento existente criando um desdobramento (fan-out) a partir do volume de origem ou uma cascata (cascade) a partir do volume de destino de um relacionamento existente. Isso pode ser útil quando você precisa copiar dados de um site para vários sites ou fornecer proteção adicional criando mais backups.' 
+---
+= Amplie a proteção usando relações em cascata ou ramificação no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode estender a proteção de um relacionamento existente criando um desdobramento (fan-out) a partir do volume de origem ou uma cascata (cascade) a partir do volume de destino de um relacionamento existente. Isso pode ser útil quando você precisa copiar dados de um site para vários sites ou fornecer proteção adicional criando mais backups.
+
+Você pode estender a proteção a volumes usando o grupo de consistência, que é um contêiner que contém vários volumes para que você possa gerenciar todos os volumes como uma única entidade. Você pode visualizar o Grupo de consistência de sincronização ativa do SnapMirror e a relação de grupo de consistência síncrona na página Relacionamentos do Unified Manager.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+* Você precisa ter configurado o Workflow Automation.
+
+
+.Passos
+. Clique em *Proteção* > *Relacionamentos*. Como alternativa, você pode visualizar os relacionamentos na página de detalhes do volume.
+. Na página *Relações de Volume*, selecione a relação do SnapMirror da qual você deseja estender a proteção.
+. Na barra de ações, clique em *Extend Protection*.
+. No menu, selecione *Da origem* ou *Do destino*, dependendo de você estar criando uma relação de fanout a partir da origem ou uma relação em cascata a partir do destino.
+. Selecione *Com SnapMirror* ou *Com SnapVault* dependendo do tipo de relação de proteção que você está criando.
++
+A caixa de diálogo *Configure Protection* é exibida.
+
++
+[NOTE]
+====
+Isso pode ser feito na página de detalhes unified relationship / Volume Relationship e Volume / Health.
+
+====
+. Preencha as informações conforme indicado na caixa de diálogo *Configurar Proteção*.
+

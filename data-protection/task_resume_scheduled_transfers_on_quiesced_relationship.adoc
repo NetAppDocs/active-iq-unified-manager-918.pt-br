@@ -1,0 +1,41 @@
+---
+permalink: data-protection/task_resume_scheduled_transfers_on_quiesced_relationship.html 
+sidebar: sidebar 
+keywords: resume, schedule, transfers, quiesce, relationship, volume relationships page 
+summary: 'Após interromper uma relação para impedir que as transferências agendadas ocorram, você pode usar a opção "Retomar" para reativá-las, protegendo assim os dados no volume de origem ou primário. As transferências são retomadas a partir de um ponto de verificação, se houver, no próximo intervalo de transferência agendado.' 
+---
+= Retome as transferências agendadas em uma relação inativa na página "Relacionamentos de Volume" no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de interromper uma relação para impedir que ocorram transferências agendadas, você pode usar *Resume* para reativá-las, de modo que os dados no volume de origem ou primário fiquem protegidos. As transferências são retomadas a partir de um ponto de verificação, se houver, no próximo intervalo de transferência agendado.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+* Você precisa ter configurado o Workflow Automation.
+
+
+Você pode selecionar no máximo 10 relacionamentos em pausa para retomar as transferências.
+
+.Passos
+. Na página *Relações* entre volumes, selecione um ou mais volumes com relações suspensas e, na barra de ferramentas, clique em *Retomar*.
+. Na caixa de diálogo *Retomar*, clique em *Continuar*.
++
+Você retorna à página Relações de volume.
+
+. Para ver as tarefas relacionadas e acompanhar o andamento delas, clique no link do trabalho exibido na parte superior da página *Volume Relationships*.
+. Faça um dos seguintes procedimentos:
++
+** Se apenas um trabalho for exibido, na página Detalhes do trabalho, clique em *Atualizar* para atualizar a lista de tarefas e os detalhes da tarefa associados ao trabalho de configuração de proteção e determinar quando o trabalho será concluído.
+** Se mais de um trabalho for exibido,
++
+... Na página Jobs, clique no job cujos detalhes você deseja visualizar.
+... Na página Detalhes do job, clique em *Refresh* para atualizar a lista de tarefas e os detalhes da tarefa associados ao job de configuração de proteção e determinar quando o job é concluído. Depois que os jobs terminarem, as transferências de dados serão retomadas no próximo intervalo de transferência agendado.
+
+
+
+
+

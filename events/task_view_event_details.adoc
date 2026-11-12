@@ -1,0 +1,31 @@
+---
+permalink: events/task_view_event_details.html 
+sidebar: sidebar 
+keywords: view, events, details 
+summary: 'Você pode visualizar detalhes sobre um evento acionado pelo Unified Manager para tomar medidas corretivas. Por exemplo, se houver um evento de integridade "Volume Offline", você pode clicar nesse evento para visualizar os detalhes e executar ações corretivas.' 
+---
+= Veja os detalhes do evento no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar detalhes sobre um evento acionado pelo Unified Manager para tomar medidas corretivas. Por exemplo, se houver um evento de integridade "Volume Offline", você pode clicar nesse evento para visualizar os detalhes e executar ações corretivas.
+
+.Antes de começar
+Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+
+Os detalhes do evento incluem informações como a fonte do evento, a causa do evento e quaisquer notas relacionadas ao evento.
+
+.Passos
+. No painel de navegação à esquerda, clique em *Event Management*.
++
+Por padrão, a visualização Todos os eventos ativos exibe os eventos Novos e Reconhecidos (ativos) que foram gerados nos 7 dias anteriores e que têm um Nível de Impacto de Incidente ou Risco.
+
+. Se você quiser visualizar uma categoria específica de eventos, por exemplo, eventos de capacidade ou eventos de desempenho, clique em *Visualizar* e selecione no menu de tipos de eventos.
+. Clique no nome do evento para o qual você deseja visualizar os detalhes.
++
+Os detalhes do evento são exibidos na página de detalhes do evento.
+
+

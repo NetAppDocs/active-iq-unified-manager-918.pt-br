@@ -1,0 +1,26 @@
+---
+permalink: reporting/concept_customize_reports.html 
+sidebar: sidebar 
+keywords: customize, reports 
+summary: Existem muitas maneiras de personalizar as visualizações para que você possa criar um relatório que contenha todas as informações necessárias para gerenciar seus clusters do ONTAP. 
+---
+= Personalize relatórios no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Existem muitas maneiras de personalizar as visualizações para que você possa criar um relatório que contenha todas as informações necessárias para gerenciar seus clusters do ONTAP.
+
+Comece com uma página de inventário padrão ou uma visualização personalizada e, em seguida, personalize-a adicionando ou removendo colunas, alterando a ordem das colunas, filtrando os dados ou classificando-os por uma coluna específica em ordem crescente ou decrescente.
+
+A partir do Unified Manager 9.8, você também pode baixar a visualização no Excel para personalizá-la usando recursos avançados. Quando terminar, carregue o arquivo do Excel personalizado. Se você agendar um relatório usando essa visualização, ele usará o arquivo do Excel personalizado para criar relatórios robustos que você poderá compartilhar.
+
+Para obter mais informações sobre como personalizar relatórios usando o Excel, consulte _Exemplos de relatórios do Microsoft Excel_.
+
+[NOTE]
+====
+Você precisa ter a função de Application Administrator ou Storage Administrator para gerenciar relatórios.
+
+====

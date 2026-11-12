@@ -1,0 +1,53 @@
+---
+permalink: performance-checker/concept_types_of_workloads_monitored_by_unified_manager.html 
+sidebar: sidebar 
+keywords: types, workloads, monitored, unified manager 
+summary: 'Use o Unified Manager para monitorar o desempenho de dois tipos de carga de trabalho: definidas pelo usuário e definidas pelo sistema.' 
+---
+= Monitore os tipos de carga de trabalho com o Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o Unified Manager para monitorar o desempenho de dois tipos de cargas de trabalho: definidas pelo usuário e definidas pelo sistema.
+
+* *_Cargas de trabalho definidas pelo usuário_*
++
+A taxa de transferência de E/S dos aplicativos para o cluster. Esses são os processos envolvidos em solicitações de leitura e gravação. Um volume, uma LUN, um compartilhamento NFS, um compartilhamento SMB/CIFS e uma carga de trabalho são cargas de trabalho definidas pelo usuário.
+
++
+[NOTE]
+====
+O Unified Manager monitora apenas a atividade da carga de trabalho no cluster. Ele não monitora os aplicativos, os clientes ou os caminhos entre os aplicativos e o cluster.
+
+====
++
+Se uma ou mais das seguintes condições forem verdadeiras para uma carga de trabalho, ela não poderá ser monitorada pelo Unified Manager:
+
++
+** Trata-se de uma cópia de proteção de dados (DP) em modo somente leitura. (Os volumes DP são monitorados quanto ao tráfego gerado pelo usuário.)
+** Trata-se de um clone de dados offline.
+** Trata-se de um volume espelhado em uma configuração MetroCluster.
+
+
+* *_Cargas de trabalho definidas pelo sistema_*
++
+Os processos internos envolvidos na eficiência de storage, replicação de dados e integridade do sistema, incluindo:
+
++
+** Eficiência de storage, como a deduplicação
+** Saúde do disco, que inclui reconstrução de RAID, limpeza de disco e assim por diante
+** Replicação de dados, como cópias do SnapMirror
+** Atividades de gestão
+** Saúde do sistema de arquivos, que inclui várias atividades do WAFL
+** Scanners do sistema de arquivos, como WAFL scan
+** Descarregamento de cópias, como operações de eficiência de storage descarregadas de hosts VMware
+** Saúde do sistema, como movimentação de volumes, compressão de dados e assim por diante
+** Volumes não monitorados
+
+
+
+
+Os dados de desempenho para cargas de trabalho definidas pelo sistema são exibidos na GUI somente quando o componente do cluster usado por essas cargas de trabalho está em contenção. Por exemplo, não é possível pesquisar o nome de uma carga de trabalho definida pelo sistema para visualizar seus dados de desempenho na GUI.

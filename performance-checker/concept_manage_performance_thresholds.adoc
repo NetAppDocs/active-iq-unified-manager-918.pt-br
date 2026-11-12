@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_manage_performance_thresholds.html 
+sidebar: sidebar 
+keywords: manage, performance, thresholds 
+summary: As políticas de limite de desempenho permitem que você determine o ponto em que o Unified Manager gera um evento para informar os administradores do sistema sobre problemas que podem estar afetando o desempenho da carga de trabalho. Essas políticas de limite são conhecidas como limites de desempenho definidos pelo usuário. 
+---
+= Gerencie os limites de desempenho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As políticas de limite de desempenho permitem determinar o ponto em que o Unified Manager gera um evento para informar os administradores do sistema sobre problemas que podem estar afetando o desempenho da carga de trabalho. Essas políticas de limite são conhecidas como limites de desempenho definidos pelo usuário.
+
+Esta versão oferece suporte a limites de desempenho definidos pelo usuário, pelo sistema e dinâmicos. Com limites de desempenho dinâmicos e definidos pelo sistema, o Unified Manager analisa a atividade da carga de trabalho para determinar o valor de limite apropriado. Com limites definidos pelo usuário, você pode definir os limites superiores de desempenho para diversos contadores de desempenho e para diversos objetos de armazenamento.
+
+[NOTE]
+====
+Os limites de desempenho definidos pelo sistema e os limites de desempenho dinâmicos são definidos pelo Unified Manager e não podem ser configurados. Se você estiver recebendo eventos desnecessários de qualquer política de limite de desempenho definida pelo sistema, poderá desativar políticas individuais na página Configuração de eventos.
+
+====

@@ -1,0 +1,42 @@
+---
+permalink: events/task_manage_host_system_resource_events.html 
+sidebar: sidebar 
+keywords: manage, host, system, resource, events 
+summary: O Unified Manager inclui um serviço que monitora problemas de recursos no sistema host em que o Unified Manager está instalado. Problemas como falta de espaço de disco disponível ou falta de memória no sistema host podem acionar eventos da estação de gerenciamento que são exibidos como mensagens de banner na parte superior da interface de usuário. 
+---
+= Gerencie eventos de recursos do sistema host no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Unified Manager inclui um serviço que monitora problemas de recursos no sistema host em que o Unified Manager está instalado. Problemas como falta de espaço de disco disponível ou falta de memória no sistema host podem acionar eventos da estação de gerenciamento que são exibidos como mensagens de banner na parte superior da interface de usuário.
+
+Os eventos da estação de gerenciamento indicam um problema no sistema host em que o Unified Manager está instalado. Exemplos de problemas na estação de gerenciamento incluem pouco espaço de disco no sistema host; o Unified Manager não executar um ciclo regular de coleta de dados; e a não conclusão, ou a conclusão tardia, da análise de estatísticas porque a próxima sondagem de coleta foi iniciada.
+
+Diferentemente de todas as outras mensagens de eventos do Unified Manager, esses eventos específicos de aviso e críticos da estação de gerenciamento são exibidos em mensagens de banner.
+
+.Etapa
+. Para visualizar as informações sobre eventos da estação de gerenciamento, execute as seguintes ações:
++
+|===
+| Se você quiser... | Faça isso... 
+
+
+ a| 
+Veja os detalhes do evento
+ a| 
+Clique no banner do evento para exibir a página de detalhes do evento, que inclui soluções sugeridas para o problema.
+
+
+
+ a| 
+Veja todos os eventos da estação de gerenciamento
+ a| 
+.. No painel de navegação à esquerda, clique em *Event Management*.
+.. No painel Filtros na página de inventário de Gerenciamento de Eventos, clique na caixa Estação de Gerenciamento na lista Tipo de origem.
+
+
+|===
+

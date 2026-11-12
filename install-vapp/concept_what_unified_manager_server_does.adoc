@@ -1,0 +1,16 @@
+---
+permalink: install-vapp/concept_what_unified_manager_server_does.html 
+sidebar: sidebar 
+keywords: unified manager, server 
+summary: 'A infraestrutura do servidor do Unified Manager consiste em uma unidade de coleta de dados, um banco de dados e um servidor de aplicativos. Ela fornece serviços de infraestrutura como descoberta, monitoramento, controle de acesso baseado em funções (RBAC), auditoria e registro em log.' 
+---
+= Saiba o que o servidor Active IQ Unified Manager faz
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A infraestrutura do servidor do Unified Manager consiste em uma unidade de coleta de dados, um banco de dados e um servidor de aplicativos. Ela fornece serviços de infraestrutura como descoberta, monitoramento, controle de acesso baseado em funções (RBAC), auditoria e registro em log.
+
+O Unified Manager coleta informações do cluster, armazena os dados no banco de dados e os analisa para verificar se há algum problema no cluster.

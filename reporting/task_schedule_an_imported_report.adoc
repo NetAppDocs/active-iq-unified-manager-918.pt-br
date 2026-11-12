@@ -1,0 +1,40 @@
+---
+permalink: reporting/task_schedule_an_imported_report.html 
+sidebar: sidebar 
+keywords: schedule, imported, reports 
+summary: Você pode agendar relatórios existentes que foram criados e importados em uma versão anterior do Unified Manager. 
+---
+= Agende relatórios .rptdesign importados no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode agendar relatórios existentes que foram criados e importados em uma versão anterior do Unified Manager.
+
+O agendamento de relatórios importados requer o seguinte:
+
+* relatórios de arquivo .rptdesign projetados pelo BIRT importados em uma versão anterior do Unified Manager
+* aplicável ao atualizar para o Unified Manager 9.6 GA ou posterior
+
+
+Após a atualização para o Unified Manager 9.6 GA ou posterior, a página "Agendamentos de Relatórios" lista os relatórios importados. Você pode editar o agendamento desses relatórios para especificar os endereços de e-mail dos destinatários, a frequência e o formato (PDF ou CSV). Caso contrário, você não pode editar nem visualizar esses relatórios na UI do Unified Manager.
+
+.Passos
+. Abra a página Agendamentos de Relatórios. Se você tiver importado relatórios, uma mensagem aparecerá.
++
+image::../media/message_non_scehduled_reports.png[Uma captura de tela da interface do usuário que mostra a mensagem aparece quando há relatórios importados.]
+
+. Clique no nome *View* para exibir a consulta SQL usada para gerar o relatório.
++
+image::../media/importedreport1.png[Uma captura de tela da interface do usuário que mostra a consulta SQL usada para gerar o relatório.]
+
+. Clique no ícone mais image:../media/more_icon.gif[""], clique em *Edit*, defina os detalhes do agendamento do relatório e salve o relatório.
++
+[NOTE]
+====
+Você também pode excluir quaisquer relatórios indesejados no ícone "Mais" image:../media/more_icon.gif[""].
+
+====
+

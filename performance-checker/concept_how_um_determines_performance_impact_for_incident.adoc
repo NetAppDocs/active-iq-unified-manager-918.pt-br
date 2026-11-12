@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_how_um_determines_performance_impact_for_incident.html 
+sidebar: sidebar 
+keywords: unified manager, determines, performance, impact, event 
+summary: 'O Unified Manager utiliza o desvio na atividade, utilização, taxa de transferência de gravação, uso de componentes do cluster ou latência de E/S (tempo de resposta) de uma carga de trabalho para determinar o nível de impacto no desempenho da carga de trabalho. Essas informações determinam a função de cada carga de trabalho no evento e como elas são classificadas na página de detalhes do evento.' 
+---
+= Entenda como o Active IQ Unified Manager determina o impacto no desempenho de um evento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Unified Manager utiliza o desvio na atividade, utilização, taxa de transferência de gravação, uso de componentes do cluster ou latência de E/S (tempo de resposta) de uma carga de trabalho para determinar o nível de impacto no desempenho da carga de trabalho. Essas informações determinam a função de cada carga de trabalho no evento e como elas são classificadas na página de detalhes do evento.
+
+O Unified Manager compara os últimos valores analisados para uma carga de trabalho com o intervalo esperado de valores (previsão de latência). A diferença entre os últimos valores analisados e o intervalo esperado de valores identifica as cargas de trabalho cujo desempenho foi mais impactado pelo evento.
+
+Por exemplo, suponha que um cluster contenha duas cargas de trabalho: Carga de Trabalho A e Carga de Trabalho B. A previsão de latência para a Carga de Trabalho A é de 5 a 10 milissegundos por operação (ms/op) e sua latência real geralmente fica em torno de 7 ms/op. A previsão de latência para a Carga de Trabalho B é de 10 a 20 ms/op e sua latência real geralmente fica em torno de 15 ms/op. Ambas as cargas de trabalho estão bem dentro de sua previsão de latência. Devido à contenção no cluster, a latência de ambas as cargas de trabalho aumenta para 40 ms/op, ultrapassando o limite dinâmico de desempenho, que é o limite superior da previsão de latência, e acionando eventos. O desvio de latência, dos valores esperados para os valores acima do limite de desempenho, para a Carga de Trabalho A é de cerca de 33 ms/op, e o desvio para a Carga de Trabalho B é de cerca de 25 ms/op. A latência de ambas as cargas de trabalho atinge um pico de 40 ms/op, mas a Carga de Trabalho A teve o maior impacto no desempenho porque apresentou o maior desvio de latência, de 33 ms/op.
+
+Na página de detalhes do evento, na seção Diagnóstico do sistema, você pode classificar as cargas de trabalho por desvio na atividade, utilização ou taxa de transferência de um componente do cluster. Você também pode classificar as cargas de trabalho por latência. Ao selecionar uma opção de classificação, o Unified Manager analisa o desvio na atividade, utilização, taxa de transferência ou latência desde que o evento foi detectado em relação aos valores esperados para determinar a ordem de classificação das cargas de trabalho. Para a latência, os pontos vermelhos (image:../media/opm_incident_icon_png.gif["Ícone de aviso do Performance Manager"]) indicam o cruzamento de um limite de desempenho por uma carga de trabalho afetada e o impacto subsequente na latência. Cada ponto vermelho indica um nível mais alto de desvio na latência, o que ajuda você a identificar as cargas de trabalho afetadas cuja latência foi mais impactada por um evento.

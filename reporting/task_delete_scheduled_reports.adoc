@@ -1,0 +1,43 @@
+---
+permalink: reporting/task_delete_scheduled_reports.html 
+sidebar: sidebar 
+keywords: delete, reports 
+summary: Depois de agendar os relatórios, você pode excluí-los na página de Agendamento de Relatórios. 
+---
+= Excluir relatórios agendados no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de agendar os relatórios, você pode excluí-los na página de Agendamento de Relatórios.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Agendamentos de relatórios*.
++
+image::../media/scheduled_reports_2.gif[Uma captura de tela da interface do usuário que mostra relatórios agendados.]
+
++
+[NOTE]
+====
+Se você tiver as permissões adequadas, poderá remover qualquer relatório e seu respectivo agendamento no sistema.
+
+====
+. Clique no ícone "Mais" image:../media/more_icon.gif[""] da programação que você deseja remover.
+. Clique em *Delete*.
+. Confirme sua decisão.
++
+O relatório agendado é removido da lista e não será mais gerado nem distribuído de acordo com a programação definida.
+
++
+[NOTE]
+====
+Se você excluir uma visualização personalizada da página de inventário, todos os arquivos personalizados do Excel ou relatórios agendados que usam essa visualização também serão excluídos.
+
+====
+

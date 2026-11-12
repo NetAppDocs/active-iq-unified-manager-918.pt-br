@@ -1,0 +1,45 @@
+---
+permalink: reporting/task_create_report_for_volumes_with_high_amount_of_cold_data.html 
+sidebar: sidebar 
+keywords: display, volumes, cold, data, non-fabricpool, aggregate, identify 
+summary: Você pode criar um relatório para exibir volumes com uma grande quantidade de dados inativos em um agregado não FabricPool. Isso pode ajudar você a identificar volumes que devem ser movidos para um agregado do FabricPool. 
+---
+= Crie um relatório para identificar volumes com alta concentração de dados frios em um agregado que não seja o FabricPool no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar um relatório para exibir volumes com uma grande quantidade de dados inativos em um agregado não FabricPool. Isso pode ajudar você a identificar volumes que devem ser movidos para um agregado do FabricPool.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+
+Siga as etapas a seguir para criar uma visualização personalizada para volumes com uma grande quantidade de dados inativos em um agregado não habilitado para o FabricPool e, em seguida, agende a geração de um relatório para essa visualização.
+
+.Passos
+. No painel de navegação à esquerda, clique em *Armazenamento* > *Volumes*.
+. No menu Exibir, selecione *Desempenho* > *Todos os volumes*.
+. Selecione *Mostrar/Ocultar* para garantir que a coluna "`Disk Type`" apareça na visualização.
++
+Adicione ou remova outras colunas para criar uma visualização que seja importante para seu relatório.
+
+. Arraste a coluna "`Tipo de disco`" para perto da coluna "`Dados frios`".
+. Clique no ícone de filtro, adicione o seguinte filtro e, em seguida, clique em *Apply Filter*:
++
+** Dados frios com mais de 100 GB
+** O tipo de disco contém SSD
+
+
+. Clique na parte superior da coluna "`Tipo de disco`" para classificar os volumes por tipo de disco, de modo que o tipo de disco SSD (FabricPool) fique na parte inferior.
+. Salve a visualização com um nome específico que reflita o que ela está exibindo, por exemplo "`Volumes de dados frios não FabricPool`".
+. Clique no botão *Relatórios Agendados* na página de inventário.
+. Insira um nome para o cronograma do relatório e preencha os outros campos do relatório, depois clique na marca de seleção (image:../media/blue_check.gif[""]) no final da linha.
++
+O relatório é enviado imediatamente como teste. Depois disso, o relatório é gerado e enviado por e-mail aos destinatários listados na frequência especificada.
+
+
+
+Com base nos resultados apresentados no relatório, você pode encontrar volumes que são bons candidatos para serem movidos para agregados do FabricPool.

@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/concept_manage_performance_using_perf_capacity_available_iops.html 
+sidebar: sidebar 
+keywords: managing, performance, performance, capacity, available, iops, information 
+summary: A capacidade de desempenho indica a quantidade de throughput que você pode obter de um recurso sem ultrapassar o desempenho útil desse recurso. Quando visualizada usando os contadores de desempenho existentes, a capacidade de desempenho é o ponto em que você obtém a utilização máxima de um nó ou agregado antes que a latência se torne um problema. 
+---
+= Gerencie a capacidade de desempenho e os IOPS disponíveis no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A _capacidade de desempenho_ indica a quantidade de throughput que você pode obter de um recurso sem ultrapassar o desempenho útil desse recurso. Quando analisada usando os contadores de desempenho existentes, a capacidade de desempenho é o ponto em que você obtém a utilização máxima de um nó ou agregado antes que a latência se torne um problema.
+
+O Unified Manager coleta estatísticas de capacidade de desempenho de nós e agregados em cada cluster. A _capacidade de desempenho utilizada_ é a porcentagem da capacidade de desempenho que está sendo usada no momento, e a _capacidade de desempenho livre_ é a porcentagem da capacidade de desempenho que ainda está disponível.
+
+Embora a capacidade de desempenho livre forneça uma porcentagem do recurso que ainda está disponível, o _IOPS disponível_ indica o número de IOPS que podem ser adicionados ao recurso antes de atingir a capacidade máxima de desempenho. Ao usar essa métrica, você pode ter certeza de que poderá adicionar cargas de trabalho com um número predeterminado de IOPS a um recurso.
+
+Monitorar as informações de capacidade de desempenho traz os seguintes benefícios:
+
+* Auxilia no provisionamento e balanceamento do fluxo de trabalho.
+* Ajuda você a evitar a sobrecarga de um nó ou levar seus recursos além do ponto ideal, reduzindo assim a necessidade de solucionar problemas.
+* Ajuda você a determinar com maior precisão onde equipamentos de armazenamento adicionais podem ser necessários.
+

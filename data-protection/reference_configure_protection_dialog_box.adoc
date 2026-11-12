@@ -1,0 +1,268 @@
+---
+permalink: data-protection/reference_configure_protection_dialog_box.html 
+sidebar: sidebar 
+keywords: configure, protection, dialog box 
+summary: Você pode usar a caixa de diálogo Configurar proteção para criar relações do SnapMirror e do SnapVault para todos os volumes de leitura, gravação e proteção de dados nos clusters, para garantir que os dados em um volume de origem ou volume primário sejam replicados. 
+---
+= Utilize a caixa de diálogo Configurar Proteção no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a caixa de diálogo Configurar proteção para criar relações do SnapMirror e do SnapVault para todos os volumes de leitura, gravação e proteção de dados nos clusters, para garantir que os dados em um volume de origem ou volume primário sejam replicados.
+
+
+
+[[source-tab]]
+== Guia Origem
+
+* *Vista de topologia*
++
+Exibe uma representação visual da relação que você está criando. A origem na topologia é destacada por padrão.
+
+* *Informações de origem*
++
+Exibe detalhes sobre os volumes de origem selecionados, incluindo as seguintes informações:
+
++
+** Nome do cluster de origem
+** Nome da SVM de origem
+** Tamanho total cumulativo do volume
++
+Exibe o tamanho total de todos os volumes de origem selecionados.
+
+** Tamanho cumulativo usado do volume
++
+Exibe o tamanho cumulativo usado do volume para todos os volumes de origem selecionados.
+
+** Volume de origem
++
+Exibe as seguintes informações em uma tabela:
+
++
+*** Volume de origem
++
+Exibe os nomes dos volumes de origem selecionados.
+
+*** Tipo
++
+Exibe o tipo de volume.
+
+*** SnapLock Tipo
++
+Exibe o tipo de SnapLock do volume. As opções são Compliance, Enterprise e não SnapLock.
+
+*** Cópia Snapshot
++
+Exibe a cópia Snapshot usada para a transferência completa. Se o volume de origem for leitura/gravação, o valor "Default" na coluna cópia Snapshot indica que uma nova cópia Snapshot é criada por padrão e usada para a transferência completa. Se o volume de origem for um volume de proteção de dados, o valor "Default" na coluna cópia Snapshot indica que nenhuma nova cópia Snapshot é criada, e todas as cópias Snapshot existentes são transferidas para o destino. Clicar no valor da cópia Snapshot exibe uma lista de cópias Snapshot, na qual você pode selecionar uma cópia Snapshot existente para usar na transferência completa. Você não pode selecionar uma cópia Snapshot padrão diferente se o tipo de origem for proteção de dados.
+
+
+
+
+
+
+
+
+
+[[snapmirror-tab]]
+== SnapMirror guia
+
+Permite especificar um cluster de destino, uma máquina virtual de storage (SVM) e um agregado para uma relação de proteção, bem como uma convenção de nomenclatura para destinos ao criar uma relação do SnapMirror. Você também pode especificar uma política do SnapMirror e um agendamento.
+
+* *Vista de topologia*
++
+Exibe uma representação visual da relação que você está criando. O recurso de destino do SnapMirror na topologia é destacado por padrão.
+
+* *Informações sobre o destino*
++
+Permite selecionar os recursos de destino para uma relação de proteção:
+
++
+** Link avançado
++
+Abre a caixa de diálogo Configurações avançadas de destino ao criar uma relação do SnapMirror.
+
+** Cluster
++
+Lista os clusters que estão disponíveis como hosts de destino de proteção. Este campo é obrigatório.
+
+** máquina virtual de storage (SVM)
++
+Lista as SVMs disponíveis no cluster selecionado. É necessário selecionar um cluster para que a lista de SVMs seja exibida. Este campo é obrigatório.
+
+** Agregado
++
+Lista os agregados disponíveis no SVM selecionado. Um cluster deve ser selecionado antes que a lista de agregados seja preenchida. Este campo é obrigatório. A lista de agregados exibe as seguintes informações:
+
++
+*** Classificação
++
+Quando vários agregados satisfazem todos os requisitos para um destino, a classificação indica a prioridade na qual o agregado é listado, de acordo com as seguintes condições:
+
++
+.... É preferível que o agregado esteja localizado em um nó diferente do nó do volume de origem para permitir a separação do domínio de falhas.
+.... É preferível um agregado em um nó com menos volumes para permitir o balanceamento de carga entre os nós de um cluster.
+.... Para permitir o balanceamento de capacidade, é preferível um agregado que tenha mais espaço livre do que outros agregados. Uma classificação de 1 significa que o agregado é o mais preferido de acordo com os três critérios.
+
+
+*** Nome agregado
++
+Nome do agregado
+
+*** Capacidade disponível
+*** Quantidade de espaço disponível no agregado para dados
+*** Pool de recursos
++
+Nome do pool de recursos ao qual o agregado pertence
+
+
+
+** Convenção de nomenclatura
++
+Especifica a convenção de nomenclatura padrão aplicada ao volume de destino. Você pode aceitar a convenção de nomenclatura fornecida ou criar uma personalizada. A convenção de nomenclatura pode ter os seguintes atributos: %C, %M, %V e %N, em que %C é o nome do cluster, %M é o nome da SVM, %V é o volume de origem e %N é o nome do nó de destino da topologia.
+
++
+O campo de convenção de nomenclatura é destacado em vermelho se a sua entrada for inválida. Clicar no link "`Preview Name`" exibe uma prévia da convenção de nomenclatura que você inseriu, e o texto da prévia é atualizado dinamicamente conforme você digita uma convenção de nomenclatura no campo de texto. Um sufixo entre 001 e 999 é acrescentado ao nome de destino quando a relação é criada, substituindo o nnn exibido no texto de prévia, com 001 sendo atribuído primeiro, 002 sendo atribuído em segundo lugar e assim por diante.
+
+
+
+* *Configurações de relacionamento*
++
+Permite especificar a taxa de transferência máxima, a política do SnapMirror e o cronograma que a relação de proteção utiliza:
+
++
+** Taxa máxima de transferência
++
+Especifica a taxa máxima na qual os dados são transferidos entre clusters pela rede. Se você optar por não usar uma taxa máxima de transferência, a transferência completa entre relações será ilimitada.
+
+** Política do SnapMirror
++
+Especifica a política do SnapMirror do ONTAP para a relação. O padrão é DPDefault.
+
+** Criar política
++
+Abre a caixa de diálogo Criar política do SnapMirror, que permite criar e usar uma nova política do SnapMirror.
+
+** SnapMirror Agendamento
++
+Especifica a política do ONTAP SnapMirror para a relação. Os agendamentos disponíveis incluem None, 5min, 8hour, daily, hourly e weekly. O padrão é None, indicando que nenhum agendamento está associado à relação. Relações sem agendamentos não têm valores de status de atraso, a menos que pertençam a um serviço de armazenamento.
+
+** Criar programação
++
+Abre a caixa de diálogo Criar Agendamento, que permite criar um novo agendamento do SnapMirror.
+
+
+
+
+
+
+
+[[snapvault-tab]]
+== SnapVault guia
+
+Permite especificar um cluster secundário, SVM e agregado para uma relação de proteção, bem como uma convenção de nomenclatura para volumes secundários ao criar uma relação do SnapVault. Você também pode especificar uma política do SnapVault e um agendamento.
+
+* *Vista de topologia*
++
+Exibe uma representação visual da relação que você está criando. O recurso secundário do SnapVault na topologia é destacado por padrão.
+
+* *Informações secundárias*
++
+Permite selecionar os recursos secundários para uma relação de proteção:
+
++
+** Link avançado
++
+Abre a caixa de diálogo Configurações Secundárias Avançadas.
+
+** Cluster
++
+Lista os clusters disponíveis como hosts de proteção secundária. Este campo é obrigatório.
+
+** máquina virtual de storage (SVM)
++
+Lista as SVMs disponíveis no cluster selecionado. É necessário selecionar um cluster para que a lista de SVMs seja exibida. Este campo é obrigatório.
+
+** Agregado
++
+Lista os agregados disponíveis no SVM selecionado. Um cluster deve ser selecionado antes que a lista de agregados seja preenchida. Este campo é obrigatório. A lista de agregados exibe as seguintes informações:
+
++
+*** Classificação
++
+Quando vários agregados satisfazem todos os requisitos para um destino, a classificação indica a prioridade na qual o agregado é listado, de acordo com as seguintes condições:
+
++
+.... É preferível que o agregado esteja localizado em um nó diferente do nó do volume primário para permitir a separação do domínio de falhas.
+.... É preferível um agregado em um nó com menos volumes para permitir o balanceamento de carga entre os nós de um cluster.
+.... Para permitir o balanceamento de capacidade, é preferível um agregado que tenha mais espaço livre do que outros agregados. Uma classificação de 1 significa que o agregado é o mais preferido de acordo com os três critérios.
+
+
+*** Nome agregado
++
+Nome do agregado
+
+*** Capacidade disponível
+*** Quantidade de espaço disponível no agregado para dados
+*** Pool de recursos
++
+Nome do pool de recursos ao qual o agregado pertence
+
+
+
+** Convenção de nomenclatura
++
+Especifica a convenção de nomenclatura padrão aplicada ao volume secundário. Você pode aceitar a convenção de nomenclatura fornecida ou criar uma personalizada. A convenção de nomenclatura pode ter os seguintes atributos: %C, %M, %V e %N, onde %C é o nome do cluster, %M é o nome da SVM, %V é o volume de origem e %N é o nome do nó secundário da topologia.
+
++
+O campo de convenção de nomenclatura é destacado em vermelho se a sua entrada for inválida. Clicar no link "`Preview Name`" exibe uma pré-visualização da convenção de nomenclatura que você inseriu, e o texto da pré-visualização é atualizado dinamicamente conforme você digita uma convenção de nomenclatura no campo de texto. Se você digitar um valor inválido, as informações inválidas serão exibidas como pontos de interrogação vermelhos na área de pré-visualização. Um sufixo entre 001 e 999 é adicionado ao nome secundário quando a relação é criada, substituindo o nnn exibido no texto da pré-visualização, sendo 001 atribuído primeiro, 002 atribuído em segundo lugar e assim por diante.
+
+
+
+* *Configurações de relacionamento*
++
+Permite especificar a taxa máxima de transferência, a política do SnapVault e a programação do SnapVault que a relação de proteção utiliza:
+
++
+** Taxa máxima de transferência
++
+Especifica a taxa máxima na qual os dados são transferidos entre clusters pela rede. Se você optar por não usar uma taxa máxima de transferência, a transferência completa entre relações será ilimitada.
+
+** SnapVault Política
++
+Especifica a política SnapVault do ONTAP para a relação. O padrão é XDPDefault.
+
+** Criar política
++
+Abre a caixa de diálogo Criar Política do SnapVault, que permite criar e usar uma nova política do SnapVault.
+
+** SnapVault Agendamento
++
+Especifica o agendamento do SnapVault do ONTAP para a relação. Os agendamentos disponíveis incluem None, 5min, 8hour, daily, hourly e weekly. O padrão é None, indicando que nenhum agendamento está associado à relação. Relações sem agendamentos não têm valores de status de atraso, a menos que pertençam a um serviço de armazenamento.
+
+** Criar programação
++
+Abre a caixa de diálogo Criar Agendamento, que permite criar um agendamento do SnapVault.
+
+
+
+
+
+
+
+[[command-buttons]]
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas:
+
+* *Cancelar*
++
+Descarta suas seleções e fecha a caixa de diálogo Configure Protection.
+
+* *Aplicar*
++
+Aplica suas seleções e inicia o processo de proteção.
+
+

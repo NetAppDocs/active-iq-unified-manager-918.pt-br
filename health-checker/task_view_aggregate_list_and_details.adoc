@@ -1,0 +1,41 @@
+---
+permalink: health-checker/task_view_aggregate_list_and_details.html 
+sidebar: sidebar 
+keywords: view, aggregate list, details 
+summary: 'Use a visualização "Todos os Agregados" na página "Saúde" para monitorar seu inventário de agregados e a visualização "Todos os Agregados" na página "Capacidade" para obter detalhes sobre capacidade e utilização.' 
+---
+= Veja a lista de agregados e os detalhes no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Na visualização Saúde: todos os agregados, você pode monitorar seu inventário de agregados. A visualização Capacidade: todos os agregados permite que você veja informações sobre a capacidade e a utilização dos agregados em todos os clusters.
+
+.Antes de começar
+Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+
+Você pode visualizar detalhes, como capacidade e configuração do agregado, além de informações de disco, na página de detalhes Aggregate / Health. Você pode usar esses detalhes antes de configurar as definições de limite, se necessário.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Agregados*.
+. Escolha uma das seguintes maneiras de visualizar os detalhes do agregado:
++
+** Para visualizar informações sobre a integridade de todos os agregados em todos os clusters, no menu Exibir, selecione Integridade: visualização de todos os agregados.
+** Para visualizar informações sobre a capacidade e a utilização de todos os agregados em todos os clusters, no menu Exibir, selecione Capacidade: visualização de todos os agregados.
+** Para visualizar os detalhes completos, clique no nome do agregado.
++
+Você também pode visualizar os detalhes completos clicando em *View Details* na caixa de diálogo de detalhes mínimos.
+
+
+
+. Visualize os objetos relacionados ao agregado clicando em *Exibir relacionados* na caixa de diálogo de detalhes mínimos.
+
+
+*Informações relacionadas*
+
+* link:../health-checker/reference_health_aggregate_details_page.html["Página de detalhes de agregado / integridade"]
+* link:../performance-checker/performance-view-all.html#performance-all-aggregates-view["Desempenho: visualização de todos os agregados"]
+* link:../reporting/task_create_report_to_view_aggregates_reaching_full_capacity.html["Crie um relatório para visualizar os agregados que atingiram a capacidade máxima no Active IQ Unified Manager"]
+

@@ -1,0 +1,33 @@
+---
+permalink: performance-checker/concept_what_expected_range_of_performance_is.html 
+sidebar: sidebar 
+keywords: expected, range, performance, latency, forecast, formed 
+summary: A previsão de latência é uma estimativa dos valores superior e inferior de desempenho esperados em um momento específico. Para a latência da carga de trabalho, os valores superiores formam o limite de desempenho. Quando o valor real ultrapassa o limite de desempenho, o Unified Manager aciona um evento de desempenho dinâmico. 
+---
+= Entenda como o Active IQ Unified Manager calcula a faixa de desempenho esperada
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A previsão de latência é uma estimativa dos valores superior e inferior de desempenho esperados em um momento específico. Para a latência da carga de trabalho, os valores superiores formam o limite de desempenho. Quando o valor real ultrapassa o limite de desempenho, o Unified Manager aciona um evento de desempenho dinâmico.
+
+Por exemplo, durante o horário comercial normal, entre 9h e 17h, a maioria dos funcionários pode verificar seus e-mails entre 9h e 10h30. O aumento da demanda nos servidores de e-mail significa um aumento na atividade da carga de trabalho no storage de back-end durante esse período. Os funcionários podem notar lentidão no tempo de resposta de seus clientes de e-mail.
+
+Durante o horário de almoço, entre 12h e 13h, e no final do expediente, após as 17h, a maioria dos funcionários provavelmente está longe de seus computadores. A demanda nos servidores de e-mail normalmente diminui, reduzindo também a demanda no storage de back-end. Como alternativa, pode haver operações de carga de trabalho agendadas, como backups de storage ou verificação de vírus, que começam após as 17h e aumentam a atividade no storage de back-end.
+
+Ao longo de vários dias, o aumento e a diminuição da atividade da carga de trabalho determinam a faixa esperada de atividade (previsão de latência), com limites superiores e inferiores para uma carga de trabalho. Quando a atividade real da carga de trabalho de um objeto está fora dos limites superiores ou inferiores e permanece fora desses limites por um período de tempo, isso pode indicar que o objeto está sendo sobrecarregado ou subutilizado.
+
+
+
+[[how-the-latency-forecast-is-formed]]
+== Como a previsão de latência é criada
+
+O Unified Manager precisa coletar no mínimo 3 dias de atividade da carga de trabalho antes de poder iniciar sua análise e antes que a previsão de latência para o tempo de resposta de E/S possa ser exibida na GUI. A coleta de dados mínima necessária não considera todas as alterações decorrentes da atividade da carga de trabalho. Após coletar os primeiros 3 dias de atividade, o Unified Manager ajusta a previsão de latência a cada 24 horas, às 00:00, para refletir as alterações na atividade da carga de trabalho e estabelecer um limite de desempenho dinâmico mais preciso.
+
+[NOTE]
+====
+O horário de verão altera a hora do sistema, o que modifica a previsão de latência das estatísticas de desempenho para cargas de trabalho monitoradas. O Unified Manager começa imediatamente a corrigir a previsão de latência, o que leva aproximadamente 15 dias para ser concluído. Durante esse período, você pode continuar usando o Unified Manager, mas, como o Unified Manager usa a previsão de latência para detectar eventos dinâmicos, alguns eventos podem não ser precisos. Os eventos detectados antes da mudança de horário não são afetados.
+
+====

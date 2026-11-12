@@ -1,0 +1,56 @@
+---
+permalink: api-automation/concept_async_run.html 
+sidebar: sidebar 
+keywords: job, objects, asynchronous, processes 
+summary: 'O Active IQ Unified Manager fornece a API de trabalhos (Jobs) que recupera informações sobre os trabalhos executados durante a execução de outras APIs. Você deve saber como o processamento assíncrono funciona usando o objeto Job.' 
+---
+= Entenda como o Active IQ Unified Manager utiliza objetos Job para processamento assíncrono
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Active IQ Unified Manager fornece a `jobs` API que recupera informações sobre os Jobs executados durante a execução de outras APIs. Você deve saber como o processamento assíncrono funciona usando o objeto Job.
+
+Algumas chamadas de API, principalmente aquelas usadas para adicionar ou modificar recursos, podem demorar mais para serem concluídas do que outras. O Unified Manager processa essas solicitações de longa duração de forma assíncrona.
+
+
+
+[[asynchronous-requests-described-using-job-object]]
+== Solicitações assíncronas descritas usando o objeto Job
+
+Após uma chamada de API assíncrona, o código de resposta HTTP 202 indica que a solicitação foi validada e aceita com sucesso, mas ainda não foi concluída. A solicitação é processada como uma tarefa em segundo plano que continua a ser executada após a resposta HTTP inicial ao cliente. A resposta inclui o objeto Job que ancora a solicitação, incluindo seu identificador exclusivo.
+
+
+
+[[query-the-job-object-associated-with-an-api-request]]
+== Consultar o objeto Job associado a uma solicitação de API
+
+O objeto Job retornado na resposta HTTP contém diversas propriedades. Você pode consultar a propriedade state para determinar se a solicitação foi concluída com sucesso. Um objeto Job pode estar em um dos seguintes estados:
+
+* `NORMAL`
+* `WARNING`
+* `PARTIAL_FAILURES`
+* `ERROR`
+
+
+Existem duas técnicas que você pode usar ao consultar um objeto Job para detectar o estado final da tarefa, seja sucesso ou falha:
+
+* Solicitação de sondagem padrão: o estado atual do trabalho é retornado imediatamente.
+* Solicitação de long polling: quando o estado do trabalho passa para `NORMAL, ERROR,` ou `PARTIAL_FAILURES.`
+
+
+
+
+[[steps-in-an-asynchronous-request]]
+== Etapas em uma solicitação assíncrona
+
+Você pode usar o seguinte procedimento de alto nível para concluir uma chamada de API assíncrona:
+
+. Emita a chamada de API assíncrona.
+. Receba uma resposta HTTP 202 indicando aceitação bem-sucedida da solicitação.
+. Extraia o identificador do objeto Job do corpo da resposta.
+. Dentro de um loop, aguarde até que o objeto Job atinja o estado terminal `NORMAL, ERROR,` ou `PARTIAL_FAILURES.`
+. Verifique o estado terminal do Job e recupere o resultado do Job.
+

@@ -1,0 +1,18 @@
+---
+permalink: storage-mgmt/concept_what_quota_limits_are.html 
+sidebar: sidebar 
+keywords: quota, limits 
+summary: Os limites de cota de usuário são valores que o servidor Unified Manager usa para avaliar se o consumo de espaço por um usuário está se aproximando do limite ou se atingiu o limite definido pela cota do usuário. Se o limite flexível for ultrapassado ou se o limite rígido for atingido, o servidor Unified Manager gera eventos de cota de usuário. 
+---
+= Saiba mais sobre os limites de cota no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os limites de cota de usuário são valores que o servidor Unified Manager utiliza para avaliar se o consumo de espaço por um usuário está se aproximando do limite ou se atingiu o limite definido pela cota do usuário. Se o limite flexível for ultrapassado ou se o limite rígido for atingido, o servidor Unified Manager gerará eventos de cota de usuário.
+
+Por padrão, o servidor do Unified Manager envia um e-mail de notificação aos usuários que ultrapassaram o limite flexível da cota ou atingiram o limite rígido da cota e para os quais os eventos de cota de usuário estão configurados. Os usuários com a função de Application Administrator podem configurar alertas que notificam os destinatários especificados sobre os eventos de cota de usuário ou de grupo de usuários.
+
+Você pode especificar limites de cota usando o ONTAP System Manager ou a ONTAP CLI.

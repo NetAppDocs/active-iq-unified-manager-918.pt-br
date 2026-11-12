@@ -1,0 +1,22 @@
+---
+permalink: install-linux/concept_browser_and_platform_requirements.html 
+sidebar: sidebar 
+keywords: supported browsers 
+summary: Para acessar a interface da Web do Unified Manager, use um navegador compatível. 
+---
+= Use navegadores compatíveis com o Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para acessar a interface da Web do Unified Manager, use um navegador compatível.
+
+A Interoperability Matrix contém a lista de versões de navegadores suportadas.
+
+http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]
+
+Em todos os navegadores, desativar os bloqueadores de pop-up garante que os recursos do software sejam exibidos corretamente.
+
+Se você planeja configurar o Unified Manager para autenticação SAML, para que um provedor de identidade (IdP) possa autenticar usuários, também deve verificar a lista de navegadores compatíveis com o IdP.

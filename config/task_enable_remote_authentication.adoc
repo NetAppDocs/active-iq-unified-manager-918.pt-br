@@ -1,0 +1,76 @@
+---
+permalink: config/task_enable_remote_authentication.html 
+sidebar: sidebar 
+keywords: enable, remote, authentication 
+summary: Você pode habilitar a autenticação remota para que o servidor do Unified Manager possa se comunicar com seus servidores de autenticação. Os usuários do servidor de autenticação podem acessar a interface gráfica do Unified Manager para gerenciar objetos de storage e dados. 
+---
+= Ative a autenticação remota no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode habilitar a autenticação remota para que o servidor do Unified Manager possa se comunicar com seus servidores de autenticação. Os usuários do servidor de autenticação podem acessar a interface gráfica do Unified Manager para gerenciar objetos de storage e dados.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator.
+
+[NOTE]
+====
+O servidor do Unified Manager deve estar conectado diretamente ao servidor de autenticação. Você deve desativar quaisquer clientes LDAP locais, como SSSD (System Security Services Daemon) ou NSLCD (Name Service LDAP Caching Daemon).
+
+====
+Você pode habilitar a autenticação remota usando o Open LDAP ou o Active Directory. Se a autenticação remota estiver desabilitada, os usuários remotos não poderão acessar o Unified Manager.
+
+A autenticação remota é suportada via LDAP e LDAPS (Secure LDAP). O Unified Manager utiliza a porta 389 como padrão para comunicação não segura e a porta 636 como padrão para comunicação segura.
+
+[NOTE]
+====
+O certificado utilizado para autenticar usuários deve estar em conformidade com o formato X.509.
+
+====
+.Passos
+. No painel de navegação à esquerda, clique em *Geral* > *Autenticação Remota*.
+. Marque a caixa *Ativar autenticação remota...*.
+. No campo Serviço de Autenticação, selecione o tipo de serviço e configure o serviço de autenticação.
++
+[cols="2*"]
+|===
+| Para o tipo de autenticação... | Insira as seguintes informações... 
+
+
+ a| 
+Active Directory
+ a| 
+** Nome do administrador do servidor de autenticação em um dos seguintes formatos:
++
+*** `domainname\username`
+*** `username@domainname`
+*** `Bind Distinguished Name` (usando a notação LDAP apropriada)
+
+
+** Senha de administrador
+** Nome diferenciado base (usando a notação LDAP apropriada)
+
+
+
+
+ a| 
+Open LDAP
+ a| 
+** Nome diferenciado de bind (na notação LDAP apropriada)
+** Senha de vinculação
+** Nome diferenciado base
+
+
+|===
++
+Se a autenticação de um usuário do Active Directory demorar muito ou expirar, o servidor de autenticação provavelmente está demorando muito para responder. Desativar o suporte a grupos aninhados no Unified Manager pode reduzir o tempo de autenticação.
+
++
+Se você selecionar a opção Usar conexão segura para o servidor de autenticação, o Unified Manager se comunicará com o servidor de autenticação usando o protocolo Secure Sockets Layer (SSL).
+
+. *Opcional:* adicione servidores de autenticação e teste a autenticação.
+. Clique em *Salvar*.
+

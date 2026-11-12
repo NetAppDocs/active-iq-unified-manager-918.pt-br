@@ -1,0 +1,29 @@
+---
+permalink: config/reference_support_and_diagnostics_menu.html 
+sidebar: sidebar 
+keywords: support and diagnostics, menu 
+summary: O menu Suporte e Diagnóstico permite gerar um pacote de suporte que você pode enviar ao suporte técnico para obter assistência na resolução de problemas. 
+---
+= Utilize o menu Suporte e Diagnóstico no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O menu Suporte e Diagnóstico permite gerar um pacote de suporte que você pode enviar ao suporte técnico para obter assistência na resolução de problemas.
+
+As seguintes opções de menu estão disponíveis:
+
+* *Gerar pacote de suporte leve*
++
+Permite que você crie um pacote de suporte leve que contém apenas 30 dias de logs e registros do banco de dados de configuração, excluindo dados de desempenho, arquivos de gravação de aquisição e heap dump do servidor.
+
+* *Gerar pacote de suporte*
++
+Permite criar um pacote de suporte completo (arquivo 7-Zip) contendo informações de diagnóstico no diretório base do usuário de diagnóstico. Se o seu sistema estiver conectado à internet, você também pode enviar o pacote de suporte para NetApp.
+
++
+O arquivo inclui informações geradas por uma mensagem AutoSupport, o conteúdo do banco de dados do Unified Manager, dados detalhados sobre os componentes internos do servidor do Unified Manager e logs de nível detalhado que normalmente não são incluídos em mensagens AutoSupport nem no pacote de suporte simplificado.
+
+

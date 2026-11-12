@@ -1,0 +1,24 @@
+---
+permalink: events/task_configure_event_retention_settings.html 
+sidebar: sidebar 
+keywords: configure, event, retention, settings 
+summary: Você pode especificar o número de meses que um evento será mantido no servidor do Unified Manager antes de ser excluído automaticamente. 
+---
+= Configure as configurações de retenção de eventos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode especificar o número de meses que um evento será mantido no servidor do Unified Manager antes de ser excluído automaticamente.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator.
+
+Manter eventos por mais de 6 meses pode afetar o desempenho do servidor e não é recomendado.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Geral* > *Retenção de dados*.
+. Na página *Retenção de Dados*, selecione o controle deslizante na área de Retenção de Eventos, mova-o para o número de meses durante os quais os eventos devem ser retidos e clique em *Salvar*.
+

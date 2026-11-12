@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/reference_cluster_summary_page_opm.html 
+sidebar: sidebar 
+keywords: performance, cluster, summary page 
+summary: A página Resumo do Desempenho do Cluster fornece um resumo dos eventos ativos, do desempenho de IOPS e do desempenho em MB/s de um cluster. Esta página também inclui a contagem total dos objetos de armazenamento no cluster. 
+---
+= Consulte a página de Resumo do Cluster de Desempenho em Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página Resumo do Desempenho do Cluster fornece um resumo dos eventos ativos, do desempenho de IOPS e do desempenho em MB/s de um cluster. Esta página também inclui a contagem total dos objetos de armazenamento no cluster.

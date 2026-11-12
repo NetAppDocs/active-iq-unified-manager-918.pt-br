@@ -1,0 +1,30 @@
+---
+permalink: config/task_edit_user_setts.html 
+sidebar: sidebar 
+keywords: edit, user, settings 
+summary: Você pode editar as configurações do usuário, como o endereço de e-mail e a função, que são especificadas para cada usuário. Por exemplo, você pode querer alterar a função de um usuário que é operador de storage e atribuir privilégios de administrador de storage ao usuário. 
+---
+= Editar configurações de usuário no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode editar as configurações do usuário, como o endereço de e-mail e a função, que são especificadas para cada usuário. Por exemplo, você pode querer alterar a função de um usuário que é operador de storage e atribuir privilégios de administrador de storage a esse usuário.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator.
+
+Ao modificar a função atribuída a um usuário, as alterações são aplicadas quando ocorre uma das seguintes ações:
+
+* Você faz logout e login novamente no Unified Manager.
+* A sessão atingiu o tempo limite de 24 horas.
+
+
+.Passos
+. No painel de navegação esquerdo, clique em *Geral* > *Usuários*.
+. Na página Users, selecione o usuário para o qual você deseja editar as configurações e clique em *Edit*.
+. Na caixa de diálogo Edit User, edite as configurações apropriadas especificadas para o usuário.
+. Clique em *Salvar*.
+

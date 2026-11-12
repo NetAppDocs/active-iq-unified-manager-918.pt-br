@@ -1,0 +1,30 @@
+---
+permalink: storage-mgmt/reference_unknown_authentication_error.html 
+sidebar: sidebar 
+keywords: unknown, authentication, error 
+summary: Solucione um erro de autenticação desconhecido. 
+---
+= Resolver um erro de autenticação desconhecido no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ao executar uma operação relacionada à autenticação, como adicionar, editar, excluir ou testar usuários ou grupos remotos, a seguinte mensagem de erro pode aparecer: `Unknown authentication error.`
+
+*Causa*
+
+Esse problema pode ocorrer se você tiver definido um valor incorreto para as seguintes opções:
+
+* Nome do administrador do serviço de autenticação do Active Directory
+* Nome diferenciado de vinculação do serviço de autenticação OpenLDAP
+
+
+*Ação corretiva*
+
+. No painel de navegação à esquerda, clique em *Geral* > *Autenticação Remota*.
+. Com base no serviço de autenticação que você selecionou, insira as informações apropriadas para Nome do administrador ou Nome diferenciado de vinculação.
+. Clique em *Test Authentication* para testar a autenticação com os detalhes que você especificou.
+. Clique em *Salvar*.
+

@@ -1,0 +1,51 @@
+---
+permalink: performance-checker/task_respond_to_user_defined_performance_threshold_events.html 
+sidebar: sidebar 
+keywords: user-defined, performance, threshold, events 
+summary: Você pode usar o Unified Manager para investigar eventos de desempenho causados por um contador de desempenho que ultrapassou um limite de aviso ou crítico definido pelo usuário. Você também pode usar o Unified Manager para verificar a integridade do componente do cluster e ver se eventos de integridade recentes detectados no componente contribuíram para o evento de desempenho. 
+---
+= Responda a eventos de limite de desempenho definidos pelo usuário no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o Unified Manager para investigar eventos de desempenho causados por um contador de desempenho que ultrapassou um limite de aviso ou crítico definido pelo usuário. Você também pode usar o Unified Manager para verificar a integridade do componente do cluster e ver se eventos de integridade recentes detectados no componente contribuíram para o evento de desempenho.
+
+.Antes de começar
+* Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+* Deve haver eventos de desempenho novos ou obsoletos.
+
+
+.Passos
+. Exiba a página *Detalhes do evento* para visualizar informações sobre o evento.
+. Analise a *Descrição*, que descreve a violação do limite que causou o evento.
++
+Por exemplo, a mensagem "`O valor de latência de 456 ms/op acionou um evento WARNING com base na configuração de limite de 400 ms/op`" indica que ocorreu um evento de aviso de latência para o objeto.
+
+. Passe o cursor sobre o nome da política para exibir detalhes sobre a política de limite que acionou o evento.
++
+Isso inclui o nome da política, o contador de desempenho avaliado, o valor do contador que deve ser ultrapassado para ser considerado um evento crítico ou de aviso e a duração durante a qual o contador deve exceder esse valor.
+
+. Anote o *Horário de Disparo do Evento* para que você possa investigar se outros eventos podem ter ocorrido ao mesmo tempo e contribuído para este evento.
+. Siga uma das opções abaixo para investigar melhor o evento e determinar se é necessário realizar alguma ação para resolver o problema de desempenho:
++
+|===
+| Opção | Possíveis ações de investigação 
+
+
+ a| 
+Clique no nome do objeto de origem para exibir a página Explorer desse objeto.
+ a| 
+Esta página permite visualizar os detalhes do objeto e compará-lo com outros objetos de armazenamento semelhantes para verificar se outros objetos de armazenamento apresentam problemas de desempenho no mesmo período. Por exemplo, para verificar se outros volumes no mesmo agregado também estão apresentando problemas de desempenho.
+
+
+
+ a| 
+Clique no nome do cluster para exibir a página Resumo do Cluster.
+ a| 
+Esta página permite que você visualize os detalhes do cluster no qual este objeto reside para verificar se outros problemas de desempenho ocorreram aproximadamente ao mesmo tempo.
+
+|===
+

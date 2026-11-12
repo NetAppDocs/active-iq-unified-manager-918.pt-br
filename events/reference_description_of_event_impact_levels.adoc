@@ -1,0 +1,32 @@
+---
+permalink: events/reference_description_of_event_impact_levels.html 
+sidebar: sidebar 
+keywords: description, event, impact, levels 
+summary: 'Cada evento está associado a um nível de impacto (Incidente, Risco, Evento ou Atualização) para ajudar você a priorizar os eventos que exigem ação corretiva imediata.' 
+---
+= Saiba mais sobre os níveis de impacto de eventos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cada evento está associado a um nível de impacto (Incidente, Risco, Evento ou Atualização) para ajudar você a priorizar os eventos que exigem ação corretiva imediata.
+
+* *Incidente*
++
+Um incidente é um conjunto de eventos que pode fazer com que um cluster pare de fornecer dados ao cliente e fique sem espaço para armazenar dados. Eventos com nível de impacto de incidente são os mais graves. Você deve tomar medidas corretivas imediatas para evitar a interrupção do serviço.
+
+* *Risco*
++
+Um risco é um conjunto de eventos que podem potencialmente fazer com que um cluster pare de fornecer dados ao cliente e fique sem espaço para armazenar dados. Eventos com um nível de impacto de Risco podem causar interrupção do serviço. Ações corretivas podem ser necessárias.
+
+* *Evento*
++
+Um evento é uma mudança de estado ou status de objetos de armazenamento e seus atributos. Eventos com nível de impacto de Evento são informativos e não exigem ação corretiva.
+
+* *Atualizar*
++
+Os eventos de atualização são um tipo específico de evento relatado pela plataforma Active IQ. Esses eventos identificam problemas cuja resolução exige que você atualize o software ONTAP, o firmware do nó ou o software do sistema operacional (para avisos de segurança). Você pode querer executar ações corretivas imediatas para alguns desses problemas, enquanto outros podem aguardar até a próxima manutenção programada.
+
+

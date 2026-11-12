@@ -1,0 +1,90 @@
+---
+permalink: performance-checker/reference_performance_event_analysis_and_notification.html 
+sidebar: sidebar 
+keywords: performance, event, analysis, notification 
+summary: Os eventos de desempenho notificam você sobre problemas de desempenho de E/S em uma carga de trabalho causados por contenção em um componente do cluster. O Unified Manager analisa o evento para identificar todas as cargas de trabalho envolvidas, o componente em contenção e se o evento ainda representa um problema que você precisa resolver. 
+---
+= Analise eventos de desempenho e notificações no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de desempenho notificam você sobre problemas de desempenho de E/S em uma carga de trabalho causados por contenção em um componente do cluster. O Unified Manager analisa o evento para identificar todas as cargas de trabalho envolvidas, o componente em contenção e se o evento ainda representa um problema que você precisa resolver.
+
+O Unified Manager monitora a latência de I/O (tempo de resposta) e IOPS (operações) dos volumes em um cluster. Quando outras cargas de trabalho usam excessivamente um componente do cluster, por exemplo, o componente entra em contenção e não consegue operar em um nível ideal para atender às demandas da carga de trabalho. O desempenho de outras cargas de trabalho que usam o mesmo componente pode ser afetado, fazendo com que suas latências aumentem. Se a latência ultrapassar o limite de desempenho dinâmico, o Unified Manager aciona um evento de desempenho para notificar você.
+
+
+
+[[event-analysis]]
+== Análise de eventos
+
+O Unified Manager realiza as seguintes análises, usando as estatísticas de desempenho dos 15 dias anteriores, para identificar as cargas de trabalho vítimas, as cargas de trabalho agressoras e o componente do cluster envolvido em um evento:
+
+* Identifica as cargas de trabalho afetadas cuja latência ultrapassou o limite de desempenho dinâmico, que é o limite superior da previsão de latência:
++
+** Para volumes em agregados híbridos de HDD ou do Flash Pool (camada local), os eventos são acionados somente quando a latência é superior a 5 milissegundos (ms) e as IOPS são superiores a 10 operações por segundo (ops/sec).
+** Para volumes em agregados totalmente SSD ou agregados do FabricPool (camada de nuvem), os eventos são acionados somente quando a latência é maior que 1 ms e as IOPS são superiores a 100 operações/seg.
+
+
+* Identifica o componente do cluster em contenção.
++
+[NOTE]
+====
+Se a latência das cargas de trabalho vítimas na interconexão de cluster for superior a 1 ms, o Unified Manager considera isso significativo e aciona um evento para a interconexão de cluster.
+
+====
+* Identifica as cargas de trabalho agressoras que estão usando excessivamente o componente do cluster e fazendo com que ele entre em contenção.
+* Classifica as cargas de trabalho envolvidas, com base no desvio na utilização ou atividade de um componente do cluster, para determinar quais cargas de trabalho agressivas apresentam a maior variação no uso do componente do cluster e quais cargas de trabalho afetadas são as mais impactadas.
+
+
+Um evento pode ocorrer por um breve instante e se corrigir assim que o componente que está utilizando deixar de estar em disputa. Um evento contínuo é aquele que se repete para o mesmo componente do cluster dentro de um intervalo de cinco minutos e permanece no estado ativo. Para eventos contínuos, o Unified Manager dispara um alerta após detectar o mesmo evento durante dois intervalos de análise consecutivos.
+
+Quando um evento é resolvido, ele permanece disponível no Unified Manager como parte do registro de problemas de desempenho anteriores para um volume. Cada evento possui um ID exclusivo que identifica o tipo de evento e os volumes, o cluster e os componentes do cluster envolvidos.
+
+[NOTE]
+====
+Um único volume pode estar envolvido em mais de um evento simultaneamente.
+
+====
+
+
+[[event-state]]
+== Estado do evento
+
+Os eventos podem estar em um dos seguintes estados:
+
+* *Ativo*
++
+Indica que o evento de desempenho está atualmente ativo (novo ou reconhecido). O problema que causou o evento não foi corrigido ou resolvido. O contador de desempenho do objeto de armazenamento permanece acima do limite de desempenho.
+
+* *Obsoleto*
++
+Indica que o evento não está mais ativo. O problema que causou o evento se corrigiu sozinho ou foi resolvido. O contador de desempenho do objeto de armazenamento não está mais acima do limite de desempenho.
+
+
+
+
+
+[[event-notification]]
+== Notificação de evento
+
+Os eventos são exibidos na página Dashboard e em muitas outras páginas da interface de usuário, e alertas para esses eventos são enviados para os endereços de e-mail especificados. Você pode visualizar informações detalhadas de análise sobre um evento e obter sugestões para resolvê-lo na página Event details e na página Workload Analysis.
+
+
+
+[[event-interaction]]
+== Interação de eventos
+
+Na página Event details e na página Workload Analysis, você pode interagir com os eventos das seguintes maneiras:
+
+* Ao passar o mouse sobre um evento, uma mensagem é exibida mostrando a data e a hora em que o evento foi detectado.
++
+Se houver vários eventos para o mesmo período, a mensagem mostrará o número de eventos.
+
+* Quando você clica em um único evento, uma caixa de diálogo mostra informações mais detalhadas sobre o evento, incluindo os componentes do cluster envolvidos.
++
+O componente em disputa está circulado e destacado em vermelho. Você pode clicar em *View full analysis* para visualizar a análise completa na página Event details. Se houver vários eventos para o mesmo período, a caixa de diálogo exibirá detalhes sobre os três eventos mais recentes. Você pode clicar em um evento para visualizar a análise do evento na página Event details.
+
+

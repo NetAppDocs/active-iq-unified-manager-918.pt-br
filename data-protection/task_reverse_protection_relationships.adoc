@@ -1,0 +1,48 @@
+---
+permalink: data-protection/task_reverse_protection_relationships.html 
+sidebar: sidebar 
+keywords: reverse, protection, relationships, volume, relationships page 
+summary: Quando um desastre desabilita o volume de origem em sua relação de proteção, você pode usar o volume de destino para fornecer dados, convertendo-o em um volume de leitura/gravação enquanto repara ou substitui a origem. Quando a origem estiver novamente disponível para receber dados, você pode usar a operação de ressincronização reversa para restabelecer a relação na direção inversa, sincronizando os dados na origem com os dados no destino de leitura/gravação. 
+---
+= Reverta as relações de proteção na página "Relações de Volume" no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando um desastre desabilita o volume de origem em sua relação de proteção, você pode usar o volume de destino para fornecer dados, convertendo-o em um volume de leitura/gravação enquanto repara ou substitui a origem. Quando a origem estiver novamente disponível para receber dados, você pode usar a operação de ressincronização reversa para restabelecer a relação na direção inversa, sincronizando os dados na origem com os dados no destino de leitura/gravação.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+* Você precisa ter configurado o Workflow Automation.
+* A relação não deve ser uma relação do SnapVault.
+* Já deve existir uma relação de proteção.
+* A relação de proteção deve ser rompida.
+* Tanto a origem quanto o destino devem estar online.
+* A origem não deve ser o destino de outro volume de proteção de dados.
+* Ao executar esta tarefa, os dados na origem que forem mais recentes do que os dados na cópia Snapshot comum serão excluídos.
+* As políticas e os agendamentos criados em relacionamentos de ressincronização reversa são os mesmos do relacionamento de proteção original.
++
+Se as políticas e os cronogramas não existirem, eles serão criados.
+
+
+
+.Passos
+. Na página *Relações de Volume*, selecione um ou mais volumes com relações que você deseja reverter e, na barra de ferramentas, clique em *Reverter a ressincronização*.
++
+A caixa de diálogo "Reverse Resync" é exibida.
+
+. Verifique se os relacionamentos exibidos na caixa de diálogo *Reverse Resync* são aqueles para os quais você deseja executar a operação de ressincronização reversa e, em seguida, clique em *Submit*.
++
+A operação de ressincronização reversa é iniciada, você retorna à página Relações de Volume e um link de tarefas aparece na parte superior da página.
+
+. *Opcional:* clique em *Visualizar tarefas* na página *Relações de volume* para acompanhar o status de cada tarefa de ressincronização reversa.
++
+Uma lista filtrada de trabalhos relacionados a esta operação é exibida.
+
+. *Opcional:* clique na seta *Voltar* do seu navegador para retornar à página *Relações de Volume*.
++
+A operação de ressincronização reversa é concluída quando todas as tarefas do trabalho são concluídas com sucesso.
+
+

@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_options_for_improving_workload_performance_from_client.html 
+sidebar: sidebar 
+keywords: options, improving, workload, performance, client-side 
+summary: Você pode verificar as cargas de trabalho do seu cliente, como aplicativos ou bancos de dados, que estão enviando E/S para volumes envolvidos em um evento de desempenho para determinar se uma alteração no lado do cliente pode corrigir o evento. 
+---
+= Melhore o desempenho da carga de trabalho ajustando as configurações do lado do cliente no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode verificar as cargas de trabalho do seu cliente, como aplicativos ou bancos de dados, que estão enviando E/S para volumes envolvidos em um evento de desempenho para determinar se uma alteração no lado do cliente pode corrigir o evento.
+
+Quando os clientes conectados a volumes em um cluster aumentam suas solicitações de E/S, o cluster precisa trabalhar mais para atender à demanda. Se você souber quais clientes têm um grande número de solicitações de E/S para um determinado volume no cluster, poderá melhorar o desempenho do cluster ajustando o número de clientes que acessam o volume ou diminuindo a quantidade de E/S para o volume. Você também pode aplicar ou aumentar um limite no grupo de política de QoS ao qual o volume pertence.
+
+Você pode investigar os clientes e seus aplicativos para determinar se os clientes estão enviando mais operações de E/S do que o normal, o que pode estar causando contenção em um componente do cluster. Na página Event details, a seção System Diagnosis exibe as principais cargas de trabalho de volume que usam o componente em contenção. Se você souber qual cliente está acessando um determinado volume, poderá acessar o cliente para determinar se o hardware do cliente ou um aplicativo não está operando conforme o esperado ou está executando mais trabalho do que o normal.
+
+Em uma configuração do MetroCluster, as solicitações de gravação para um volume em um cluster local são espelhadas para um volume no cluster remoto. Manter o volume de origem no cluster local sincronizado com o volume de destino no cluster remoto também pode aumentar a demanda de ambos os clusters na configuração do MetroCluster. Ao reduzir as solicitações de gravação para esses volumes espelhados, os clusters podem executar menos operações de sincronização, o que reduz o impacto no desempenho de outras cargas de trabalho.

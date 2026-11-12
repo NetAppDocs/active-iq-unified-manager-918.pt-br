@@ -1,0 +1,38 @@
+---
+permalink: performance-checker/concept_what_used_headroom_value_means.html 
+sidebar: sidebar 
+keywords: performance, capacity, value, means 
+summary: O valor da capacidade de desempenho utilizada ajuda você a identificar os nós e agregados que estão atualmente sobrecarregados ou subutilizados. Isso permite redistribuir as cargas de trabalho para tornar os recursos de storage mais eficientes. 
+---
+= Utilize o valor de capacidade de desempenho usado no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O valor da capacidade de desempenho utilizada ajuda você a identificar os nós e agregados que estão atualmente sobrecarregados ou subutilizados. Isso permite redistribuir as cargas de trabalho para tornar os recursos de storage mais eficientes.
+
+A figura a seguir mostra a curva de latência versus utilização de um recurso e identifica, com pontos coloridos, três áreas onde o ponto operacional atual pode estar localizado.
+
+image::../media/headroom_chart_over_under.gif[Uma captura de tela da interface do usuário que mostra a curva de latência versus utilização de um recurso.]
+
+* Uma taxa de utilização da capacidade de desempenho igual a 100 representa o ponto ideal.
++
+Os recursos estão sendo usados com eficiência neste momento.
+
+* Uma porcentagem da capacidade de desempenho usada acima de 100 indica que o nó ou agregado está sobreutilizado e que as cargas de trabalho estão recebendo desempenho abaixo do ideal.
++
+Não adicione novas cargas de trabalho ao recurso, e talvez seja necessário redistribuir as cargas de trabalho existentes.
+
+* Uma porcentagem de capacidade de desempenho utilizada inferior a 100% indica que o nó ou agregado está subutilizado e que os recursos não estão sendo usados de forma eficaz.
++
+É possível adicionar mais cargas de trabalho ao recurso.
+
+
+
+[NOTE]
+====
+Ao contrário da utilização, a porcentagem de capacidade de desempenho usada pode ultrapassar 100%. Não há um percentual máximo, mas os recursos normalmente estarão na faixa de 110% a 140% quando estiverem superutilizados. Percentuais mais altos indicariam um recurso com problemas sérios.
+
+====

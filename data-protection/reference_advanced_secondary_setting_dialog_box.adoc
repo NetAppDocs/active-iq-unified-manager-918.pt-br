@@ -1,0 +1,88 @@
+---
+permalink: data-protection/reference_advanced_secondary_setting_dialog_box.html 
+sidebar: sidebar 
+keywords: advanced, secondary, settings, dialog box 
+summary: Você pode usar a caixa de diálogo Configurações Secundárias Avançadas para habilitar a replicação flexível por versão, o backup de múltiplas cópias e as configurações relacionadas ao espaço em um volume secundário. Você pode usar a caixa de diálogo Configurações Secundárias Avançadas quando quiser alterar, habilitar ou desabilitar as configurações atuais. 
+---
+= Utilize a caixa de diálogo Configurações Secundárias Avançadas no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a caixa de diálogo Configurações Secundárias Avançadas para habilitar a replicação flexível por versão, o backup de múltiplas cópias e as configurações relacionadas ao espaço em um volume secundário. Você pode usar a caixa de diálogo Configurações Secundárias Avançadas quando quiser alterar, habilitar ou desabilitar as configurações atuais.
+
+As configurações relacionadas ao espaço maximizam a quantidade de dados armazenados, incluindo: deduplicação, compressão de dados, crescimento automático e garantia de espaço.
+
+A caixa de diálogo inclui os seguintes campos:
+
+* *Habilitar replicação flexível por versão*
++
+Habilita o SnapMirror com replicação flexível em termos de versão. A replicação flexível em termos de versão permite a proteção do SnapMirror de um volume de origem, mesmo que o volume de destino esteja executando uma versão anterior do ONTAP em relação à do volume de origem.
+
++
+** Ativar backup
++
+Se a replicação flexível por versão estiver ativada, também permite que várias cópias de Snapshot dos dados de origem do SnapMirror sejam transferidas e mantidas no destino do SnapMirror.
+
+
+
+* *Ativar a desduplicação*
++
+Habilita a deduplicação no volume secundário em uma relação do SnapVault, para que blocos de dados duplicados sejam eliminados e você economize espaço. Você pode usar a deduplicação quando a economia de espaço for de pelo menos 10% e a taxa de substituição de dados não for alta. A deduplicação é frequentemente usada em ambientes virtualizados, compartilhamentos de arquivos e dados de backup. Essa configuração fica desativada por padrão. Quando habilitada, essa operação é iniciada após cada transferência.
+
++
+** Ativar compressão
++
+Habilita a compressão de dados transparente. Você pode usar a compressão quando a economia de espaço for de pelo menos 10%, quando a sobrecarga potencial for aceitável e quando houver recursos de sistema suficientes para que a compressão seja concluída fora dos horários de pico. Em uma relação do SnapVault, essa configuração é desativada por padrão. A compressão está disponível somente quando a desduplicação é selecionada.
+
+** Comprimir em linha
++
+Permite economia imediata de espaço ao compactar os dados antes de gravá-los no disco. Você pode usar a compactação em linha quando o sistema não tiver mais de 50 por cento de utilização durante os horários de pico e quando o sistema puder acomodar novas gravações e CPU adicional durante os horários de pico. Essa configuração está disponível somente quando "`Enable Compression`" estiver selecionado.
+
+
+
+* *Ativar o Autogrow*
++
+Permite aumentar automaticamente o volume de destino quando a porcentagem de espaço livre estiver abaixo do limite especificado, desde que haja espaço disponível no agregado associado.
+
+* *Tamanho máximo*
++
+Define a porcentagem máxima até a qual um volume pode crescer. O padrão é 20% maior que o tamanho do volume de origem. Um volume não cresce automaticamente se o tamanho atual for maior ou igual à porcentagem máxima de crescimento automático. Este campo só é habilitado quando a configuração de crescimento automático está ativada.
+
+* *Tamanho do incremento*
++
+Especifica o incremento percentual pelo qual o volume cresce automaticamente antes de atingir a porcentagem máxima do volume de origem.
+
+* *Garantia de espaço*
++
+Garante que haja espaço suficiente alocado no volume secundário para que as transferências de dados sejam sempre bem-sucedidas. A configuração da garantia de espaço pode ser uma das seguintes:
+
++
+** Arquivo
+** Volume
+** None + Por exemplo, você pode ter um volume de 200 GB que contém arquivos totalizando 50 GB; no entanto, esses arquivos contêm apenas 10 GB de dados. A garantia de volume aloca 200 GB para o volume de destino, independentemente do conteúdo na origem. A garantia de arquivo aloca 50 GB para garantir que haja espaço suficiente reservado para os arquivos na origem; selecionar None nesse cenário significa que apenas 10 GB serão alocados no destino para o espaço realmente usado pelos dados dos arquivos na origem.
+
+
++
+A garantia de espaço está definida como Volume por padrão.
+
+
+
+
+
+[[command-buttons]]
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas:
+
+* *Aplicar*
++
+Salva as configurações de eficiência selecionadas e as aplica quando você clica em *Apply* na caixa de diálogo Configure Protection.
+
+* *Cancelar*
++
+Descarta suas seleções e fecha a caixa de diálogo Advanced Destination Settings.
+
+

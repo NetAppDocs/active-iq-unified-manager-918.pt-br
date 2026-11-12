@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_confirm_that_response_time_is_within_expected_range.html 
+sidebar: sidebar 
+keywords: confirm, latency, within, expected, range 
+summary: 'Quando um componente do cluster está em contenção, as cargas de trabalho de volume que o utilizam podem apresentar tempo de resposta (latência) reduzido. Você pode revisar a latência de cada carga de trabalho afetada no componente em contenção para confirmar se sua latência real está dentro do intervalo esperado. Você também pode clicar no nome de um volume para visualizar os dados históricos desse volume.' 
+---
+= Confirme se a latência está dentro da faixa esperada no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando um componente do cluster está em contenção, as cargas de trabalho de volume que o utilizam podem apresentar tempo de resposta (latência) reduzido. Você pode revisar a latência de cada carga de trabalho afetada no componente em contenção para confirmar se sua latência real está dentro do intervalo esperado. Você também pode clicar no nome de um volume para visualizar os dados históricos desse volume.
+
+Se o evento de desempenho estiver em estado obsoleto, a latência de cada vítima envolvida no evento pode ter retornado ao intervalo esperado.

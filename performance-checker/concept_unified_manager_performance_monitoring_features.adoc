@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_unified_manager_performance_monitoring_features.html 
+sidebar: sidebar 
+keywords: unified manager, performance, monitoring, features 
+summary: O Unified Manager coleta e analisa estatísticas de desempenho de sistemas que executam o software ONTAP. Ele usa limites de desempenho dinâmicos e limites de desempenho definidos pelo usuário para monitorar uma variedade de contadores de desempenho em diversos componentes do cluster. 
+---
+= Explore os recursos de monitoramento de desempenho do Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Unified Manager coleta e analisa estatísticas de desempenho de sistemas que executam o software ONTAP. Ele usa limites de desempenho dinâmicos e limites de desempenho definidos pelo usuário para monitorar uma variedade de contadores de desempenho em diversos componentes do cluster.
+
+Um alto tempo de resposta (latência) indica que o objeto de armazenamento, por exemplo, um volume, está apresentando desempenho inferior ao normal. Esse problema também indica que houve queda no desempenho dos aplicativos cliente que usam o volume. O Unified Manager identifica o componente de armazenamento onde está o problema de desempenho e fornece uma lista de ações sugeridas que você pode realizar para resolver o problema de desempenho.
+
+O Unified Manager inclui os seguintes recursos:
+
+* Monitora e analisa estatísticas de desempenho da carga de trabalho de um sistema que executa o software ONTAP.
+* Monitora contadores de desempenho para clusters, nós, agregados, portas, SVMs, volumes, LUNs, namespaces NVMe e interfaces de rede (LIFs).
+* Exibe gráficos detalhados que representam a atividade da carga de trabalho ao longo do tempo, incluindo IOPS (operações), MB/s (taxa de transferência), latência (tempo de resposta), utilização, capacidade de desempenho e proporção de cache.
+* Permite criar políticas de limite de desempenho definidas pelo usuário que disparam eventos e enviam alertas por e-mail quando os limites são ultrapassados.
+* Utiliza limites definidos pelo sistema e limites de desempenho dinâmicos que aprendem sobre a atividade da sua carga de trabalho para identificar e alertar você sobre problemas de desempenho.
+* Identifica as políticas de qualidade do serviço (QoS) e as políticas de Nível de Serviço de Desempenho (PSLs) aplicadas aos seus volumes e LUNs.
+* Identifica claramente o componente do cluster que está em disputa.
+* Identifica cargas de trabalho que estão sobrecarregando os componentes do cluster e as cargas de trabalho cujo desempenho é afetado pelo aumento da atividade.
+

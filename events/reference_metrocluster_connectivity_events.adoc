@@ -1,0 +1,258 @@
+---
+permalink: events/reference_metrocluster_connectivity_events.html 
+sidebar: sidebar 
+keywords: metrocluster, connectivity, events, impact area, availability 
+summary: Os eventos de conectividade fornecem a você informações sobre a conectividade entre os componentes de um cluster e entre clusters em uma configuração MetroCluster, para que você possa monitorar possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade. 
+---
+= Saiba mais sobre os eventos de conectividade do MetroCluster no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de conectividade fornecem informações sobre a conectividade entre os componentes de um cluster e entre clusters em configurações MetroCluster over FC e MetroCluster over IP, para que você possa monitorar possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade.
+
+
+
+[[events-common-in-both-configurations]]
+== Eventos comuns em ambas as configurações
+
+Esses eventos de conectividade são comuns tanto para as configurações do MetroCluster sobre FC quanto para as do MetroCluster sobre IP.
+
+
+
+[[impact-area-availability]]
+=== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Todos os links entre parceiros do MetroCluster estão inativos(ocumEvtMetroClusterAllLinksBetweenPartnersDown)
+ a| 
+Incidente
+ a| 
+Relacionamento do MetroCluster
+ a| 
+Crítico
+
+
+
+ a| 
+O MetroCluster não consegue acessar os parceiros pela rede de peering(ocumEvtMetroClusterPartnersNotReachableOverPeeringNetwork)
+ a| 
+Incidente
+ a| 
+Relacionamento do MetroCluster
+ a| 
+Crítico
+
+
+
+ a| 
+O MetroCluster teve a capacidade de recuperação de desastres afetada (ocumEvtMetroClusterDRStatusImpacted)
+ a| 
+Risco
+ a| 
+Relacionamento do MetroCluster
+ a| 
+Crítico
+
+
+
+ a| 
+A configuração do MetroCluster foi comutada (ocumEvtMetroClusterDRStatusImpacted)
+ a| 
+Risco
+ a| 
+Relacionamento do MetroCluster
+ a| 
+Aviso
+
+|===
+
+
+[[metrocluster-over-fc-configuration]]
+== Configuração do MetroCluster over FC
+
+Esses eventos dizem respeito às configurações do MetroCluster over FC.
+
+
+
+[[impact-area-availability]]
+=== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Todos os links entre switches estão inativos(ocumEvtMetroClusterAllISLBetweenSwitchesDown)
+ a| 
+Incidente
+ a| 
+Conexão entre switches do MetroCluster
+ a| 
+Crítico
+
+
+
+ a| 
+Link da ponte FC-SAS para a pilha de armazenamento inativo(ocumEvtBridgeSasPortDown)
+ a| 
+Incidente
+ a| 
+MetroCluster conexão da pilha de pontes
+ a| 
+Crítico
+
+
+
+ a| 
+MetroCluster configuração parcialmente comutada(ocumEvtMetroClusterDRStatusPartiallyImpacted)
+ a| 
+Risco
+ a| 
+Relacionamento do MetroCluster
+ a| 
+Erro
+
+
+
+ a| 
+Node To FC Switch todos os links de interconexão FC-VI estão inativos(ocumEvtMccNodeSwitchFcviLinksDown)
+ a| 
+Incidente
+ a| 
+Conexão do switch de nó do MetroCluster
+ a| 
+Crítico
+
+
+
+ a| 
+Um ou mais links de iniciador FC do nó para o switch FC estão inativos(ocumEvtMccNodeSwitchFcLinksOneOrMoreDown)
+ a| 
+Risco
+ a| 
+Conexão do switch de nó do MetroCluster
+ a| 
+Aviso
+
+
+
+ a| 
+Todos os links do iniciador FC do nó para o switch FC inativos(ocumEvtMccNodeSwitchFcLinksDown)
+ a| 
+Incidente
+ a| 
+Conexão do switch de nó do MetroCluster
+ a| 
+Crítico
+
+
+
+ a| 
+Link FC do switch para a ponte FC-SAS inativo (ocumEvtMccSwitchBridgeFcLinksDown)
+ a| 
+Incidente
+ a| 
+MetroCluster conexão de bridge do switch
+ a| 
+Crítico
+
+
+
+ a| 
+Todos os links FC VI InterConnect entre nós inativos (ocumEvtMccInterNodeLinksDown)
+ a| 
+Incidente
+ a| 
+Conexão entre nós
+ a| 
+Crítico
+
+
+
+ a| 
+Entre nós, um ou mais links FC VI InterConnect inativos (ocumEvtMccInterNodeLinksOneOrMoreDown)
+ a| 
+Risco
+ a| 
+Conexão entre nós
+ a| 
+Aviso
+
+
+
+ a| 
+Link do nó para a ponte inativo (ocumEvtMccNodeBridgeLinksDown)
+ a| 
+Incidente
+ a| 
+Conexão da bridge do nó
+ a| 
+Crítico
+
+
+
+ a| 
+Todos os links SAS do nó para a pilha de armazenamento estão inativos (ocumEvtMccNodeStackLinksDown)
+ a| 
+Incidente
+ a| 
+Conexão da pilha de nós
+ a| 
+Crítico
+
+
+
+ a| 
+Nó para pilha de armazenamento uma ou mais conexões SAS inativas ( ocumEvtMccNodeStackLinksOneOrMoreDown)
+ a| 
+Risco
+ a| 
+Conexão da pilha de nós
+ a| 
+Aviso
+
+|===
+
+
+[[metrocluster-over-ip-configuration]]
+== Configuração do MetroCluster over IP
+
+Esses eventos dizem respeito ao MetroCluster over IP.
+
+
+
+[[impact-area-availability]]
+=== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+O MetroCluster o status da conectividade IP entre sites está inativo (mccIntersiteconnectivityStatusDown)
+ a| 
+Risco
+ a| 
+Relacionamento do MetroCluster
+ a| 
+Crítico
+
+
+
+ a| 
+Conexão offline do nó IP ao switch do MetroCluster (mccIpPortStatusOffline)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+|===

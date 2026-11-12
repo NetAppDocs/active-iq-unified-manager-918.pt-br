@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_break_snapmirror_relationship.html 
+sidebar: sidebar 
+keywords: break, snapmirror, relationship, volume, relationship page 
+summary: Você pode romper uma relação de proteção para interromper as transferências de dados entre um volume de origem e um volume de destino em uma relação do SnapMirror. Você pode romper uma relação quando quiser migrar dados, para recuperação de desastres ou para testes de aplicativos. O volume de destino é alterado para um volume de leitura/gravação. Você não pode romper uma relação do SnapVault. 
+---
+= Desfaça uma relação do SnapMirror na página Relacionamentos de Volume do Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode romper uma relação de proteção para interromper as transferências de dados entre um volume de origem e um volume de destino em uma relação do SnapMirror. Você pode romper uma relação quando quiser migrar dados, para recuperação de desastres ou para testes de aplicativos. O volume de destino é alterado para um volume de leitura/gravação. Você não pode romper uma relação do SnapVault.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+* Você precisa ter configurado o Workflow Automation.
+
+
+.Passos
+. Na página *Volume Relationships*, selecione um ou mais volumes com relações de proteção para os quais você deseja interromper as transferências de dados e, na barra de ferramentas, clique em *Break*.
++
+A caixa de diálogo "Break Relationship" é exibida.
+
+. Clique em *Continuar* para interromper a relação.
+. Na página *Relacionamentos de Volume*, verifique na coluna *Estado do Relacionamento* se o relacionamento está rompido.
++
+A coluna "Estado do Relacionamento" está oculta por padrão, portanto talvez seja necessário selecioná-la na lista de colunas a serem exibidas/ocultadas image:../media/icon_columnshowhide_sm_onc.gif[""].
+
+

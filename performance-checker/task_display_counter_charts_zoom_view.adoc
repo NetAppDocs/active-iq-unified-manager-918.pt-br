@@ -1,0 +1,21 @@
+---
+permalink: performance-checker/task_display_counter_charts_zoom_view.html 
+sidebar: sidebar 
+keywords: display, counter charts, zoom, view 
+summary: A visualização ampliada dos gráficos de contador fornece um nível de detalhe mais preciso para o gráfico de contador selecionado e sua linha do tempo associada. Isso amplia os dados do gráfico de contador, permitindo uma visão mais clara dos eventos de desempenho e suas causas subjacentes. 
+---
+= Exiba a visualização ampliada dos gráficos de contador no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A visualização ampliada dos gráficos de contador fornece um nível de detalhe mais preciso para o gráfico de contador selecionado e sua linha do tempo associada. Isso amplia os dados do gráfico de contador, permitindo uma visão mais clara dos eventos de desempenho e suas causas subjacentes.
+
+Você pode exibir a visualização ampliada dos gráficos de contador para qualquer gráfico de contador.
+
+.Passos
+. Clique em *Visualização Ampliada* para abrir o gráfico selecionado em uma nova janela do navegador.
+. Se você estiver visualizando um gráfico de detalhamento e clicar em *Zoom View*, o gráfico de detalhamento será exibido em *Zoom View*. Você pode selecionar *Total* enquanto estiver em *Zoom View* se quiser alterar a opção de visualização.
+

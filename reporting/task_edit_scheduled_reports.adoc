@@ -1,0 +1,35 @@
+---
+permalink: reporting/task_edit_scheduled_reports.html 
+sidebar: sidebar 
+keywords: editing, schedule, reports 
+summary: Depois de agendar os relatórios, você poderá editá-los na página de agendamento de relatórios. 
+---
+= Edite relatórios agendados no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Depois de agendar os relatórios, você poderá editá-los na página de agendamento de relatórios.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+
+.Passos
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Agendamentos de relatórios*.
++
+image::../media/scheduled_reports_2.gif[Uma captura de tela da interface do usuário que mostra relatórios agendados.]
+
++
+[NOTE]
+====
+Se você tiver as permissões adequadas, poderá alterar qualquer relatório e seu agendamento no sistema.
+
+====
+. Clique no ícone "Mais" image:../media/more_icon.gif[""] da programação que você deseja alterar.
+. Clique em *Editar*.
+. Você pode alterar o *Nome da Programação*, a lista de *Destinatários*, a *Frequência* e o *Formato* da programação do relatório.
+. Ao concluir, clique na marca de seleção para salvar suas alterações.
+

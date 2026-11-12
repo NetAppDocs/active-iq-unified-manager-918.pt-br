@@ -1,0 +1,44 @@
+---
+permalink: data-protection/task_create_snapmirror_and_snapvault_schedules.html 
+sidebar: sidebar 
+keywords: create, snapmirror, snapvault, schedules 
+summary: Você pode criar agendamentos básicos ou avançados do SnapMirror e do SnapVault para habilitar transferências automáticas de proteção de dados em um volume de origem ou primário, para que as transferências ocorram com mais ou menos frequência, dependendo da frequência com que os dados mudam em seus volumes. 
+---
+= Crie agendas de SnapMirror e SnapVault no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode criar agendamentos básicos ou avançados do SnapMirror e do SnapVault para habilitar transferências automáticas de proteção de dados em um volume de origem ou primário, para que as transferências ocorram com mais ou menos frequência, dependendo da frequência com que os dados mudam em seus volumes.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+* Você já deve ter preenchido a área Informações de destino na caixa de diálogo Configurar proteção.
+* Você precisa ter configurado o Workflow Automation para executar esta tarefa.
+
+
+.Passos
+. Na guia *SnapMirror* ou na guia *SnapVault* da caixa de diálogo *Configurar proteção*, clique no link *Criar agendamento* na área *Configurações de relacionamento*.
++
+A caixa de diálogo Criar Agendamento é exibida.
+
+. No campo *Nome do Agendamento*, digite o nome que você deseja dar ao agendamento.
+. Selecione uma das seguintes opções:
++
+** *Básico*
++
+Selecione se você deseja criar um agendamento básico no estilo de intervalos.
+
+** *Avançado*
++
+Selecione se você deseja criar um agendamento no estilo cron.
+
+
+
+. Clique em *Create*.
++
+O novo horário é exibido na lista suspensa Schedule do SnapMirror ou Schedule do SnapVault.
+
+

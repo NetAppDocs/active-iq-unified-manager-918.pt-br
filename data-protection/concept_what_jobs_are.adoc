@@ -1,0 +1,18 @@
+---
+permalink: data-protection/concept_what_jobs_are.html 
+sidebar: sidebar 
+keywords: jobs 
+summary: Um trabalho é uma série de tarefas que você pode monitorar usando o Unified Manager. Visualizar os trabalhos e suas respectivas tarefas permite que você determine se foram concluídos com sucesso. 
+---
+= Saiba mais sobre os jobs no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um trabalho é uma série de tarefas que você pode monitorar usando o Unified Manager. Visualizar os trabalhos e suas respectivas tarefas permite que você determine se foram concluídos com sucesso.
+
+Os trabalhos são iniciados quando você cria relacionamentos de SnapMirror e SnapVault, quando realiza qualquer operação de relacionamento (quebrar, editar, suspender, remover, retomar, ressincronizar e reverter a ressincronização), quando executa tarefas de restauração de dados, quando faz login em um cluster e assim por diante.
+
+Quando você inicia um trabalho, pode usar a página Trabalhos e a página Detalhes do trabalho para monitorar o trabalho e o progresso das tarefas de trabalho associadas.

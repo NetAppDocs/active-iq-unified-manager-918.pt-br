@@ -1,0 +1,48 @@
+---
+permalink: performance-checker/task_respond_to_performance_incident_caused_by_disk_failure.html 
+sidebar: sidebar 
+keywords: dynamic, performance, event, disk, failure 
+summary: Você pode usar o Unified Manager para investigar um evento de desempenho causado por cargas de trabalho que sobrecarregam um agregado. Você também pode usar o Unified Manager para verificar a integridade do agregado e ver se eventos de integridade recentes detectados no agregado contribuíram para o evento de desempenho. 
+---
+= Responder a um evento de desempenho causado por falha de disco no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar o Unified Manager para investigar um evento de desempenho causado por cargas de trabalho que sobrecarregam um agregado. Você também pode usar o Unified Manager para verificar a integridade do agregado e ver se eventos de integridade recentes detectados no agregado contribuíram para o evento de desempenho.
+
+.Antes de começar
+* Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+* Devem existir eventos de desempenho novos, reconhecidos ou obsoletos.
+
+
+.Passos
+. Exiba a página *Detalhes do evento* para visualizar informações sobre o evento.
+. Leia a *Descrição*, que descreve as cargas de trabalho envolvidas no evento e o componente do cluster em contenção.
++
+Há vários volumes afetados cuja latência foi afetada pelo componente do cluster em disputa. O agregado, que está no meio de uma reconstrução de RAID para substituir o disco com falha por um disco sobressalente, é o componente do cluster em disputa. Em Componente em Disputa, o ícone Aggregate é destacado em vermelho, e o nome do agregado é exibido entre parênteses.
+
+. No gráfico Workload Utilization, selecione *Bully Workloads*.
+. Passe o cursor sobre o gráfico para ver as principais cargas de trabalho agressoras que estão afetando o componente.
++
+As principais cargas de trabalho com o maior pico de utilização desde que o evento foi detectado são exibidas na parte superior do gráfico. Uma das principais cargas de trabalho é a carga de trabalho definida pelo sistema "Disk Health", que indica uma reconstrução de RAID. Uma reconstrução é o processo interno envolvido na reconstrução do agregado com o disco sobressalente. A carga de trabalho "Disk Health", juntamente com outras cargas de trabalho no agregado, provavelmente causou a contenção no agregado e o evento associado.
+
+. Após confirmar que a atividade da carga de trabalho de integridade do disco causou o evento, aguarde aproximadamente 30 minutos para que a reconstrução seja concluída e para que o Unified Manager analise o evento e detecte se o agregado ainda está em disputa.
+. Atualize os *detalhes do evento*.
++
+Após a conclusão da reconstrução do RAID, verifique se o State está obsolete, indicando que o evento foi resolvido.
+
+. No gráfico de utilização da carga de trabalho, selecione *Bully Workloads* para visualizar as cargas de trabalho no agregado por utilização de pico.
+. Na área *Suggested Actions*, clique no botão *Analyze Workload* da carga de trabalho principal.
+. Na página *Análise de Carga de Trabalho*, defina o Intervalo de Tempo para exibir os dados das últimas 24 horas (1 dia) para o volume selecionado.
++
+Na Linha do Tempo de Eventos, um ponto vermelho (image:../media/opm_incident_icon_png.gif["Ícone de incidente do Performance Manager"]) indica quando ocorreu o evento de falha de disco.
+
+. No gráfico de utilização do nó e do agregado, oculte a linha das estatísticas do nó para que apenas a linha do agregado permaneça visível.
+. Compare os dados neste gráfico com os dados no momento do evento no gráfico *Latency*.
++
+No momento do evento, a utilização do agregado mostra uma grande quantidade de atividade de leitura e gravação, causada pelos processos de reconstrução de RAID, o que aumentou a latência do volume selecionado. Algumas horas após a ocorrência do evento, tanto as leituras e gravações quanto a latência diminuíram, confirmando que o agregado não está mais em contenção.
+
+

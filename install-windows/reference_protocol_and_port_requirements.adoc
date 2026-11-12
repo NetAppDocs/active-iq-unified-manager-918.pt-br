@@ -1,0 +1,299 @@
+---
+permalink: install-windows/reference_protocol_and_port_requirements.html 
+sidebar: sidebar 
+keywords: unified manager, protocol, port, requirements 
+summary: As portas e os protocolos necessários permitem a comunicação entre o servidor do Unified Manager e os sistemas de armazenamento gerenciados, os servidores e outros componentes. 
+---
+= Compreenda os requisitos de protocolo e porta para o Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+As portas e os protocolos necessários permitem a comunicação entre o servidor do Unified Manager e os sistemas de armazenamento gerenciados, os servidores e outros componentes.
+
+
+
+[[connections-to-the-unified-manager-server]]
+== Conexões com o servidor do Unified Manager
+
+Em instalações típicas, você não precisa especificar números de porta ao se conectar à interface web do Unified Manager, pois as portas padrão são sempre utilizadas. Por exemplo, como o Unified Manager sempre tenta ser executado em sua porta padrão, você pode inserir  `+https://<host>+` em vez de  `+https://<host>:443+`.
+
+O servidor do Unified Manager usa protocolos específicos para acessar as seguintes interfaces:
+
+[cols="4*"]
+|===
+| Interface | Protocolo | Porta | Descrição 
+
+
+ a| 
+Interface da Web do Unified Manager
+ a| 
+HTTP
+ a| 
+80
+ a| 
+Usado para acessar a interface da Web do Unified Manager; redireciona automaticamente para a porta segura 443.
+
+
+
+ a| 
+A interface do usuário da Web do Unified Manager e programas que usam APIs
+ a| 
+HTTPS
+ a| 
+443
+ a| 
+Utilizado para acessar com segurança a interface do usuário da web do Unified Manager ou para fazer chamadas de API; as chamadas de API só podem ser feitas usando HTTPS.
+
+
+
+ a| 
+Console de manutenção
+ a| 
+SSH/SFTP
+ a| 
+22
+ a| 
+Utilizado para acessar o console de manutenção e recuperar pacotes de suporte.
+
+
+
+ a| 
+Linha de comando do Linux
+ a| 
+SSH/SFTP
+ a| 
+22
+ a| 
+Usado para acessar a linha de comando do Red Hat Enterprise Linux e recuperar pacotes de suporte.
+
+
+
+ a| 
+Syslog
+ a| 
+UDP
+ a| 
+514
+ a| 
+Utilizado para acessar mensagens EMS baseadas em assinatura dos sistemas ONTAP e para criar eventos com base nessas mensagens.
+
+
+
+ a| 
+REST
+ a| 
+HTTPS
+ a| 
+9443
+ a| 
+Usado para acessar eventos EMS em tempo real baseados em API REST de sistemas ONTAP autenticados.
+
+
+
+ a| 
+Banco de dados MySQL
+ a| 
+O MySQL
+ a| 
+3306
+ a| 
+Utilizado para habilitar o acesso do OnCommand Workflow Automation e do OnCommand API Services ao Unified Manager.
+
+
+
+ a| 
+Broker AMQP QPID
+ a| 
+TCP/IP
+ a| 
+56072
+ a| 
+Usado para comunicação interna de mensagens.
+
+
+
+ a| 
+Broker AMQP QPID
+ a| 
+WebSocket sobre TCP
+ a| 
+56080
+ a| 
+Usada para escutar nesta porta mensagens recebidas do ONTAP (cloud agent).
+
+
+
+ a| 
+Broker AMQP QPID
+ a| 
+WebSocket sobre TCP
+ a| 
+56443
+ a| 
+Usada para escutar nesta porta as mensagens recebidas do ONTAP (agente na nuvem). A comunicação por esta porta suporta a criptografia fornecida por TLS ou SSL.
+
+|===
+[NOTE]
+====
+A porta padrão do MySQL, 3306, é restrita apenas ao localhost durante a instalação do Unified Manager em sistemas Windows. Após a conclusão da instalação, habilite o firewall para restringir o acesso à porta 3306 do MySQL. Isso não afeta nenhum cenário de atualização, em que a configuração anterior é mantida. Essa configuração pode ser modificada, e a conexão pode ser disponibilizada para outros hosts usando a `Control access to MySQL port 3306` opção no console de manutenção. Para obter informações, consulte link:../config/reference_additional_menu_options.html["Opções adicionais do menu"]. As portas usadas para comunicação HTTP e HTTPS (portas 80 e 443) podem ser alteradas usando o console de manutenção do Unified Manager. Para obter mais informações, consulte link:../config/concept_configure_unified_manager.html["Configurando o Active IQ Unified Manager"].
+
+====
+
+
+[[connections-from-the-unified-manager-server]]
+== Conexões do servidor do Unified Manager
+
+Você deve configurar seu firewall para abrir as portas que permitem a comunicação entre o servidor Unified Manager e os sistemas de armazenamento gerenciados, servidores e outros componentes. Se uma porta não estiver aberta, a comunicação falhará.
+
+Dependendo do seu ambiente, você pode optar por modificar as portas e os protocolos usados pelo servidor Unified Manager para se conectar a destinos específicos.
+
+O servidor Unified Manager se conecta aos sistemas de armazenamento gerenciados, servidores e outros componentes usando os seguintes protocolos e portas:
+
+[cols="4*"]
+|===
+| Destino | Protocolo | Porta | Descrição 
+
+
+ a| 
+Sistema de storage
+ a| 
+HTTPS
+ a| 
+443/TCP
+ a| 
+Utilizado para monitorar e gerenciar sistemas de armazenamento.
+
+
+
+ a| 
+Sistema de storage
+ a| 
+NDMP
+ a| 
+10000/TCP
+ a| 
+Usado em determinadas operações de restauração de Snapshot.
+
+
+
+ a| 
+AutoSupport servidor
+ a| 
+HTTPS
+ a| 
+443
+ a| 
+Utilizado para enviar informações do AutoSupport. Requer acesso à internet para executar esta função.
+
+
+
+ a| 
+Servidor de autenticação
+ a| 
+LDAP
+ a| 
+389
+ a| 
+Usado para fazer solicitações de autenticação e solicitações de pesquisa de usuários e grupos.
+
+
+
+ a| 
+LDAPS
+ a| 
+636
+ a| 
+Utilizado para comunicação LDAP segura.
+
+
+
+ a| 
+Servidor de e-mail
+ a| 
+SMTP
+ a| 
+25
+ a| 
+Utilizado para enviar e-mails de notificação de alerta.
+
+
+
+ a| 
+Remetente de trap SNMP
+ a| 
+SNMPv1 ou SNMPv3
+ a| 
+162/UDP
+ a| 
+Usado para enviar notificações de alerta por traps SNMP.
+
+
+
+ a| 
+Servidor do provedor de dados externo
+ a| 
+TCP
+ a| 
+2003
+ a| 
+Usado para enviar dados de desempenho a um provedor de dados externo, como o Graphite.
+
+
+
+ a| 
+Servidor NTP
+ a| 
+NTP
+ a| 
+123/UDP
+ a| 
+Utilizado para sincronizar a hora no servidor Unified Manager com um servidor de horário NTP externo. (apenas para sistemas VMware)
+
+
+
+ a| 
+Broker AMQP QPID
+ a| 
+TCP/IP
+ a| 
+56072
+ a| 
+Usado para comunicação interna de mensagens.
+
+
+
+ a| 
+Broker AMQP QPID
+ a| 
+WebSocket sobre TCP
+ a| 
+56080
+ a| 
+Usada para escutar nesta porta mensagens recebidas do ONTAP (cloud agent).
+
+
+
+ a| 
+Broker AMQP QPID
+ a| 
+WebSocket sobre TCP
+ a| 
+56443
+ a| 
+Usada para escutar nesta porta as mensagens recebidas do ONTAP (cloud agent). A comunicação por esta porta oferece suporte à criptografia fornecida por TLS ou SSL.
+
+
+
+ a| 
+Syslog
+ a| 
+UDP
+ a| 
+514
+ a| 
+Utilizado pelo Unified Manager para enviar registros de auditoria para um servidor syslog remoto.
+
+|===

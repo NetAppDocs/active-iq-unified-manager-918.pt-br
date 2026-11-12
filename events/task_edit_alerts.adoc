@@ -1,0 +1,27 @@
+---
+permalink: events/task_edit_alerts.html 
+sidebar: sidebar 
+keywords: edit, alerts 
+summary: Você pode editar as propriedades do alerta, como o recurso ao qual o alerta está associado, eventos, destinatários, opções de notificação, frequência de notificação e scripts associados. 
+---
+= Editar alertas no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode editar as propriedades do alerta, como o recurso ao qual o alerta está associado, eventos, destinatários, opções de notificação, frequência de notificação e scripts associados.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator.
+
+.Passos
+. No painel de navegação à esquerda, clique em *Gerenciamento de armazenamento* > *Configuração de alertas*.
+. Na página *Configuração de alertas*, selecione o alerta que deseja editar e clique em *Editar*.
+. Na caixa de diálogo *Edit Alert*, edite as seções de nome, recursos, eventos e ações, conforme necessário.
++
+Você pode alterar ou remover o script associado ao alerta.
+
+. Clique em *Salvar*.
+

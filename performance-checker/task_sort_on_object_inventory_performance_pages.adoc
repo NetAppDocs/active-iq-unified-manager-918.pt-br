@@ -1,0 +1,23 @@
+---
+permalink: performance-checker/task_sort_on_object_inventory_performance_pages.html 
+sidebar: sidebar 
+keywords: sort, object, inventory, performance, pages 
+summary: Você pode classificar todos os dados nas páginas de Desempenho do Inventário de Objetos por qualquer coluna, em ordem crescente ou decrescente. Isso permite localizar rapidamente os dados do inventário de objetos, o que é útil ao analisar o desempenho ou iniciar um processo de solução de problemas. 
+---
+= Classifique os dados nas páginas de desempenho do inventário de objetos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode classificar todos os dados nas páginas de Desempenho do Inventário de Objetos por qualquer coluna, em ordem crescente ou decrescente. Isso permite localizar rapidamente os dados do inventário de objetos, o que é útil ao analisar o desempenho ou iniciar um processo de solução de problemas.
+
+A coluna selecionada para ordenação é indicada por um nome de cabeçalho de coluna destacado e um ícone de seta à direita do nome, que indica a direção da ordenação. Uma seta para cima indica ordem crescente; uma seta para baixo indica ordem decrescente. A ordem de ordenação padrão é por *Status* (criticidade do evento) em ordem decrescente, com os eventos de desempenho mais críticos listados primeiro.
+
+.Etapa
+. Você pode clicar no nome de uma coluna para alternar a ordem de classificação da coluna em ordem crescente ou decrescente.
++
+O conteúdo da página Desempenho do Inventário de Objetos é classificado em ordem crescente ou decrescente, com base na coluna selecionada.
+
+

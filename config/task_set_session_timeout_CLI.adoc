@@ -1,0 +1,24 @@
+---
+permalink: config/task_set_session_timeout_CLI.html 
+sidebar: sidebar 
+keywords: session timeout, CLI, maximum 
+summary: Você pode definir um valor máximo de tempo limite de sessão para o Unified Manager usando a CLI para que a sessão seja encerrada automaticamente após um determinado período de tempo. 
+---
+= Defina o tempo limite da sessão usando a CLI no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode definir um valor máximo de tempo limite de sessão para o Unified Manager usando a CLI para que a sessão seja encerrada automaticamente após um determinado período. Por padrão, o tempo limite da sua sessão está definido para o valor máximo, que é de 4.320 minutos (72 horas). Isso significa que sua sessão termina automaticamente após 72 horas, mesmo se você estiver conectado e usando o Unified Manager.
+
+.Sobre esta tarefa
+Você precisa ter a função de Application Administrator.
+
+A configuração de tempo limite da sessão afeta todas as sessões de usuários conectados.
+
+.Passos
+. Faça login na CLI do Unified Manager digitando o `um cli login` comando. Use um nome de usuário e uma senha válidos para autenticação.
+. Digite o `um option set max.session.timeout.value=<in mins>` comando para modificar o valor do tempo limite da sessão.
+

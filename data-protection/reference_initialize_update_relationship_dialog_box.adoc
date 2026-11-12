@@ -1,0 +1,88 @@
+---
+permalink: data-protection/reference_initialize_update_relationship_dialog_box.html 
+sidebar: sidebar 
+keywords: initialize, update, dialog box 
+summary: A caixa de diálogo Inicializar/Atualizar permite que você execute uma transferência completa pela primeira vez em um novo relacionamento de proteção ou atualize um relacionamento se ele já estiver inicializado e você quiser executar uma atualização incremental manual e não agendada. 
+---
+= Utilize a caixa de diálogo Inicializar/Atualizar no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Inicializar/Atualizar permite que você execute uma transferência completa pela primeira vez em um novo relacionamento de proteção ou atualize um relacionamento se ele já estiver inicializado e você quiser executar uma atualização incremental manual e não agendada.
+
+
+
+[[transfer-options-tab]]
+== Guia Opções de transferência
+
+A guia Opções de transferência permite alterar a prioridade de inicialização de uma transferência e a largura de banda usada durante as transferências.
+
+* *Prioridade de Transferência*
++
+A prioridade com que a transferência é executada. Você pode selecionar Normal ou Baixa. Os relacionamentos com políticas que especificam uma prioridade de transferência Normal são executados antes daqueles que especificam uma prioridade de transferência Baixa. A opção Normal é selecionada por padrão.
+
+* *Taxa máxima de transferência*
++
+Especifica a taxa máxima na qual os dados são transferidos entre clusters pela rede. Se você optar por não usar uma taxa máxima de transferência, a transferência completa entre relacionamentos será ilimitada. Se você selecionar mais de um relacionamento com diferentes taxas máximas de transferência, poderá especificar uma das seguintes configurações de taxa máxima de transferência:
+
++
+** Use os valores especificados durante a configuração ou edição do relacionamento individual
++
+Quando selecionada, as operações de inicialização e atualização utilizam a taxa de transferência máxima especificada no momento da criação ou edição de cada relacionamento. Este campo está disponível apenas quando vários relacionamentos com taxas de transferência diferentes estão sendo inicializados ou atualizados.
+
+** Ilimitado
++
+Indica que não há limitação de largura de banda nas transferências entre relacionamentos. Este campo está disponível apenas quando vários relacionamentos com taxas de transferência diferentes estão sendo inicializados ou atualizados.
+
+** Limitar largura de banda para
++
+Quando selecionado, a largura de banda é limitada ao valor que você especificar. Você pode inserir um valor numérico e selecionar kilobytes por segundo (KBps), megabytes por segundo (MBps), gigabytes por segundo (GBps) ou terabytes por segundo (TBps). A taxa de transferência máxima que você especificar deve ser superior a 1 KBps e inferior a 4 TBps.
+
+
+
+
+
+
+
+[[source-snapshot-copies-tab]]
+== Guia Cópias Snapshot de origem
+
+A guia Cópias Snapshot de origem exibe as seguintes informações sobre a cópia Snapshot de origem usada para a transferência completa:
+
+* *Volume de origem*
++
+Exibe os nomes dos volumes de origem correspondentes.
+
+* *Volume de destino*
++
+Exibe os nomes dos volumes de destino selecionados.
+
+* *Tipo de fonte*
++
+Exibe o tipo de volume. O tipo pode ser Leitura/gravação ou Proteção de dados.
+
+* *cópia Snapshot*
++
+Exibe a cópia Snapshot usada para a transferência de dados. Clicar no valor da cópia Snapshot exibe a caixa de diálogo "Select Source Snapshot Copy", na qual você pode selecionar uma cópia Snapshot específica para sua transferência, dependendo do tipo de relação de proteção que você tem e da operação que está executando. A opção de especificar uma cópia Snapshot diferente não está disponível para origens do tipo de proteção de dados.
+
+
+
+
+
+[[command-buttons]]
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas:
+
+* *Cancelar*
++
+Descarta suas seleções e fecha a caixa de diálogo Initialize/Update.
+
+* *Enviar*
++
+Salva suas seleções e inicia a tarefa de inicialização ou atualização.
+
+

@@ -1,0 +1,26 @@
+---
+permalink: events/task_fix_issues_using_um_automatic_remediations.html 
+sidebar: sidebar 
+keywords: fix, issues, use, unified manager, automatic, remediations 
+summary: 'Existem certos eventos que o Unified Manager pode diagnosticar minuciosamente e fornecer uma única solução usando o botão "Fix It". Quando disponíveis, essas soluções são exibidas no Dashboard, na página de detalhes do evento e na seleção "Workload Analysis" no menu de navegação à esquerda.' 
+---
+= Corrija problemas usando a correção automática no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Há certos eventos que o Unified Manager pode diagnosticar minuciosamente e fornecer uma única solução usando o botão *Fix It*. Quando disponíveis, essas soluções são exibidas no Dashboard, na página Event details e na seleção Workload Analysis no menu de navegação à esquerda.
+
+A maioria dos eventos tem várias resoluções possíveis que são exibidas na página de detalhes do evento para que você possa implementar a melhor solução usando o ONTAP System Manager ou a ONTAP CLI. Uma ação *Fix It* está disponível quando o Unified Manager determinou que há uma única resolução para corrigir o problema e que ele pode ser resolvido usando um comando da ONTAP CLI.
+
+.Passos
+. Para visualizar os eventos que podem ser corrigidos no *Dashboard*, clique em *Dashboard*.
++
+image::../media/management_actions.png[Uma captura de tela que mostra como visualizar e corrigir eventos no Dashboard.]
+
+. Para resolver qualquer problema que o Unified Manager possa corrigir, clique no botão *Corrigir*. Para corrigir um problema que afeta vários objetos, clique no botão *Corrigir tudo*.
+
+
+Para obter informações sobre os problemas que podem ser corrigidos por meio de correção automática, consulte link:..//storage-mgmt/reference_what_ontap_issues_can_unified_manager_fix.html["Que problemas o Unified Manager pode resolver"].

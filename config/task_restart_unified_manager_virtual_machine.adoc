@@ -1,0 +1,26 @@
+---
+permalink: config/task_restart_unified_manager_virtual_machine.html 
+sidebar: sidebar 
+keywords: restart, unified manager, virtual, machine 
+summary: Você pode reiniciar a máquina virtual a partir do console de manutenção do Unified Manager. Você deve reiniciar após gerar um novo certificado de segurança ou se houver um problema com a máquina virtual. 
+---
+= Reinicie a máquina virtual do Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode reiniciar a máquina virtual a partir do console de manutenção do Unified Manager. Você deve reiniciar após gerar um novo certificado de segurança ou se houver um problema com a máquina virtual.
+
+.Antes de começar
+O appliance virtual está ligado.
+
+Você está conectado ao console de manutenção como o usuário de manutenção.
+
+Você também pode reiniciar a máquina virtual a partir do vSphere usando a opção *Restart Guest*. Consulte a documentação da VMware para obter mais informações.
+
+.Passos
+. Acesse o console de manutenção.
+. Selecione *Configuração do sistema* > *Reiniciar máquina virtual*.
+

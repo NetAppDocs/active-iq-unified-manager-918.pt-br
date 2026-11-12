@@ -1,0 +1,142 @@
+---
+permalink: api-automation/concept_verify_svm_workflow.html 
+sidebar: sidebar 
+keywords: verify, svms, clusters 
+summary: 'Antes de provisionar compartilhamentos de arquivos ou LUNs, você deve verificar se os clusters têm Storage Virtual Machines (SVMs) criadas.' 
+---
+= Verifique as SVMs em clusters ONTAP usando as APIs do Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de provisionar compartilhamentos de arquivos ou LUNs, você deve verificar se os clusters têm Storage Virtual Machines (SVMs) criadas.
+
+[NOTE]
+====
+O fluxo de trabalho pressupõe que os clusters ONTAP tenham sido adicionados ao Unified Manager e que a chave do cluster tenha sido obtida. Os clusters devem ter as licenças necessárias para provisionar LUNs e compartilhamentos de arquivos neles.
+
+====
+. Verifique se o cluster possui uma SVM criada.
++
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Caminho 
+
+
+ a| 
+data center
+ a| 
+GET
+ a| 
+`/datacenter/svm/svms`
+`/datacenter/svm/svms/\{key}`
+
+|===
++
+*Exemplo de cURL*
+
++
+[listing]
+----
+curl -X GET "https://<hostname>/api/datacenter/svm/svms" -H "accept: application/json" -H "Authorization: Basic <Base64EncodedCredentials>"
+----
+. Se a chave da SVM não for retornada, crie a SVM. Para criar as SVMs, você precisa da chave do cluster no qual provisiona a SVM. Você também precisa especificar o nome da SVM. Siga estas etapas.
++
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Caminho 
+
+
+ a| 
+data center
+ a| 
+GET
+ a| 
+`/datacenter/cluster/clusters`
+`/datacenter/cluster/clusters/\{key}`
+
+|===
++
+Obtenha a chave do cluster.
+
++
+*Exemplo de cURL*
+
++
+[listing]
+----
+curl -X GET "https://<hostname>/api/datacenter/cluster/clusters" -H "accept: application/json" -H "Authorization: Basic <Base64EncodedCredentials>"
+----
+. A partir da saída, obtenha a chave do cluster e, em seguida, use-a como entrada para criar a SVM.
++
+[NOTE]
+====
+Ao criar a SVM, certifique-se de que ela suporte todos os protocolos necessários para o provisionamento de LUNs e compartilhamentos de arquivos nela, como CIFS, NFS, FCP e iSCSI. Os fluxos de trabalho de provisionamento podem falhar se a SVM não suportar os serviços necessários. Também é recomendável habilitar na SVM os serviços para os respectivos tipos de cargas de trabalho.
+
+====
++
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Caminho 
+
+
+ a| 
+data center
+ a| 
+POST
+ a| 
+`/datacenter/svm/svms`
+
+|===
++
+*Exemplo de cURL*
+
++
+Insira os detalhes do objeto SVM como parâmetros de entrada.
+
++
+[listing]
+----
+curl -X POST "https://<hostname>/api/datacenter/svm/svms" -H "accept: application/json" -H "Content-Type: application/json" -H "Authorization: Basic <Base64EncodedCredentials>" "{ \"aggregates\": [ { \"_links\": {}, \"key\": \"1cd8a442-86d1,type=objecttype,uuid=1cd8a442-86d1-11e0-ae1c-9876567890123\",
+\"name\": \"cluster2\", \"uuid\": \"02c9e252-41be-11e9-81d5-00a0986138f7\" } ],
+\"cifs\": { \"ad_domain\": { \"fqdn\": \"string\", \"password\": \"string\",
+\"user\": \"string\" }, \"enabled\": true, \"name\": \"CIFS1\" },
+\"cluster\": { \"key\": \"1cd8a442-86d1-11e0-ae1c-123478563412,type=object type,uuid=1cd8a442-86d1-11e0-ae1c-9876567890123\" },
+\"dns\": { \"domains\": [ \"example.com\", \"example2.example3.com\" ],
+\"servers\": [ \"10.224.65.20\", \"2001:db08:a0b:12f0::1\" ] },
+\"fcp\": { \"enabled\": true }, \"ip_interface\": [ { \"enabled\": true,
+\"ip\": { \"address\": \"10.10.10.7\", \"netmask\": \"24\" },
+\"location\": { \"home_node\": { \"name\": \"node1\" } }, \"name\":
+\"dataLif1\" } ], \"ipspace\": { \"name\": \"exchange\" },
+\"iscsi\": { \"enabled\": true }, \"language\": \"c.utf_8\",
+\"ldap\": { \"ad_domain\": \"string\", \"base_dn\": \"string\",
+\"bind_dn\": \"string\", \"enabled\": true, \"servers\": [ \"string\" ] },
+\"name\": \"svm1\", \"nfs\": { \"enabled\": true },
+\"nis\": { \"domain\": \"string\", \"enabled\": true,
+\"servers\": [ \"string\" ] }, \"nvme\": { \"enabled\": true },
+\"routes\": [ { \"destination\": { \"address\": \"10.10.10.7\",
+\"netmask\": \"24\" }, \"gateway\": \"string\" } ],
+\"snapshot_policy\": { \"name\": \"default\" },
+\"state\": \"running\", \"subtype\": \"default\"}"
+----
++
+A saída JSON exibe uma chave do objeto Job que você pode usar para verificar a SVM que você criou.
+
+. Verifique a criação da SVM usando a chave do objeto de job para a consulta. Se a SVM for criada com sucesso, a resposta retornará a chave da SVM.
++
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Caminho 
+
+
+ a| 
+servidor de gerenciamento
+ a| 
+GET
+ a| 
+`/management-server/jobs/\{key}`
+
+|===
+

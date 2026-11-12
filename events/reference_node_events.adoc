@@ -1,0 +1,409 @@
+---
+permalink: events/reference_node_events.html 
+sidebar: sidebar 
+keywords: node, events, impact area, availability, capacity, configuration, performance, security 
+summary: Os eventos de nó fornecem informações sobre o status do nó para que você possa monitorar possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e da trap, o nível de impacto, o tipo de origem e a gravidade. 
+---
+= Saiba mais sobre eventos de nó no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de nó fornecem informações sobre o status do nó para que você possa monitorar possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e da trap, o nível de impacto, o tipo de origem e a gravidade.
+
+Um asterisco (*) identifica eventos do EMS que foram convertidos em eventos do Unified Manager.
+
+
+
+[[impact-area-availability]]
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Espaço do volume raiz do nó quase cheio(ocumEvtClusterNodeRootVolumeSpaceNearlyFull)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Aviso
+
+
+
+ a| 
+Nuvem AWS MetaDataConnFail *(ocumCloudAwsMetadataConnFail)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+
+
+ a| 
+Nuvem AWS IAMCredsExpired *(ocumCloudAwsIamCredsExpired)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+
+
+ a| 
+Cloud AWS IAMCredsInvalid *(ocumCloudAwsIamCredsInvalid)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+
+
+ a| 
+Nuvem AWS IAMCredsNotFound *(ocumCloudAwsIamCredsNotFound)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+
+
+ a| 
+Cloud AWS IAMCredsNotInitialized *(ocumCloudAwsIamCredsNotInitialized)
+ a| 
+Evento
+ a| 
+Nó
+ a| 
+Informação
+
+
+
+ a| 
+Nuvem AWS IAMRoleInvalid *(ocumCloudAwsIamRoleInvalid)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+
+
+ a| 
+Nuvem AWS IAMRoleNotFound *(ocumCloudAwsIamRoleNotFound)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+
+
+ a| 
+Host de nível de nuvem não resolvido *(ocumObjstoreHostUnresolvable)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+
+
+ a| 
+Interface de rede intercluster da camada de nuvem inativa *(ocumObjstoreInterClusterLifDown)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+
+
+ a| 
+Um dos pools do NFSv4 esgotado *(nbladeNfsv4PoolEXhaust)
+ a| 
+Incidente
+ a| 
+Nó
+ a| 
+Crítico
+
+
+
+ a| 
+Solicitação de assinatura de nível de nuvem incompatível *(oscSignatureMismatch)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+|===
+
+
+[[impact-area-capacity]]
+== Área de impacto: capacidade
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Monitoramento de QoS com memória no máximo *(ocumQosMonitorMemoryMaxed)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+
+
+ a| 
+Memória do monitor de QoS reduzida *(ocumQosMonitorMemoryAbated)
+ a| 
+Evento
+ a| 
+Nó
+ a| 
+Informação
+
+|===
+
+
+[[impact-area-configuration]]
+== Área de impacto: configuração
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Nó renomeado(não aplicável)
+ a| 
+Evento
+ a| 
+Nó
+ a| 
+Informação
+
+|===
+
+
+[[impact-area-performance]]
+== Área de impacto: desempenho
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Limiar crítico de IOPS do nó atingido(ocumNodeIopsIncident)
+ a| 
+Incidente
+ a| 
+Nó
+ a| 
+Crítico
+
+
+
+ a| 
+Limiar de aviso de IOPS do nó ultrapassado(ocumNodeIopsWarning)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Aviso
+
+
+
+ a| 
+Limiar crítico de MB/s do nó ultrapassado(ocumNodeMbpsIncident)
+ a| 
+Incidente
+ a| 
+Nó
+ a| 
+Crítico
+
+
+
+ a| 
+Limiar de aviso de MB/s do nó ultrapassado(ocumNodeMbpsWarning)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Aviso
+
+
+
+ a| 
+Latência do nó ms/op limiar crítico ultrapassado(ocumNodeLatencyIncident)
+ a| 
+Incidente
+ a| 
+Nó
+ a| 
+Crítico
+
+
+
+ a| 
+Limiar de aviso de latência do nó em ms/op excedido(ocumNodeLatencyWarning)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Aviso
+
+
+
+ a| 
+Violação do limite crítico da capacidade de desempenho do nó usada(ocumNodePerfCapacityUsedIncident)
+ a| 
+Incidente
+ a| 
+Nó
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de aviso de capacidade de desempenho do nó usada violado(ocumNodePerfCapacityUsedWarning)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Aviso
+
+
+
+ a| 
+Capacidade de desempenho do nó utilizada - Limiar crítico de tomada de controle ultrapassado(ocumNodePerfCapacityUsedTakeoverIncident)
+ a| 
+Incidente
+ a| 
+Nó
+ a| 
+Crítico
+
+
+
+ a| 
+Capacidade de desempenho do nó usada - limite de aviso de takeover violado(ocumNodePerfCapacityUsedTakeoverWarning)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Aviso
+
+
+
+ a| 
+Limite crítico de utilização do nó excedido (ocumNodeUtilizationIncident)
+ a| 
+Incidente
+ a| 
+Nó
+ a| 
+Crítico
+
+
+
+ a| 
+Limite de aviso de utilização de nó ultrapassado (ocumNodeUtilizationWarning)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Aviso
+
+
+
+ a| 
+O limite de sobreutilização do par HA de nós foi ultrapassado (ocumNodeHaPairOverUtilizedInformation)
+ a| 
+Evento
+ a| 
+Nó
+ a| 
+Informação
+
+
+
+ a| 
+Limite de fragmentação do disco do nó ultrapassado (ocumNodeDiskFragmentationWarning)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Aviso
+
+
+
+ a| 
+Limite de capacidade de desempenho utilizado ultrapassado (ocumNodeOverUtilizedWarning)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Aviso
+
+
+
+ a| 
+Limiar dinâmico do nó ultrapassado (ocumNodeDynamicEventWarning)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Aviso
+
+|===
+
+
+[[impact-area-security]]
+== Área de impacto: segurança
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+ID do aviso: NTAP-<__advisory ID__>(ocumx)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Crítico
+
+|===

@@ -1,0 +1,26 @@
+---
+permalink: events/reference_what_suggested_actions_section_displays.html 
+sidebar: sidebar 
+keywords: suggest, actions, section, displays 
+summary: A seção Ações sugeridas da página de detalhes do evento fornece possíveis causas para o evento e sugere algumas ações para que você possa tentar resolvê-lo por conta própria. As ações sugeridas são personalizadas com base no tipo de evento ou no tipo de limite que foi ultrapassado. 
+---
+= Saiba mais sobre as ações sugeridas no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A seção Ações sugeridas da página de detalhes do evento fornece possíveis causas para o evento e sugere algumas ações para que você possa tentar resolvê-lo por conta própria. As ações sugeridas são personalizadas com base no tipo de evento ou no tipo de limite que foi ultrapassado.
+
+Esta área é exibida apenas para alguns tipos de eventos.
+
+Em alguns casos, há links de *Ajuda* fornecidos na página que remetem a informações adicionais para muitas ações sugeridas, incluindo instruções para executar uma ação específica. Algumas das ações podem envolver o uso do Unified Manager, do ONTAP System Manager, do OnCommand Workflow Automation, de comandos da CLI do ONTAP ou de uma combinação dessas ferramentas.
+
+Você deve considerar as ações sugeridas aqui apenas como uma orientação para resolver este evento. A ação que você tomar para resolver este evento deve se basear no contexto do seu ambiente.
+
+Se você deseja analisar o objeto e o evento com mais detalhes, clique no botão *Analisar Carga de Trabalho* para exibir a página de Análise de Carga de Trabalho.
+
+Há certos eventos que o Unified Manager pode diagnosticar minuciosamente e fornecer uma única solução. Quando disponíveis, essas soluções são exibidas com um botão *Fix It*. Clique neste botão para que o Unified Manager corrija o problema que causou o evento.
+
+Para eventos de plataforma do Active IQ, esta seção pode conter um link para um artigo da Base de Conhecimento da NetApp, quando disponível, que descreve o problema e as possíveis soluções. Em sites sem acesso externo à rede, um PDF do artigo da Base de Conhecimento é aberto localmente; o PDF faz parte do arquivo de regras que você baixa manualmente para a instância do Unified Manager.

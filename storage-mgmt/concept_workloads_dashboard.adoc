@@ -1,0 +1,76 @@
+---
+permalink: storage-mgmt/concept_workloads_dashboard.html 
+sidebar: sidebar 
+keywords: workloads, overview, data center, sections 
+summary: 'Uma carga de trabalho representa as operações de entrada/saída (E/S) de um objeto de storage, como um volume ou LUN. A forma como o storage é provisionado se baseia nos requisitos esperados da carga de trabalho. As estatísticas da carga de trabalho são rastreadas pelo Active IQ Unified Manager somente depois que há tráfego de entrada e saída no objeto de storage. Por exemplo, os valores de IOPS e latência da carga de trabalho ficam disponíveis depois que os usuários começam a usar um banco de dados ou um aplicativo de e-mail.' 
+---
+= Saiba mais sobre o painel de cargas de trabalho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Uma carga de trabalho representa as operações de entrada/saída (E/S) de um objeto de storage, como um volume ou LUN. A forma como o storage é provisionado se baseia nos requisitos esperados da carga de trabalho. As estatísticas da carga de trabalho são rastreadas pelo Active IQ Unified Manager somente depois que há tráfego de entrada e saída no objeto de storage. Por exemplo, os valores de IOPS e latência da carga de trabalho ficam disponíveis depois que os usuários começam a usar um banco de dados ou um aplicativo de e-mail.
+
+A página Workloads exibe um resumo das cargas de trabalho de storage dos clusters ONTAP gerenciados pelo Unified Manager. Ela fornece informações cumulativas e resumidas sobre as cargas de trabalho de storage que estão em conformidade com o Performance Service Level, bem como sobre as cargas de trabalho de storage que não estão em conformidade. Ela também permite avaliar a capacidade total, disponível e usada, além do desempenho (IOPS) dos clusters em todo o seu data center.
+
+[NOTE]
+====
+Recomenda-se que você avalie o número de cargas de trabalho de armazenamento que não estão em conformidade, estão indisponíveis ou não são gerenciadas por nenhum Performance Service Level e tome as medidas necessárias para garantir sua conformidade, uso de capacidade e IOPS.
+
+====
+A página Workloads possui as duas seções a seguir:
+
+* Visão geral das cargas de trabalho: fornece uma visão geral do número de cargas de trabalho de armazenamento nos clusters do ONTAP gerenciados pelo Unified Manager.
+* Visão geral do data center: fornece uma visão geral da capacidade e das IOPS das cargas de trabalho de storage no data center. Os dados relevantes são exibidos no nível do data center e para cada .
+
+
+
+
+[[workloads-overview-section]]
+== Seção de visão geral das cargas de trabalho
+
+A seção de visão geral das cargas de trabalho fornece informações cumulativas e resumidas sobre as cargas de trabalho de armazenamento. O status das cargas de trabalho de armazenamento é exibido com base nos Níveis de Serviço de Desempenho atribuídos e não atribuídos.
+
+* *Atribuído*: os seguintes status são relatados para cargas de trabalho de armazenamento às quais os Níveis de Serviço de Desempenho foram atribuídos:
++
+** *Em conformidade*: o desempenho das cargas de trabalho de armazenamento se baseia nos Níveis de Serviço de Desempenho atribuídos a elas. Se as cargas de trabalho de armazenamento estiverem dentro do limite de latência definido nos Níveis de Serviço de Desempenho associados, elas serão marcadas como "`em conformidade`". As cargas de trabalho em conformidade são marcadas em azul.
+** *Não conforme*: durante o monitoramento de desempenho, as cargas de trabalho de storage são marcadas como "`não conformes`" se a latência das cargas de trabalho de storage exceder o limite de latência definido no Nível de Serviço de Desempenho associado. As cargas de trabalho não conformes são marcadas em laranja.
+** *Indisponível*: As cargas de trabalho de storage são marcadas como "`unavailable`" se estiverem offline ou se o cluster correspondente estiver inacessível. As cargas de trabalho indisponíveis são marcadas em vermelho.
+
+
+* *Não atribuído*: as cargas de trabalho de storage que não têm um Nível de Serviço de Desempenho atribuído aparecem como "`não atribuído`". O número é indicado pelo ícone de informação.
+
+
+A contagem total de cargas de trabalho é a soma das cargas de trabalho atribuídas e não atribuídas.
+
+Você pode clicar no número total de cargas de trabalho exibidas nesta seção e visualizá-las na página Workloads.
+
+A subseção Conformidade por Níveis de Serviço de Desempenho exibe o número total de cargas de trabalho de armazenamento disponíveis:
+
+* Em conformidade com cada tipo de Nível de Serviço de Desempenho
+* Para os quais existe uma discrepância entre os níveis de serviço de desempenho atribuídos e os recomendados
+
+
+
+
+[[data-center-overview-section]]
+== Seção de visão geral do data center
+
+A seção de visão geral do data center representa graficamente a capacidade disponível e utilizada, bem como as IOPS de todos os clusters no data center. Com esses dados, você deve gerenciar a capacidade e as IOPS das cargas de trabalho de storage. A seção também exibe as seguintes informações para as cargas de trabalho de storage em todos os clusters:
+
+* A capacidade total, disponível e utilizada de todos os clusters em seu data center
+* Os IOPS totais, disponíveis e usados de todos os clusters no seu data center
+* A capacidade disponível e utilizada com base em cada Nível de Serviço de Desempenho
+* As IOPS disponíveis e usadas com base em cada Nível de Serviço de Desempenho
+* O espaço total e as IOPS usadas pelas cargas de trabalho que não têm Performance Service Level atribuído
+
+
+*Como a capacidade e o desempenho do data center são calculados com base nos Níveis de Serviço de Desempenho*
+
+A capacidade utilizada e as IOPS são obtidas com base na capacidade total utilizada e no desempenho de todas as cargas de trabalho de storage nos clusters.
+
+O IOPS disponível é calculado com base na latência esperada e nos Níveis de Serviço de Desempenho (PSL) recomendados nos nós. Inclui o IOPS disponível para todos os PSL cuja latência esperada seja menor ou igual à sua própria latência esperada.
+
+A capacidade disponível é calculada com base na latência esperada e nos níveis de serviço de desempenho recomendados nos agregados. Ela inclui a capacidade disponível para todos os níveis de serviço de desempenho cuja latência esperada seja menor ou igual à própria latência esperada.

@@ -1,0 +1,42 @@
+---
+permalink: config/task_configure_unified_manager_to_send_alert_notifications.html 
+sidebar: sidebar 
+keywords: configure, unified manager, send, alert, notifications 
+summary: Você pode configurar o Unified Manager para enviar notificações que alertem você sobre eventos em seu ambiente. Antes que as notificações possam ser enviadas, você deve configurar várias outras opções do Unified Manager. 
+---
+= Configure o Active IQ Unified Manager para enviar notificações de alerta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode configurar o Unified Manager para enviar notificações que alertem você sobre eventos em seu ambiente. Antes que as notificações possam ser enviadas, você deve configurar várias outras opções do Unified Manager.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator.
+
+Após implantar o Unified Manager e concluir a configuração inicial, você deve considerar configurar seu ambiente para disparar alertas e gerar e-mails de notificação ou traps SNMP com base no recebimento de eventos.
+
+.Passos
+. link:task_configure_event_notification_settings.html["Configure as definições de notificação de eventos"].
++
+Se você quiser que as notificações de alerta sejam enviadas quando determinados eventos ocorrerem em seu ambiente, será necessário configurar um servidor SMTP e fornecer um endereço de e-mail a partir do qual a notificação de alerta será enviada. Se você quiser usar traps SNMP, poderá selecionar essa opção e fornecer as informações necessárias.
+
+. link:task_enable_remote_authentication.html["Habilitar autenticação remota"].
++
+Se você quiser que usuários remotos do LDAP ou do Active Directory acessem a instância do Unified Manager e recebam notificações de alerta, você deverá habilitar a autenticação remota.
+
+. link:task_add_authentication_servers.html["Adicionar servidores de autenticação"].
++
+Você pode adicionar servidores de autenticação para que usuários remotos no servidor de autenticação possam acessar o Unified Manager.
+
+. link:task_add_users.html["Adicionar usuários"].
++
+Você pode adicionar vários tipos diferentes de usuários locais ou remotos e atribuir funções específicas. Ao criar um alerta, você atribui um usuário para receber as notificações de alerta.
+
+. link:task_add_alerts.html["Adicionar alertas"].
++
+Depois de adicionar o endereço de e-mail para envio de notificações, adicionar os usuários que receberão as notificações, configurar as definições de rede e configurar as opções SMTP e SNMP necessárias para o seu ambiente, você poderá atribuir alertas.
+
+

@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_edit_protection_relationships_from_protection_volume.html 
+sidebar: sidebar 
+keywords: edit, protection, relationships, volume, relationships, page 
+summary: Você pode editar as relações de proteção existentes para alterar a taxa máxima de transferência, a política de proteção ou o agendamento de proteção. Você pode editar uma relação para diminuir a largura de banda usada para transferências ou para aumentar a frequência de transferências agendadas, visto que os dados são alterados com frequência. 
+---
+= Edite as relações de proteção na página "Relações de Volume" no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode editar as relações de proteção existentes para alterar a taxa máxima de transferência, a política de proteção ou o agendamento de proteção. Você pode editar uma relação para diminuir a largura de banda usada para transferências ou para aumentar a frequência de transferências agendadas, visto que os dados são alterados com frequência.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Os volumes selecionados devem ser destinos de relacionamentos de proteção. Não é possível editar relacionamentos quando volumes de origem, volumes de balanceamento de carga ou volumes que não sejam o destino de uma relação do SnapMirror ou do SnapVault estiverem selecionados.
+
+.Passos
+. Na página *Relacionamentos de Volume*, selecione na lista de volumes um ou mais volumes no mesmo SVM para os quais você deseja editar as configurações de relacionamento e, em seguida, selecione *Editar* na barra de ferramentas.
++
+A caixa de diálogo Edit Relationship é exibida.
+
+. Na caixa de diálogo *Editar relacionamento*, edite a taxa de transferência máxima, a política de proteção ou o cronograma de proteção, conforme necessário.
+. Clique em *Aplicar*.
++
+As alterações são aplicadas aos relacionamentos selecionados.
+
+

@@ -1,0 +1,49 @@
+---
+permalink: performance-checker/concept_roles_of_workloads_involved_in_performance_incident.html 
+sidebar: sidebar 
+keywords: roles, workloads, involved, performance, event 
+summary: O Unified Manager utiliza funções para identificar o envolvimento de uma carga de trabalho em um evento de desempenho. As funções incluem vítimas, agressores e sharks. Uma carga de trabalho definida pelo usuário pode ser, ao mesmo tempo, vítima, agressora e shark. 
+---
+= Identifique funções de carga de trabalho em eventos de desempenho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O Unified Manager utiliza funções para identificar o envolvimento de uma carga de trabalho em um evento de desempenho. As funções incluem vítimas, agressores e sharks. Uma carga de trabalho definida pelo usuário pode ser, ao mesmo tempo, vítima, agressora e shark.
+
+|===
+| Papel | Descrição 
+
+
+ a| 
+Vítima
+ a| 
+Uma carga de trabalho definida pelo usuário cujo desempenho diminuiu devido a outras cargas de trabalho, chamadas de "valentões", que estão sobrecarregando um componente do cluster. Somente as cargas de trabalho definidas pelo usuário são identificadas como vítimas. O Unified Manager identifica as cargas de trabalho vítimas com base no desvio de latência, em que a latência real, durante um evento, aumentou significativamente em relação à latência prevista (faixa esperada).
+
+
+
+ a| 
+Valentão
+ a| 
+Uma carga de trabalho definida pelo usuário ou pelo sistema, cujo uso excessivo de um componente do cluster causou a queda de desempenho de outras cargas de trabalho, chamadas de vítimas. O Unified Manager identifica as cargas de trabalho problemáticas com base no desvio no uso de um componente do cluster, em que o uso real, durante um evento, aumentou significativamente em relação à faixa de uso esperada.
+
+
+
+ a| 
+Tubarão
+ a| 
+Uma carga de trabalho definida pelo usuário com o maior uso de um componente do cluster em comparação com todas as cargas de trabalho envolvidas em um evento. O Unified Manager identifica as cargas de trabalho shark com base no uso de um componente do cluster durante um evento.
+
+|===
+As cargas de trabalho em um cluster podem compartilhar muitos dos componentes do cluster, como agregados e a CPU para rede e processamento de dados. Quando uma carga de trabalho, como um volume, aumenta o uso de um componente do cluster a ponto de o componente não conseguir atender com eficiência às demandas da carga de trabalho, o componente entra em contenção. A carga de trabalho que usa em excesso um componente do cluster é um agressor. As outras cargas de trabalho que compartilham esses componentes e cujo desempenho é afetado pelo agressor são as vítimas. A atividade de cargas de trabalho definidas pelo sistema, como deduplicação ou cópias Snapshot, também pode escalar para "`bullying`".
+
+Quando o Unified Manager detecta um evento, ele identifica todas as cargas de trabalho e os componentes do cluster envolvidos, incluindo as cargas de trabalho invasoras que causaram o evento, o componente do cluster que está em disputa e as cargas de trabalho vítimas cujo desempenho diminuiu devido ao aumento da atividade das cargas de trabalho invasoras.
+
+[NOTE]
+====
+Se o Unified Manager não conseguir identificar as cargas de trabalho agressoras, ele emitirá alertas apenas sobre as cargas de trabalho vítimas e o componente do cluster envolvido.
+
+====
+O Unified Manager consegue identificar cargas de trabalho que são vítimas de cargas de trabalho abusivas e também identificar quando essas mesmas cargas de trabalho se tornam abusivas. Uma carga de trabalho pode ser abusiva consigo mesma. Por exemplo, uma carga de trabalho de alto desempenho que está sendo limitada por um limite de grupo de políticas faz com que todas as cargas de trabalho no grupo de políticas também sejam limitadas, incluindo ela mesma. Uma carga de trabalho que é abusiva ou vítima em um evento de desempenho em andamento pode mudar sua função ou deixar de participar do evento.

@@ -1,0 +1,80 @@
+---
+permalink: reporting/task_create_report_to_view_aggregates_with_most_available_iops.html 
+sidebar: sidebar 
+keywords: create, report, view, aggregates, available, IOPS 
+summary: Este relatório mostra quais agregados têm o maior número de IOPS disponíveis por tipo de agregado em que você pode provisionar novas cargas de trabalho. 
+---
+= Crie um relatório para visualizar os agregados com o maior número de IOPS disponíveis no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este relatório mostra quais agregados têm o maior número de IOPS disponíveis por tipo de agregado em que você pode provisionar novas cargas de trabalho.
+
+.Antes de começar
+* Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+
+Siga as etapas a seguir para abrir uma visualização de Saúde: todos os Volumes, baixar a visualização no Excel, criar um gráfico de capacidade disponível, carregar o arquivo do Excel personalizado e agendar o relatório final.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Agregados*.
+. Selecione *Desempenho: todos os agregados* no menu suspenso *Exibir*.
+. Selecione *Mostrar/Ocultar* para mostrar a coluna `Available IOPS` e ocultar as colunas `Cluster FQDN, Inactive Data Reporting,` e `Threshold Policy`.
+. Arraste e solte as colunas `Available IOPS` e `Free Capacity` ao lado da coluna `Type`.
+. Dê um nome e salve a visualização personalizada `Available IOPS Per Aggr.`
+. Selecione *Reports* > *Download Excel*.
++
+image::../media/download_excel_menu.png[Uma captura de tela da UI que mostra como baixar excel de relatórios.]
+
++
+Dependendo do seu navegador, talvez seja necessário clicar em *OK* para salvar o arquivo.
+
+. Se necessário, clique em *Enable Editing*.
+. No Excel, abra o arquivo baixado.
+. Na datasheet, clique no pequeno triângulo no canto superior esquerdo da planilha para selecionar a planilha inteira.
+. Na faixa de opções *Dados*, selecione *Classificar* na `Sort & Filter area.`
+. Defina os seguintes níveis de classificação:
++
+.. Especifique *Sort by* como `Available IOPS` (IOPS), *Sort On* como `Cell Values,` e *Order* como `Largest to Smallest.`
+.. Clique em *Adicionar nível*.
+.. Especifique *Classificar por* como  `Type`, *Classificar em* como  `Cell Values,` e *Ordem* como  `Z to A.`
+.. Clique em *Adicionar nível*.
+.. Especifique *Classificar por* como `Free Capacity (GB),` *Classificar em* como `Cell Values,` e *Ordem* como `Largest to Smallest.`
+.. Clique em *OK*.
+
+
+. Salve e feche o arquivo do Excel.
+. No Unified Manager, selecione *Reports* > *Upload Excel*.
++
+[NOTE]
+====
+Certifique-se de estar na mesma visualização em que você baixou o arquivo do Excel.
+
+====
+. Selecione o arquivo do Excel que você modificou, neste caso `performance-aggregates-<date>.xlsx.`
+. Clique em *Abrir*.
+. Clique em *Enviar*.
++
+Uma marca de seleção aparece ao lado do item de menu *Reports* > *Upload Excel*.
+
++
+image::../media/upload_excel.png[Uma captura de tela da UI que mostra como carregar excel para relatórios.]
+
+. Clique em *Relatórios Agendados*.
+. Clique em *Adicionar Cronograma* para adicionar uma nova linha à página Cronogramas de Relatório, para que você possa definir as características do agendamento do novo relatório.
+. Insira um nome para o cronograma do relatório e preencha os outros campos do relatório, depois clique na marca de seleção (image:../media/blue_check.gif[""]) no final da linha.
++
+[NOTE]
+====
+Selecione o formato *XLSX* para o relatório.
+
+====
++
+O relatório é enviado imediatamente como teste. Depois disso, o relatório é gerado e enviado por e-mail aos destinatários listados na frequência especificada.
+
+
+
+Com base nos resultados apresentados no relatório, você pode querer provisionar novas cargas de trabalho nos agregados que possuem o maior número de IOPS disponíveis.

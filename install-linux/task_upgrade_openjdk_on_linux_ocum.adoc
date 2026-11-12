@@ -1,0 +1,39 @@
+---
+permalink: install-linux/task_upgrade_openjdk_on_linux_ocum.html 
+sidebar: sidebar 
+keywords: openjdk, jre, linux, upgrade 
+summary: Você pode atualizar para uma versão mais recente do OpenJDK no servidor Linux onde o Unified Manager está instalado para obter correções para vulnerabilidades de segurança. 
+---
+= Atualize o OpenJDK no Linux para o Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode atualizar para uma versão mais recente do OpenJDK no servidor Linux onde o Unified Manager está instalado para obter correções para vulnerabilidades de segurança.
+
+.Antes de começar
+Você precisa ter privilégios de administrador (root) no sistema Linux em que o Unified Manager está instalado.
+
+Você pode atualizar versões do OpenJDK dentro das famílias de versões. Por exemplo, você pode atualizar do OpenJDK 11.0.14 para o OpenJDK 11.0.17, mas não pode atualizar diretamente do OpenJDK 11 para o OpenJDK 12.
+
+.Passos
+. Faça login como usuário raiz na máquina host do Unified Manager.
+. Faça o download da versão apropriada do OpenJDK (64 bits) para o sistema de destino.
+. Interrompa os serviços do Unified Manager:
++
+`systemctl stop ocieau`
+
++
+`systemctl stop ocie`
+
+. Instale a versão mais recente do OpenJDK no sistema.
+. Inicie os serviços do Unified Manager:
++
+`systemctl start ocie`
+
++
+`systemctl start ocieau`
+
+

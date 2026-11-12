@@ -1,0 +1,20 @@
+---
+permalink: health-checker/task_send_asup_to_technical_support.html 
+sidebar: sidebar 
+keywords: support bundle, web ui, maintenance console 
+summary: Você deve enviar um pacote de suporte quando o problema que você está enfrentando exigir um diagnóstico e uma solução de problemas mais detalhados do que uma mensagem AutoSupport pode fornecer. Você pode enviar um pacote de suporte para o suporte técnico usando a interface web do Unified Manager e o console de manutenção. 
+---
+= Envie um pacote de suporte através da interface web e do console de manutenção no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você deve enviar um pacote de suporte quando o problema que você está enfrentando exigir um diagnóstico e uma solução de problemas mais detalhados do que uma mensagem AutoSupport pode fornecer. Você pode enviar um pacote de suporte para o suporte técnico usando a interface web do Unified Manager e o console de manutenção.
+
+O Unified Manager armazena, no máximo, dois pacotes de suporte completos e três pacotes de suporte simplificados simultaneamente.
+
+*Informações relacionadas*
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Funções e capacidades de usuário do Unified Manager"]

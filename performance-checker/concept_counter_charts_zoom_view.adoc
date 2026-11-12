@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_counter_charts_zoom_view.html 
+sidebar: sidebar 
+keywords: counter, charts, zoom, view 
+summary: Os gráficos de contador oferecem uma visualização com zoom que permite ampliar os detalhes de desempenho ao longo do período especificado. Isso permite que você veja detalhes de desempenho e eventos com muito mais granularidade, o que é útil na solução de problemas de desempenho. 
+---
+= Saiba mais sobre a visualização de zoom em Gráficos de Contadores no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os gráficos de contador oferecem uma visualização com zoom que permite ampliar os detalhes de desempenho ao longo do período especificado. Isso permite que você veja detalhes de desempenho e eventos com muito mais granularidade, o que é útil na solução de problemas de desempenho.
+
+Quando exibidos na Zoom View, alguns dos gráficos de detalhamento fornecem informações adicionais além do que aparece quando o gráfico não está na Zoom View. Por exemplo, as páginas da Zoom View dos gráficos de detalhamento de IOPS, IOPS/TB e MBps exibem os valores da política de QoS para volumes e LUNs, caso tenham sido configurados no ONTAP.
+
+[NOTE]
+====
+Para políticas de limite de desempenho definidas pelo sistema, apenas as políticas "`Node resources over-utilized`" e "`QoS throughput limit breached`" estão disponíveis na lista *Policies*. As outras políticas de limite definidas pelo sistema não estão disponíveis no momento.
+
+====

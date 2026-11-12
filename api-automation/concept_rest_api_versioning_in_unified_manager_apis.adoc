@@ -1,0 +1,23 @@
+---
+permalink: api-automation/concept_rest_api_versioning_in_unified_manager_apis.html 
+sidebar: sidebar 
+keywords: api, version, active iq, unified, manager 
+summary: As URIs da API REST no Active IQ Unified Manager especificam um número de versão. Por exemplo, /v2/datacenter/svm/svms. O número de versão v2 em /v2/datacenter/svm/svms indica a versão da API usada em uma versão específica. O número de versão minimiza o impacto das alterações da API no software cliente, enviando uma resposta que o cliente pode processar. 
+---
+= Entenda os números de versão da API no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os URIs da API REST no Active IQ Unified Manager especificam um número de versão. Por exemplo, `/v2/datacenter/svm/svms.` o número da versão `v2` em `/v2/datacenter/svm/svms` indica a versão da API usada em uma versão específica. O número da versão minimiza o impacto das alterações da API no software cliente, enviando uma resposta que o cliente pode processar.
+
+A parte numérica deste número de versão é incremental em relação aos lançamentos. URIs com um número de versão fornecem uma interface consistente que mantém a compatibilidade com versões anteriores em lançamentos futuros. Você também encontra as mesmas APIs sem uma versão, por exemplo `/datacenter/svm/svms,`, que indicam as APIs base sem uma versão. As APIs base são sempre a versão mais recente das APIs.
+
+[NOTE]
+====
+No canto superior direito da sua interface do Swagger, você pode selecionar a versão da API a ser usada. A versão mais alta é selecionada por padrão. É recomendável que você use a versão mais alta de uma determinada API, em relação ao inteiro incremental, disponível na sua instância do Unified Manager.
+
+====
+Para todas as solicitações, você deve solicitar explicitamente a versão da API que deseja usar. Quando o número da versão é especificado, o serviço não retorna elementos de resposta que seu aplicativo não foi projetado para processar. Em solicitações REST, você deve incluir o parâmetro de versão. As versões anteriores das APIs acabam sendo descontinuadas após algumas versões. Nesta versão, a `v1` versão das APIs está descontinuada.

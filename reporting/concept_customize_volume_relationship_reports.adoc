@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_volume_relationship_reports.html 
+sidebar: sidebar 
+keywords: customize, volume, relationship, reports 
+summary: O relatório de inventário de relacionamentos de volume permite que você analise os detalhes do inventário de storage em um cluster, entenda o grau de proteção necessário para os volumes e filtre os detalhes dos volumes com base na origem da falha, no padrão e nos agendamentos. 
+---
+= Personalize os relatórios de relacionamento de volume no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O relatório de inventário de relacionamentos de volume permite que você analise os detalhes do inventário de storage em um cluster, entenda o grau de proteção necessário para os volumes e filtre os detalhes dos volumes com base na origem da falha, no padrão e nos agendamentos.

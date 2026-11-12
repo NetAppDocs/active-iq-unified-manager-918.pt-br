@@ -1,0 +1,37 @@
+---
+permalink: performance-checker/task_view_performance_status_of_all_san_array_clusters.html 
+sidebar: sidebar 
+keywords: all san, array, performance, clusters 
+summary: 'Use a visualização "Todos os Clusters" na página "Desempenho" para exibir o status de desempenho de todos os seus clusters do All SAN Array.' 
+---
+= Visualize o desempenho de todos os clusters SAN Array no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a visualização Performance: all Clusters para exibir o status de desempenho dos seus clusters All SAN Array.
+
+.Antes de começar
+Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+
+Você pode visualizar informações gerais de todos os clusters SAN Array na visualização Performance: All Clusters e detalhes na página Cluster / Performance Explorer.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Armazenamento* > *Clusters*.
+. Certifique-se de que a coluna "`Personality`" esteja visível na visualização *Health: All Clusters* ou adicione-a usando o controle *Show / Hide*.
++
+Esta coluna exibe "`All SAN Array`" para seus clusters All SAN Array.
+
+. Para visualizar informações sobre o desempenho nesses clusters, selecione a visualização *Performance: All Clusters*.
++
+Veja as informações de desempenho do cluster All SAN Array.
+
+. Para visualizar informações detalhadas sobre o desempenho nesses clusters, clique no nome de um cluster All SAN Array.
+. Clique na guia *Explorer*.
+. Na página *Cluster / Performance Explorer*, selecione *Nodes on this Cluster* no menu *View and Compare*.
++
+Você pode comparar as estatísticas de desempenho de ambos os nós neste cluster para garantir que a carga seja quase idêntica em ambos os nós. Se houver grandes discrepâncias entre os dois nós, você pode adicionar o segundo nó aos gráficos e comparar os valores em um período mais longo para identificar quaisquer problemas de configuração.
+
+

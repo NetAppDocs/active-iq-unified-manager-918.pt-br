@@ -1,0 +1,56 @@
+---
+permalink: events/reference_snapshot_events.html 
+sidebar: sidebar 
+keywords: snapshot, events, impact area, availability 
+summary: Os eventos de Snapshot fornecem informações sobre o status dos snapshots, permitindo que você os monitore em busca de possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento, o nome da armadilha, o nível de impacto, o tipo de origem e a gravidade. 
+---
+= Saiba mais sobre eventos de Snapshot no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de Snapshot fornecem informações sobre o status dos snapshots, permitindo que você os monitore em busca de possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento, o nome da armadilha, o nível de impacto, o tipo de origem e a gravidade.
+
+
+
+[[impact-area-availability]]
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Exclusão automática de Snapshot desativada(não aplicável)
+ a| 
+Evento
+ a| 
+Volume
+ a| 
+Informação
+
+
+
+ a| 
+Exclusão automática de Snapshot ativada(não aplicável)
+ a| 
+Evento
+ a| 
+Volume
+ a| 
+Informação
+
+
+
+ a| 
+Configuração de exclusão automática de Snapshot modificada(não aplicável)
+ a| 
+Evento
+ a| 
+Volume
+ a| 
+Informação
+
+|===

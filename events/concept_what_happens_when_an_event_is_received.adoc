@@ -1,0 +1,28 @@
+---
+permalink: events/concept_what_happens_when_an_event_is_received.html 
+sidebar: sidebar 
+keywords: happens, when, event, received 
+summary: 'Quando o Unified Manager recebe um evento, ele é exibido na página Dashboard, na página de inventário Event Management, nas guias Summary e Explorer da página Cluster/Performance e na página de inventário específica do objeto (por exemplo, a página de inventário Volumes/Health).' 
+---
+= Entenda como o Active IQ Unified Manager lida com um evento recebido
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando o Unified Manager recebe um evento, ele é exibido na página Dashboard, na página de inventário Event Management, nas guias Summary e Explorer da página Cluster/Performance e na página de inventário específica do objeto (por exemplo, a página de inventário Volumes/Health).
+
+Quando o Unified Manager detecta múltiplas ocorrências contínuas da mesma condição de evento para o mesmo componente do cluster, ele trata todas as ocorrências como um único evento, e não como eventos separados. A duração do evento é incrementada para indicar que ele ainda está ativo.
+
+Dependendo de como você configurar as definições na página de Configuração de Alertas, você pode notificar outros usuários sobre esses eventos. O alerta inicia as seguintes ações:
+
+* Um e-mail sobre o evento pode ser enviado a todos os usuários administradores do Unified Manager.
+* O evento pode ser enviado para destinatários adicionais por e-mail.
+* Um trap SNMP pode ser enviado para o receptor de traps.
+* Você pode executar um script personalizado para realizar uma ação.
+
+
+Esse fluxo de trabalho é mostrado no diagrama a seguir.
+
+image::../media/um_perf_threshold_event_flow.gif[Um diagrama que mostra o processamento de eventos de limite, desde a coleta do contador até a notificação por e-mail]

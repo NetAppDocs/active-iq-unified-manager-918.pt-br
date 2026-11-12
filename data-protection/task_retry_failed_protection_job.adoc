@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_retry_failed_protection_job.html 
+sidebar: sidebar 
+keywords: retry, failed, protection job 
+summary: Após tomar medidas para corrigir uma tarefa de proteção com falha, você pode usar Retry para executar a tarefa novamente. Tentar novamente cria uma nova tarefa usando o ID da tarefa original. 
+---
+= Tente novamente uma tarefa de proteção com falha no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após tomar medidas para corrigir uma tarefa de proteção com falha, você pode usar *Tentar novamente* para executar a tarefa novamente. Tentar novamente uma tarefa cria uma nova tarefa usando o ID da tarefa original.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Você só pode tentar novamente uma tarefa com falha por vez. Selecionar mais de uma tarefa desativa o botão *Tentar novamente*. Somente tarefas do tipo Configuração de Proteção e Operação de Relacionamento de Proteção podem ser tentadas novamente.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Proteção* > *Tarefas*.
+. Na lista de tarefas, selecione uma única tarefa com falha do tipo Configuração de Proteção ou Operação de Relação de Proteção.
++
+O botão *Tentar novamente* está ativado.
+
+. Clique em *Tentar novamente*.
++
+A tarefa foi reiniciada.
+
+

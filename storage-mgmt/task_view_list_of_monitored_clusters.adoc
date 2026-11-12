@@ -1,0 +1,24 @@
+---
+permalink: storage-mgmt/task_view_list_of_monitored_clusters.html 
+sidebar: sidebar 
+keywords: view, list, monitored, clusters 
+summary: Você pode usar a página de Configuração de Cluster para visualizar seu inventário de clusters. Você pode ver detalhes sobre os clusters, como nome ou endereço IP e status de comunicação. 
+---
+= Veja a lista de clusters monitorados pelo Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a página de Configuração de Cluster para visualizar seu inventário de clusters. Você pode ver detalhes sobre os clusters, como nome ou endereço IP e status de comunicação.
+
+.Antes de começar
+Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+
+.Etapa
+. No painel de navegação esquerdo, clique em *Gerenciamento de armazenamento* > *Configuração de cluster*.
++
+Todos os clusters no seu ambiente de storage gerenciado pelo Unified Manager são exibidos. A lista de clusters é classificada pela coluna de nível de severidade do estado da coleta. Você pode clicar no cabeçalho de uma coluna para classificar os clusters por diferentes colunas.
+
+

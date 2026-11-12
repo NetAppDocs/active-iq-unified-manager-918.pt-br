@@ -1,0 +1,23 @@
+---
+permalink: data-protection/task_view_job_details.html 
+sidebar: sidebar 
+keywords: view, job, details 
+summary: Após iniciar um trabalho, você pode acompanhar seu progresso na página de detalhes do trabalho e monitorar as tarefas associadas para detectar possíveis erros. 
+---
+= Veja os detalhes do trabalho no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Após iniciar um trabalho, você pode acompanhar seu progresso na página de detalhes do trabalho e monitorar as tarefas associadas para detectar possíveis erros.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+.Passos
+. No painel de navegação esquerdo, clique em *Proteção* > *Tarefas*.
+. Na página Trabalhos, clique no nome de um trabalho na coluna *Nome* para exibir a lista de tarefas associadas ao trabalho.
+. Clique em uma tarefa para exibir informações adicionais no painel *Detalhes da Tarefa* e no painel *Mensagens da Tarefa* à direita da lista de tarefas.
+

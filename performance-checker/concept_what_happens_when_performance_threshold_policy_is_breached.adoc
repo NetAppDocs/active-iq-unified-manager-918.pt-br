@@ -1,0 +1,27 @@
+---
+permalink: performance-checker/concept_what_happens_when_performance_threshold_policy_is_breached.html 
+sidebar: sidebar 
+keywords: happens, performance, threshold, policy, breached 
+summary: Quando o valor de um contador excede o valor definido do limite de desempenho pelo período especificado na duração, o limite é violado e um evento é gerado. 
+---
+= Responda às políticas de limite de desempenho violadas no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando o valor de um contador excede o valor definido do limite de desempenho pelo período especificado na duração, o limite é violado e um evento é gerado.
+
+O evento faz com que as seguintes ações sejam iniciadas:
+
+* O evento é exibido no Dashboard, na página Performance Cluster Summary, na página Events e na página Performance Inventory específica do objeto.
+* (opcional) é possível enviar um alerta por e-mail sobre o evento para um ou mais destinatários de e-mail, e um trap SNMP para um receptor de traps.
+* (opcional) Um script pode ser executado para modificar ou atualizar automaticamente os objetos de armazenamento.
+
+
+A primeira ação é sempre executada. Você configura se as ações opcionais serão realizadas na página de Configuração de Alertas. É possível definir ações específicas dependendo de uma política de limite de Aviso ou Crítico ser violada.
+
+Após ocorrer uma violação da política de limite de desempenho em um objeto de storage, nenhum outro evento é gerado para essa política até que o valor do contador fique abaixo do valor limite, momento em que a duração é redefinida para esse limite. Enquanto o limite continuar a ser excedido, o horário de término do evento é atualizado continuamente para refletir que esse evento ainda está em andamento.
+
+Um evento de limite captura, ou congela, as informações relacionadas à gravidade e à definição da política, de modo que as informações exclusivas do limite sejam exibidas com o evento, mesmo que a política de limite seja modificada no futuro.

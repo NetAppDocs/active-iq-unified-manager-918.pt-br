@@ -1,0 +1,16 @@
+---
+permalink: install-linux/concept_overview_of_installation_process_on_red_hat.html 
+sidebar: sidebar 
+keywords: overview, installation process 
+summary: O fluxo de trabalho de instalação descreve as tarefas que você deve executar antes de poder usar o Unified Manager. 
+---
+= Entenda a sequência de instalação do Active IQ Unified Manager no Red Hat Enterprise Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+O fluxo de trabalho de instalação descreve as tarefas que você deve executar antes de poder usar o Unified Manager.
+
+image::../media/install_flow_on_rhel_2026.png[Um diagrama que mostra os pré-requisitos, a instalação do Unified Manager e os fluxos de trabalho de configuração inicial no Red Hat Linux]

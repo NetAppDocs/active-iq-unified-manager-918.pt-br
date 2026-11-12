@@ -1,0 +1,31 @@
+---
+permalink: config/task_test_configuration_of_authentication_servers_um_6_0.html 
+sidebar: sidebar 
+keywords: test, configuration, authentication servers 
+summary: Você pode validar a configuração dos seus servidores de autenticação para garantir que o servidor de gerenciamento consiga se comunicar com eles. Você pode validar a configuração pesquisando um usuário remoto ou grupo remoto nos seus servidores de autenticação e autenticando esse usuário ou grupo usando as configurações definidas. 
+---
+= Teste a configuração dos servidores de autenticação no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode validar a configuração dos seus servidores de autenticação para garantir que o servidor de gerenciamento consiga se comunicar com eles. Você pode validar a configuração pesquisando um usuário remoto ou grupo remoto nos seus servidores de autenticação e autenticando esse usuário ou grupo usando as configurações definidas.
+
+.Antes de começar
+* Você deve ter habilitado a autenticação remota e configurado seu serviço de autenticação para que o servidor do Unified Manager possa autenticar o usuário remoto ou o grupo remoto.
+* Você deve ter adicionado seus servidores de autenticação para que o servidor de gerenciamento possa procurar o usuário remoto ou o grupo remoto nesses servidores e autenticá-los.
+* Você precisa ter a função de Application Administrator.
+
+
+Se o serviço de autenticação estiver configurado para o Active Directory e se você estiver validando a autenticação de usuários remotos que pertencem ao grupo primário do servidor de autenticação, as informações sobre o grupo primário não serão exibidas nos resultados da autenticação.
+
+.Passos
+. No painel de navegação à esquerda, clique em *Geral* > *Autenticação Remota*.
+. Clique em *Test Authentication*.
+. Na caixa de diálogo Test User, especifique o nome de usuário e a senha do usuário remoto ou o nome do grupo remoto e clique em *Test*.
++
+Se você estiver autenticando um grupo remoto, não deve inserir a senha.
+
+

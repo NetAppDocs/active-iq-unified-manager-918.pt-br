@@ -1,0 +1,71 @@
+---
+permalink: data-protection/reference_resynchronize_dialog_box.html 
+sidebar: sidebar 
+keywords: resynchronize, dialog box 
+summary: A caixa de diálogo Ressincronizar permite que você ressincronize dados em uma relação do SnapMirror ou do SnapVault que foi interrompida anteriormente e, em seguida, o destino foi transformado em um volume de leitura/gravação. Você também pode ressincronizar quando uma cópia Snapshot comum necessária no volume de origem é excluída, fazendo com que as atualizações do SnapMirror ou do SnapVault falhem. 
+---
+= Utilize a caixa de diálogo de ressincronização no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A caixa de diálogo Ressincronizar permite que você ressincronize dados em uma relação do SnapMirror ou do SnapVault que foi interrompida anteriormente e, em seguida, o destino foi transformado em um volume de leitura/gravação. Você também pode ressincronizar quando uma cópia Snapshot comum necessária no volume de origem é excluída, fazendo com que as atualizações do SnapMirror ou do SnapVault falhem.
+
+
+
+[[resynchronization-options-tab]]
+== Aba de opções de ressincronização
+
+A aba Opções de Ressincronização permite definir a prioridade de transferência e a taxa máxima de transferência para o relacionamento de proteção que você está ressincronizando.
+
+* *Prioridade de Transferência*
++
+A prioridade em que a transferência é executada. Você pode selecionar Normal ou Low. Os relacionamentos com políticas que especificam uma prioridade de transferência normal são executados antes daqueles com políticas que especificam uma prioridade de transferência baixa.
+
+* *Taxa máxima de transferência*
++
+Especifica a taxa máxima na qual os dados são transferidos entre clusters pela rede. Quando selecionada, a largura de banda da rede é limitada ao valor que você especificar. Você pode inserir um valor numérico e selecionar kilobytes por segundo (KBps), megabytes por segundo (MBps), gigabytes por segundo (GBps) ou TBps. Se você optar por não usar uma taxa máxima de transferência, a transferência completa entre relacionamentos será ilimitada.
+
+
+
+
+
+[[source-snapshot-copies-tab]]
+== Guia Cópias Snapshot de origem
+
+A guia Cópias Snapshot de origem exibe as seguintes informações sobre a cópia Snapshot de origem usada para a transferência completa:
+
+* *Volume de origem*
++
+Exibe os nomes dos volumes de origem correspondentes.
+
+* *Volume de destino*
++
+Exibe os nomes dos volumes de destino selecionados.
+
+* *Tipo de fonte*
++
+Exibe o tipo de volume: leitura/gravação ou proteção de dados.
+
+* *cópia Snapshot*
++
+Exibe a cópia Snapshot usada para a transferência de dados. Clicar no valor da cópia Snapshot exibe a caixa de diálogo "Select Source Snapshot Copy", na qual você pode selecionar uma cópia Snapshot específica para a sua transferência, dependendo do tipo de relação de proteção que você tem e da operação que está executando.
+
+
+
+
+
+[[command-buttons]]
+== Botões de comando
+
+* *Enviar*
++
+Inicia o processo de ressincronização e fecha a caixa de diálogo Resynchronize.
+
+* *Cancelar*
++
+Cancela suas seleções e fecha a caixa de diálogo Ressincronizar.
+
+

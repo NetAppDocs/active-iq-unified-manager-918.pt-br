@@ -1,0 +1,62 @@
+---
+permalink: events/reference_event_setup_page.html 
+sidebar: sidebar 
+keywords: event, setup, page, command, buttons, list, view 
+summary: A página Configuração de Eventos exibe a lista de eventos desativados e fornece informações como o tipo de objeto associado e a gravidade do evento. Você também pode executar tarefas como desativar ou ativar eventos globalmente. 
+---
+= Saiba mais sobre a página de Configuração de Eventos no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A página Configuração de Eventos exibe a lista de eventos desativados e fornece informações como o tipo de objeto associado e a gravidade do evento. Você também pode executar tarefas como desativar ou ativar eventos globalmente.
+
+Você só pode acessar esta página se tiver a função de Administrador de Aplicativos ou Administrador de Armazenamento.
+
+
+
+[[command-buttons]]
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas para eventos selecionados:
+
+* *Desativar*
++
+Abre a caixa de diálogo Disable Events, que você pode usar para desativar eventos.
+
+* *Habilitar*
++
+Ativa os eventos selecionados que você havia optado por desativar anteriormente.
+
+* *Regras de Upload*
++
+Abre a caixa de diálogo "Regras de upload", que permite que sites sem acesso externo à rede carreguem manualmente o arquivo de regras do Active IQ para o Unified Manager. As regras são executadas nas mensagens do cluster AutoSupport para gerar eventos de configuração do sistema, cabeamento, melhores práticas e disponibilidade, conforme definido pela plataforma Active IQ.
+
+* *Inscreva-se nos eventos de EMS*
++
+Abre a caixa de diálogo "Inscrever-se em eventos do EMS", que permite que você se inscreva para receber eventos específicos do Event Management System (EMS) dos clusters que você está monitorando. O EMS coleta informações sobre eventos que ocorrem no cluster. Quando uma notificação é recebida para um evento do EMS assinado, um evento do Unified Manager é gerado com a severidade apropriada.
+
+
+
+
+
+[[list-view]]
+== Visualização em lista
+
+A visualização em lista exibe (em formato tabular) informações sobre eventos desativados. Você pode usar os filtros de coluna para personalizar os dados exibidos.
+
+* *Evento*
++
+Exibe o nome do evento que está desativado.
+
+* *Gravidade*
++
+Exibe a gravidade do evento. A gravidade pode ser Crítica, Erro, Aviso ou Informação.
+
+* *Tipo de fonte*
++
+Exibe o tipo de origem para o qual o evento é gerado.
+
+

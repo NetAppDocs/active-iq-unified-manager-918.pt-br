@@ -1,0 +1,107 @@
+---
+permalink: api-automation/concept_manage_sep.html 
+sidebar: sidebar 
+keywords: manage, storage, efficiency, policy 
+summary: Você pode visualizar, criar, modificar e excluir políticas de eficiência de armazenamento usando as APIs do provedor de armazenamento. 
+---
+= Gerencie políticas de eficiência de armazenamento usando APIs no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar, criar, modificar e excluir políticas de eficiência de armazenamento usando as APIs do provedor de armazenamento.
+
+[NOTE]
+====
+Observe os seguintes pontos:
+
+* Não é obrigatório atribuir uma política de eficiência de armazenamento ao criar uma carga de trabalho no Unified Manager.
+* Você não pode remover a atribuição de uma política de eficiência de armazenamento de uma carga de trabalho depois que uma política é atribuída a ela.
+* Se uma carga de trabalho tiver algumas configurações de armazenamento especificadas em volumes do ONTAP, como deduplicação e compactação, essas configurações poderão ser substituídas pelas configurações especificadas na Storage Efficiency Policy que você aplica ao adicionar as cargas de trabalho de armazenamento no Unified Manager.
+
+
+====
+
+
+[[view-storage-efficiency-policies]]
+== Ver as políticas de eficiência de armazenamento
+
+Você pode usar o seguinte método para visualizar as Políticas de Eficiência de Armazenamento antes de atribuí-las às cargas de trabalho de armazenamento. Esta API lista todas as Políticas de Eficiência de Armazenamento definidas pelo sistema e criadas pelo usuário e recupera os atributos de todas as Políticas de Eficiência de Armazenamento. Se você quiser consultar uma Política de Eficiência de Armazenamento específica, precisará inserir o ID exclusivo da política para recuperar seus detalhes.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+GET
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===
+
+
+[[add-storage-efficiency-policies]]
+== Adicionar políticas de eficiência de armazenamento
+
+Você pode usar o seguinte método para criar políticas de eficiência de armazenamento personalizadas e atribuí-las às suas cargas de trabalho de armazenamento caso as políticas definidas pelo sistema não atendam aos requisitos de provisionamento das suas cargas de trabalho de armazenamento. Insira os detalhes da política de eficiência de armazenamento que você deseja criar como parâmetros de entrada.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+POST
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+|===
+
+
+[[delete-storage-efficiency-policies]]
+== Excluir políticas de eficiência de armazenamento
+
+Você pode usar o seguinte método para excluir uma Storage Efficiency Policy específica. Não é possível excluir uma Storage Efficiency Policy se ela estiver atribuída a uma carga de trabalho ou se for a única Storage Efficiency Policy disponível. Para excluir uma Storage Efficiency Policy específica, você precisa fornecer o ID exclusivo da Storage Efficiency Policy como parâmetro de entrada.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+EXCLUIR
+ a| 
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===
+
+
+[[modify-storage-efficiency-policies]]
+== Modificar as políticas de eficiência de armazenamento
+
+Você pode usar o seguinte método para modificar uma Política de Eficiência de Armazenamento e atualizar suas propriedades. Não é possível modificar uma Política de Eficiência de Armazenamento definida pelo sistema ou atribuída a uma carga de trabalho. Para modificar uma Política de Eficiência de Armazenamento específica, você precisa fornecer o ID exclusivo da Política de Eficiência de Armazenamento. Além disso, você precisa fornecer a propriedade que deseja atualizar, juntamente com seu valor.
+
+[cols="3*"]
+|===
+| Categoria | Verbo HTTP | Caminho 
+
+
+ a| 
+provedor de armazenamento
+ a| 
+PATCH
+ a| 
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===

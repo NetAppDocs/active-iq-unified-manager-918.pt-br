@@ -1,0 +1,40 @@
+---
+permalink: events/task_exclude_disaster_recovery_destination_volumes_from_alerts.html 
+sidebar: sidebar 
+keywords: exclude, disaster, recovery, destination, volumes, generate, alerts 
+summary: Ao configurar alertas de volume, você pode especificar uma string na caixa de diálogo Alerta que identifica um volume ou grupo de volumes. No entanto, se você configurou a recuperação de desastres para SVMs, os volumes de origem e de destino têm o mesmo nome, portanto, você receberá alertas para ambos os volumes. 
+---
+= Exclua os volumes de destino de recuperação de desastres da geração de alertas no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ao configurar alertas de volume, você pode especificar uma string na caixa de diálogo Alerta que identifica um volume ou grupo de volumes. No entanto, se você configurou a recuperação de desastres para SVMs, os volumes de origem e de destino têm o mesmo nome, portanto, você receberá alertas para ambos os volumes.
+
+.Antes de começar
+Você precisa ter a função de Application Administrator ou Storage Administrator.
+
+Você pode desativar alertas para volumes de destino de recuperação de desastres excluindo volumes que tenham o nome da SVM de destino. Isso é possível porque o identificador de eventos de volume contém o nome da SVM e o nome do volume no formato "<svm_name>:/<volume_name>".
+
+O exemplo abaixo mostra como criar alertas para o volume "vol1" na SVM primária "vs1", mas excluir a geração do alerta para um volume com o mesmo nome na SVM "vs1-dr".
+
+Execute as etapas a seguir na caixa de diálogo Add Alert:
+
+.Passos
+. Clique em *Name* e insira um nome e uma descrição para o alerta.
+. Clique em *Recursos* e selecione a guia *Incluir*.
++
+.. Selecione *Volume* na lista suspensa e, em seguida, digite *`vol1`* no campo *Nome contém* para exibir os volumes cujo nome contém "vol1".
+.. Selecione *+<<All Volumes whose name contains 'vol1'>>+* na área *Recursos Disponíveis* e mova-o para a área *Recursos Selecionados*.
+
+
+. Selecione a guia *Excluir*, selecione *Volume*, digite *`vs1-dr`* no campo *O nome contém* e clique em *Adicionar*.
++
+Isso impede que o alerta seja gerado para o volume "vol1" na SVM "vs1-dr".
+
+. Clique em *Eventos* e selecione o(s) evento(s) que deseja aplicar ao(s) volume(s).
+. Clique em *Ações* e selecione o nome do usuário que receberá o e-mail de alerta no campo *Alertar estes usuários*.
+. Configure outras opções nesta página para emitir traps SNMP e executar um script e, em seguida, clique em *Salvar*.
+

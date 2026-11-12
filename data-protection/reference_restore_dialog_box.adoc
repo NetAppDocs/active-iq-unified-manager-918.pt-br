@@ -1,0 +1,111 @@
+---
+permalink: data-protection/reference_restore_dialog_box.html 
+sidebar: sidebar 
+keywords: restore, dialog box 
+summary: Você pode usar a caixa de diálogo Restaurar para restaurar dados em um volume a partir de uma cópia Snapshot específica. 
+---
+= Utilize a caixa de diálogo Restaurar no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode usar a caixa de diálogo Restaurar para restaurar dados em um volume a partir de uma cópia Snapshot específica.
+
+
+
+[[restore-from]]
+== Restaurar de
+
+A área "Restaurar de" permite que você especifique de onde deseja restaurar os dados.
+
+* *Volume*
++
+Especifica o volume do qual você deseja restaurar os dados. Por padrão, o volume no qual você iniciou a ação de restauração é selecionado. Você pode selecionar um volume diferente na lista suspensa que contém todos os volumes com relacionamentos de proteção com o volume no qual você iniciou a ação de restauração.
+
+* *cópia Snapshot*
++
+Especifica qual cópia Snapshot você deseja usar para restaurar os dados. Por padrão, a cópia Snapshot mais recente é selecionada. Você também pode selecionar uma cópia Snapshot diferente na lista suspensa. A lista de cópias Snapshot muda de acordo com o volume selecionado.
+
+* *Liste no máximo 995 arquivos e diretórios*
++
+Por padrão, a lista mostra no máximo 995 objetos. Você pode desmarcar esta caixa de seleção se quiser visualizar todos os objetos no volume selecionado. Esta operação pode demorar um pouco se o número de itens for muito grande.
+
+
+
+
+
+[[select-items-to-restore]]
+== Selecione os itens que deseja restaurar
+
+A área "Selecionar itens para restaurar" permite que você selecione o volume inteiro ou arquivos e pastas específicos que deseja restaurar. Você pode selecionar no máximo 10 arquivos, pastas ou uma combinação de ambos. Quando o número máximo de itens é selecionado, as caixas de seleção de itens ficam desabilitadas.
+
+* *Campo de caminho*
++
+Exibe o caminho para os dados que você deseja restaurar. Você pode navegar até a pasta e os arquivos que deseja restaurar ou digitar o caminho. Este campo fica vazio até que você selecione ou digite um caminho. Clicar em image:../media/icon_upfolder.gif["ícone de pasta superior"] após escolher um caminho faz você subir um nível na estrutura de diretórios.
+
+* *Lista de pastas e arquivos*
++
+Exibe o conteúdo do caminho que você inseriu. Por padrão, a pasta raiz é exibida inicialmente. Clicar no nome de uma pasta exibe o conteúdo dela.
+
+
+
+Você pode selecionar os itens a serem restaurados da seguinte forma:
+
+* Ao inserir o caminho com um nome de arquivo específico no campo de caminho, o arquivo especificado é exibido em Folders and Files.
+* Ao inserir um caminho sem especificar um arquivo em particular, o conteúdo da pasta é exibido na lista de Pastas e Arquivos, e você pode selecionar até 10 arquivos, pastas ou uma combinação de ambos para restaurar.
++
+Se uma pasta contiver mais de 995 itens, uma mensagem será exibida para indicar que há itens demais para serem mostrados, e se você prosseguir com a operação, todos os itens da pasta especificada serão restaurados. Você pode desmarcar a caixa de seleção "`List maximum of 995 files and directories`" se quiser visualizar todos os objetos no volume selecionado.
+
+
+
+[NOTE]
+====
+Não é possível restaurar fluxos de arquivos NTFS.
+
+====
+
+
+[[restore-to]]
+== Restaurar para
+
+A área "Restaurar para" permite que você especifique onde deseja restaurar os dados.
+
+* *Localização original em Volume_Name*
++
+Restaura os dados selecionados para o diretório na origem do qual foi feito backup dos dados originalmente.
+
+* *Localização alternativa*
++
+Restaura os dados selecionados em um novo local:
+
++
+** Caminho de restauração
++
+Especifica um caminho alternativo para restaurar os dados selecionados. O caminho já deve existir. Você pode usar o botão *Procurar* para navegar até o local onde deseja restaurar os dados ou pode inserir o caminho manualmente usando o formato `cluster://svm/volume/path`.
+
+** Preservar a hierarquia de diretórios
++
+Quando selecionada, essa opção preserva a estrutura do arquivo ou diretório original. Por exemplo, se a origem for /A/B/C/myFile.txt e o destino for /X/Y/Z, o Unified Manager restaurará os dados usando a seguinte estrutura de diretórios no destino: /X/Y/Z/A/B/C/myFile.txt.
+
+
+
+
+
+
+
+[[command-buttons]]
+== Botões de comando
+
+Os botões de comando permitem que você execute as seguintes tarefas:
+
+* *Cancelar*
++
+Descarta as suas seleções e fecha a caixa de diálogo Restaurar.
+
+* *Restaurar*
++
+Aplica suas seleções e inicia o processo de restauração.
+
+

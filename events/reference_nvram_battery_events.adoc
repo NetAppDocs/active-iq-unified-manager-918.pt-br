@@ -1,0 +1,56 @@
+---
+permalink: events/reference_nvram_battery_events.html 
+sidebar: sidebar 
+keywords: nvram, battery, events, impact area, availability 
+summary: Os eventos de bateria NVRAM fornecem informações sobre o status das suas baterias para que você possa monitorar possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade. 
+---
+= Saiba mais sobre eventos de bateria NVRAM no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Os eventos de bateria NVRAM fornecem informações sobre o status das suas baterias para que você possa monitorar possíveis problemas. Os eventos são agrupados por área de impacto e incluem o nome do evento e do trap, o nível de impacto, o tipo de origem e a gravidade.
+
+
+
+[[impact-area-availability]]
+== Área de impacto: disponibilidade
+
+|===
+| Nome do evento (Nome do trap) | Nível de impacto | Tipo de origem | Gravidade 
+
+
+ a| 
+Bateria de NVRAM fraca(ocumEvtNvramBatteryLow)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Aviso
+
+
+
+ a| 
+Bateria da NVRAM descarregada(ocumEvtNvramBatteryDischarged)
+ a| 
+Risco
+ a| 
+Nó
+ a| 
+Erro
+
+
+
+ a| 
+Bateria da NVRAM excessivamente carregada(ocumEvtNvramBatteryOverCharged)
+ a| 
+Incidente
+ a| 
+Nó
+ a| 
+Crítico
+
+|===

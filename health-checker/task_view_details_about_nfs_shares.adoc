@@ -1,0 +1,48 @@
+---
+permalink: health-checker/task_view_details_about_nfs_shares.html 
+sidebar: sidebar 
+keywords: view, details, nfs shares 
+summary: 'Veja detalhes sobre os compartilhamentos NFS, como status, caminho do volume, níveis de acesso do cliente e política de exportação, usando a visualização "Todos os Compartilhamentos NFS" na página "Saúde".' 
+---
+= Veja detalhes sobre os compartilhamentos NFS no Active IQ Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você pode visualizar detalhes sobre todos os compartilhamentos NFS, como seu status, o caminho associado ao volume (volumes FlexGroup ou volumes FlexVol), os níveis de acesso dos clientes aos compartilhamentos NFS e a política de exportação definida para os volumes exportados. Use a visualização "Health: All NFS Shares" para ver todos os compartilhamentos NFS em todos os clusters monitorados e use a página de detalhes "Storage VM / Health" para visualizar todos os compartilhamentos NFS em uma máquina virtual de storage (SVM) específica.
+
+.Antes de começar
+* A licença NFS deve estar habilitada no cluster.
+* As interfaces de rede que servem os compartilhamentos NFS devem ser configuradas.
+* Você precisa ter a função de Operador, Administrador de Aplicativos ou administrador de storage.
+
+
+.Etapa
+. No painel de navegação esquerdo, siga as etapas abaixo, dependendo de você querer visualizar todos os compartilhamentos NFS ou apenas os compartilhamentos NFS de uma SVM específica.
++
+[cols="2*"]
+|===
+| Para... | Siga estes passos... 
+
+
+ a| 
+Veja todos os compartilhamentos NFS
+ a| 
+Clique em *Storage* > *NFS Shares*
+
+
+
+ a| 
+Visualize os compartilhamentos NFS de uma única SVM
+ a| 
+.. Clique em *Armazenamento* > *VMs de armazenamento*
+.. Clique na SVM para a qual você deseja visualizar os detalhes dos compartilhamentos NFS.
+.. Na página de detalhes de integridade da VM de armazenamento, clique na guia *NFS Shares*.
+
+
+|===
+
+
+Para obter mais informações, consulte link:../storage-mgmt/task_provision_fileshares.html["Provisionamento de volumes de compartilhamento de arquivos"] e link:../api-automation/concept_provision_file_share.html["Provisionamento de compartilhamentos de arquivos CIFS e NFS usando APIs"].
